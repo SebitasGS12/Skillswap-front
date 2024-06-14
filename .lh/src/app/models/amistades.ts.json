@@ -1,0 +1,54 @@
+{
+    "sourceFile": "src/app/models/amistades.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1718396926453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1718396963685,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n export class Amistades {\r\n+    amis\r\n \r\n \r\n-    \r\n }\r\n"
+                },
+                {
+                    "date": 1718396971965,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n export class Amistades {\r\n-    amis\r\n+    amistadID:\r\n \r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1718396980889,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n export class Amistades {\r\n-    amistadID:\r\n+    amistadID:number;\r\n+    \r\n \r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1718396986736,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n export class Amistades {\r\n     amistadID:number;\r\n+    fechaAmistad:string;\r\n     \r\n \r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1718397048729,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export class Amistades {\r\n-    amistadID:number;\r\n+    amistadID!:number;\r\n     fechaAmistad:string;\r\n-    \r\n \r\n \r\n+\r\n }\r\n"
+                },
+                {
+                    "date": 1718397058073,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n export class Amistades {\r\n     amistadID!:number;\r\n-    fechaAmistad:string;\r\n+    fechaAmistad!:string;\r\n+    amistadAceptada:boolean;\r\n+    \r\n \r\n \r\n-\r\n }\r\n"
+                },
+                {
+                    "date": 1718397076718,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n export class Amistades {\r\n     amistadID!:number;\r\n     fechaAmistad!:string;\r\n-    amistadAceptada:boolean;\r\n-    \r\n+    amistadAceptada!:boolean;\r\n+    obj_Usuario\r\n \r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1718397082032,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,10 @@\n+import { Usuario } from \"./usuario\";\r\n+\r\n export class Amistades {\r\n     amistadID!:number;\r\n     fechaAmistad!:string;\r\n     amistadAceptada!:boolean;\r\n-    obj_Usuario\r\n+    obj_Usuario:Usuario;\r\n \r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1718397091137,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,8 @@\n export class Amistades {\r\n     amistadID!:number;\r\n     fechaAmistad!:string;\r\n     amistadAceptada!:boolean;\r\n-    obj_Usuario:Usuario;\r\n+    obj_Usuario!:Usuario;\r\n+    obj_Amigo!:\r\n \r\n-\r\n }\r\n"
+                }
+            ],
+            "date": 1718396926453,
+            "name": "Commit-0",
+            "content": "export class Amistades {\r\n\r\n\r\n    \r\n}\r\n"
+        }
+    ]
+}

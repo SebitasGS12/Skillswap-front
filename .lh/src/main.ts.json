@@ -1,0 +1,50 @@
+{
+    "sourceFile": "src/main.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1718401841674,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1718401852798,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { bootstrapApplication } from '@angular/platform-browser';\r\n-import { appConfig } from './app/app.';\r\n+import { AppModule } from './app/app.module';\r\n import { AppComponent } from './app/app.component';\r\n \r\n bootstrapApplication(AppComponent, appConfig)\r\n   .catch((err) => console.error(err));\r\n"
+                },
+                {
+                    "date": 1718401875396,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { bootstrapApplication } from '@angular/platform-browser';\r\n import { AppModule } from './app/app.module';\r\n import { AppComponent } from './app/app.component';\r\n \r\n-bootstrapApplication(AppComponent, appConfig)\r\n+bootstrapApplication(AppModule)\r\n   .catch((err) => console.error(err));\r\n"
+                },
+                {
+                    "date": 1718401881430,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n import { bootstrapApplication } from '@angular/platform-browser';\r\n import { AppModule } from './app/app.module';\r\n import { AppComponent } from './app/app.component';\r\n \r\n-bootstrapApplication(AppModule)\r\n+bootstrapApplication(AppModule,{\r\n+  \r\n+})\r\n   .catch((err) => console.error(err));\r\n"
+                },
+                {
+                    "date": 1718401889840,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,7 +2,7 @@\n import { AppModule } from './app/app.module';\r\n import { AppComponent } from './app/app.component';\r\n \r\n bootstrapApplication(AppModule,{\r\n-  \r\n+  ngZoneEventCoalescing: true\r\n })\r\n   .catch((err) => console.error(err));\r\n"
+                },
+                {
+                    "date": 1718401895389,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import { bootstrapApplication } from '@angular/platform-browser';\r\n import { AppModule } from './app/app.module';\r\n import { AppComponent } from './app/app.component';\r\n \r\n-bootstrapApplication(AppModule,{\r\n+bootstrapApplication.(AppModule,{\r\n   ngZoneEventCoalescing: true\r\n })\r\n   .catch((err) => console.error(err));\r\n"
+                },
+                {
+                    "date": 1718401901537,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import { bootstrapApplication } from '@angular/platform-browser';\r\n import { AppModule } from './app/app.module';\r\n import { AppComponent } from './app/app.component';\r\n \r\n-bootstrapApplication.(AppModule,{\r\n+platformBrowserDynamic(AppModule,{\r\n   ngZoneEventCoalescing: true\r\n })\r\n   .catch((err) => console.error(err));\r\n"
+                },
+                {
+                    "date": 1718401907571,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import { bootstrapApplication } from '@angular/platform-browser';\r\n import { AppModule } from './app/app.module';\r\n import { AppComponent } from './app/app.component';\r\n+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';\r\n \r\n-platformBrowserDynamic(AppModule,{\r\n+platformBrowserDynamic().(AppModule,{\r\n   ngZoneEventCoalescing: true\r\n })\r\n   .catch((err) => console.error(err));\r\n"
+                },
+                {
+                    "date": 1718402071482,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,7 @@\n-import { bootstrapApplication } from '@angular/platform-browser';\r\n import { AppModule } from './app/app.module';\r\n-import { AppComponent } from './app/app.component';\r\n import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';\r\n \r\n-platformBrowserDynamic().(AppModule,{\r\n+platformBrowserDynamic().bootstrapModule(AppModule,{\r\n   ngZoneEventCoalescing: true\r\n })\r\n   .catch((err) => console.error(err));\r\n"
+                }
+            ],
+            "date": 1718401841674,
+            "name": "Commit-0",
+            "content": "import { bootstrapApplication } from '@angular/platform-browser';\r\nimport { appConfig } from './app/app.';\r\nimport { AppComponent } from './app/app.component';\r\n\r\nbootstrapApplication(AppComponent, appConfig)\r\n  .catch((err) => console.error(err));\r\n"
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/app/app-routing.module.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1718401630369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1718402026456,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,14 @@\n import { NgModule } from '@angular/core';\r\n import { RouterModule, Routes } from '@angular/router';\r\n+import { ListarAmistadesComponent } from './components/listar-amistades/listar-amistades.component';\r\n \r\n const routes: Routes = [\r\n \r\n   //{path: '', component: PaginaPrincipalComponent},\r\n \r\n-  {path: 'listado', component: ListarProductosComponent},\r\n+  {path: 'listado', component: ListarAmistadesComponent},\r\n \r\n-  {path: 'nuevo', component: RegistrarProductosComponent},\r\n-\r\n   {path: '**', redirectTo: '', pathMatch: 'full'},\r\n \r\n \r\n \r\n"
+                }
+            ],
+            "date": 1718401630369,
+            "name": "Commit-0",
+            "content": "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\n\r\nconst routes: Routes = [\r\n\r\n  //{path: '', component: PaginaPrincipalComponent},\r\n\r\n  {path: 'listado', component: ListarProductosComponent},\r\n\r\n  {path: 'nuevo', component: RegistrarProductosComponent},\r\n\r\n  {path: '**', redirectTo: '', pathMatch: 'full'},\r\n\r\n\r\n\r\n];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forRoot(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class AppRoutingModule { }\r\n"
+        }
+    ]
+}

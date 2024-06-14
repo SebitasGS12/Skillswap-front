@@ -1,0 +1,66 @@
+{
+    "sourceFile": "src/app/components/listar-amistades/listar-amistades.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 12,
+            "patches": [
+                {
+                    "date": 1718396454013,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1718400845451,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,9 @@\n @Component({\r\n   selector: 'app-listar-mistades',\r\n   standalone: true,\r\n   imports: [],\r\n-  templateUrl: './listar-amistades.component.html',\r\n-  styleUrl: './listar-mistades.component.css'\r\n+  templateUrl: './listar-amistades.component.html'\r\n })\r\n-export class ListarMistadesComponent {\r\n+export class ListarAmistadesComponent {\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1718400858219,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n-import { Component } from '@angular/core';\r\n+import { Component, OnInit } from '@angular/core';\r\n \r\n @Component({\r\n   selector: 'app-listar-mistades',\r\n   standalone: true,\r\n   imports: [],\r\n   templateUrl: './listar-amistades.component.html'\r\n })\r\n-export class ListarAmistadesComponent {\r\n+export class ListarAmistadesComponent implements OnInit{\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1718400865154,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,6 +6,11 @@\n   imports: [],\r\n   templateUrl: './listar-amistades.component.html'\r\n })\r\n export class ListarAmistadesComponent implements OnInit{\r\n+  ngOnInit(): void {\r\n \r\n+    \r\n+\r\n+  }\r\n+\r\n }\r\n"
+                },
+                {
+                    "date": 1718400877542,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,11 +6,15 @@\n   imports: [],\r\n   templateUrl: './listar-amistades.component.html'\r\n })\r\n export class ListarAmistadesComponent implements OnInit{\r\n+\r\n+\r\n+  Amistades[]\r\n+\r\n   ngOnInit(): void {\r\n \r\n-    \r\n+    this.\r\n \r\n   }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1718400883333,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import { Component, OnInit } from '@angular/core';\r\n+import { Amistades } from '../../models/amistades';\r\n \r\n @Component({\r\n   selector: 'app-listar-mistades',\r\n   standalone: true,\r\n@@ -8,9 +9,9 @@\n })\r\n export class ListarAmistadesComponent implements OnInit{\r\n \r\n \r\n-  Amistades[]\r\n+  amistades:Amistades[]\r\n \r\n   ngOnInit(): void {\r\n \r\n     this.\r\n"
+                },
+                {
+                    "date": 1718400896929,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,10 @@\n })\r\n export class ListarAmistadesComponent implements OnInit{\r\n \r\n \r\n-  amistades:Amistades[]\r\n-\r\n+  amistades:Amistades[] = [];\r\n+constructor(private amistadesService)\r\n   ngOnInit(): void {\r\n \r\n     this.\r\n \r\n"
+                },
+                {
+                    "date": 1718400907984,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import { Component, OnInit } from '@angular/core';\r\n import { Amistades } from '../../models/amistades';\r\n+import { AmistadesService } from '../../service/amistadesService';\r\n \r\n @Component({\r\n   selector: 'app-listar-mistades',\r\n   standalone: true,\r\n@@ -10,9 +11,9 @@\n export class ListarAmistadesComponent implements OnInit{\r\n \r\n \r\n   amistades:Amistades[] = [];\r\n-constructor(private amistadesService)\r\n+  constructor(private amistadesService: AmistadesService){}\r\n   ngOnInit(): void {\r\n \r\n     this.\r\n \r\n"
+                },
+                {
+                    "date": 1718400914455,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   amistades:Amistades[] = [];\r\n   constructor(private amistadesService: AmistadesService){}\r\n   ngOnInit(): void {\r\n \r\n-    this.\r\n+    this.amistadesService.listar().\r\n \r\n   }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1718400925036,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,13 @@\n   amistades:Amistades[] = [];\r\n   constructor(private amistadesService: AmistadesService){}\r\n   ngOnInit(): void {\r\n \r\n-    this.amistadesService.listar().\r\n+    this.amistadesService.listar().subscribe(\r\n+      json => {\r\n+        \r\n+      }\r\n+    )\r\n \r\n   }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1718400932178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n   ngOnInit(): void {\r\n \r\n     this.amistadesService.listar().subscribe(\r\n       json => {\r\n-        \r\n+        this.\r\n       }\r\n     )\r\n \r\n   }\r\n"
+                },
+                {
+                    "date": 1718402170195,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Amistades } from '../../models/amistades';\r\n import { AmistadesService } from '../../service/amistadesService';\r\n \r\n @Component({\r\n-  selector: 'app-listar-mistades',\r\n+  selector: 'app-listar-amistades',\r\n   standalone: true,\r\n   imports: [],\r\n   templateUrl: './listar-amistades.component.html'\r\n })\r\n@@ -16,9 +16,9 @@\n   ngOnInit(): void {\r\n \r\n     this.amistadesService.listar().subscribe(\r\n       json => {\r\n-        this.\r\n+        this.amistades = json;\r\n       }\r\n     )\r\n \r\n   }\r\n"
+                },
+                {
+                    "date": 1718402205287,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Amistades } from '../../models/amistades';\r\n import { AmistadesService } from '../../service/amistadesService';\r\n \r\n @Component({\r\n-  selector: 'app-listar-amistades',\r\n+  selector: 'app-listar-mistades',\r\n   standalone: true,\r\n   imports: [],\r\n   templateUrl: './listar-amistades.component.html'\r\n })\r\n"
+                }
+            ],
+            "date": 1718396454013,
+            "name": "Commit-0",
+            "content": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-listar-mistades',\r\n  standalone: true,\r\n  imports: [],\r\n  templateUrl: './listar-amistades.component.html',\r\n  styleUrl: './listar-mistades.component.css'\r\n})\r\nexport class ListarMistadesComponent {\r\n\r\n}\r\n"
+        }
+    ]
+}

@@ -1,0 +1,74 @@
+{
+    "sourceFile": "src/app/service/amistadesService.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 14,
+            "patches": [
+                {
+                    "date": 1718399566694,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1718400609927,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,8 @@\n+\r\n+\r\n+@\r\n export class AmistadesService {\r\n \r\n \r\n-    \r\n+\r\n }\r\n"
+                },
+                {
+                    "date": 1718400617491,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,12 @@\n+import { Injectable } from \"@angular/core\";\r\n \r\n \r\n-@\r\n+@Injectable({\r\n+\r\n+    \r\n+\r\n+})\r\n export class AmistadesService {\r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1718400622665,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+import { Injectable } from \"@angular/core\";\r\n+\r\n+\r\n+@Injectable({\r\n+\r\n+    providedIn:'root'\r\n+\r\n+})\r\n+export class AmistadesService {\r\n+\r\n+\r\n+\r\n+}\r\n"
+                },
+                {
+                    "date": 1718400634476,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,26 +1,11 @@\n import { Injectable } from \"@angular/core\";\r\n \r\n \r\n @Injectable({\r\n-\r\n     providedIn:'root'\r\n-\r\n })\r\n export class AmistadesService {\r\n+    private baseUrl = \"\"\r\n \r\n \r\n-\r\n }\r\n-import { Injectable } from \"@angular/core\";\r\n-\r\n-\r\n-@Injectable({\r\n-\r\n-    \r\n-\r\n-})\r\n-export class AmistadesService {\r\n-\r\n-\r\n-\r\n-}\r\n"
+                },
+                {
+                    "date": 1718400640329,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,12 @@\n import { Injectable } from \"@angular/core\";\r\n+import { Datos } from \"../constants/datos\";\r\n \r\n \r\n @Injectable({\r\n     providedIn:'root'\r\n })\r\n export class AmistadesService {\r\n-    private baseUrl = \"\"\r\n+    private baseUrl = Datos.API_URL;\r\n \r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1718400646185,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,8 @@\n     providedIn:'root'\r\n })\r\n export class AmistadesService {\r\n     private baseUrl = Datos.API_URL;\r\n+    constructor/()\r\n \r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1718400653894,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,14 @@\n import { Injectable } from \"@angular/core\";\r\n import { Datos } from \"../constants/datos\";\r\n+import { HttpClient } from \"@angular/common/http\";\r\n \r\n \r\n @Injectable({\r\n     providedIn:'root'\r\n })\r\n export class AmistadesService {\r\n     private baseUrl = Datos.API_URL;\r\n-    constructor/()\r\n+    constructor(private http: HttpClient)\r\n \r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1718400659682,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,15 @@\n+import { Injectable } from \"@angular/core\";\r\n+import { Datos } from \"../constants/datos\";\r\n+import { HttpClient } from \"@angular/common/http\";\r\n+\r\n+\r\n+@Injectable({\r\n+    providedIn:'root'\r\n+})\r\n+export class AmistadesService {\r\n+    private baseUrl = Datos.API_URL;\r\n+    constructor(private http: HttpClient){}\r\n+    public listar\r\n+\r\n+\r\n+}\r\n"
+                },
+                {
+                    "date": 1718400665679,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,29 +1,16 @@\n import { Injectable } from \"@angular/core\";\r\n import { Datos } from \"../constants/datos\";\r\n import { HttpClient } from \"@angular/common/http\";\r\n+import { Observable } from \"rxjs\";\r\n \r\n \r\n @Injectable({\r\n     providedIn:'root'\r\n })\r\n export class AmistadesService {\r\n     private baseUrl = Datos.API_URL;\r\n     constructor(private http: HttpClient){}\r\n-    public listar\r\n+    public listar():Observable\r\n \r\n \r\n }\r\n-import { Injectable } from \"@angular/core\";\r\n-import { Datos } from \"../constants/datos\";\r\n-import { HttpClient } from \"@angular/common/http\";\r\n-\r\n-\r\n-@Injectable({\r\n-    providedIn:'root'\r\n-})\r\n-export class AmistadesService {\r\n-    private baseUrl = Datos.API_URL;\r\n-    constructor(private http: HttpClient)\r\n-\r\n-\r\n-}\r\n"
+                },
+                {
+                    "date": 1718400671318,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,17 @@\n import { Injectable } from \"@angular/core\";\r\n import { Datos } from \"../constants/datos\";\r\n import { HttpClient } from \"@angular/common/http\";\r\n import { Observable } from \"rxjs\";\r\n+import { Amistades } from \"../models/amistades\";\r\n \r\n \r\n @Injectable({\r\n     providedIn:'root'\r\n })\r\n export class AmistadesService {\r\n     private baseUrl = Datos.API_URL;\r\n     constructor(private http: HttpClient){}\r\n-    public listar():Observable\r\n+    public listar():Observable<Amistades[]>\r\n \r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1718400678100,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,10 @@\n })\r\n export class AmistadesService {\r\n     private baseUrl = Datos.API_URL;\r\n     constructor(private http: HttpClient){}\r\n-    public listar():Observable<Amistades[]>\r\n+    public listar():Observable<Amistades[]>{\r\n+        return this.baseUrl.\r\n+    }\r\n \r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1718400684966,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n export class AmistadesService {\r\n     private baseUrl = Datos.API_URL;\r\n     constructor(private http: HttpClient){}\r\n     public listar():Observable<Amistades[]>{\r\n-        return this.baseUrl.\r\n+        return this.http.get\r\n     }\r\n \r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1718400693907,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n export class AmistadesService {\r\n     private baseUrl = Datos.API_URL;\r\n     constructor(private http: HttpClient){}\r\n     public listar():Observable<Amistades[]>{\r\n-        return this.http.get\r\n+        return this.http.get<Amistades[]>(this.baseUrl)\r\n     }\r\n \r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1718402104999,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n @Injectable({\r\n     providedIn:'root'\r\n })\r\n export class AmistadesService {\r\n-    private baseUrl = Datos.API_URL ;\r\n+    private baseUrl = Datos.API_URL+ ;\r\n     constructor(private http: HttpClient){}\r\n \r\n     public listar():Observable<Amistades[]>{\r\n         return this.http.get<Amistades[]>(this.baseUrl);\r\n"
+                }
+            ],
+            "date": 1718399566694,
+            "name": "Commit-0",
+            "content": "export class AmistadesService {\r\n\r\n\r\n    \r\n}\r\n"
+        }
+    ]
+}
