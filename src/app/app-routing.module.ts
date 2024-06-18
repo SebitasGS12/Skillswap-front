@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ListarAmistadesComponent } from './components/listar-amistades/listar-amistades.component';
+import { PerfilUsuarioComponent } from './components/perfil-usuario/perfil-usuario.component';
 
 const routes: Routes = [
 
   //{path: '', component: PaginaPrincipalComponent},
 
-  {path: 'listado', component: ListarAmistadesComponent},
+  {path: 'perfil', component: PerfilUsuarioComponent},
 
   {path: '**', redirectTo: '', pathMatch: 'full'},
 

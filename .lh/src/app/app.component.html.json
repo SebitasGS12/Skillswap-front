@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 2,
+            "activePatchIndex": 8,
             "patches": [
                 {
                     "date": 1718402130433,
@@ -16,6 +16,30 @@
                 {
                     "date": 1718402156970,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-<app-\n\\ No newline at end of file\n+<app-listar-mistades></app-listar-mistades>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718420701365,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,2 @@\n-<app-listar-mistades></app-listar-mistades>\n\\ No newline at end of file\n+\r\n+<app-listar-amistades></app-listar-amistades>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718420814235,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +0,0 @@\n-\r\n-<app-listar-amistades></app-listar-amistades>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718420827752,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,1 @@\n+<app-aside-component></app-aside-component>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718420839288,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-<app-aside-component></app-aside-component>\n\\ No newline at end of file\n+<app-aside></app-aside>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718508427569,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-<app-aside></app-aside>\n\\ No newline at end of file\n+<app-app-perfil-usuario'></app-aside>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718508434883,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-<app-app-perfil-usuario'></app-aside>\n\\ No newline at end of file\n+<app-perfil-usuario></app-perfil-usuario>\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1718402130433,

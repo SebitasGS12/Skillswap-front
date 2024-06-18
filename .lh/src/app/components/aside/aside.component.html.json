@@ -1,0 +1,138 @@
+{
+    "sourceFile": "src/app/components/aside/aside.component.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 30,
+            "patches": [
+                {
+                    "date": 1718420623449,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1718420946435,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n <div>\r\n+    \r\n \r\n-\r\n     \r\n </div>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718420955859,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n <div>\r\n-    \r\n \r\n     \r\n+    \r\n </div>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718420965549,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-<div>\r\n+<div class=\"aside\">\r\n \r\n+\r\n     \r\n-    \r\n </div>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718420973062,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-<div class=\"aside\">\r\n+<div class=\"\">\r\n+    \r\n \r\n-\r\n     \r\n </div>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718420978397,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-<div class=\"\">\r\n-    \r\n+<div>\r\n+        \r\n \r\n     \r\n </div>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718420991043,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n-<div>\r\n-        \r\n+<div class=\"container-aside\">\r\n \r\n+\r\n     \r\n+\r\n+    \r\n </div>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718421014208,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <div class=\"container-aside\">\r\n \r\n \r\n-    \r\n+    <div class=\"\"></div>\r\n \r\n     \r\n </div>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718421021160,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <div class=\"container-aside\">\r\n \r\n \r\n-    <div class=\"\"></div>\r\n+    <div class=\"container-aside_\"></div>\r\n \r\n     \r\n </div>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718421028331,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <div class=\"container-aside\">\r\n \r\n \r\n-    <div class=\"container-aside_\"></div>\r\n+    <div class=\"container-aside_user\"></div>\r\n \r\n     \r\n </div>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718421037193,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,10 @@\n <div class=\"container-aside\">\r\n \r\n \r\n-    <div class=\"container-aside_user\"></div>\r\n+    <div class=\"container-aside_user\">\r\n+        <img src=\"\" alt=\"\">\r\n+        \r\n+    </div>\r\n \r\n     \r\n </div>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718421045820,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n \r\n     <div class=\"container-aside_user\">\r\n         <img src=\"\" alt=\"\">\r\n-        \r\n+        <p>Alexandra Delgado</p>\r\n     </div>\r\n \r\n     \r\n </div>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718421059967,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n     <div class=\"container-aside_user\">\r\n         <img src=\"\" alt=\"\">\r\n         <p>Alexandra Delgado</p>\r\n     </div>\r\n-\r\n+    .\r\n     \r\n </div>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718421070618,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,12 @@\n     <div class=\"container-aside_user\">\r\n         <img src=\"\" alt=\"\">\r\n         <p>Alexandra Delgado</p>\r\n     </div>\r\n-    .\r\n+    <div class=\"container-aside_tools\">\r\n+\r\n+        \r\n+\r\n+\r\n+    </div>\r\n     \r\n </div>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718421078317,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n         <p>Alexandra Delgado</p>\r\n     </div>\r\n     <div class=\"container-aside_tools\">\r\n \r\n-        \r\n+        ul*li4\r\n \r\n \r\n     </div>\r\n     \r\n"
+                },
+                {
+                    "date": 1718421087347,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n         <p>Alexandra Delgado</p>\r\n     </div>\r\n     <div class=\"container-aside_tools\">\r\n \r\n-        ul*li4\r\n+        ul>li\r\n \r\n \r\n     </div>\r\n     \r\n"
+                },
+                {
+                    "date": 1718421101656,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n         <p>Alexandra Delgado</p>\r\n     </div>\r\n     <div class=\"container-aside_tools\">\r\n \r\n-        ul>li\r\n+        ul>li*4>img\r\n \r\n \r\n     </div>\r\n     \r\n"
+                },
+                {
+                    "date": 1718421108992,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n         <p>Alexandra Delgado</p>\r\n     </div>\r\n     <div class=\"container-aside_tools\">\r\n \r\n-        ul>li*4>img\r\n+        ul>li*4>img.icono\r\n \r\n \r\n     </div>\r\n     \r\n"
+                },
+                {
+                    "date": 1718421114338,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n         <p>Alexandra Delgado</p>\r\n     </div>\r\n     <div class=\"container-aside_tools\">\r\n \r\n-        ul>li*4>img.icono\r\n+        ul>li*4>img.icono+p\r\n \r\n \r\n     </div>\r\n     \r\n"
+                },
+                {
+                    "date": 1718421121810,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,26 @@\n         <p>Alexandra Delgado</p>\r\n     </div>\r\n     <div class=\"container-aside_tools\">\r\n \r\n-        ul>li*4>img.icono+p\r\n+        <ul>\r\n+            <li>\r\n+                <img src=\"\" alt=\"\" class=\"icono\">\r\n+                <p>Inicio</p>\r\n+            </li>\r\n+            <li>\r\n+                <img src=\"\" alt=\"\" class=\"icono\">\r\n+                <p></p>\r\n+            </li>\r\n+            <li>\r\n+                <img src=\"\" alt=\"\" class=\"icono\">\r\n+                <p></p>\r\n+            </li>\r\n+            <li>\r\n+                <img src=\"\" alt=\"\" class=\"icono\">\r\n+                <p></p>\r\n+            </li>\r\n+        </ul>\r\n \r\n \r\n     </div>\r\n     \r\n"
+                },
+                {
+                    "date": 1718421128289,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,26 +6,9 @@\n         <p>Alexandra Delgado</p>\r\n     </div>\r\n     <div class=\"container-aside_tools\">\r\n \r\n-        <ul>\r\n-            <li>\r\n-                <img src=\"\" alt=\"\" class=\"icono\">\r\n-                <p>Inicio</p>\r\n-            </li>\r\n-            <li>\r\n-                <img src=\"\" alt=\"\" class=\"icono\">\r\n-                <p></p>\r\n-            </li>\r\n-            <li>\r\n-                <img src=\"\" alt=\"\" class=\"icono\">\r\n-                <p></p>\r\n-            </li>\r\n-            <li>\r\n-                <img src=\"\" alt=\"\" class=\"icono\">\r\n-                <p></p>\r\n-            </li>\r\n-        </ul>\r\n+        ul>li*4>\r\n \r\n \r\n     </div>\r\n     \r\n"
+                },
+                {
+                    "date": 1718421137722,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n         <p>Alexandra Delgado</p>\r\n     </div>\r\n     <div class=\"container-aside_tools\">\r\n \r\n-        ul>li*4>\r\n+        ul>li*4>a>img.icono+\r\n \r\n \r\n     </div>\r\n     \r\n"
+                },
+                {
+                    "date": 1718421146998,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,34 @@\n         <p>Alexandra Delgado</p>\r\n     </div>\r\n     <div class=\"container-aside_tools\">\r\n \r\n-        ul>li*4>a>img.icono+\r\n+        <ul>\r\n+            <li>\r\n+                <a href=\"\">\r\n+                    <img src=\"\" alt=\"\" class=\"icono\">\r\n+                    <p>Inicio</p>\r\n+                </a>\r\n+            </li>\r\n+            <li>\r\n+                <a href=\"\">\r\n+                    <img src=\"\" alt=\"\" class=\"icono\">\r\n+                    <p></p>\r\n+                </a>\r\n+            </li>\r\n+            <li>\r\n+                <a href=\"\">\r\n+                    <img src=\"\" alt=\"\" class=\"icono\">\r\n+                    <p></p>\r\n+                </a>\r\n+            </li>\r\n+            <li>\r\n+                <a href=\"\">\r\n+                    <img src=\"\" alt=\"\" class=\"icono\">\r\n+                    <p></p>\r\n+                </a>\r\n+            </li>\r\n+        </ul>\r\n \r\n \r\n     </div>\r\n     \r\n"
+                },
+                {
+                    "date": 1718421154341,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n             </li>\r\n             <li>\r\n                 <a href=\"\">\r\n                     <img src=\"\" alt=\"\" class=\"icono\">\r\n-                    <p></p>\r\n+                    <p>Notificaciones</p>\r\n                 </a>\r\n             </li>\r\n             <li>\r\n                 <a href=\"\">\r\n"
+                },
+                {
+                    "date": 1718421161641,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,15 +22,15 @@\n             </li>\r\n             <li>\r\n                 <a href=\"\">\r\n                     <img src=\"\" alt=\"\" class=\"icono\">\r\n-                    <p></p>\r\n+                    <p>Foros</p>\r\n                 </a>\r\n             </li>\r\n             <li>\r\n                 <a href=\"\">\r\n                     <img src=\"\" alt=\"\" class=\"icono\">\r\n-                    <p></p>\r\n+                    <p>Mensajes</p>\r\n                 </a>\r\n             </li>\r\n         </ul>\r\n \r\n"
+                },
+                {
+                    "date": 1718421167363,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,10 +31,14 @@\n                     <img src=\"\" alt=\"\" class=\"icono\">\r\n                     <p>Mensajes</p>\r\n                 </a>\r\n             </li>\r\n+            <li>\r\n+                <a href=\"\">\r\n+                    <img src=\"\" alt=\"\" class=\"icono\">\r\n+                    <p>Mensajes</p>\r\n+                </a>\r\n+            </li>\r\n         </ul>\r\n-\r\n-\r\n     </div>\r\n     \r\n </div>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718421342004,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,11 +34,10 @@\n             </li>\r\n             <li>\r\n                 <a href=\"\">\r\n                     <img src=\"\" alt=\"\" class=\"icono\">\r\n-                    <p>Mensajes</p>\r\n+                    <p>Cuenta</p>\r\n                 </a>\r\n             </li>\r\n         </ul>\r\n     </div>\r\n-    \r\n </div>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718421359985,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n \r\n         <ul>\r\n             <li>\r\n                 <a href=\"\">\r\n-                    <img src=\"\" alt=\"\" class=\"icono\">\r\n+                    <img src=\"\" alt=\"inicio icono\" class=\"icono\">\r\n                     <p>Inicio</p>\r\n                 </a>\r\n             </li>\r\n             <li>\r\n"
+                },
+                {
+                    "date": 1718421369577,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n \r\n         <ul>\r\n             <li>\r\n                 <a href=\"\">\r\n-                    <img src=\"\" alt=\"inicio icono\" class=\"icono\">\r\n+                    <img src=\"\" alt=\"\" class=\"icono\">\r\n                     <p>Inicio</p>\r\n                 </a>\r\n             </li>\r\n             <li>\r\n"
+                },
+                {
+                    "date": 1718421601317,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,6 +40,6 @@\n             </li>\r\n         </ul>\r\n     </div>\r\n \r\n-    .container-aside_boton\r\n+    .container-aside_botonI\r\n </div>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718422589942,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,48 @@\n+<div class=\"container-aside\">\r\n+\r\n+\r\n+    <div class=\"container-aside_user\">\r\n+        <img src=\"\" alt=\"\">\r\n+        <p>Alexandra Delgado</p>\r\n+    </div>\r\n+    <div class=\"container-aside_tools\">\r\n+\r\n+        <ul>\r\n+            <li>\r\n+                <a href=\"\">\r\n+                    <img src=\"\" alt=\"\" class=\"icono\">\r\n+                    <p>Inicio</p>\r\n+                </a>\r\n+            </li>\r\n+            <li>\r\n+                <a href=\"\">\r\n+                    <img src=\"\" alt=\"\" class=\"icono\">\r\n+                    <p>Notificaciones</p>\r\n+                </a>\r\n+            </li>\r\n+            <li>\r\n+                <a href=\"\">\r\n+                    <img src=\"\" alt=\"\" class=\"icono\">\r\n+                    <p>Foros</p>\r\n+                </a>\r\n+            </li>\r\n+            <li>\r\n+                <a href=\"\">\r\n+                    <img src=\"\" alt=\"\" class=\"icono\">\r\n+                    <p>Mensajes</p>\r\n+                </a>\r\n+            </li>\r\n+            <li>\r\n+                <a href=\"\">\r\n+                    <img src=\"\" alt=\"\" class=\"icono\">\r\n+                    <p>Cuenta</p>\r\n+                </a>\r\n+            </li>\r\n+        </ul>\r\n+    </div>\r\n+\r\n+    <div class=\"container-aside_botonInferior\">\r\n+        <button>Nuevo</button>\r\n+\r\n+    </div>\r\n+</div>\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1718420623449,
+            "name": "Commit-0",
+            "content": "<div>\r\n\r\n\r\n    \r\n</div>"
+        }
+    ]
+}

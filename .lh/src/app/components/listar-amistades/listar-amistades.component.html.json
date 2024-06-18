@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 15,
+            "activePatchIndex": 17,
             "patches": [
                 {
                     "date": 1718400760150,
@@ -68,6 +68,14 @@
                 {
                     "date": 1718400999881,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,10 +15,10 @@\n             <tr>\r\n                 <th>{{amistad.amistadID}}</th>\r\n                 <td>{{amistad.fechaAmistad}}</td>\r\n                 <td>{{amistad.amistadAceptada}}</td>\r\n+                <td>{{amistad.obj_Usuario.correo}}</td>\r\n                 <td>{{amistad.fechaAmistad}}</td>\r\n-                <td>{{amistad.fechaAmistad}}</td>\r\n             </tr>\r\n         }\r\n         </tbody>\r\n     </table>\r\n"
+                },
+                {
+                    "date": 1718420754451,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n                 <th>{{amistad.amistadID}}</th>\r\n                 <td>{{amistad.fechaAmistad}}</td>\r\n                 <td>{{amistad.amistadAceptada}}</td>\r\n                 <td>{{amistad.obj_Usuario.correo}}</td>\r\n-                <td>{{amistad.fechaAmistad}}</td>\r\n+                <td>{{amistad.obj_Amigo.correo}}</td>\r\n             </tr>\r\n         }\r\n         </tbody>\r\n     </table>\r\n"
+                },
+                {
+                    "date": 1718420759583,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n                 <th>Amistad ID</th>\r\n                 <th>Fecha</th>\r\n                 <th>Amistad Aceptada</th>\r\n                 <th>Usuario Correo</th>\r\n-                <th>Usuario Correo</th>\r\n+                <th>Usuario Correa</th>\r\n             </tr>\r\n         </thead>\r\n         <tbody>\r\n         @for (amistad of amistades; track $index) {\r\n"
                 }
             ],
             "date": 1718400760150,

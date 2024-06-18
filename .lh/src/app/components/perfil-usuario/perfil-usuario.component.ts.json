@@ -1,0 +1,58 @@
+{
+    "sourceFile": "src/app/components/perfil-usuario/perfil-usuario.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1718509405824,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1718509460518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,6 +7,6 @@\n   templateUrl: './perfil-usuario.component.html',\r\n   styleUrl: './perfil-usuario.component.css'\r\n })\r\n export class PerfilUsuarioComponent {\r\n-  items:\r\n+  items:string[] = 4;\r\n } \r\n"
+                },
+                {
+                    "date": 1718509467918,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,6 +7,6 @@\n   templateUrl: './perfil-usuario.component.html',\r\n   styleUrl: './perfil-usuario.component.css'\r\n })\r\n export class PerfilUsuarioComponent {\r\n-  items:string[] = 4;\r\n+  items:string[] = ['Modas',];\r\n } \r\n"
+                },
+                {
+                    "date": 1718509475719,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,6 +7,6 @@\n   templateUrl: './perfil-usuario.component.html',\r\n   styleUrl: './perfil-usuario.component.css'\r\n })\r\n export class PerfilUsuarioComponent {\r\n-  items:string[] = ['Modas',];\r\n-} \r\n+  items:string[] = ['Modas','Liderazgo'];\r\n+} \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718509542521,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,5 +8,6 @@\n   styleUrl: './perfil-usuario.component.css'\r\n })\r\n export class PerfilUsuarioComponent {\r\n   items:string[] = ['Modas','Liderazgo'];\r\n+  items:string[] = ['Modas','Liderazgo'];\r\n } \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718509550168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,6 +8,6 @@\n   styleUrl: './perfil-usuario.component.css'\r\n })\r\n export class PerfilUsuarioComponent {\r\n   items:string[] = ['Modas','Liderazgo'];\r\n-  items:string[] = ['Modas','Liderazgo'];\r\n+  foros:string[] = ['Como pasar de una diseñadora a una emprendedora','Liderazgo'];\r\n } \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718509556428,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,6 +8,7 @@\n   styleUrl: './perfil-usuario.component.css'\r\n })\r\n export class PerfilUsuarioComponent {\r\n   items:string[] = ['Modas','Liderazgo'];\r\n-  foros:string[] = ['Como pasar de una diseñadora a una emprendedora','Liderazgo'];\r\n+  foros:string[] = ['Como pasar de una diseñadora a una emprendedora','Guia para construir un sistema de diseño\r\n+'];\r\n } \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718672528531,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n   styleUrl: './perfil-usuario.component.css'\r\n })\r\n export class PerfilUsuarioComponent {\r\n   items:string[] = ['Modas','Liderazgo'];\r\n-  foros:string[] = ['Como pasar de una diseñadora a una emprendedora','Guia para construir un sistema de diseño\r\n-'];\r\n+  foros:string[] = ['Como pasar de una diseñadora a una emprendedora',\r\n+    'Guia para construir un sistema de diseño'];\r\n } \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718672534736,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,6 +9,9 @@\n })\r\n export class PerfilUsuarioComponent {\r\n   items:string[] = ['Modas','Liderazgo'];\r\n   foros:string[] = ['Como pasar de una diseñadora a una emprendedora',\r\n-    'Guia para construir un sistema de diseño'];\r\n+    'Guia para construir un sistema de diseño',\r\n+    'Guia para construir un sistema de diseño'\r\n+  \r\n+  ];\r\n } \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718672545911,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,10 @@\n   templateUrl: './perfil-usuario.component.html',\r\n   styleUrl: './perfil-usuario.component.css'\r\n })\r\n export class PerfilUsuarioComponent {\r\n-  items:string[] = ['Modas','Liderazgo'];\r\n+  items:string[] = ['Modas',\r\n+    'Liderazgo'];\r\n   foros:string[] = ['Como pasar de una diseñadora a una emprendedora',\r\n     'Guia para construir un sistema de diseño',\r\n     'Guia para construir un sistema de diseño'\r\n   \r\n"
+                },
+                {
+                    "date": 1718672552765,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,12 @@\n   styleUrl: './perfil-usuario.component.css'\r\n })\r\n export class PerfilUsuarioComponent {\r\n   items:string[] = ['Modas',\r\n-    'Liderazgo'];\r\n+    'Liderazgo',\r\n+    'Liderazgo'\r\n+  \r\n+  ];\r\n   foros:string[] = ['Como pasar de una diseñadora a una emprendedora',\r\n     'Guia para construir un sistema de diseño',\r\n     'Guia para construir un sistema de diseño'\r\n   \r\n"
+                }
+            ],
+            "date": 1718509405824,
+            "name": "Commit-0",
+            "content": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-perfil-usuario',\r\n  standalone: true,\r\n  imports: [],\r\n  templateUrl: './perfil-usuario.component.html',\r\n  styleUrl: './perfil-usuario.component.css'\r\n})\r\nexport class PerfilUsuarioComponent {\r\n  items:\r\n} \r\n"
+        }
+    ]
+}
