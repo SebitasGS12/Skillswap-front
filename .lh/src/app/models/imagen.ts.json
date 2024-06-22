@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 6,
+            "activePatchIndex": 14,
             "patches": [
                 {
                     "date": 1718500545213,
@@ -32,6 +32,38 @@
                 {
                     "date": 1718500631024,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,5 @@\n-import { Blob } from \"buffer\";\r\n-\r\n class Imagen {\r\n-    imagenID:number;\r\n-    estado:boolean;\r\n+    imagenID!:number;\r\n+    estado!:boolean;\r\n     contenido!:Uint8Array;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719010442791,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-class Imagen {\r\n+export class Imagen {\r\n     imagenID!:number;\r\n     estado!:boolean;\r\n-    contenido!:Uint8Array;\r\n+    contenido!:;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719010456603,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n export class Imagen {\r\n     imagenID!:number;\r\n     estado!:boolean;\r\n-    contenido!:;\r\n+    contenido!:strnig;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719010470497,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n export class Imagen {\r\n     imagenID!:number;\r\n     estado!:boolean;\r\n-    contenido!:strnig;\r\n+    contenido!:string;\r\n+    //TODO Cambiar el tipo de dato del campo contenido\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719010489723,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n export class Imagen {\r\n     imagenID!:number;\r\n     estado!:boolean;\r\n-    contenido!:string;\r\n-    //TODO Cambiar el tipo de dato del campo contenido\r\n+    contenido!:Uint8Array;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719010645308,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n export class Imagen {\r\n     imagenID!:number;\r\n     estado!:boolean;\r\n-    contenido!:Uint8Array;\r\n+    contenido:Uint8Array;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719010654616,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n export class Imagen {\r\n     imagenID!:number;\r\n     estado!:boolean;\r\n-    contenido:Uint8Array;\r\n+    contenido!: Uint8Array;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719010664934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n export class Imagen {\r\n     imagenID!:number;\r\n     estado!:boolean;\r\n-    contenido!: Uint8Array;\r\n+    contenido:Uint8Array ;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719010671556,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-export class Imagen {\r\n-    imagenID!:number;\r\n-    estado!:boolean;\r\n+export interface Imagen {\r\n+    imagenID:number;\r\n+    estado:boolean;\r\n     contenido:Uint8Array ;\r\n }\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1718500545213,

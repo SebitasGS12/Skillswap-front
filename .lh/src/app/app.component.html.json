@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 8,
+            "activePatchIndex": 12,
             "patches": [
                 {
                     "date": 1718402130433,
@@ -40,6 +40,22 @@
                 {
                     "date": 1718508434883,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-<app-app-perfil-usuario'></app-aside>\n\\ No newline at end of file\n+<app-perfil-usuario></app-perfil-usuario>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718678914268,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-<app-perfil-usuario></app-perfil-usuario>\n\\ No newline at end of file\n+<app-\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718678926266,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-<app-\n\\ No newline at end of file\n+<app-categorias-explroar></app-categorias-explroar>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718844710453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,2 @@\n-<app-categorias-explroar></app-categorias-explroar>\n\\ No newline at end of file\n+<app-aside></app-aside>\r\n+<app-categorias-explorar></app-categorias-explorar>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718844738440,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,1 @@\n-<app-aside></app-aside>\r\n <app-categorias-explorar></app-categorias-explorar>\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1718402130433,

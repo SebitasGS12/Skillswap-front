@@ -1,0 +1,70 @@
+{
+    "sourceFile": "src/app/service/categoriaHabilidadService.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 13,
+            "patches": [
+                {
+                    "date": 1719013716901,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1719013723375,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,8 @@\n-class\n\\ No newline at end of file\n+\r\n+\r\n+\r\n+export class name {\r\n+    constructor(parameters) {\r\n+        \r\n+    }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719013729344,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,17 @@\n \r\n \r\n+import { Injectable } from \"@angular/core\";\r\n+import { Datos } from \"../constants/datos\";\r\n+import { HttpClient } from \"@angular/common/http\";\r\n+import { Observable } from \"rxjs\";\r\n+import { Amistades } from \"../models/amistades\";\r\n+import { Habilidad } from \"../models/habilidad\";\r\n \r\n+\r\n+@Injectable({\r\n+    providedIn:'root'\r\n+})\r\n export class name {\r\n     constructor(parameters) {\r\n         \r\n     }\r\n"
+                },
+                {
+                    "date": 1719013923137,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,4 @@\n-\r\n-\r\n import { Injectable } from \"@angular/core\";\r\n import { Datos } from \"../constants/datos\";\r\n import { HttpClient } from \"@angular/common/http\";\r\n import { Observable } from \"rxjs\";\r\n@@ -11,8 +9,21 @@\n @Injectable({\r\n     providedIn:'root'\r\n })\r\n export class name {\r\n-    constructor(parameters) {\r\n-        \r\n-    }\r\n+    ort class HabilidadesService {\r\n+        private baseUrl = Datos.API_URL+\"Habilidad\" ;\r\n+        constructor(private http: HttpClient){}\r\n+    \r\n+        public listar():Observable<Habilidad[]>{\r\n+            return this.http.get<Habilidad[]>(this.baseUrl);\r\n+        }\r\n+    \r\n+    \r\n+      public registrar(habilidad: Habilidad): Observable<any> {\r\n+        return this.http.post<any>(this.baseUrl, habilidad);\r\n+      }\r\n+      \r\n+      public buscar(id : string): Observable<Habilidad> {\r\n+        return this.http.get<Habilidad>(this.baseUrl + `/${id}`);\r\n+      }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719013928923,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,9 @@\n \r\n @Injectable({\r\n     providedIn:'root'\r\n })\r\n-export class name {\r\n-    ort class HabilidadesService {\r\n+export class  {\r\n         private baseUrl = Datos.API_URL+\"Habilidad\" ;\r\n         constructor(private http: HttpClient){}\r\n     \r\n         public listar():Observable<Habilidad[]>{\r\n"
+                },
+                {
+                    "date": 1719013944032,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,10 @@\n \r\n @Injectable({\r\n     providedIn:'root'\r\n })\r\n-export class  {\r\n-        private baseUrl = Datos.API_URL+\"Habilidad\" ;\r\n+export class CategoriaHabilidadService {\r\n+        private baseUrl = Datos.API_URL+\"CategoriaHabilidad\" ;\r\n         constructor(private http: HttpClient){}\r\n     \r\n         public listar():Observable<Habilidad[]>{\r\n             return this.http.get<Habilidad[]>(this.baseUrl);\r\n"
+                },
+                {
+                    "date": 1719013950208,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n import { HttpClient } from \"@angular/common/http\";\r\n import { Observable } from \"rxjs\";\r\n import { Amistades } from \"../models/amistades\";\r\n import { Habilidad } from \"../models/habilidad\";\r\n+import { CategoriaHabilidad } from \"../models/categoria-habilidad\";\r\n \r\n \r\n @Injectable({\r\n     providedIn:'root'\r\n@@ -12,9 +13,9 @@\n export class CategoriaHabilidadService {\r\n         private baseUrl = Datos.API_URL+\"CategoriaHabilidad\" ;\r\n         constructor(private http: HttpClient){}\r\n     \r\n-        public listar():Observable<Habilidad[]>{\r\n+        public listar():Observable<CategoriaHabilidadHabilidad[]>{\r\n             return this.http.get<Habilidad[]>(this.baseUrl);\r\n         }\r\n     \r\n     \r\n"
+                },
+                {
+                    "date": 1719013957808,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,29 @@\n+import { Injectable } from \"@angular/core\";\r\n+import { Datos } from \"../constants/datos\";\r\n+import { HttpClient } from \"@angular/common/http\";\r\n+import { Observable } from \"rxjs\";\r\n+import { Amistades } from \"../models/amistades\";\r\n+import { Habilidad } from \"../models/habilidad\";\r\n+import { CategoriaHabilidad } from \"../models/categoria-habilidad\";\r\n+\r\n+\r\n+@Injectable({\r\n+    providedIn:'root'\r\n+})\r\n+export class CategoriaHabilidadService {\r\n+        private baseUrl = Datos.API_URL+\"CategoriaHabilidad\" ;\r\n+        constructor(private http: HttpClient){}\r\n+    \r\n+        public listar():Observable<CategoriaHabilidad[]>{\r\n+            return this.http.get<CategoriaHabilidad[]>(this.baseUrl);\r\n+        }\r\n+    \r\n+    \r\n+      public registrar(habilidad: CategoriaHabilidad): Observable<any> {\r\n+        return this.http.post<any>(this.baseUrl, habilidad);\r\n+      }\r\n+      \r\n+      public buscar(id : string): Observable<Habilidad> {\r\n+        return this.http.get<Habilidad>(this.baseUrl + `/${id}`);\r\n+      }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719013967064,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,41 +18,12 @@\n             return this.http.get<CategoriaHabilidad[]>(this.baseUrl);\r\n         }\r\n     \r\n     \r\n-      public registrar(habilidad: CategoriaHabilidad): Observable<any> {\r\n-        return this.http.post<any>(this.baseUrl, habilidad);\r\n+      public registrar(categoriaHabilidad: CategoriaHabilidad): Observable<any> {\r\n+        return this.http.post<any>(this.baseUrl, categoriaHabilidad);\r\n       }\r\n       \r\n       public buscar(id : string): Observable<Habilidad> {\r\n         return this.http.get<Habilidad>(this.baseUrl + `/${id}`);\r\n       }\r\n-}\n-import { Injectable } from \"@angular/core\";\r\n-import { Datos } from \"../constants/datos\";\r\n-import { HttpClient } from \"@angular/common/http\";\r\n-import { Observable } from \"rxjs\";\r\n-import { Amistades } from \"../models/amistades\";\r\n-import { Habilidad } from \"../models/habilidad\";\r\n-import { CategoriaHabilidad } from \"../models/categoria-habilidad\";\r\n-\r\n-\r\n-@Injectable({\r\n-    providedIn:'root'\r\n-})\r\n-export class CategoriaHabilidadService {\r\n-        private baseUrl = Datos.API_URL+\"CategoriaHabilidad\" ;\r\n-        constructor(private http: HttpClient){}\r\n-    \r\n-        public listar():Observable<CategoriaHabilidadHabilidad[]>{\r\n-            return this.http.get<Habilidad[]>(this.baseUrl);\r\n-        }\r\n-    \r\n-    \r\n-      public registrar(habilidad: Habilidad): Observable<any> {\r\n-        return this.http.post<any>(this.baseUrl, habilidad);\r\n-      }\r\n-      \r\n-      public buscar(id : string): Observable<Habilidad> {\r\n-        return this.http.get<Habilidad>(this.baseUrl + `/${id}`);\r\n-      }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719013979996,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,8 +22,8 @@\n       public registrar(categoriaHabilidad: CategoriaHabilidad): Observable<any> {\r\n         return this.http.post<any>(this.baseUrl, categoriaHabilidad);\r\n       }\r\n       \r\n-      public buscar(id : string): Observable<Habilidad> {\r\n+      public buscar(id : string): Observable<CategoriaHabilidad> {\r\n         return this.http.get<Habilidad>(this.baseUrl + `/${id}`);\r\n       }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719013987717,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,12 +18,12 @@\n             return this.http.get<CategoriaHabilidad[]>(this.baseUrl);\r\n         }\r\n     \r\n     \r\n-      public registrar(categoriaHabilidad: CategoriaHabilidad): Observable<any> {\r\n+        public registrar(categoriaHabilidad: CategoriaHabilidad): Observable<any> {\r\n         return this.http.post<any>(this.baseUrl, categoriaHabilidad);\r\n       }\r\n       \r\n       public buscar(id : string): Observable<CategoriaHabilidad> {\r\n-        return this.http.get<Habilidad>(this.baseUrl + `/${id}`);\r\n+        return this.http.get<CategoriaHabilidad>(this.baseUrl + `/${id}`);\r\n       }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719013993133,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,10 +20,10 @@\n     \r\n     \r\n         public registrar(categoriaHabilidad: CategoriaHabilidad): Observable<any> {\r\n         return this.http.post<any>(this.baseUrl, categoriaHabilidad);\r\n-      }\r\n-      \r\n-      public buscar(id : string): Observable<CategoriaHabilidad> {\r\n+        }\r\n+    \r\n+        public buscar(id : string): Observable<CategoriaHabilidad> {\r\n         return this.http.get<CategoriaHabilidad>(this.baseUrl + `/${id}`);\r\n       }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719013998424,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,20 +10,20 @@\n @Injectable({\r\n     providedIn:'root'\r\n })\r\n export class CategoriaHabilidadService {\r\n-        private baseUrl = Datos.API_URL+\"CategoriaHabilidad\" ;\r\n-        constructor(private http: HttpClient){}\r\n-    \r\n-        public listar():Observable<CategoriaHabilidad[]>{\r\n-            return this.http.get<CategoriaHabilidad[]>(this.baseUrl);\r\n-        }\r\n-    \r\n-    \r\n-        public registrar(categoriaHabilidad: CategoriaHabilidad): Observable<any> {\r\n-        return this.http.post<any>(this.baseUrl, categoriaHabilidad);\r\n-        }\r\n-    \r\n-        public buscar(id : string): Observable<CategoriaHabilidad> {\r\n-        return this.http.get<CategoriaHabilidad>(this.baseUrl + `/${id}`);\r\n-      }\r\n+    private baseUrl = Datos.API_URL+\"CategoriaHabilidad\" ;\r\n+    constructor(private http: HttpClient){}\r\n+\r\n+    public listar():Observable<CategoriaHabilidad[]>{\r\n+        return this.http.get<CategoriaHabilidad[]>(this.baseUrl);\r\n+    }\r\n+\r\n+\r\n+    public registrar(categoriaHabilidad: CategoriaHabilidad): Observable<any> {\r\n+    return this.http.post<any>(this.baseUrl, categoriaHabilidad);\r\n+    }\r\n+\r\n+    public buscar(id : string): Observable<CategoriaHabilidad> {\r\n+    return this.http.get<CategoriaHabilidad>(this.baseUrl + `/${id}`);\r\n+    }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719014003805,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,8 @@\n import { Injectable } from \"@angular/core\";\r\n import { Datos } from \"../constants/datos\";\r\n import { HttpClient } from \"@angular/common/http\";\r\n import { Observable } from \"rxjs\";\r\n-import { Amistades } from \"../models/amistades\";\r\n-import { Habilidad } from \"../models/habilidad\";\r\n import { CategoriaHabilidad } from \"../models/categoria-habilidad\";\r\n \r\n \r\n @Injectable({\r\n"
+                }
+            ],
+            "date": 1719013716901,
+            "name": "Commit-0",
+            "content": "class"
+        }
+    ]
+}

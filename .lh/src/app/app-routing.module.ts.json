@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 4,
+            "activePatchIndex": 6,
             "patches": [
                 {
                     "date": 1718401630369,
@@ -24,6 +24,14 @@
                 {
                     "date": 1718508538714,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,14 @@\n import { NgModule } from '@angular/core';\r\n import { RouterModule, Routes } from '@angular/router';\r\n import { ListarAmistadesComponent } from './components/listar-amistades/listar-amistades.component';\r\n-import { AsideComponent } from './components/aside/aside.component';\r\n import { PerfilUsuarioComponent } from './components/perfil-usuario/perfil-usuario.component';\r\n \r\n const routes: Routes = [\r\n \r\n   //{path: '', component: PaginaPrincipalComponent},\r\n \r\n-  {path: 'listado', component: PerfilUsuarioComponent},\r\n+  {path: 'perfil', component: PerfilUsuarioComponent},\r\n \r\n   {path: '**', redirectTo: '', pathMatch: 'full'},\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1718678366551,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,13 @@\n import { NgModule } from '@angular/core';\r\n import { RouterModule, Routes } from '@angular/router';\r\n-import { ListarAmistadesComponent } from './components/listar-amistades/listar-amistades.component';\r\n import { PerfilUsuarioComponent } from './components/perfil-usuario/perfil-usuario.component';\r\n \r\n const routes: Routes = [\r\n \r\n   //{path: '', component: PaginaPrincipalComponent},\r\n \r\n-  {path: 'perfil', component: PerfilUsuarioComponent},\r\n+  {path: 'explorar', component: PerfilUsuarioComponent},\r\n \r\n   {path: '**', redirectTo: '', pathMatch: 'full'},\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1718678372194,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,14 @@\n import { NgModule } from '@angular/core';\r\n import { RouterModule, Routes } from '@angular/router';\r\n import { PerfilUsuarioComponent } from './components/perfil-usuario/perfil-usuario.component';\r\n+import { CategoriasExplorarComponent } from './components/categorias-explorar/categorias-explorar.component';\r\n \r\n const routes: Routes = [\r\n \r\n   //{path: '', component: PaginaPrincipalComponent},\r\n \r\n-  {path: 'explorar', component: PerfilUsuarioComponent},\r\n+  {path: 'explorar', component: CategoriasExplorarComponent},\r\n \r\n   {path: '**', redirectTo: '', pathMatch: 'full'},\r\n \r\n \r\n"
                 }
             ],
             "date": 1718401630369,

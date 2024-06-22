@@ -6,6 +6,7 @@ import { HttpClient,  provideHttpClient, withFetch } from "@angular/common/http"
 import { AsideComponent } from "./components/aside/aside.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { PerfilUsuarioComponent } from "./components/perfil-usuario/perfil-usuario.component";
+import { CategoriasExplorarComponent } from "./components/categorias-explorar/categorias-explorar.component";
 
 @NgModule({
     declarations: [
@@ -22,7 +23,8 @@ import { PerfilUsuarioComponent } from "./components/perfil-usuario/perfil-usuar
         ReactiveFormsModule,
         AppRoutingModule,
         AsideComponent,
-        PerfilUsuarioComponent
+        PerfilUsuarioComponent,
+        CategoriasExplorarComponent
     ]
 })
 export class AppModule { }
