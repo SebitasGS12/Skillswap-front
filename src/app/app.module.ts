@@ -4,6 +4,7 @@ import { BrowserModule, provideClientHydration } from "@angular/platform-browser
 import { AppRoutingModule } from './app-routing.module';
 import { ListarAmistadesComponent } from "./components/listar-amistades/listar-amistades.component";
 import { provideHttpClient, withFetch } from "@angular/common/http";
+import { FooterComponent } from "./components/footer/footer.component";
 
 @NgModule({
     declarations: [
@@ -17,7 +18,8 @@ import { provideHttpClient, withFetch } from "@angular/common/http";
     imports: [
         BrowserModule,
         AppRoutingModule,
-        ListarAmistadesComponent
+        ListarAmistadesComponent,
+        FooterComponent
     ]
 })
 export class AppModule { }
