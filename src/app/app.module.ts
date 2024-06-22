@@ -7,6 +7,9 @@ import { AsideComponent } from "./components/aside/aside.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { PerfilUsuarioComponent } from "./components/perfil-usuario/perfil-usuario.component";
 import { CategoriasExplorarComponent } from "./components/categorias-explorar/categorias-explorar.component";
+import { CrearForoComponent } from "./components/crear-foro/crear-foro.component";
+import { ListadoCategoriasForoComponent } from "./components/listado-categorias-foro/listado-categorias-foro.component";
+import { ListadoPersonasComponent } from "./components/listado-personas/listado-personas.component";
 
 @NgModule({
     declarations: [
@@ -24,7 +27,10 @@ import { CategoriasExplorarComponent } from "./components/categorias-explorar/ca
         AppRoutingModule,
         AsideComponent,
         PerfilUsuarioComponent,
-        CategoriasExplorarComponent
+        CategoriasExplorarComponent,
+        CrearForoComponent,
+        ListadoCategoriasForoComponent,
+        ListadoPersonasComponent
     ]
 })
 export class AppModule { }

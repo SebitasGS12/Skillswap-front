@@ -1,0 +1,42 @@
+.container {
+    max-width: 100%;
+  }
+  
+  .card {
+    margin-bottom: 1.5rem;
+  }
+  
+  .card-header {
+    padding: 0.75rem 1.25rem;
+  }
+  
+  .card-body {
+    padding: 1.25rem;
+  }
+  
+  .form-control {
+    margin-bottom: 1rem;
+  }
+  
+  .pagination {
+    margin-top: 2rem;
+  }
+  
+  .page-link {
+    color: #007bff;
+  }
+  
+  .page-link:hover {
+    color: #0056b3;
+  }
+  
+  .btn-outline-light {
+    border-color: white;
+    color: white;
+  }
+  
+  .btn-outline-light:hover {
+    background-color: white;
+    color: black;
+  }
+  
