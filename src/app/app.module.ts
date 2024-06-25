@@ -6,6 +6,7 @@ import { ListarAmistadesComponent } from "./components/listar-amistades/listar-a
 import { provideHttpClient, withFetch } from "@angular/common/http";
 import { LoginComponent } from "./components/login/login.component";
 import { MenuUsuarioComponent } from "./components/menu-usuario/menu-usuario.component";
+import { NotificacionesComponent } from "./components/notificaciones/notificaciones.component";
 
 @NgModule({
     declarations: [
@@ -21,7 +22,8 @@ import { MenuUsuarioComponent } from "./components/menu-usuario/menu-usuario.com
         AppRoutingModule,
         ListarAmistadesComponent,
         LoginComponent,
-        MenuUsuarioComponent
+        MenuUsuarioComponent,
+        NotificacionesComponent
     ]
 })
 export class AppModule { }
