@@ -6,25 +6,15 @@ import { CrearForoComponent } from './components/crear-foro/crear-foro.component
 import { ListadoCategoriasForoComponent } from './components/listado-categorias-foro/listado-categorias-foro.component';
 import { ListadoPersonasComponent } from './components/listado-personas/listado-personas.component';
 
+import { MenuPrincipalComponent } from './components/menu-principal/menu-principal.component';
+import { CrearDiscusionComponent } from './components/crear-discusion/crear-discusion.component';
+import { LoginComponent } from './components/login/login.component';
+import { MenuUsuarioComponent } from './components/menu-usuario/menu-usuario.component';
+import { NotificacionesComponent } from './components/notificaciones/notificaciones.component';
+
 const routes: Routes = [
 
-  //{path: '', component: PaginaPrincipalComponent},
-
-  {path: 'explorar', component: CategoriasExplorarComponent},
-
-  {path: 'perfil', component: PerfilUsuarioComponent},
-
-  {path: 'crearForo', component: CrearForoComponent},
-
-  {path: 'listaCategoriasForo', component: ListadoCategoriasForoComponent},
-
-  {path: 'listadoPersonas', component: ListadoPersonasComponent},
-
   {path: '**', redirectTo: '', pathMatch: 'full'},
-
-
-
-
 ];
 
 @NgModule({
