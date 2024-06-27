@@ -1,0 +1,50 @@
+{
+    "sourceFile": "src/app/models/respuestas.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1718507595187,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1718507852641,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,3 @@\n-export class Respuesta\n\\ No newline at end of file\n+export class Respuestas{\r\n+    res\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718507857751,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n export class Respuestas{\r\n-    res\r\n+    respuestasId\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718507867519,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,5 @@\n export class Respuestas{\r\n-    respuestasId\r\n+    respuestasId!:number;\r\n+    contenido!:string;\r\n+    \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718507874073,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n export class Respuestas{\r\n     respuestasId!:number;\r\n     contenido!:string;\r\n+    fechaCreacion!:Date;\r\n     \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718507879354,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n export class Respuestas{\r\n     respuestasId!:number;\r\n     contenido!:string;\r\n     fechaCreacion!:Date;\r\n-    \r\n-}\n\\ No newline at end of file\n+    obj_Usuario!:\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718507886464,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,9 @@\n+import { Usuario } from \"./usuario\";\r\n+\r\n export class Respuestas{\r\n     respuestasId!:number;\r\n     contenido!:string;\r\n\\ No newline at end of file\n     fechaCreacion!:Date;\r\n-    obj_Usuario!:\n+    obj_Usuario!:Usuario;\r\n+    \r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718507892416,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,6 @@\n     respuestasId!:number;\r\n     contenido!:string;\r\n     fechaCreacion!:Date;\r\n     obj_Usuario!:Usuario;\r\n-    \r\n+        \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718507899879,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n+import { Discuciones } from \"./discuciones\";\r\n import { Usuario } from \"./usuario\";\r\n \r\n export class Respuestas{\r\n     respuestasId!:number;\r\n     contenido!:string;\r\n     fechaCreacion!:Date;\r\n     obj_Usuario!:Usuario;\r\n-        \r\n+    obj_Discuciones!:Discuciones;\r\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1718507595187,
+            "name": "Commit-0",
+            "content": "export class Respuesta"
+        }
+    ]
+}

@@ -1,0 +1,49 @@
+<div class="container_principal">
+    <div class="principal_banner">
+        <div class="banner_datos">
+            <img src="./assets/images/userphoto.png" alt="">
+            <div class="datos_user">
+                <h1>Ana Smith</h1>
+                <div class="datos_user-info">
+                    <p>AnaSmith43XL</p>
+                    <p>anaSmithagmail.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="banner_boton">
+            <a href="" class="btn button_banner ">Editar</a>
+        </div>
+    </div>
+    <hr>
+    <div class="principal_info">
+        <div class="info_text">
+            <h1>Más de mí:</h1>
+            <h4>Soy una mujer apasionada por la lectura, me agrada la música cansa. Trabajo en una empresa de Modas, tengo habilidades en:</h4>
+        </div>
+        <div class="info_categoria">    
+        @for (item of items; track $index) {
+            <a href="" class="btn btn-primary categoria_button ">{{item}}</a>
+        }
+            <div class="info_categoria-last-button">
+                <a href="" class="btn btn-primary categoria_button " >Editar</a>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="principal_foros">
+        <h1>Mis foros</h1>
+        <div class="foros_contenido">
+        @for (item of foros; track $index) {
+            <div class="foros_contenido-item">
+                <div class="foro_info">
+                    <h3>{{item}}</h3>
+                    <a href="#" class="btn btn-dark button_foro">Conectar</a>
+                </div>  
+                <div class="foro_img">
+                    <img src="./assets/images/imgForo.png" alt="">
+                </div>
+            </div>
+        }
+        </div>
+    </div>
+</div>

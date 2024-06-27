@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ListarAmistadesComponent } from './components/listar-amistades/listar-amistades.component';
+import { PerfilUsuarioComponent } from './components/perfil-usuario/perfil-usuario.component';
+import { CategoriasExplorarComponent } from './components/categorias-explorar/categorias-explorar.component';
+import { CrearForoComponent } from './components/crear-foro/crear-foro.component';
+import { ListadoCategoriasForoComponent } from './components/listado-categorias-foro/listado-categorias-foro.component';
+import { ListadoPersonasComponent } from './components/listado-personas/listado-personas.component';
 
 import { MenuPrincipalComponent } from './components/menu-principal/menu-principal.component';
 import { CrearDiscusionComponent } from './components/crear-discusion/crear-discusion.component';
@@ -10,18 +14,7 @@ import { NotificacionesComponent } from './components/notificaciones/notificacio
 
 const routes: Routes = [
 
-  //{path: '', component: PaginaPrincipalComponent},
-  { path: '', component: MenuPrincipalComponent },
-  { path: 'discusion', component: CrearDiscusionComponent },
-  {path: 'listado', component: ListarAmistadesComponent},
-  {path: 'login', component: LoginComponent},
-  {path: 'menusu', component: MenuUsuarioComponent},
-  {path: 'notificaciones', component: NotificacionesComponent},
-
   {path: '**', redirectTo: '', pathMatch: 'full'},
-
-
-
 ];
 
 @NgModule({
