@@ -1,0 +1,46 @@
+{
+    "sourceFile": "src/app/models/categoria-habilidad.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1718500470294,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1718500477786,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,8 @@\n-export class CategoriaHabilidad{}\n\\ No newline at end of file\n+export class CategoriaHabilidad{\r\n+    private Integer categoriaHabilidadId;\r\n+    private String nombre;\r\n+\r\n+    @ManyToOne\r\n+    @JoinColumn(name = \"imagenId\")\r\n+    private Imagen obj_imagenId;\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718500484674,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export class CategoriaHabilidad{\r\n-    private Integer categoriaHabilidadId;\r\n-    private String nombre;\r\n+    categoriaHabilidadId;\r\n+    nombre;\r\n \r\n     @ManyToOne\r\n     @JoinColumn(name = \"imagenId\")\r\n     private Imagen obj_imagenId;\r\n"
+                },
+                {
+                    "date": 1718500493740,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,6 @@\n export class CategoriaHabilidad{\r\n-    categoriaHabilidadId;\r\n+    categoriaHabilidadId:number;\r\n     nombre;\r\n \r\n-    @ManyToOne\r\n-    @JoinColumn(name = \"imagenId\")\r\n-    private Imagen obj_imagenId;\r\n+    obj_imagenId;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718500501015,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n export class CategoriaHabilidad{\r\n-    categoriaHabilidadId:number;\r\n-    nombre;\r\n+    categoriaHabilidadId!:number;\r\n+    nombre!:string;\r\n \r\n-    obj_imagenId;\r\n+    obj_imagenId!:;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718500520033,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n export class CategoriaHabilidad{\r\n     categoriaHabilidadId!:number;\r\n     nombre!:string;\r\n \r\n-    obj_imagenId!:;\r\n+    obj_imagenId!:Imagen;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718500532887,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +0,0 @@\n-export class CategoriaHabilidad{\r\n-    categoriaHabilidadId!:number;\r\n-    nombre!:string;\r\n-\r\n-    obj_imagenId!:Imagen;\r\n-}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718500636743,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,8 @@\n+import { Imagen } from \"./imagen\";\r\n+\r\n+export class CategoriaHabilidad{\r\n+    categoriaHabilidadId!:number;\r\n+    nombre!:string;\r\n+\r\n+    obj_imagenId!:Imagen;\r\n+}\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1718500470294,
+            "name": "Commit-0",
+            "content": "export class CategoriaHabilidad{}"
+        }
+    ]
+}

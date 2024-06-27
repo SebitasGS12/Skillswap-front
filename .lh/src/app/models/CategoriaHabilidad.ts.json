@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/models/CategoriaHabilidad.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1718500532876,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1718500532876,
+            "name": "Commit-0",
+            "content": "export class CategoriaHabilidad {\r\n    categoriaHabilidadId!: number;\r\n    nombre!: string;\r\n\r\n    obj_imagenId!: Imagen;\r\n}\r\n"
+        }
+    ]
+}

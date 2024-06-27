@@ -2,13 +2,13 @@ import { NgModule } from "@angular/core";
 import { AppComponent } from "./app.component";
 import { BrowserModule, provideClientHydration } from "@angular/platform-browser";
 import { AppRoutingModule } from './app-routing.module';
-import { ListarAmistadesComponent } from "./components/listar-amistades/listar-amistades.component";
-import { provideHttpClient, withFetch } from "@angular/common/http";
-import { FooterComponent } from "./components/footer/footer.component";
+
 
 @NgModule({
     declarations: [
         AppComponent,
+        HeaderComponent,
+
     ],
     providers: [
         provideClientHydration(),
@@ -17,9 +17,9 @@ import { FooterComponent } from "./components/footer/footer.component";
     bootstrap: [AppComponent],
     imports: [
         BrowserModule,
+        FormsModule,
+        ReactiveFormsModule,
         AppRoutingModule,
-        ListarAmistadesComponent,
-        FooterComponent
     ]
 })
 export class AppModule { }

@@ -1,0 +1,50 @@
+{
+    "sourceFile": "src/app/models/habilidad.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1718506787520,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1718506795857,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,5 @@\n-export class\n\\ No newline at end of file\n+export class Habilidad {\r\n+    constructor(parameters) {\r\n+        \r\n+    }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718506802343,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n export class Habilidad {\r\n-    constructor(parameters) {\r\n-        \r\n-    }\r\n+    habilidadId;\r\n+    private String nombre;\r\n+    private String descripcion;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718506807753,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n export class Habilidad {\r\n-    habilidadId;\r\n+    habilidadId!:number;\r\n     private String nombre;\r\n     private String descripcion;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718506839735,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n export class Habilidad {\r\n     habilidadId!:number;\r\n-    private String nombre;\r\n+    nombre;\r\n     private String descripcion;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718506847596,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n export class Habilidad {\r\n     habilidadId!:number;\r\n-    nombre;\r\n-    private String descripcion;\r\n+    nombre!:string;\r\n+    descripcion!:string;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718506853668,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n export class Habilidad {\r\n     habilidadId!:number;\r\n     nombre!:string;\r\n     descripcion!:string;\r\n+    obj_CategoriaHabilidad!:\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718506860490,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,9 @@\n+import { CategoriaHabilidad } from \"./categoria-habilidad\";\r\n+\r\n export class Habilidad {\r\n     habilidadId!:number;\r\n     nombre!:string;\r\n     descripcion!:string;\r\n-    obj_CategoriaHabilidad!:\r\n+    obj_CategoriaHabilidad!:CategoriaHabilidad;\r\n+    obj_Perfil!:\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718507154246,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n import { CategoriaHabilidad } from \"./categoria-habilidad\";\r\n+import { Perfil } from \"./perfil\";\r\n \r\n export class Habilidad {\r\n     habilidadId!:number;\r\n     nombre!:string;\r\n     descripcion!:string;\r\n     obj_CategoriaHabilidad!:CategoriaHabilidad;\r\n-    obj_Perfil!:\r\n+    obj_Perfil!:Perfil;\r\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1718506787520,
+            "name": "Commit-0",
+            "content": "export class"
+        }
+    ]
+}

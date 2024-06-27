@@ -2,7 +2,7 @@ import { Usuario } from "./usuario";
 
 export class Amistades {
     amistadID!:number;
-    fechaAmistad!:string;
+    fechaAmistad!:Date;
     amistadAceptada!:boolean;
     obj_Usuario!:Usuario;
     obj_Amigo!:Usuario;

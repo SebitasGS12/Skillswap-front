@@ -1,0 +1,70 @@
+{
+    "sourceFile": "src/app/models/perfil.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 13,
+            "patches": [
+                {
+                    "date": 1718507039926,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1718507046967,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,5 @@\n-export class\n\\ No newline at end of file\n+export class Perfil {\r\n+    constructor(parameters) {\r\n+        \r\n+    }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718507052336,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,3 @@\n export class Perfil {\r\n-    constructor(parameters) {\r\n-        \r\n-    }\r\n+    \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718507058348,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,4 @@\n export class Perfil {\r\n     \r\n+\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718507065364,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n export class Perfil {\r\n-    \r\n+    perfilID!:\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718507074945,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n export class Perfil {\r\n-    perfilID!:\r\n+    perfilID!:number;\r\n+    nombre!:string;\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718507081464,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n export class Perfil {\r\n     perfilID!:number;\r\n     nombre!:string;\r\n-\r\n+    apellido!:string;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718507087353,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n export class Perfil {\r\n     perfilID!:number;\r\n     nombre!:string;\r\n     apellido!:string;\r\n+    telefono!:string;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718507095967,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,5 +2,7 @@\n     perfilID!:number;\r\n     nombre!:string;\r\n     apellido!:string;\r\n     telefono!:string;\r\n+    fechaNacimiento!:Date;\r\n+    \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718507104823,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,10 @@\n+import { Imagen } from \"./imagen\";\r\n+\r\n export class Perfil {\r\n     perfilID!:number;\r\n     nombre!:string;\r\n     apellido!:string;\r\n     telefono!:string;\r\n     fechaNacimiento!:Date;\r\n-    \r\n+    obj_imagenPerfilId!:Imagen\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718507111032,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,6 +5,7 @@\n     nombre!:string;\r\n     apellido!:string;\r\n     telefono!:string;\r\n     fechaNacimiento!:Date;\r\n-    obj_imagenPerfilId!:Imagen\r\n+    obj_imagenPerfilId!:Imagen;\r\n+    obj_imagenCabeceraId!:\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718507121699,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,6 +6,7 @@\n     apellido!:string;\r\n     telefono!:string;\r\n     fechaNacimiento!:Date;\r\n     obj_imagenPerfilId!:Imagen;\r\n-    obj_imagenCabeceraId!:\r\n+    obj_imagenCabeceraId!:Imagen;\r\n+    biografia!:\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718507130650,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,6 +7,7 @@\n     telefono!:string;\r\n     fechaNacimiento!:Date;\r\n     obj_imagenPerfilId!:Imagen;\r\n     obj_imagenCabeceraId!:Imagen;\r\n-    biografia!:\r\n+    biografia!:String;\r\n+    \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718507137903,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,6 +8,6 @@\n     fechaNacimiento!:Date;\r\n     obj_imagenPerfilId!:Imagen;\r\n     obj_imagenCabeceraId!:Imagen;\r\n     biografia!:String;\r\n-    \r\n+    obj_Usuario!:\r\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1718507039926,
+            "name": "Commit-0",
+            "content": "export class"
+        }
+    ]
+}

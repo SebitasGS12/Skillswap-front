@@ -1,0 +1,58 @@
+{
+    "sourceFile": "src/app/models/discuciones-tags-id.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1718505327590,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1718505346411,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,3 @@\n-class obj_Discuciones {\r\n-    constructor(parameters) {\r\n-        \r\n-    }\r\n+class DiscucionesTagsId {\r\n+\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718505359371,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,5 @@\n-class DiscucionesTagsId {\r\n+export class DiscucionesTagsId {\r\n \r\n+\r\n+    \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718505370070,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n export class DiscucionesTagsId {\r\n \r\n+    o\r\n \r\n-    \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718505378670,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n export class DiscucionesTagsId {\r\n \r\n-    o\r\n+    obj_Discuciones!:\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718505791841,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n+import { Discuciones } from \"./discuciones\";\r\n+\r\n export class DiscucionesTagsId {\r\n \r\n-    obj_Discuciones!:\r\n+    obj_Discuciones!:Discuciones\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718505797932,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n \r\n export class DiscucionesTagsId {\r\n \r\n     obj_Discuciones!:Discuciones\r\n-\r\n+    \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718505806690,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n \r\n export class DiscucionesTagsId {\r\n \r\n     obj_Discuciones!:Discuciones\r\n-    \r\n+    obj_\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718505863921,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n \r\n export class DiscucionesTagsId {\r\n \r\n     obj_Discuciones!:Discuciones\r\n-    obj_\r\n+    obj_T\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718505870350,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n \r\n export class DiscucionesTagsId {\r\n \r\n     obj_Discuciones!:Discuciones\r\n-    obj_T\r\n+    obj_Tags!:\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718506611836,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import { Discuciones } from \"./discuciones\";\r\n+import { Tags } from \"./tags\";\r\n \r\n export class DiscucionesTagsId {\r\n \r\n     obj_Discuciones!:Discuciones\r\n-    obj_Tags!:\r\n+    obj_Tags!:Tags;\r\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1718505327590,
+            "name": "Commit-0",
+            "content": "class obj_Discuciones {\r\n    constructor(parameters) {\r\n        \r\n    }\r\n}"
+        }
+    ]
+}

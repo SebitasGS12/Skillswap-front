@@ -1,0 +1,53 @@
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+/>
+<body>
+  <div class="container" id="container">
+    <div class="form-container sign-up">
+      <form>
+        <h1>Crear cuenta de SkillSwap</h1>
+        <input type="text" placeholder="Nombre Completo" />
+        <input type="text" placeholder="Usuario" />
+        <input type="email" placeholder="Correo Electronico" />
+        <input type="password" placeholder="Contraseña" />
+        <button>Registrarse</button>
+      </form>
+    </div>
+    <div class="form-container sign-in">
+      <form>
+        <h1>Iniciar sesion en SkillSwap</h1>
+        <input type="email" placeholder="Correo electronico" />
+        <input type="password" placeholder="Contraseña" />
+        <button>Ingresar</button>
+      </form>
+    </div>
+    <div class="toggle-container">
+      <div class="toggle">
+        <div class="toggle-panel toggle-left">
+          <h1>¿Ya tienes una cuenta?</h1>
+          <p>Inicia sesion para entrar en la pagina</p>
+          <button class="hidden" id="login">Iniciar sesion</button>
+        </div>
+        <div class="toggle-panel toggle-right">
+          <h1>¿Aun no tienes una cuenta?</h1>
+          <p>Registrate para que puedas iniciar sesion</p>
+          <button class="hidden" id="register">Registrarse</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const container = document.getElementById("container");
+    const registerBtn = document.getElementById("register");
+    const loginBtn = document.getElementById("login");
+
+    registerBtn.addEventListener("click", () => {
+      container.classList.add("active");
+    });
+
+    loginBtn.addEventListener("click", () => {
+      container.classList.remove("active");
+    });
+  </script>
+</body>

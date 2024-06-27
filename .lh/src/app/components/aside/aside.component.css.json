@@ -1,0 +1,250 @@
+{
+    "sourceFile": "src/app/components/aside/aside.component.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 58,
+            "patches": [
+                {
+                    "date": 1718421385102,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1718421415663,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,4 +3,8 @@\n     background-color: #f5f5f5;\r\n     border-right: 1px solid #ddd;\r\n     padding: 15px;\r\n }\r\n+.container-aside_user {\r\n+    text-align: center;\r\n+    margin-bottom: 20px;\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718421426216,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,5 +6,12 @@\n }\r\n .container-aside_user {\r\n     text-align: center;\r\n     margin-bottom: 20px;\r\n-}\n\\ No newline at end of file\n+}\r\n+\r\n+.container-aside_user img {\r\n+    width: 80px;\r\n+    height: 80px;\r\n+    border-radius: 50%;\r\n+    margin-bottom: 10px;\r\n+}\r\n"
+                },
+                {
+                    "date": 1718421431409,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,4 +14,15 @@\n     height: 80px;\r\n     border-radius: 50%;\r\n     margin-bottom: 10px;\r\n }\r\n+\r\n+.container-aside_user p {\r\n+    font-size: 18px;\r\n+    font-weight: bold;\r\n+    color: #333;\r\n+}\r\n+\r\n+.container-aside_tools ul {\r\n+    list-style-type: none;\r\n+    padding: 0;\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718421437520,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,5 +24,17 @@\n \r\n .container-aside_tools ul {\r\n     list-style-type: none;\r\n     padding: 0;\r\n+}\r\n+\r\n+.container-aside_tools li {\r\n+    margin-bottom: 10px;\r\n+}\r\n+\r\n+\r\n+.container-aside_tools a {\r\n+    text-decoration: none;\r\n+    color: #333;\r\n+    display: flex;\r\n+    align-items: center;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718421443378,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,5 +36,17 @@\n     text-decoration: none;\r\n     color: #333;\r\n     display: flex;\r\n     align-items: center;\r\n+}\r\n+\r\n+\r\n+.container-aside_tools .icono {\r\n+    width: 20px;\r\n+    height: 20px;\r\n+    margin-right: 10px;\r\n+}\r\n+\r\n+.container-aside_tools p {\r\n+    margin: 0;\r\n+    font-size: 16px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718421472155,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,14 +8,8 @@\n     text-align: center;\r\n     margin-bottom: 20px;\r\n }\r\n \r\n-.container-aside_user img {\r\n-    width: 80px;\r\n-    height: 80px;\r\n-    border-radius: 50%;\r\n-    margin-bottom: 10px;\r\n-}\r\n \r\n .container-aside_user p {\r\n     font-size: 18px;\r\n     font-weight: bold;\r\n"
+                },
+                {
+                    "date": 1718421508699,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n     width: 250px;\r\n     background-color: #f5f5f5;\r\n     border-right: 1px solid #ddd;\r\n     padding: 15px;\r\n+    height: 1000px;\r\n }\r\n .container-aside_user {\r\n     text-align: center;\r\n     margin-bottom: 20px;\r\n"
+                },
+                {
+                    "date": 1718421513862,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n     width: 250px;\r\n     background-color: #f5f5f5;\r\n     border-right: 1px solid #ddd;\r\n     padding: 15px;\r\n-    height: 1000px;\r\n+    height: 100px;\r\n }\r\n .container-aside_user {\r\n     text-align: center;\r\n     margin-bottom: 20px;\r\n"
+                },
+                {
+                    "date": 1718421557246,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n     width: 250px;\r\n     background-color: #f5f5f5;\r\n     border-right: 1px solid #ddd;\r\n     padding: 15px;\r\n-    height: 100px;\r\n+    height: ;\r\n }\r\n .container-aside_user {\r\n     text-align: center;\r\n     margin-bottom: 20px;\r\n"
+                },
+                {
+                    "date": 1718421577004,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n .container-aside {\r\n     width: 250px;\r\n-    background-color: #f5f5f5;\r\n+    background-color: #0F1A24;\r\n     border-right: 1px solid #ddd;\r\n     padding: 15px;\r\n-    height: ;\r\n+    height: 80vh;\r\n }\r\n .container-aside_user {\r\n     text-align: center;\r\n     margin-bottom: 20px;\r\n"
+                },
+                {
+                    "date": 1718421951016,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n     background-color: #0F1A24;\r\n     border-right: 1px solid #ddd;\r\n     padding: 15px;\r\n     height: 80vh;\r\n+    color: FFFFFF;\r\n }\r\n .container-aside_user {\r\n     text-align: center;\r\n     margin-bottom: 20px;\r\n"
+                },
+                {
+                    "date": 1718421969125,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,13 +3,13 @@\n     background-color: #0F1A24;\r\n     border-right: 1px solid #ddd;\r\n     padding: 15px;\r\n     height: 80vh;\r\n-    color: FFFFFF;\r\n }\r\n .container-aside_user {\r\n     text-align: center;\r\n     margin-bottom: 20px;\r\n+    color: #FFFFFF;\r\n }\r\n \r\n \r\n .container-aside_user p {\r\n"
+                },
+                {
+                    "date": 1718421976621,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,16 +7,17 @@\n }\r\n .container-aside_user {\r\n     text-align: center;\r\n     margin-bottom: 20px;\r\n-    color: #FFFFFF;\r\n }\r\n \r\n \r\n .container-aside_user p {\r\n     font-size: 18px;\r\n     font-weight: bold;\r\n     color: #333;\r\n+    color: #FFFFFF;\r\n+\r\n }\r\n \r\n .container-aside_tools ul {\r\n     list-style-type: none;\r\n"
+                },
+                {
+                    "date": 1718421984675,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,5 +45,7 @@\n \r\n .container-aside_tools p {\r\n     margin: 0;\r\n     font-size: 16px;\r\n+    color: #FFFFFF;\r\n+\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718422220428,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+\r\n+\r\n .container-aside {\r\n     width: 250px;\r\n     background-color: #0F1A24;\r\n     border-right: 1px solid #ddd;\r\n@@ -46,6 +48,5 @@\n .container-aside_tools p {\r\n     margin: 0;\r\n     font-size: 16px;\r\n     color: #FFFFFF;\r\n-\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718422227349,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,8 @@\n \r\n+p{\r\n+    font-family: '';\r\n+}\r\n \r\n .container-aside {\r\n     width: 250px;\r\n     background-color: #0F1A24;\r\n"
+                },
+                {
+                    "date": 1718422234359,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n \r\n p{\r\n-    font-family: '';\r\n+    font-family: 'Be Vietnam Pro';\r\n }\r\n \r\n .container-aside {\r\n     width: 250px;\r\n"
+                },
+                {
+                    "date": 1718497951408,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,22 +9,11 @@\n     border-right: 1px solid #ddd;\r\n     padding: 15px;\r\n     height: 80vh;\r\n }\r\n-.container-aside_user {\r\n-    text-align: center;\r\n-    margin-bottom: 20px;\r\n+ \r\n }\r\n \r\n-\r\n-.container-aside_user p {\r\n-    font-size: 18px;\r\n-    font-weight: bold;\r\n-    color: #333;\r\n-    color: #FFFFFF;\r\n-\r\n-}\r\n-\r\n .container-aside_tools ul {\r\n     list-style-type: none;\r\n     padding: 0;\r\n }\r\n"
+                },
+                {
+                    "date": 1718498029660,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,11 +9,10 @@\n     border-right: 1px solid #ddd;\r\n     padding: 15px;\r\n     height: 80vh;\r\n }\r\n- \r\n-}\r\n \r\n+\r\n .container-aside_tools ul {\r\n     list-style-type: none;\r\n     padding: 0;\r\n }\r\n@@ -40,5 +39,7 @@\n .container-aside_tools p {\r\n     margin: 0;\r\n     font-size: 16px;\r\n     color: #FFFFFF;\r\n-}\n\\ No newline at end of file\n+}\r\n+\r\n+.\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718498036368,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,5 +41,5 @@\n     font-size: 16px;\r\n     color: #FFFFFF;\r\n }\r\n \r\n-.\n\\ No newline at end of file\n+.container-aside_botonInferior\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718498046647,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,5 +41,7 @@\n     font-size: 16px;\r\n     color: #FFFFFF;\r\n }\r\n \r\n-.container-aside_botonInferior\n\\ No newline at end of file\n+.container-aside_botonInferior button{\r\n+    background-color: ;\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718498052089,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,6 +42,6 @@\n     color: #FFFFFF;\r\n }\r\n \r\n .container-aside_botonInferior button{\r\n-    background-color: ;\r\n+    background-color:#4947D2 ;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718498067249,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,6 +42,7 @@\n     color: #FFFFFF;\r\n }\r\n \r\n .container-aside_botonInferior button{\r\n-    background-color:#4947D2 ;\r\n+    color:#FFFFFF;\r\n+    background-color:#4947D2;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718498093650,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,7 +42,8 @@\n     color: #FFFFFF;\r\n }\r\n \r\n .container-aside_botonInferior button{\r\n+    \r\n     color:#FFFFFF;\r\n     background-color:#4947D2;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718498102293,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,8 +42,8 @@\n     color: #FFFFFF;\r\n }\r\n \r\n .container-aside_botonInferior button{\r\n-    \r\n+        width: ;\r\n     color:#FFFFFF;\r\n     background-color:#4947D2;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718498109073,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,8 +42,9 @@\n     color: #FFFFFF;\r\n }\r\n \r\n .container-aside_botonInferior button{\r\n-        width: ;\r\n+    border: ;\r\n+        width: 80%;\r\n     color:#FFFFFF;\r\n     background-color:#4947D2;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718498115449,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n     color: #FFFFFF;\r\n }\r\n \r\n .container-aside_botonInferior button{\r\n-    border: ;\r\n-        width: 80%;\r\n+    border: 5px;\r\n+    width: 80%;\r\n     color:#FFFFFF;\r\n     background-color:#4947D2;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718498120990,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,8 +42,9 @@\n     color: #FFFFFF;\r\n }\r\n \r\n .container-aside_botonInferior button{\r\n+    border-radius: 5px;\r\n     border: 5px;\r\n     width: 80%;\r\n     color:#FFFFFF;\r\n     background-color:#4947D2;\r\n"
+                },
+                {
+                    "date": 1718498135709,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     padding: 0;\r\n }\r\n \r\n .container-aside_tools li {\r\n-    margin-bottom: 10px;\r\n+    margin-bottom: 15px;\r\n }\r\n \r\n \r\n .container-aside_tools a {\r\n"
+                },
+                {
+                    "date": 1718498395138,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,8 +41,12 @@\n     font-size: 16px;\r\n     color: #FFFFFF;\r\n }\r\n \r\n+.container-aside_botonInferior{\r\n+    \r\n+}\r\n+\r\n .container-aside_botonInferior button{\r\n     border-radius: 5px;\r\n     border: 5px;\r\n     width: 80%;\r\n"
+                },
+                {
+                    "date": 1718498400979,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n     color: #FFFFFF;\r\n }\r\n \r\n .container-aside_botonInferior{\r\n-    \r\n+    align-;\r\n }\r\n \r\n .container-aside_botonInferior button{\r\n     border-radius: 5px;\r\n"
+                },
+                {
+                    "date": 1718498406536,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,11 @@\n     color: #FFFFFF;\r\n }\r\n \r\n .container-aside_botonInferior{\r\n-    align-;\r\n+\r\n+    \r\n+\r\n }\r\n \r\n .container-aside_botonInferior button{\r\n     border-radius: 5px;\r\n"
+                },
+                {
+                    "date": 1718498424552,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,14 +41,9 @@\n     font-size: 16px;\r\n     color: #FFFFFF;\r\n }\r\n \r\n-.container-aside_botonInferior{\r\n \r\n-    \r\n-\r\n-}\r\n-\r\n .container-aside_botonInferior button{\r\n     border-radius: 5px;\r\n     border: 5px;\r\n     width: 80%;\r\n"
+                },
+                {
+                    "date": 1718498433405,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,10 @@\n     background-color: #0F1A24;\r\n     border-right: 1px solid #ddd;\r\n     padding: 15px;\r\n     height: 80vh;\r\n+\r\n+    display: flex;\r\n }\r\n \r\n \r\n .container-aside_tools ul {\r\n"
+                },
+                {
+                    "date": 1718498439400,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,15 +3,17 @@\n     font-family: 'Be Vietnam Pro';\r\n }\r\n \r\n .container-aside {\r\n+\r\n+    display: flex;\r\n+    flex\r\n     width: 250px;\r\n     background-color: #0F1A24;\r\n     border-right: 1px solid #ddd;\r\n     padding: 15px;\r\n     height: 80vh;\r\n \r\n-    display: flex;\r\n }\r\n \r\n \r\n .container-aside_tools ul {\r\n"
+                },
+                {
+                    "date": 1718498450667,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,15 +5,14 @@\n \r\n .container-aside {\r\n \r\n     display: flex;\r\n-    flex\r\n+    flex-direction: column;\r\n     width: 250px;\r\n     background-color: #0F1A24;\r\n     border-right: 1px solid #ddd;\r\n     padding: 15px;\r\n     height: 80vh;\r\n-\r\n }\r\n \r\n \r\n .container-aside_tools ul {\r\n"
+                },
+                {
+                    "date": 1718498458892,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,11 @@\n     font-size: 16px;\r\n     color: #FFFFFF;\r\n }\r\n \r\n-\r\n+.container-aside_botonInferior{\r\n+    \r\n+}\r\n .container-aside_botonInferior button{\r\n     border-radius: 5px;\r\n     border: 5px;\r\n     width: 80%;\r\n"
+                },
+                {
+                    "date": 1718498479955,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,10 +45,9 @@\n     color: #FFFFFF;\r\n }\r\n \r\n .container-aside_botonInferior{\r\n-    \r\n-}\r\n+align-self: ;}\r\n .container-aside_botonInferior button{\r\n     border-radius: 5px;\r\n     border: 5px;\r\n     width: 80%;\r\n"
+                },
+                {
+                    "date": 1718498487098,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,10 @@\n     color: #FFFFFF;\r\n }\r\n \r\n .container-aside_botonInferior{\r\n-align-self: ;}\r\n+    align-self: flex-end;\r\n+}\r\n .container-aside_botonInferior button{\r\n     border-radius: 5px;\r\n     border: 5px;\r\n     width: 80%;\r\n"
+                },
+                {
+                    "date": 1718498495992,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n     color: #FFFFFF;\r\n }\r\n \r\n .container-aside_botonInferior{\r\n-    align-self: flex-end;\r\n+    align-self: ;\r\n }\r\n .container-aside_botonInferior button{\r\n     border-radius: 5px;\r\n     border: 5px;\r\n"
+                },
+                {
+                    "date": 1718498505637,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n     color: #FFFFFF;\r\n }\r\n \r\n .container-aside_botonInferior{\r\n-    align-self: ;\r\n+    align-self: baseline;\r\n }\r\n .container-aside_botonInferior button{\r\n     border-radius: 5px;\r\n     border: 5px;\r\n"
+                },
+                {
+                    "date": 1718498511425,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n     color: #FFFFFF;\r\n }\r\n \r\n .container-aside_botonInferior{\r\n-    align-self: baseline;\r\n+    ju\r\n }\r\n .container-aside_botonInferior button{\r\n     border-radius: 5px;\r\n     border: 5px;\r\n"
+                },
+                {
+                    "date": 1718498538796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,14 +44,5 @@\n     font-size: 16px;\r\n     color: #FFFFFF;\r\n }\r\n \r\n-.container-aside_botonInferior{\r\n-    ju\r\n-}\r\n-.container-aside_botonInferior button{\r\n-    border-radius: 5px;\r\n-    border: 5px;\r\n-    width: 80%;\r\n-    color:#FFFFFF;\r\n-    background-color:#4947D2;\r\n-}\n\\ No newline at end of file\n+ \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718498573191,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,8 @@\n     font-family: 'Be Vietnam Pro';\r\n }\r\n \r\n .container-aside {\r\n-\r\n     display: flex;\r\n     flex-direction: column;\r\n     width: 250px;\r\n     background-color: #0F1A24;\r\n"
+                },
+                {
+                    "date": 1718498579346,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n \r\n .container-aside {\r\n     display: flex;\r\n     flex-direction: column;\r\n+    gap: 10px;\r\n     width: 250px;\r\n     background-color: #0F1A24;\r\n     border-right: 1px solid #ddd;\r\n     padding: 15px;\r\n"
+                },
+                {
+                    "date": 1718498584608,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,8 @@\n \r\n .container-aside {\r\n     display: flex;\r\n     flex-direction: column;\r\n-    gap: 10px;\r\n     width: 250px;\r\n     background-color: #0F1A24;\r\n     border-right: 1px solid #ddd;\r\n     padding: 15px;\r\n"
+                },
+                {
+                    "date": 1718498590667,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,8 @@\n     font-family: 'Be Vietnam Pro';\r\n }\r\n \r\n .container-aside {\r\n-    display: flex;\r\n-    flex-direction: column;\r\n     width: 250px;\r\n     background-color: #0F1A24;\r\n     border-right: 1px solid #ddd;\r\n     padding: 15px;\r\n"
+                },
+                {
+                    "date": 1718498596914,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,12 @@\n }\r\n \r\n \r\n .container-aside_tools ul {\r\n+    display: flex;\r\n+    flex-direction: column;\r\n+}\r\n+.container-aside_tools ul {\r\n     list-style-type: none;\r\n     padding: 0;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1718498605367,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,11 +11,12 @@\n     height: 80vh;\r\n }\r\n \r\n \r\n-.container-aside_tools ul {\r\n+.container-aside_tools {\r\n     display: flex;\r\n     flex-direction: column;\r\n+    gap: 10p´x;\r\n }\r\n .container-aside_tools ul {\r\n     list-style-type: none;\r\n     padding: 0;\r\n"
+                },
+                {
+                    "date": 1718498614518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,11 +12,9 @@\n }\r\n \r\n \r\n .container-aside_tools {\r\n-    display: flex;\r\n-    flex-direction: column;\r\n-    gap: 10p´x;\r\n+\r\n }\r\n .container-aside_tools ul {\r\n     list-style-type: none;\r\n     padding: 0;\r\n"
+                },
+                {
+                    "date": 1718498623732,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,12 +11,13 @@\n     height: 80vh;\r\n }\r\n \r\n \r\n-.container-aside_tools {\r\n \r\n-}\r\n .container-aside_tools ul {\r\n+    display: flex;\r\n+    flex-direction: column;\r\n+    gap: 10px;\r\n     list-style-type: none;\r\n     padding: 0;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1718498681572,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,12 @@\n     margin-bottom: 15px;\r\n }\r\n \r\n \r\n+.container-aside_tools li {\r\n+    margin-bottom: 15px;\r\n+}\r\n+\r\n .container-aside_tools a {\r\n     text-decoration: none;\r\n     color: #333;\r\n     display: flex;\r\n"
+                },
+                {
+                    "date": 1718498696627,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n     list-style-type: none;\r\n     padding: 0;\r\n }\r\n \r\n-.container-aside_tools li {\r\n+.li {\r\n     margin-bottom: 15px;\r\n }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1718498704964,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,26 +11,24 @@\n     height: 80vh;\r\n }\r\n \r\n \r\n+.container-aside_tools {\r\n \r\n+}\r\n .container-aside_tools ul {\r\n-    display: flex;\r\n+        display: flex;\r\n     flex-direction: column;\r\n     gap: 10px;\r\n     list-style-type: none;\r\n     padding: 0;\r\n }\r\n \r\n-.li {\r\n+.container-aside_tools li {\r\n     margin-bottom: 15px;\r\n }\r\n \r\n \r\n-.container-aside_tools li {\r\n-    margin-bottom: 15px;\r\n-}\r\n-\r\n .container-aside_tools a {\r\n     text-decoration: none;\r\n     color: #333;\r\n     display: flex;\r\n"
+                },
+                {
+                    "date": 1718498711443,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,13 +11,11 @@\n     height: 80vh;\r\n }\r\n \r\n \r\n-.container-aside_tools {\r\n \r\n-}\r\n .container-aside_tools ul {\r\n-        display: flex;\r\n+    display: flex;\r\n     flex-direction: column;\r\n     gap: 10px;\r\n     list-style-type: none;\r\n     padding: 0;\r\n@@ -26,9 +24,13 @@\n .container-aside_tools li {\r\n     margin-bottom: 15px;\r\n }\r\n \r\n+.container-aside_tools li {\r\n+    margin-bottom: 15px;\r\n+}\r\n \r\n+\r\n .container-aside_tools a {\r\n     text-decoration: none;\r\n     color: #333;\r\n     display: flex;\r\n"
+                },
+                {
+                    "date": 1718498722841,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n .container-aside_tools li {\r\n     margin-bottom: 15px;\r\n }\r\n \r\n-.container-aside_tools li {\r\n+.link-tool :hover{\r\n     margin-bottom: 15px;\r\n }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1718498728226,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n     margin-bottom: 15px;\r\n }\r\n \r\n .link-tool :hover{\r\n-    color:#0F1A24\r\n+    color:#0F1A24;\r\n }\r\n \r\n \r\n .container-aside_tools a {\r\n"
+                },
+                {
+                    "date": 1718499016428,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,5 +49,5 @@\n     font-size: 16px;\r\n     color: #FFFFFF;\r\n }\r\n \r\n-.link-tool a:_\n\\ No newline at end of file\n+.link-tool a:\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1718421385102,
+            "name": "Commit-0",
+            "content": ".container-aside {\r\n    width: 250px;\r\n    background-color: #f5f5f5;\r\n    border-right: 1px solid #ddd;\r\n    padding: 15px;\r\n}\r\n"
+        }
+    ]
+}

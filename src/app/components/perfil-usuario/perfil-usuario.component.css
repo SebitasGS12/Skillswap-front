@@ -1,0 +1,93 @@
+.container_principal{
+    font-family: 'Be Vietnam Pro';
+    display: flex;
+    flex-direction: column;
+    padding: 30px 10%;
+    gap: 20px;
+    background-color: #0F1A24;
+    color:#FFFFFF;
+}
+
+.principal_banner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.banner_datos{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.datos_user{
+    text-align: start;
+}
+.datos_user-info p{
+    margin:0;
+}   
+.banner_boton{
+    margin-left: 10px;
+}
+
+.button_banner{
+    background-color: white;
+    color:black;    
+}
+.button_banner:hover{
+    background-color: black;
+    color:white;
+    transition:  background-color .3s ease;    
+}
+.info_text {
+    padding: 10px 0;
+}
+.info_text h4{
+    width: 100%;
+    font-size: 1em;
+}
+
+.info_categoria{
+
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.info_categoria-last-button{
+    margin-left: auto;
+}
+
+.principal_foros{
+    margin-top: 10px;
+}
+
+.foros_contenido-item{
+    display: flex;
+    flex-direction: row;
+
+    margin:20px 0;
+}
+.foro_info{
+    font-size: .5em;
+
+}
+.principal_foros h1{
+    margin-bottom: 10px;
+}
+.foro_info a {
+    margin-top: 5px;
+    width: 150px;
+    padding: 5px;
+    background-color: #6383D6;
+}
+
+.foro_info a:hover {
+    background-color: #0F1A24;
+    color: white;
+}
+
+
+.foro_img{
+    margin-left: auto;
+}
