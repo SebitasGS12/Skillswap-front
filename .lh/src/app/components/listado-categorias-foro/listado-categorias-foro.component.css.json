@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/app/components/listado-categorias-foro/listado-categorias-foro.component.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1719634485556,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1719634495796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,4 @@\n-@import '~bootstrap/dist/css/bootstrap.min.css';\r\n-\r\n .container {\r\n     max-width: 100%;\r\n   }\r\n   \r\n"
+                }
+            ],
+            "date": 1719634485556,
+            "name": "Commit-0",
+            "content": "@import '~bootstrap/dist/css/bootstrap.min.css';\r\n\r\n.container {\r\n    max-width: 100%;\r\n  }\r\n  \r\n  .card {\r\n    margin-bottom: 1.5rem;\r\n  }\r\n  \r\n  .card-header {\r\n    padding: 0.75rem 1.25rem;\r\n  }\r\n  \r\n  .card-body {\r\n    padding: 1.25rem;\r\n  }\r\n  \r\n  .form-control {\r\n    margin-bottom: 1rem;\r\n  }\r\n  \r\n  .pagination {\r\n    margin-top: 2rem;\r\n  }\r\n  \r\n  .page-link {\r\n    color: #007bff;\r\n  }\r\n  \r\n  .page-link:hover {\r\n    color: #0056b3;\r\n  }\r\n  \r\n  .btn-outline-light {\r\n    border-color: white;\r\n    color: white;\r\n  }\r\n  \r\n  .btn-outline-light:hover {\r\n    background-color: white;\r\n    color: black;\r\n  }\r\n  "
+        }
+    ]
+}

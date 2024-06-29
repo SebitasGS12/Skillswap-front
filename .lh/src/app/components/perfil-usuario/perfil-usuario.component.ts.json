@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 10,
+            "activePatchIndex": 11,
             "patches": [
                 {
                     "date": 1718509405824,
@@ -48,6 +48,10 @@
                 {
                     "date": 1718672552765,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,12 @@\n   styleUrl: './perfil-usuario.component.css'\r\n })\r\n export class PerfilUsuarioComponent {\r\n   items:string[] = ['Modas',\r\n-    'Liderazgo'];\r\n+    'Liderazgo',\r\n+    'Liderazgo'\r\n+  \r\n+  ];\r\n   foros:string[] = ['Como pasar de una diseñadora a una emprendedora',\r\n     'Guia para construir un sistema de diseño',\r\n     'Guia para construir un sistema de diseño'\r\n   \r\n"
+                },
+                {
+                    "date": 1719635033730,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,13 @@\n import { Component } from '@angular/core';\r\n+import { HeaderComponent } from \"../header/header.component\";\r\n \r\n @Component({\r\n-  selector: 'app-perfil-usuario',\r\n-  standalone: true,\r\n-  imports: [],\r\n-  templateUrl: './perfil-usuario.component.html',\r\n-  styleUrl: './perfil-usuario.component.css'\r\n+    selector: 'app-perfil-usuario',\r\n+    standalone: true,\r\n+    templateUrl: './perfil-usuario.component.html',\r\n+    styleUrl: './perfil-usuario.component.css',\r\n+    imports: [HeaderComponent]\r\n })\r\n export class PerfilUsuarioComponent {\r\n   items:string[] = ['Modas',\r\n     'Liderazgo',\r\n"
                 }
             ],
             "date": 1718509405824,

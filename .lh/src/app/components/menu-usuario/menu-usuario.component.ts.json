@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/app/components/menu-usuario/menu-usuario.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1719619921608,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1719619932671,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,11 @@\n+import { CommonModule } from '@angular/common';\r\n import { Component } from '@angular/core';\r\n \r\n @Component({\r\n   selector: 'app-menu-usuario',\r\n   standalone: true,\r\n-  imports: [Com],\r\n+  imports: [CommonModule],\r\n   templateUrl: './menu-usuario.component.html',\r\n   styleUrl: './menu-usuario.component.css'\r\n })\r\n export class MenuUsuarioComponent {\r\n"
+                },
+                {
+                    "date": 1719619966494,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,14 @@\n import { CommonModule } from '@angular/common';\r\n import { Component } from '@angular/core';\r\n+import { HeaderComponent } from \"../header/header.component\";\r\n \r\n @Component({\r\n-  selector: 'app-menu-usuario',\r\n-  standalone: true,\r\n-  imports: [CommonModule],\r\n-  templateUrl: './menu-usuario.component.html',\r\n-  styleUrl: './menu-usuario.component.css'\r\n+    selector: 'app-menu-usuario',\r\n+    standalone: true,\r\n+    templateUrl: './menu-usuario.component.html',\r\n+    styleUrl: './menu-usuario.component.css',\r\n+    imports: [CommonModule, HeaderComponent]\r\n })\r\n export class MenuUsuarioComponent {\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719620338764,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,15 @@\n import { CommonModule } from '@angular/common';\r\n import { Component } from '@angular/core';\r\n import { HeaderComponent } from \"../header/header.component\";\r\n+import { AsideComponent } from \"../aside/aside.component\";\r\n \r\n @Component({\r\n     selector: 'app-menu-usuario',\r\n     standalone: true,\r\n     templateUrl: './menu-usuario.component.html',\r\n     styleUrl: './menu-usuario.component.css',\r\n-    imports: [CommonModule, HeaderComponent]\r\n+    imports: [CommonModule, HeaderComponent, AsideComponent]\r\n })\r\n export class MenuUsuarioComponent {\r\n \r\n }\r\n"
+                }
+            ],
+            "date": 1719619921608,
+            "name": "Commit-0",
+            "content": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-menu-usuario',\r\n  standalone: true,\r\n  imports: [Com],\r\n  templateUrl: './menu-usuario.component.html',\r\n  styleUrl: './menu-usuario.component.css'\r\n})\r\nexport class MenuUsuarioComponent {\r\n\r\n}\r\n"
+        }
+    ]
+}

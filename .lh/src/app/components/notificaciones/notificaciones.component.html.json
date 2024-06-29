@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/app/components/notificaciones/notificaciones.component.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1719630132052,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1719635065103,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,7 @@\n+<app-header></app-header>\r\n+<div class=\"division\">\r\n+  <app-aside></app-aside>\r\n <div class=\"body\">\r\n     <h1>Notificaciones</h1>\r\n     <div class=\"container\">\r\n         <div class=\"tabs\">\r\n"
+                },
+                {
+                    "date": 1719635071120,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,5 +51,6 @@\n                 <span class=\"time\">12:00 PM</span>\r\n             </div>\r\n         </div>\r\n     </div>\r\n+</div>\r\n </div>\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1719630132052,
+            "name": "Commit-0",
+            "content": "<div class=\"body\">\r\n    <h1>Notificaciones</h1>\r\n    <div class=\"container\">\r\n        <div class=\"tabs\">\r\n            <div class=\"tab-button\">Todos</div>\r\n            <div class=\"tab-button\">Menciones</div>\r\n            <div class=\"tab-button\">Interacciones</div>\r\n        </div>\r\n        <div class=\"tab-content\">\r\n            <div class=\"notification\">\r\n                <img src=\"https://img.freepik.com/foto-gratis/cerrar-lindo-gato-interior_23-2148882585.jpg?t=st=1719293832~exp=1719297432~hmac=9ef9fff465d15a1a5a3d7d2bcdc7ca2b2e380ec4f504344d5a58392dc55297ad&w=740\" alt=\"avatar\">\r\n                <div class=\"text\">\r\n                    <p>Nueva respuesta en el hilo que sigues</p>\r\n                    <span>Hace 2 h</span>\r\n                </div>\r\n                <span class=\"time\">12:00 PM</span>\r\n            </div>\r\n            <div class=\"notification\">\r\n                <img src=\"https://img.freepik.com/foto-gratis/perro-feliz-naturaleza_23-2148882552.jpg?t=st=1719293846~exp=1719297446~hmac=e8890d8a3bedeecee0b4de577a864a5fb099753af3ba7d100eb120e6f585a1f8&w=740\" alt=\"avatar\">\r\n                <div class=\"text\">\r\n                    <p>Mencionado en un hilo</p>\r\n                    <span>Hace 1 h</span>\r\n                </div>\r\n                <span class=\"time\">12:00 PM</span>\r\n            </div>\r\n            <div class=\"notification\">\r\n                <img src=\"https://img.freepik.com/foto-gratis/pintura-casa-techo-rojo-luna-al-fondo_1340-33574.jpg?w=900&t=st=1719296788~exp=1719297388~hmac=a9c2e213e60121b1167274e3251eaa25cfc76d9ab7544d812abb98bb16834432\" alt=\"avatar\">\r\n                <div class=\"text\">\r\n                    <p>Nuevo seguidor</p>\r\n                    <span>Hace 3 d</span>\r\n                </div>\r\n                <span class=\"time\">12:00 PM</span>\r\n            </div>\r\n            <div class=\"notification\">\r\n                <img src=\"https://img.freepik.com/foto-gratis/pintura-bosque-rio-primer-plano_1340-27682.jpg?w=740&t=st=1719296802~exp=1719297402~hmac=77412e2f4346370c8c09ea6b918655523791b2b3fc5fee062f62b15a03c2d936\" alt=\"avatar\">\r\n                <div class=\"text\">\r\n                    <p>Nuevo seguidor</p>\r\n                    <span>Hace 3 d</span>\r\n                </div>\r\n                <span class=\"time\">12:00 PM</span>\r\n            </div>\r\n            <div class=\"notification\">\r\n                <img src=\"https://img.freepik.com/foto-gratis/pintura-cascada-bosque-fondo-verde_1340-27149.jpg?w=1380&t=st=1719296837~exp=1719297437~hmac=947af02d4e9d148e44975142345ca903ac1078b1c7bdc1af7ea2f660e0742068\" alt=\"avatar\">\r\n                <div class=\"text\">\r\n                    <p>Nuevo seguidor</p>\r\n                    <span>Hace 3 d</span>\r\n                </div>\r\n                <span class=\"time\">12:00 PM</span>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
+        }
+    ]
+}

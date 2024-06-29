@@ -7,7 +7,7 @@ p {
     background-color: #0F1A24;
     border-right: 1px solid #ddd;
     padding: 15px;
-    height: 80vh;
+    height: 100%;
     overflow-y: auto;
     position: relative;
 

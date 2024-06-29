@@ -1,0 +1,74 @@
+{
+    "sourceFile": "src/app/components/menu-principal/menu-principal.component.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 14,
+            "patches": [
+                {
+                    "date": 1719612199255,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1719612204920,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n         <h1>SkillSwap</h1>\r\n     </div>\r\n     <div>\r\n         <a href=\"/iniciarSesion\" class=\"login\">Iniciar Sesión</a>\r\n-        <a href=\"#\" class=\"registrar\">Registrarse</a>\r\n+        <a href=\"/registarse\" class=\"registrar\">Registrarse</a>\r\n     </div>\r\n </header>\r\n <section class=\"bienvenido\">\r\n     <div class=\"carrusel\">\r\n"
+                },
+                {
+                    "date": 1719612937597,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,10 @@\n         <img src=\"./assets/images/logo.png\" alt=\"SkillSwap Logo\">\r\n         <h1>SkillSwap</h1>\r\n     </div>\r\n     <div>\r\n-        <a href=\"/iniciarSesion\" class=\"login\">Iniciar Sesión</a>\r\n-        <a href=\"/registarse\" class=\"registrar\">Registrarse</a>\r\n+        <a routerLink=\"/iniciarSesion\" class=\"login\">Iniciar Sesión</a>\r\n+        <a routerLink=\"/registarse\" class=\"registrar\">Registrarse</a>\r\n     </div>\r\n </header>\r\n <section class=\"bienvenido\">\r\n     <div class=\"carrusel\">\r\n"
+                },
+                {
+                    "date": 1719613153637,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,8 @@\n         <h1>SkillSwap</h1>\r\n     </div>\r\n     <div>\r\n         <a routerLink=\"/iniciarSesion\" class=\"login\">Iniciar Sesión</a>\r\n-        <a routerLink=\"/registarse\" class=\"registrar\">Registrarse</a>\r\n     </div>\r\n </header>\r\n <section class=\"bienvenido\">\r\n     <div class=\"carrusel\">\r\n"
+                },
+                {
+                    "date": 1719613209788,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n         <img src=\"./assets/images/logo.png\" alt=\"SkillSwap Logo\">\r\n         <h1>SkillSwap</h1>\r\n     </div>\r\n     <div>\r\n-        <a routerLink=\"/iniciarSesion\" class=\"login\">Iniciar Sesión</a>\r\n+        <a [routerLink]=\"['/routePath']\" routerLinkActive=\"router-link-active\" =\"/iniciarSesion\" class=\"login\">Iniciar Sesión</a>\r\n     </div>\r\n </header>\r\n <section class=\"bienvenido\">\r\n     <div class=\"carrusel\">\r\n"
+                },
+                {
+                    "date": 1719613219052,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n         <img src=\"./assets/images/logo.png\" alt=\"SkillSwap Logo\">\r\n         <h1>SkillSwap</h1>\r\n     </div>\r\n     <div>\r\n-        <a [routerLink]=\"['/routePath']\" routerLinkActive=\"router-link-active\" =\"/iniciarSesion\" class=\"login\">Iniciar Sesión</a>\r\n+        <a [routerLink]=\"['/iniciarSesion']\" class=\"login\">Iniciar Sesión</a>\r\n     </div>\r\n </header>\r\n <section class=\"bienvenido\">\r\n     <div class=\"carrusel\">\r\n"
+                },
+                {
+                    "date": 1719613256978,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n         <img src=\"./assets/images/logo.png\" alt=\"SkillSwap Logo\">\r\n         <h1>SkillSwap</h1>\r\n     </div>\r\n     <div>\r\n-        <a [routerLink]=\"['/iniciarSesion']\" class=\"login\">Iniciar Sesión</a>\r\n+        <a class=\"login\">Iniciar Sesión</a>\r\n     </div>\r\n </header>\r\n <section class=\"bienvenido\">\r\n     <div class=\"carrusel\">\r\n"
+                },
+                {
+                    "date": 1719613262965,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n     <div class=\"logo\">\r\n         <img src=\"./assets/images/logo.png\" alt=\"SkillSwap Logo\">\r\n         <h1>SkillSwap</h1>\r\n     </div>\r\n-    <div>\r\n+    <nav></nav>\r\n         <a class=\"login\">Iniciar Sesión</a>\r\n     </div>\r\n </header>\r\n <section class=\"bienvenido\">\r\n"
+                },
+                {
+                    "date": 1719613270064,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,11 +3,12 @@\n     <div class=\"logo\">\r\n         <img src=\"./assets/images/logo.png\" alt=\"SkillSwap Logo\">\r\n         <h1>SkillSwap</h1>\r\n     </div>\r\n-    <nav></nav>\r\n+    <nav>\r\n         <a class=\"login\">Iniciar Sesión</a>\r\n-    </div>\r\n+    </nav>\r\n+    \r\n </header>\r\n <section class=\"bienvenido\">\r\n     <div class=\"carrusel\">\r\n         <img src=\"./assets/images/banner.jpg\" alt=\"Imagen 1\" class=\"activa\">\r\n"
+                },
+                {
+                    "date": 1719613277497,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,10 @@\n         <img src=\"./assets/images/logo.png\" alt=\"SkillSwap Logo\">\r\n         <h1>SkillSwap</h1>\r\n     </div>\r\n     <nav>\r\n-        <a class=\"login\">Iniciar Sesión</a>\r\n+        a-r\r\n+        <a  class=\"login\">Iniciar Sesión</a>\r\n     </nav>\r\n     \r\n </header>\r\n <section class=\"bienvenido\">\r\n"
+                },
+                {
+                    "date": 1719613283146,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n         <img src=\"./assets/images/logo.png\" alt=\"SkillSwap Logo\">\r\n         <h1>SkillSwap</h1>\r\n     </div>\r\n     <nav>\r\n-        a-r\r\n+        \r\n         <a  class=\"login\">Iniciar Sesión</a>\r\n     </nav>\r\n     \r\n </header>\r\n"
+                },
+                {
+                    "date": 1719613309032,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n         <h1>SkillSwap</h1>\r\n     </div>\r\n     <nav>\r\n         \r\n-        <a  class=\"login\">Iniciar Sesión</a>\r\n+        <a [routerLink]=\"['/iniciarSesion']\" class=\"login\">Iniciar Sesión</a>\r\n     </nav>\r\n     \r\n </header>\r\n <section class=\"bienvenido\">\r\n"
+                },
+                {
+                    "date": 1719613676139,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,12 +3,11 @@\n     <div class=\"logo\">\r\n         <img src=\"./assets/images/logo.png\" alt=\"SkillSwap Logo\">\r\n         <h1>SkillSwap</h1>\r\n     </div>\r\n-    <nav>\r\n-        \r\n+    <div>\r\n         <a [routerLink]=\"['/iniciarSesion']\" class=\"login\">Iniciar Sesión</a>\r\n-    </nav>\r\n+    </div>\r\n     \r\n </header>\r\n <section class=\"bienvenido\">\r\n     <div class=\"carrusel\">\r\n"
+                },
+                {
+                    "date": 1719613689299,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n         <img src=\"./assets/images/logo.png\" alt=\"SkillSwap Logo\">\r\n         <h1>SkillSwap</h1>\r\n     </div>\r\n     <div>\r\n-        <a [routerLink]=\"['/iniciarSesion']\" class=\"login\">Iniciar Sesión</a>\r\n+        <a [routerLink]=\"['iniciarSesion']\" class=\"login\">Iniciar Sesión</a>\r\n     </div>\r\n     \r\n </header>\r\n <section class=\"bienvenido\">\r\n"
+                },
+                {
+                    "date": 1719613704002,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n         <img src=\"./assets/images/logo.png\" alt=\"SkillSwap Logo\">\r\n         <h1>SkillSwap</h1>\r\n     </div>\r\n     <div>\r\n-        <a [routerLink]=\"['iniciarSesion']\" class=\"login\">Iniciar Sesión</a>\r\n+        <a [routerLink]=\"['/iniciarSesion']\" class=\"login\">Iniciar Sesión</a>\r\n     </div>\r\n     \r\n </header>\r\n <section class=\"bienvenido\">\r\n"
+                }
+            ],
+            "date": 1719612199255,
+            "name": "Commit-0",
+            "content": "<!-- src/app/menu-principal/menu-principal.component.html -->\r\n<header>\r\n    <div class=\"logo\">\r\n        <img src=\"./assets/images/logo.png\" alt=\"SkillSwap Logo\">\r\n        <h1>SkillSwap</h1>\r\n    </div>\r\n    <div>\r\n        <a href=\"/iniciarSesion\" class=\"login\">Iniciar Sesión</a>\r\n        <a href=\"#\" class=\"registrar\">Registrarse</a>\r\n    </div>\r\n</header>\r\n<section class=\"bienvenido\">\r\n    <div class=\"carrusel\">\r\n        <img src=\"./assets/images/banner.jpg\" alt=\"Imagen 1\" class=\"activa\">\r\n        <img src=\"./assets/images/banner1.jpg\" alt=\"Imagen 2\">\r\n        <img src=\"./assets/images/banner2.jpg\" alt=\"Imagen 3\">\r\n        <img src=\"./assets/images/banner3.jpg\" alt=\"Imagen 4\">\r\n        <div class=\"carrusel-movimiento\">\r\n            <div class=\"activa\" data-slide=\"0\"></div>\r\n            <div data-slide=\"1\"></div>\r\n            <div data-slide=\"2\"></div>\r\n            <div data-slide=\"3\"></div>\r\n        </div>\r\n    </div>\r\n    <div class=\"contenido\">\r\n        <h1>Bienvenido a SkillSwap</h1>\r\n        <p>Conéctese con personas que pueden ayudarlo a aprender nuevas<br>\r\n            habilidades o compartir su experiencia con otros.</p>\r\n        <div class=\"buscar\">\r\n            <div class=\"buscar-input\">\r\n                <input type=\"text\" placeholder=\"Buscar una habilidad, materia o tema.\">\r\n                <img src=\"./assets/images/buscar.png\" alt=\"Icono Lupa\">\r\n                <button>Buscar</button>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</section>\r\n<h2>Explora por las Categorias:</h2>\r\n<section class=\"categorias\">\r\n    <div>\r\n        <img src=\"./assets/images/programacion.jpg\" alt=\"Programación\">\r\n        <p>Programación</p>\r\n    </div>\r\n    <div>\r\n        <img src=\"./assets/images/escritura.jpg\" alt=\"Escritura\">\r\n        <p>Escritura</p>\r\n    </div>\r\n    <div>\r\n        <img src=\"./assets/images/cocina.jpg\" alt=\"Cocina\">\r\n        <p>Cocina</p>\r\n    </div>\r\n    <div>\r\n        <img src=\"./assets/images/fotografia.jpg\" alt=\"Fotografía\">\r\n        <p>Fotografía</p>\r\n    </div>\r\n    <div>\r\n        <img src=\"./assets/images/musica.jpg\" alt=\"Música\">\r\n        <p>Música</p>\r\n    </div>\r\n</section>\r\n"
+        }
+    ]
+}

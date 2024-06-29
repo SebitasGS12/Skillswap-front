@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/components/notificaciones/notificaciones.component.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1719630124790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1719630124790,
+            "name": "Commit-0",
+            "content": ".body {\r\n    font-family: Arial, sans-serif;\r\n    background-color: #0F1A24;\r\n    color: #ffffff;\r\n    margin: 0;\r\n    padding: 0;\r\n}\r\n\r\n.container {\r\n    max-width: 600px;\r\n    margin: 20px auto;\r\n    padding: 20px;\r\n    background-color: #0F1A24;\r\n    border-radius: 10px;\r\n    border: solid #3533CD;\r\n    min-height: 100vh;\r\n}\r\n\r\nh1 {\r\n    text-align: center;\r\n    font-size: 24px;\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.tabs {\r\n    display: flex;\r\n    justify-content: space-around;\r\n    margin-bottom: 20px;\r\n    border-bottom: 2px solid #3533CD;\r\n}\r\n\r\n.tab-button {\r\n    background: none;\r\n    border: none;\r\n    color: #ffffff;\r\n    font-size: 18px;\r\n    cursor: pointer;\r\n    padding: 10px 20px;\r\n    border-bottom: 2px solid transparent;\r\n}\r\n\r\n.tab-content {\r\n    display: block;\r\n}\r\n\r\n.notification {\r\n    display: flex;\r\n    align-items: center;\r\n    padding: 10px;\r\n}\r\n\r\n.notification img {\r\n    width: 60px;\r\n    height: 60px;\r\n    border-radius: 50%;\r\n    margin-right: 15px;\r\n}\r\n\r\n.text {\r\n    flex-grow: 1;\r\n}\r\n\r\n.text p {\r\n    margin: 0;\r\n    font-size: 16px;\r\n}\r\n\r\n.text span {\r\n    font-size: 12px;\r\n    color: #a0a0b8;\r\n}\r\n\r\n.time {\r\n    font-size: 12px;\r\n    color: #a0a0b8;\r\n}"
+        }
+    ]
+}

@@ -1,0 +1,58 @@
+{
+    "sourceFile": "src/app/service/perfilService.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1719627976107,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1719627983792,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n @Injectable({\r\n     providedIn:'root'\r\n })\r\n export class PefilService {\r\n-    private baseUrl = Datos.API_URL+\"Sesion\" ;\r\n+    private baseUrl = Datos.API_URL+\"Perfil\" ;\r\n     constructor(private http: HttpClient){}\r\n \r\n     public obtenerSesion(): Observable<Sesion> {\r\n         return this.http.get<any>(this.baseUrl+'/actual');\r\n"
+                },
+                {
+                    "date": 1719627989125,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n export class PefilService {\r\n     private baseUrl = Datos.API_URL+\"Perfil\" ;\r\n     constructor(private http: HttpClient){}\r\n \r\n-    public obtenerSesion(): Observable<Sesion> {\r\n+    public obtenerPerfilByUsuario(): Observable<Sesion> {\r\n         return this.http.get<any>(this.baseUrl+'/actual');\r\n     }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719627998612,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n export class PefilService {\r\n     private baseUrl = Datos.API_URL+\"Perfil\" ;\r\n     constructor(private http: HttpClient){}\r\n \r\n-    public obtenerPerfilByUsuario(): Observable<Sesion> {\r\n+    public obtenerPerfilByUsuario(usuario:Usuario): Observable<Perfil> {\r\n         return this.http.get<any>(this.baseUrl+'/actual');\r\n     }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719628005695,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n import { Observable } from \"rxjs\";\r\n import { Amistades } from \"../models/amistades\";\r\n import { Usuario } from \"../models/usuario\";\r\n import { Sesion } from \"../models/sesion\";\r\n+import { Perfil } from \"../models/perfil\";\r\n \r\n \r\n @Injectable({\r\n     providedIn:'root'\r\n"
+                },
+                {
+                    "date": 1719628014163,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,8 @@\n     private baseUrl = Datos.API_URL+\"Perfil\" ;\r\n     constructor(private http: HttpClient){}\r\n \r\n     public obtenerPerfilByUsuario(usuario:Usuario): Observable<Perfil> {\r\n-        return this.http.get<any>(this.baseUrl+'/actual');\r\n+        return this.http.get<any>(this.baseUrl+'/actual'+´usuario.´);\r\n     }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719628025100,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,8 @@\n     private baseUrl = Datos.API_URL+\"Perfil\" ;\r\n     constructor(private http: HttpClient){}\r\n \r\n     public obtenerPerfilByUsuario(usuario:Usuario): Observable<Perfil> {\r\n-        return this.http.get<any>(this.baseUrl+'/actual'+´usuario.´);\r\n+        return this.http.get<any>(this.baseUrl+'/actual'+usuario.usuarioId´);\r\n     }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719628032402,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,8 @@\n     private baseUrl = Datos.API_URL+\"Perfil\" ;\r\n     constructor(private http: HttpClient){}\r\n \r\n     public obtenerPerfilByUsuario(usuario:Usuario): Observable<Perfil> {\r\n-        return this.http.get<any>(this.baseUrl+'/actual'+usuario.usuarioId´);\r\n+        return this.http.get<any>(this.baseUrl+'/usuario/'+usuario.usuarioId);\r\n     }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719628064027,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \r\n @Injectable({\r\n     providedIn:'root'\r\n })\r\n-export class PefilService {\r\n+export class PefrilService {\r\n     private baseUrl = Datos.API_URL+\"Perfil\" ;\r\n     constructor(private http: HttpClient){}\r\n \r\n     public obtenerPerfilByUsuario(usuario:Usuario): Observable<Perfil> {\r\n"
+                },
+                {
+                    "date": 1719632018717,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,13 +10,13 @@\n \r\n @Injectable({\r\n     providedIn:'root'\r\n })\r\n-export class PefrilService {\r\n+export class PerfilService {\r\n     private baseUrl = Datos.API_URL+\"Perfil\" ;\r\n     constructor(private http: HttpClient){}\r\n \r\n-    public obtenerPerfilByUsuario(usuario:Usuario): Observable<Perfil> {\r\n+    public obtenerPerfilByUsuario(usuarioid:Usuario): Observable<Perfil> {\r\n         return this.http.get<any>(this.baseUrl+'/usuario/'+usuario.usuarioId);\r\n     }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719632025742,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n export class PerfilService {\r\n     private baseUrl = Datos.API_URL+\"Perfil\" ;\r\n     constructor(private http: HttpClient){}\r\n \r\n-    public obtenerPerfilByUsuario(usuarioid:Usuario): Observable<Perfil> {\r\n-        return this.http.get<any>(this.baseUrl+'/usuario/'+usuario.usuarioId);\r\n+    public obtenerPerfilByUsuario(usuarioid:number): Observable<Perfil> {\r\n+        return this.http.get<any>(this.baseUrl+'/usuario/'+usuarioId);\r\n     }\r\n \r\n }\r\n"
+                }
+            ],
+            "date": 1719627976107,
+            "name": "Commit-0",
+            "content": "import { Injectable } from \"@angular/core\";\r\nimport { Datos } from \"../constants/datos\";\r\nimport { HttpClient } from \"@angular/common/http\";\r\nimport { Observable } from \"rxjs\";\r\nimport { Amistades } from \"../models/amistades\";\r\nimport { Usuario } from \"../models/usuario\";\r\nimport { Sesion } from \"../models/sesion\";\r\n\r\n\r\n@Injectable({\r\n    providedIn:'root'\r\n})\r\nexport class PefilService {\r\n    private baseUrl = Datos.API_URL+\"Sesion\" ;\r\n    constructor(private http: HttpClient){}\r\n\r\n    public obtenerSesion(): Observable<Sesion> {\r\n        return this.http.get<any>(this.baseUrl+'/actual');\r\n    }\r\n\r\n}\r\n"
+        }
+    ]
+}

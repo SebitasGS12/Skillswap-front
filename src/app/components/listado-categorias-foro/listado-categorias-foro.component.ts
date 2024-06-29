@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { AsideComponent } from "../aside/aside.component";
+import { HeaderComponent } from "../header/header.component";
+
 @Component({
-  selector: 'app-listado-categorias-foro',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './listado-categorias-foro.component.html',
-  styleUrl: './listado-categorias-foro.component.css',
+    selector: 'app-listado-categorias-foro',
+    standalone: true,
+    templateUrl: './listado-categorias-foro.component.html',
+    styleUrl: './listado-categorias-foro.component.css',
+    imports: [CommonModule, AsideComponent, HeaderComponent]
 })
 export class ListadoCategoriasForoComponent {
 

@@ -1,0 +1,54 @@
+{
+    "sourceFile": "src/app/components/header/header.component.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1719621404417,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1719621411790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n             <a href=\"#\">Inicio</a>\r\n             <a href=\"#\">Notificaciones</a>\r\n             <a href=\"#\">Foros</a>\r\n             <a href=\"#\">Mensajes</a>\r\n-            <a href=\"#\">Salir</a>\r\n+            <a href=\"salir()\">Salir</a>\r\n         </nav>\r\n         <div class=\"icono-usuario\">\r\n             <img src=\"/assets/images/usuario.png\" alt=\"User Icon\" height=\"40\">\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1719621417848,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n             <a href=\"#\">Inicio</a>\r\n             <a href=\"#\">Notificaciones</a>\r\n             <a href=\"#\">Foros</a>\r\n             <a href=\"#\">Mensajes</a>\r\n-            <a href=\"salir()\">Salir</a>\r\n+            <a href='salir()'>Salir</a>\r\n         </nav>\r\n         <div class=\"icono-usuario\">\r\n             <img src=\"/assets/images/usuario.png\" alt=\"User Icon\" height=\"40\">\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1719623508114,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n             <a href=\"#\">Inicio</a>\r\n             <a href=\"#\">Notificaciones</a>\r\n             <a href=\"#\">Foros</a>\r\n             <a href=\"#\">Mensajes</a>\r\n-            <a href='salir()'>Salir</a>\r\n+            <a (click)=\"\" href='salir()'>Salir</a>\r\n         </nav>\r\n         <div class=\"icono-usuario\">\r\n             <img src=\"/assets/images/usuario.png\" alt=\"User Icon\" height=\"40\">\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1719623513454,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n             <a href=\"#\">Inicio</a>\r\n             <a href=\"#\">Notificaciones</a>\r\n             <a href=\"#\">Foros</a>\r\n             <a href=\"#\">Mensajes</a>\r\n-            <a (click)=\"\" href='salir()'>Salir</a>\r\n+            <a (click)=\"salir()\" Salir</a>\r\n         </nav>\r\n         <div class=\"icono-usuario\">\r\n             <img src=\"/assets/images/usuario.png\" alt=\"User Icon\" height=\"40\">\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1719626120708,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n             <a href=\"#\">Inicio</a>\r\n             <a href=\"#\">Notificaciones</a>\r\n             <a href=\"#\">Foros</a>\r\n             <a href=\"#\">Mensajes</a>\r\n-            <a (click)=\"salir()\" Salir</a>\r\n+            <a (click)=\"salir($)\" >Salir</a>\r\n         </nav>\r\n         <div class=\"icono-usuario\">\r\n             <img src=\"/assets/images/usuario.png\" alt=\"User Icon\" height=\"40\">\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1719626126445,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n             <a href=\"#\">Inicio</a>\r\n             <a href=\"#\">Notificaciones</a>\r\n             <a href=\"#\">Foros</a>\r\n             <a href=\"#\">Mensajes</a>\r\n-            <a (click)=\"salir($)\" >Salir</a>\r\n+            <a (click)=\"salir($event)\" >Salir</a>\r\n         </nav>\r\n         <div class=\"icono-usuario\">\r\n             <img src=\"/assets/images/usuario.png\" alt=\"User Icon\" height=\"40\">\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1719626310340,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-<body>\r\n+<div body>\r\n     <header>\r\n         <div class=\"logo\">\r\n             <img src=\"/assets/images/logo.png\" alt=\"SkillSwap Logo\">\r\n             <h1>SkillSwap</h1>\r\n@@ -14,5 +14,5 @@\n         <div class=\"icono-usuario\">\r\n             <img src=\"/assets/images/usuario.png\" alt=\"User Icon\" height=\"40\">\r\n         </div>\r\n     </header>\r\n-</body>\n\\ No newline at end of file\n+</div>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719626316942,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-<div body>\r\n+<div class=\"body\">\r\n     <header>\r\n         <div class=\"logo\">\r\n             <img src=\"/assets/images/logo.png\" alt=\"SkillSwap Logo\">\r\n             <h1>SkillSwap</h1>\r\n"
+                },
+                {
+                    "date": 1719626322897,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <div class=\"body\">\r\n-    <header>\r\n+    <div class=\"header\">\r\n         <div class=\"logo\">\r\n             <img src=\"/assets/images/logo.png\" alt=\"SkillSwap Logo\">\r\n             <h1>SkillSwap</h1>\r\n         </div>\r\n@@ -13,6 +13,6 @@\n         </nav>\r\n         <div class=\"icono-usuario\">\r\n             <img src=\"/assets/images/usuario.png\" alt=\"User Icon\" height=\"40\">\r\n         </div>\r\n-    </header>\r\n+    </div>\r\n </div>\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1719621404417,
+            "name": "Commit-0",
+            "content": "<body>\r\n    <header>\r\n        <div class=\"logo\">\r\n            <img src=\"/assets/images/logo.png\" alt=\"SkillSwap Logo\">\r\n            <h1>SkillSwap</h1>\r\n        </div>\r\n        <nav>\r\n            <a href=\"#\">Inicio</a>\r\n            <a href=\"#\">Notificaciones</a>\r\n            <a href=\"#\">Foros</a>\r\n            <a href=\"#\">Mensajes</a>\r\n            <a href=\"#\">Salir</a>\r\n        </nav>\r\n        <div class=\"icono-usuario\">\r\n            <img src=\"/assets/images/usuario.png\" alt=\"User Icon\" height=\"40\">\r\n        </div>\r\n    </header>\r\n</body>"
+        }
+    ]
+}

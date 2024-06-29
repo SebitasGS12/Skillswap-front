@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 7,
+            "activePatchIndex": 10,
             "patches": [
                 {
                     "date": 1718422175703,
@@ -36,6 +36,18 @@
                 {
                     "date": 1718669417287,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,5 @@\n /* You can add global styles to this file, and also import other style files */\r\n-\r\n-\r\n-\r\n @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');\r\n \r\n *{\r\n     margin: 0;\r\n"
+                },
+                {
+                    "date": 1719612828460,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+\r\n /* You can add global styles to this file, and also import other style files */\r\n @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');\r\n \r\n *{\r\n@@ -6,8 +7,15 @@\n     padding: 0;\r\n     box-sizing: border-box;\r\n }\r\n \r\n+body {\r\n+    margin: 0;\r\n+    font-family: Arial, sans-serif;\r\n+    background-color: #0F1A24;\r\n+    color: white;\r\n+}\r\n+\r\n .be-vietnam-pro-thin {\r\n     font-family: \"Be Vietnam Pro\", sans-serif;\r\n     font-weight: 100;\r\n     font-style: normal;\r\n@@ -113,4 +121,5 @@\n font-family: \"Be Vietnam Pro\", sans-serif;\r\n font-weight: 900;\r\n font-style: italic;\r\n }\r\n+\r\n"
+                },
+                {
+                    "date": 1719620404585,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,12 @@\n     padding: 0;\r\n     box-sizing: border-box;\r\n }\r\n \r\n+.division{\r\n+    \r\n+}\r\n+\r\n body {\r\n     margin: 0;\r\n     font-family: Arial, sans-serif;\r\n     background-color: #0F1A24;\r\n"
+                },
+                {
+                    "date": 1719620411222,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,10 @@\n     box-sizing: border-box;\r\n }\r\n \r\n .division{\r\n-    \r\n+    display: flex;\r\n+    flex-direction: row;\r\n }\r\n \r\n body {\r\n     margin: 0;\r\n"
                 }
             ],
             "date": 1718422175703,

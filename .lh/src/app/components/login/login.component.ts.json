@@ -1,0 +1,46 @@
+{
+    "sourceFile": "src/app/components/login/login.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1719613177216,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1719614471317,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,14 @@\n-import { Component } from '@angular/core';\r\n+import { CommonModule } from '@angular/common';\r\n+import { Component, OnInit } from '@angular/core';\r\n \r\n @Component({\r\n   selector: 'app-login',\r\n   standalone: true,\r\n-  imports: [Comm],\r\n+  imports: [CommonModule],\r\n   templateUrl: './login.component.html',\r\n   styleUrl: './login.component.css'\r\n })\r\n-export class LoginComponent {\r\n+export class LoginComponent  implements OnInit{\r\n \r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719614483205,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,22 @@\n   templateUrl: './login.component.html',\r\n   styleUrl: './login.component.css'\r\n })\r\n export class LoginComponent  implements OnInit{\r\n+  ngOnInit() {\r\n+    const container = document.getElementById(\"container\");\r\n+    const registerBtn = document.getElementById(\"register\");\r\n+    const loginBtn = document.getElementById(\"login\");\r\n \r\n+    if (registerBtn && loginBtn && container) {\r\n+      registerBtn.addEventListener(\"click\", () => {\r\n+        container.classList.add(\"active\");\r\n+      });\r\n \r\n+      loginBtn.addEventListener(\"click\", () => {\r\n+        container.classList.remove(\"active\");\r\n+      });\r\n+    }\r\n+  }\r\n+\r\n+\r\n }\r\n"
+                },
+                {
+                    "date": 1719614983285,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,14 @@\n   templateUrl: './login.component.html',\r\n   styleUrl: './login.component.css'\r\n })\r\n export class LoginComponent  implements OnInit{\r\n+\r\n+\r\n+  \r\n+\r\n+\r\n+\r\n   ngOnInit() {\r\n     const container = document.getElementById(\"container\");\r\n     const registerBtn = document.getElementById(\"register\");\r\n     const loginBtn = document.getElementById(\"login\");\r\n"
+                },
+                {
+                    "date": 1719615570287,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,63 @@\n+import { CommonModule } from '@angular/common';\r\n+import { Component, OnInit } from '@angular/core';\r\n+\r\n+@Component({\r\n+  selector: 'app-login',\r\n+  standalone: true,\r\n+  imports: [CommonModule],\r\n+  templateUrl: './login.component.html',\r\n+  styleUrl: './login.component.css'\r\n+})\r\n+export class LoginComponent  implements OnInit{\r\n+\r\n+\r\n+\r\n+\r\n+\r\n+\r\n+  ngOnInit() {\r\n+    const container = document.getElementById(\"container\");\r\n+    const registerBtn = document.getElementById(\"register\");\r\n+    const loginBtn = document.getElementById(\"login\");\r\n+\r\n+    if (registerBtn && loginBtn && container) {\r\n+      registerBtn.addEventListener(\"click\", () => {\r\n+        container.classList.add(\"active\");\r\n+      });\r\n+\r\n+      loginBtn.addEventListener(\"click\", () => {\r\n+        container.classList.remove(\"active\");\r\n+      });\r\n+    }\r\n+  }\r\n+ constructor(private authService: AuthService) { }\r\n+\r\n+  register(user: any) {\r\n+    this.authService.register(user).subscribe(\r\n+      (response) => {\r\n+        // Aquí puedes manejar la respuesta después de registrar\r\n+        console.log('Usuario registrado exitosamente:', response);\r\n+      },\r\n+      (error) => {\r\n+        // Aquí puedes manejar el error\r\n+        console.error('Error al registrar usuario:', error);\r\n+      }\r\n+    );\r\n+  }\r\n+\r\n+  login(credentials: any) {\r\n+    this.authService.login(credentials).subscribe(\r\n+      (response) => {\r\n+        // Aquí puedes manejar la respuesta después de iniciar sesión\r\n+        console.log('Usuario ha iniciado sesión:', response);\r\n+        // Aquí podrías redirigir al usuario a otra página, por ejemplo:\r\n+        // this.router.navigate(['/dashboard']);\r\n+      },\r\n+      (error) => {\r\n+        // Aquí puedes manejar el error\r\n+        console.error('Error al iniciar sesión:', error);\r\n+      }\r\n+    );\r\n+  }\r\n+\r\n+}\r\n"
+                },
+                {
+                    "date": 1719615583960,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import { CommonModule } from '@angular/common';\r\n import { Component, OnInit } from '@angular/core';\r\n+import { UsuarioService } from '../../service/usuarioService';\r\n \r\n @Component({\r\n   selector: 'app-login',\r\n   standalone: true,\r\n@@ -29,9 +30,9 @@\n         container.classList.remove(\"active\");\r\n       });\r\n     }\r\n   }\r\n- constructor(private authService: AuthService) { }\r\n+ constructor(private authService: UsuarioService) { }\r\n \r\n   register(user: any) {\r\n     this.authService.register(user).subscribe(\r\n       (response) => {\r\n@@ -60,39 +61,4 @@\n     );\r\n   }\r\n \r\n }\r\n-import { CommonModule } from '@angular/common';\r\n-import { Component, OnInit } from '@angular/core';\r\n-\r\n-@Component({\r\n-  selector: 'app-login',\r\n-  standalone: true,\r\n-  imports: [CommonModule],\r\n-  templateUrl: './login.component.html',\r\n-  styleUrl: './login.component.css'\r\n-})\r\n-export class LoginComponent  implements OnInit{\r\n-\r\n-\r\n-  \r\n-\r\n-\r\n-\r\n-  ngOnInit() {\r\n-    const container = document.getElementById(\"container\");\r\n-    const registerBtn = document.getElementById(\"register\");\r\n-    const loginBtn = document.getElementById(\"login\");\r\n-\r\n-    if (registerBtn && loginBtn && container) {\r\n-      registerBtn.addEventListener(\"click\", () => {\r\n-        container.classList.add(\"active\");\r\n-      });\r\n-\r\n-      loginBtn.addEventListener(\"click\", () => {\r\n-        container.classList.remove(\"active\");\r\n-      });\r\n-    }\r\n-  }\r\n-\r\n-\r\n-}\r\n"
+                },
+                {
+                    "date": 1719615589210,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n         container.classList.remove(\"active\");\r\n       });\r\n     }\r\n   }\r\n- constructor(private authService: UsuarioService) { }\r\n+ constructor(private usuarioService: UsuarioService) { }\r\n \r\n   register(user: any) {\r\n     this.authService.register(user).subscribe(\r\n       (response) => {\r\n"
+                },
+                {
+                    "date": 1719615597158,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n   }\r\n  constructor(private usuarioService: UsuarioService) { }\r\n \r\n   register(user: any) {\r\n-    this.usuarioService.register(user).subscribe(\r\n+    this.usuarioService.registrar(user).subscribe(\r\n       (response) => {\r\n         // Aquí puedes manejar la respuesta después de registrar\r\n         console.log('Usuario registrado exitosamente:', response);\r\n       },\r\n"
+                }
+            ],
+            "date": 1719613177216,
+            "name": "Commit-0",
+            "content": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-login',\r\n  standalone: true,\r\n  imports: [Comm],\r\n  templateUrl: './login.component.html',\r\n  styleUrl: './login.component.css'\r\n})\r\nexport class LoginComponent {\r\n\r\n\r\n}\r\n"
+        }
+    ]
+}

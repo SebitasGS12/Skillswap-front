@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 28,
             "patches": [
                 {
                     "date": 1718499665825,
@@ -12,6 +12,114 @@
                 {
                     "date": 1718499674475,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n   styleUrl: './aside.component.css'\r\n })\r\n export class AsideComponent {\r\n   \r\n-  \r\n+  user!:string = \"assets/images/home.png\";\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719621090802,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n   styleUrl: './aside.component.css'\r\n })\r\n export class AsideComponent {\r\n   \r\n-  user!:string = \"assets/images/home.png\";\r\n-\r\n+  user:string = \"assets/images/home.png\";\r\n+  \r\n }\r\n"
+                },
+                {
+                    "date": 1719621100136,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,14 @@\n-import { Component } from '@angular/core';\r\n+import { Component, OnInit } from '@angular/core';\r\n \r\n @Component({\r\n   selector: 'app-aside',\r\n   standalone: true,\r\n   imports: [],\r\n   templateUrl: './aside.component.html',\r\n   styleUrl: './aside.component.css'\r\n })\r\n-export class AsideComponent {\r\n+export class AsideComponent implements OnInit {\r\n   \r\n   user:string = \"assets/images/home.png\";\r\n-  \r\n+\r\n }\r\n"
+                },
+                {
+                    "date": 1719621363717,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,15 @@\n   templateUrl: './aside.component.html',\r\n   styleUrl: './aside.component.css'\r\n })\r\n export class AsideComponent implements OnInit {\r\n+  ngOnInit(): void {\r\n+\r\n+    \r\n+\r\n+\r\n+\r\n+  }\r\n   \r\n   user:string = \"assets/images/home.png\";\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719625218050,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,15 @@\n+import { Component, OnInit } from '@angular/core';\r\n+\r\n+@Component({\r\n+  selector: 'app-aside',\r\n+  standalone: true,\r\n+  imports: [],\r\n+  templateUrl: './aside.component.html',\r\n+  styleUrl: './aside.component.css'\r\n+})\r\n+export class AsideComponent implements OnInit {\r\n+\r\n+  \r\n+  user:string = \"assets/images/home.png\";\r\n+\r\n+}\r\n"
+                },
+                {
+                    "date": 1719626729361,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,25 +12,4 @@\n   \r\n   user:string = \"assets/images/home.png\";\r\n \r\n }\r\n-import { Component, OnInit } from '@angular/core';\r\n-\r\n-@Component({\r\n-  selector: 'app-aside',\r\n-  standalone: true,\r\n-  imports: [],\r\n-  templateUrl: './aside.component.html',\r\n-  styleUrl: './aside.component.css'\r\n-})\r\n-export class AsideComponent implements OnInit {\r\n-  ngOnInit(): void {\r\n-\r\n-    \r\n-\r\n-\r\n-\r\n-  }\r\n-  \r\n-  user:string = \"assets/images/home.png\";\r\n-\r\n-}\r\n"
+                },
+                {
+                    "date": 1719626736808,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,14 @@\n   styleUrl: './aside.component.css'\r\n })\r\n export class AsideComponent implements OnInit {\r\n \r\n+  constructor(){}\r\n+\r\n+  ngOnInit(): void {\r\n+    throw new Error('Method not implemented.');\r\n+  }\r\n+\r\n   \r\n   user:string = \"assets/images/home.png\";\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719626750678,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,11 @@\n   styleUrl: './aside.component.css'\r\n })\r\n export class AsideComponent implements OnInit {\r\n \r\n-  constructor(){}\r\n+  constructor(private router: Router,\r\n+    private negocioService: NegocioService,\r\n+    private sesionService:SesionService){}\r\n \r\n   ngOnInit(): void {\r\n     throw new Error('Method not implemented.');\r\n   }\r\n"
+                },
+                {
+                    "date": 1719626756579,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,8 @@\n import { Component, OnInit } from '@angular/core';\r\n+import { Router } from '@angular/router';\r\n+import { NegocioService } from '../../service/negocioService';\r\n+import { SesionService } from '../../service/sesionService';\r\n \r\n @Component({\r\n   selector: 'app-aside',\r\n   standalone: true,\r\n"
+                },
+                {
+                    "date": 1719627312661,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,17 @@\n     private negocioService: NegocioService,\r\n     private sesionService:SesionService){}\r\n \r\n   ngOnInit(): void {\r\n-    throw new Error('Method not implemented.');\r\n+\r\n+    this.sesionService.obtenerSesion().subscribe(\r\n+      (response) => {\r\n+        console.log(response);\r\n+        this.sesion = response;\r\n+      }\r\n+    );\r\n+\r\n+\r\n   }\r\n \r\n   \r\n   user:string = \"assets/images/home.png\";\r\n"
+                },
+                {
+                    "date": 1719627320456,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import { Component, OnInit } from '@angular/core';\r\n import { Router } from '@angular/router';\r\n import { NegocioService } from '../../service/negocioService';\r\n import { SesionService } from '../../service/sesionService';\r\n+import { Sesion } from '../../models/sesion';\r\n \r\n @Component({\r\n   selector: 'app-aside',\r\n   standalone: true,\r\n@@ -10,8 +11,9 @@\n   templateUrl: './aside.component.html',\r\n   styleUrl: './aside.component.css'\r\n })\r\n export class AsideComponent implements OnInit {\r\n+  sesion!:Sesion;\r\n \r\n   constructor(private router: Router,\r\n     private negocioService: NegocioService,\r\n     private sesionService:SesionService){}\r\n"
+                },
+                {
+                    "date": 1719627329484,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,36 @@\n+import { Component, OnInit } from '@angular/core';\r\n+import { Router } from '@angular/router';\r\n+import { NegocioService } from '../../service/negocioService';\r\n+import { SesionService } from '../../service/sesionService';\r\n+import { Sesion } from '../../models/sesion';\r\n+\r\n+@Component({\r\n+  selector: 'app-aside',\r\n+  standalone: true,\r\n+  imports: [],\r\n+  templateUrl: './aside.component.html',\r\n+  styleUrl: './aside.component.css'\r\n+})\r\n+export class AsideComponent implements OnInit {\r\n+  sesion!:Sesion;\r\n+\r\n+  constructor(private router: Router,\r\n+    private negocioService: NegocioService,\r\n+    private sesionService:SesionService){}\r\n+\r\n+  ngOnInit(): void {\r\n+\r\n+    this.sesionService.obtenerSesion().subscribe(\r\n+      (response) => {\r\n+        console.log(response);\r\n+        this.sesion = response;\r\n+      }\r\n+    );\r\n+    \r\n+\r\n+  }\r\n+\r\n+  \r\n+  user:string = \"assets/images/home.png\";\r\n+\r\n+}\r\n"
+                },
+                {
+                    "date": 1719627336779,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,45 +12,11 @@\n   styleUrl: './aside.component.css'\r\n })\r\n export class AsideComponent implements OnInit {\r\n   sesion!:Sesion;\r\n-\r\n-  constructor(private router: Router,\r\n-    private negocioService: NegocioService,\r\n-    private sesionService:SesionService){}\r\n-\r\n-  ngOnInit(): void {\r\n-\r\n-    this.sesionService.obtenerSesion().subscribe(\r\n-      (response) => {\r\n-        console.log(response);\r\n-        this.sesion = response;\r\n-      }\r\n-    );\r\n-    \r\n-\r\n-  }\r\n-\r\n-  \r\n   user:string = \"assets/images/home.png\";\r\n \r\n-}\r\n-import { Component, OnInit } from '@angular/core';\r\n-import { Router } from '@angular/router';\r\n-import { NegocioService } from '../../service/negocioService';\r\n-import { SesionService } from '../../service/sesionService';\r\n-import { Sesion } from '../../models/sesion';\r\n \r\n-@Component({\r\n-  selector: 'app-aside',\r\n-  standalone: true,\r\n-  imports: [],\r\n-  templateUrl: './aside.component.html',\r\n-  styleUrl: './aside.component.css'\r\n-})\r\n-export class AsideComponent implements OnInit {\r\n-  sesion!:Sesion;\r\n-\r\n   constructor(private router: Router,\r\n     private negocioService: NegocioService,\r\n     private sesionService:SesionService){}\r\n \r\n@@ -66,7 +32,6 @@\n \r\n   }\r\n \r\n   \r\n-  user:string = \"assets/images/home.png\";\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719627343109,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n import { Router } from '@angular/router';\r\n import { NegocioService } from '../../service/negocioService';\r\n import { SesionService } from '../../service/sesionService';\r\n import { Sesion } from '../../models/sesion';\r\n+import { Usuario } from '../../models/usuario';\r\n \r\n @Component({\r\n   selector: 'app-aside',\r\n   standalone: true,\r\n@@ -13,10 +14,10 @@\n })\r\n export class AsideComponent implements OnInit {\r\n   sesion!:Sesion;\r\n   user:string = \"assets/images/home.png\";\r\n+  usuarioAside:Usuario\r\n \r\n-\r\n   constructor(private router: Router,\r\n     private negocioService: NegocioService,\r\n     private sesionService:SesionService){}\r\n \r\n"
+                },
+                {
+                    "date": 1719627351168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n })\r\n export class AsideComponent implements OnInit {\r\n   sesion!:Sesion;\r\n   user:string = \"assets/images/home.png\";\r\n-  usuarioAside:Usuario\r\n+  usuarioAside!:Usuario;\r\n \r\n   constructor(private router: Router,\r\n     private negocioService: NegocioService,\r\n     private sesionService:SesionService){}\r\n@@ -26,8 +26,9 @@\n     this.sesionService.obtenerSesion().subscribe(\r\n       (response) => {\r\n         console.log(response);\r\n         this.sesion = response;\r\n+        this.\r\n       }\r\n     );\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1719627358313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n     this.sesionService.obtenerSesion().subscribe(\r\n       (response) => {\r\n         console.log(response);\r\n         this.sesion = response;\r\n-        this.\r\n+        this.usuarioAside = this.sesion.obj_Usuario;\r\n       }\r\n     );\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1719627721082,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,9 @@\n export class AsideComponent implements OnInit {\r\n   sesion!:Sesion;\r\n   user:string = \"assets/images/home.png\";\r\n   usuarioAside!:Usuario;\r\n+  \r\n \r\n   constructor(private router: Router,\r\n     private negocioService: NegocioService,\r\n     private sesionService:SesionService){}\r\n"
+                },
+                {
+                    "date": 1719627730574,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,10 +15,10 @@\n export class AsideComponent implements OnInit {\r\n   sesion!:Sesion;\r\n   user:string = \"assets/images/home.png\";\r\n   usuarioAside!:Usuario;\r\n-  \r\n \r\n+\r\n   constructor(private router: Router,\r\n     private negocioService: NegocioService,\r\n     private sesionService:SesionService){}\r\n \r\n@@ -31,8 +31,9 @@\n         this.usuarioAside = this.sesion.obj_Usuario;\r\n       }\r\n     );\r\n \r\n+    \r\n \r\n   }\r\n \r\n   \r\n"
+                },
+                {
+                    "date": 1719627758857,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,10 +15,10 @@\n export class AsideComponent implements OnInit {\r\n   sesion!:Sesion;\r\n   user:string = \"assets/images/home.png\";\r\n   usuarioAside!:Usuario;\r\n+  perfil!:Perfil;\r\n \r\n-\r\n   constructor(private router: Router,\r\n     private negocioService: NegocioService,\r\n     private sesionService:SesionService){}\r\n \r\n@@ -31,10 +31,10 @@\n         this.usuarioAside = this.sesion.obj_Usuario;\r\n       }\r\n     );\r\n \r\n-    \r\n \r\n+\r\n   }\r\n \r\n   \r\n \r\n"
+                },
+                {
+                    "date": 1719627765454,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n import { NegocioService } from '../../service/negocioService';\r\n import { SesionService } from '../../service/sesionService';\r\n import { Sesion } from '../../models/sesion';\r\n import { Usuario } from '../../models/usuario';\r\n+import { Perfil } from '../../models/perfil';\r\n \r\n @Component({\r\n   selector: 'app-aside',\r\n   standalone: true,\r\n@@ -28,8 +29,9 @@\n       (response) => {\r\n         console.log(response);\r\n         this.sesion = response;\r\n         this.usuarioAside = this.sesion.obj_Usuario;\r\n+        this.\r\n       }\r\n     );\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1719627780973,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,18 +20,20 @@\n   perfil!:Perfil;\r\n \r\n   constructor(private router: Router,\r\n     private negocioService: NegocioService,\r\n-    private sesionService:SesionService){}\r\n+    private sesionService:SesionService,\r\n+    private perfilService:PerfilSer\r\n+  ){}\r\n \r\n   ngOnInit(): void {\r\n \r\n     this.sesionService.obtenerSesion().subscribe(\r\n       (response) => {\r\n         console.log(response);\r\n         this.sesion = response;\r\n         this.usuarioAside = this.sesion.obj_Usuario;\r\n-        this.\r\n+        this.perfil = \r\n       }\r\n     );\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1719627908424,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n \r\n   constructor(private router: Router,\r\n     private negocioService: NegocioService,\r\n     private sesionService:SesionService,\r\n-    private perfilService:PerfilSer\r\n+    private perfilService:PerfilSerice\r\n   ){}\r\n \r\n   ngOnInit(): void {\r\n \r\n"
+                },
+                {
+                    "date": 1719628050981,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n \r\n   constructor(private router: Router,\r\n     private negocioService: NegocioService,\r\n     private sesionService:SesionService,\r\n-    private perfilService:PerfilSerice\r\n+    private perfilService:PerfilSeri\r\n   ){}\r\n \r\n   ngOnInit(): void {\r\n \r\n"
+                },
+                {
+                    "date": 1719628056260,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n \r\n   constructor(private router: Router,\r\n     private negocioService: NegocioService,\r\n     private sesionService:SesionService,\r\n-    private perfilService:PerfilSeri\r\n+    private perfilService:Perfil\r\n   ){}\r\n \r\n   ngOnInit(): void {\r\n \r\n"
+                },
+                {
+                    "date": 1719628068809,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n \r\n   constructor(private router: Router,\r\n     private negocioService: NegocioService,\r\n     private sesionService:SesionService,\r\n-    private perfilService:Perfil\r\n+    private perfilService:PerfilService\r\n   ){}\r\n \r\n   ngOnInit(): void {\r\n \r\n"
+                },
+                {
+                    "date": 1719628078233,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n import { SesionService } from '../../service/sesionService';\r\n import { Sesion } from '../../models/sesion';\r\n import { Usuario } from '../../models/usuario';\r\n import { Perfil } from '../../models/perfil';\r\n+import { PerfilService } from '../../service/perfilService';\r\n \r\n @Component({\r\n   selector: 'app-aside',\r\n   standalone: true,\r\n@@ -31,9 +32,8 @@\n       (response) => {\r\n         console.log(response);\r\n         this.sesion = response;\r\n         this.usuarioAside = this.sesion.obj_Usuario;\r\n-        this.perfil = \r\n       }\r\n     );\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1719628085403,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n         this.usuarioAside = this.sesion.obj_Usuario;\r\n       }\r\n     );\r\n \r\n-    this.\r\n+    this.perfilService.obtenerPerfilByUsuario\r\n \r\n \r\n \r\n   }\r\n"
+                },
+                {
+                    "date": 1719630818257,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n \r\n @Component({\r\n   selector: 'app-aside',\r\n   standalone: true,\r\n-  imports: [Co, RouterModule],\r\n+  imports: [Com, RouterModule],\r\n   templateUrl: './aside.component.html',\r\n   styleUrl: './aside.component.css'\r\n })\r\n export class AsideComponent implements OnInit {\r\n"
                 }
             ],
             "date": 1718499665825,

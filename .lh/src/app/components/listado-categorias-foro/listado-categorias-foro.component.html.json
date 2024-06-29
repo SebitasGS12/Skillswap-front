@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/app/components/listado-categorias-foro/listado-categorias-foro.component.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1719634804711,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1719634810501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n+<div class=\"division\">\r\n \r\n+\r\n <div class=\"container\">\r\n <div class=\"container mt-5\">\r\n     <h1 class=\"text-#0F1A24\">FOROS SKILL SWAP</h1>\r\n     <div class=\"mb-4\">\r\n"
+                },
+                {
+                    "date": 1719634818464,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,41 +1,42 @@\n <div class=\"division\">\r\n \r\n \r\n-<div class=\"container\">\r\n-<div class=\"container mt-5\">\r\n-    <h1 class=\"text-#0F1A24\">FOROS SKILL SWAP</h1>\r\n-    <div class=\"mb-4\">\r\n-      <input type=\"text\" class=\"form-control\" placeholder=\"Buscar foros por categoría\">\r\n-      <button class=\"btn btn-primary mt-2\">Buscar</button>\r\n-    </div>\r\n-    \r\n-    <div class=\"card bg-dark text-white mb-3\" *ngFor=\"let categoria of categorias\">\r\n-      <div class=\"card-header bg-primary d-flex justify-content-between align-items-center\">\r\n-        <span>{{ categoria.nombre }}</span>\r\n-        <button class=\"btn btn-outline-light btn-sm\">+</button>\r\n+  <div class=\"container\">\r\n+    <div class=\"container mt-5\">\r\n+      <h1 class=\"text-#0F1A24\">FOROS SKILL SWAP</h1>\r\n+      <div class=\"mb-4\">\r\n+        <input type=\"text\" class=\"form-control\" placeholder=\"Buscar foros por categoría\">\r\n+        <button class=\"btn btn-primary mt-2\">Buscar</button>\r\n       </div>\r\n-      <div class=\"card-body\">\r\n-        <div *ngFor=\"let foro of categoria.foros\" class=\"mb-3\">\r\n-          <div class=\"d-flex justify-content-between\">\r\n-            <div>\r\n-              <h5>{{ foro.titulo }}</h5>\r\n-              <p>{{ foro.descripcion }}</p>\r\n+\r\n+      <div class=\"card bg-dark text-white mb-3\" *ngFor=\"let categoria of categorias\">\r\n+        <div class=\"card-header bg-primary d-flex justify-content-between align-items-center\">\r\n+          <span>{{ categoria.nombre }}</span>\r\n+          <button class=\"btn btn-outline-light btn-sm\">+</button>\r\n+        </div>\r\n+        <div class=\"card-body\">\r\n+          <div *ngFor=\"let foro of categoria.foros\" class=\"mb-3\">\r\n+            <div class=\"d-flex justify-content-between\">\r\n+              <div>\r\n+                <h5>{{ foro.titulo }}</h5>\r\n+                <p>{{ foro.descripcion }}</p>\r\n+              </div>\r\n+              <span>Fecha: {{ foro.fecha }}</span>\r\n             </div>\r\n-            <span>Fecha: {{ foro.fecha }}</span>\r\n           </div>\r\n         </div>\r\n       </div>\r\n+\r\n+      <nav>\r\n+        <ul class=\"pagination justify-content-center\">\r\n+          <li class=\"page-item\"><a class=\"page-link\" href=\"#\">1</a></li>\r\n+          <li class=\"page-item\"><a class=\"page-link\" href=\"#\">2</a></li>\r\n+          <li class=\"page-item\"><a class=\"page-link\" href=\"#\">3</a></li>\r\n+          <li class=\"page-item\"><a class=\"page-link\" href=\"#\">4</a></li>\r\n+          <li class=\"page-item\"><a class=\"page-link\" href=\"#\">5</a></li>\r\n+          <li class=\"page-item\"><a class=\"page-link\" href=\"#\">6</a></li>\r\n+        </ul>\r\n+      </nav>\r\n     </div>\r\n-  \r\n-    <nav>\r\n-      <ul class=\"pagination justify-content-center\">\r\n-        <li class=\"page-item\"><a class=\"page-link\" href=\"#\">1</a></li>\r\n-        <li class=\"page-item\"><a class=\"page-link\" href=\"#\">2</a></li>\r\n-        <li class=\"page-item\"><a class=\"page-link\" href=\"#\">3</a></li>\r\n-        <li class=\"page-item\"><a class=\"page-link\" href=\"#\">4</a></li>\r\n-        <li class=\"page-item\"><a class=\"page-link\" href=\"#\">5</a></li>\r\n-        <li class=\"page-item\"><a class=\"page-link\" href=\"#\">6</a></li>\r\n-      </ul>\r\n-    </nav>\r\n   </div>\r\n </div>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719634826403,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <div class=\"division\">\r\n \r\n-\r\n+  <app-aside></app-aside>\r\n   <div class=\"container\">\r\n     <div class=\"container mt-5\">\r\n       <h1 class=\"text-#0F1A24\">FOROS SKILL SWAP</h1>\r\n       <div class=\"mb-4\">\r\n"
+                },
+                {
+                    "date": 1719634896060,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+<app-header></app-header>\r\n <div class=\"division\">\r\n \r\n   <app-aside></app-aside>\r\n   <div class=\"container\">\r\n"
+                },
+                {
+                    "date": 1719634905229,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,6 @@\n <app-header></app-header>\r\n <div class=\"division\">\r\n-\r\n   <app-aside></app-aside>\r\n   <div class=\"container\">\r\n     <div class=\"container mt-5\">\r\n       <h1 class=\"text-#0F1A24\">FOROS SKILL SWAP</h1>\r\n"
+                }
+            ],
+            "date": 1719634804711,
+            "name": "Commit-0",
+            "content": "\r\n<div class=\"container\">\r\n<div class=\"container mt-5\">\r\n    <h1 class=\"text-#0F1A24\">FOROS SKILL SWAP</h1>\r\n    <div class=\"mb-4\">\r\n      <input type=\"text\" class=\"form-control\" placeholder=\"Buscar foros por categoría\">\r\n      <button class=\"btn btn-primary mt-2\">Buscar</button>\r\n    </div>\r\n    \r\n    <div class=\"card bg-dark text-white mb-3\" *ngFor=\"let categoria of categorias\">\r\n      <div class=\"card-header bg-primary d-flex justify-content-between align-items-center\">\r\n        <span>{{ categoria.nombre }}</span>\r\n        <button class=\"btn btn-outline-light btn-sm\">+</button>\r\n      </div>\r\n      <div class=\"card-body\">\r\n        <div *ngFor=\"let foro of categoria.foros\" class=\"mb-3\">\r\n          <div class=\"d-flex justify-content-between\">\r\n            <div>\r\n              <h5>{{ foro.titulo }}</h5>\r\n              <p>{{ foro.descripcion }}</p>\r\n            </div>\r\n            <span>Fecha: {{ foro.fecha }}</span>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  \r\n    <nav>\r\n      <ul class=\"pagination justify-content-center\">\r\n        <li class=\"page-item\"><a class=\"page-link\" href=\"#\">1</a></li>\r\n        <li class=\"page-item\"><a class=\"page-link\" href=\"#\">2</a></li>\r\n        <li class=\"page-item\"><a class=\"page-link\" href=\"#\">3</a></li>\r\n        <li class=\"page-item\"><a class=\"page-link\" href=\"#\">4</a></li>\r\n        <li class=\"page-item\"><a class=\"page-link\" href=\"#\">5</a></li>\r\n        <li class=\"page-item\"><a class=\"page-link\" href=\"#\">6</a></li>\r\n      </ul>\r\n    </nav>\r\n  </div>\r\n</div>"
+        }
+    ]
+}
