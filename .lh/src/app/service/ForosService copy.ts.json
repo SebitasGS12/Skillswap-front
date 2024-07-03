@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/service/ForosService copy.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1719965173816,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1719965173816,
+            "name": "Commit-0",
+            "content": "import { Injectable } from \"@angular/core\";\r\nimport { Datos } from \"../constants/datos\";\r\nimport { HttpClient } from \"@angular/common/http\";\r\nimport { Observable } from \"rxjs\";\r\nimport { CategoriaHabilidad } from \"../models/categoria-habilidad\";\r\nimport { CategoriaForos } from \"../models/categoria-foros\";\r\nimport { Foro } from \"../models/Foro\";\r\n\r\n\r\n@Injectable({\r\n    providedIn:'root'\r\n})\r\nexport class DiscucionesService {\r\n    private baseUrl = Datos.API_URL+\"Foros\" ;\r\n    constructor(private http: HttpClient){}\r\n\r\n    public listar():Observable<Foro[]>{\r\n        return this.http.get<Foro[]>(this.baseUrl);\r\n    }\r\n\r\n    public registrar(categoriaHabilidad: Foro): Observable<Foro> {\r\n    return this.http.post<any>(this.baseUrl, categoriaHabilidad);\r\n    }\r\n\r\n    public buscar(id : number): Observable<Foro> {\r\n    return this.http.get<Foro>(this.baseUrl + `/${id}`);\r\n    }\r\n}"
+        }
+    ]
+}

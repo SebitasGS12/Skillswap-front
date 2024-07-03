@@ -1,0 +1,50 @@
+{
+    "sourceFile": "src/app/models/votos.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1718507406126,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1718507411390,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,5 @@\n-export class\n\\ No newline at end of file\n+export class Votos {\r\n+    constructor(parameters) {\r\n+        \r\n+    }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718507418615,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n export class Votos {\r\n-    constructor(parameters) {\r\n-        \r\n-    }\r\n+    \r\n+    votoId:\r\n+\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718507424533,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n export class Votos {\r\n     \r\n-    votoId:\r\n+    votoId!:number;\r\n+    \r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718507430973,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n export class Votos {\r\n     \r\n     votoId!:number;\r\n+    tipoVoto!:boolean;\r\n     \r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718507438766,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n export class Votos {\r\n     \r\n     votoId!:number;\r\n     tipoVoto!:boolean;\r\n+    fechaVoto!:Date;\r\n     \r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718507453109,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,7 +2,7 @@\n     \r\n     votoId!:number;\r\n     tipoVoto!:boolean;\r\n     fechaVoto!:Date;\r\n-    \r\n-\r\n+    obj_Respuesta!:Repuesta;\r\n+    obj_Usuario!\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718507458944,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,10 @@\n+import { Usuario } from \"./usuario\";\r\n+\r\n export class Votos {\r\n     \r\n     votoId!:number;\r\n     tipoVoto!:boolean;\r\n     fechaVoto!:Date;\r\n-    obj_Respuesta!:Repuesta;\r\n-    obj_Usuario!\r\n+    obj_Respuesta!:Resuesta;\r\n+    obj_Usuario!:Usuario;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718507906468,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,11 @@\n+import { Respuestas } from \"./respuestas\";\r\n import { Usuario } from \"./usuario\";\r\n \r\n export class Votos {\r\n     \r\n     votoId!:number;\r\n     tipoVoto!:boolean;\r\n     fechaVoto!:Date;\r\n-    obj_Respuesta!:Resuesta;\r\n+    obj_Respuesta!:Respuestas;\r\n     obj_Usuario!:Usuario;\r\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1718507406126,
+            "name": "Commit-0",
+            "content": "export class"
+        }
+    ]
+}

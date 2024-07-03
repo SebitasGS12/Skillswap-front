@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/app/service/sesionService.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1719623290035,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1719623295562,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,14 +12,12 @@\n export class SesionService {\r\n     private baseUrl = Datos.API_URL+\"Sesion\" ;\r\n     constructor(private http: HttpClient){}\r\n \r\n-    public inciarSesion(usuario: Usuario): Observable<Usuario> {\r\n+    public obtenerSesion(usuario: Usuario): Observable<Usuario> {\r\n         return this.http.post<any>(this.baseUrl+'/sesionon', usuario);\r\n     }\r\n-    public registrarNuevaCuenta(usuario: Usuario): Observable<Usuario> {\r\n-        return this.http.post<any>(this.baseUrl+'/registro', usuario);\r\n-    }\r\n+ \r\n \r\n     \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1719623304262,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,10 +12,10 @@\n export class SesionService {\r\n     private baseUrl = Datos.API_URL+\"Sesion\" ;\r\n     constructor(private http: HttpClient){}\r\n \r\n-    public obtenerSesion(usuario: Usuario): Observable<Usuario> {\r\n-        return this.http.post<any>(this.baseUrl+'/sesionon', usuario);\r\n+    public obtenerSesion(usuario: Sesion): Observable<Usuario> {\r\n+        return this.http.get<any>(this.baseUrl+'/actual', usuario);\r\n     }\r\n  \r\n \r\n     \r\n"
+                },
+                {
+                    "date": 1719623311216,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,25 @@\n+import { Injectable } from \"@angular/core\";\r\n+import { Datos } from \"../constants/datos\";\r\n+import { HttpClient } from \"@angular/common/http\";\r\n+import { Observable } from \"rxjs\";\r\n+import { Amistades } from \"../models/amistades\";\r\n+import { Usuario } from \"../models/usuario\";\r\n+import { Sesion } from \"../models/sesion\";\r\n+\r\n+\r\n+@Injectable({\r\n+    providedIn:'root'\r\n+})\r\n+export class SesionService {\r\n+    private baseUrl = Datos.API_URL+\"Sesion\" ;\r\n+    constructor(private http: HttpClient){}\r\n+\r\n+    public obtenerSesion(usuario: Sesion): Observable<Sesion> {\r\n+        return this.http.get<Sesion>(this.baseUrl+'/actual', usuario);\r\n+    }\r\n+ \r\n+\r\n+    \r\n+\r\n+\r\n+}\r\n"
+                },
+                {
+                    "date": 1719623317076,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,37 +13,13 @@\n export class SesionService {\r\n     private baseUrl = Datos.API_URL+\"Sesion\" ;\r\n     constructor(private http: HttpClient){}\r\n \r\n-    public obtenerSesion(usuario: Sesion): Observable<Sesion> {\r\n-        return this.http.get<Sesion>(this.baseUrl+'/actual', usuario);\r\n+    public obtenerSesion(sesion: Sesion): Observable<Sesion> {\r\n+        return this.http.get<Sesion>(this.baseUrl+'/actual', sesion);\r\n     }\r\n  \r\n \r\n     \r\n \r\n \r\n }\r\n-import { Injectable } from \"@angular/core\";\r\n-import { Datos } from \"../constants/datos\";\r\n-import { HttpClient } from \"@angular/common/http\";\r\n-import { Observable } from \"rxjs\";\r\n-import { Amistades } from \"../models/amistades\";\r\n-import { Usuario } from \"../models/usuario\";\r\n-\r\n-\r\n-@Injectable({\r\n-    providedIn:'root'\r\n-})\r\n-export class SesionService {\r\n-    private baseUrl = Datos.API_URL+\"Sesion\" ;\r\n-    constructor(private http: HttpClient){}\r\n-\r\n-    public obtenerSesion(usuario: Sesion): Observable<Usuario> {\r\n-        return this.http.get<any>(this.baseUrl+'/actual', usuario);\r\n-    }\r\n- \r\n-\r\n-    \r\n-\r\n-\r\n-}\r\n"
+                },
+                {
+                    "date": 1719623325708,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     private baseUrl = Datos.API_URL+\"Sesion\" ;\r\n     constructor(private http: HttpClient){}\r\n \r\n     public obtenerSesion(sesion: Sesion): Observable<Sesion> {\r\n-        return this.http.get<Sesion>(this.baseUrl+'/actual', sesion);\r\n+        return this.http.get<any>(this.baseUrl+'/actual);\r\n     }\r\n  \r\n \r\n     \r\n"
+                },
+                {
+                    "date": 1719624508099,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,13 +13,9 @@\n export class SesionService {\r\n     private baseUrl = Datos.API_URL+\"Sesion\" ;\r\n     constructor(private http: HttpClient){}\r\n \r\n-    public obtenerSesion(sesion: Sesion): Observable<Sesion> {\r\n-        return this.http.get<any>(this.baseUrl+'/actual);\r\n+    public obtenerSesion(): Observable<Sesion> {\r\n+        return this.http.get<any>(this.baseUrl+'/actual');\r\n     }\r\n- \r\n \r\n-    \r\n-\r\n-\r\n }\r\n"
+                }
+            ],
+            "date": 1719623290035,
+            "name": "Commit-0",
+            "content": "import { Injectable } from \"@angular/core\";\r\nimport { Datos } from \"../constants/datos\";\r\nimport { HttpClient } from \"@angular/common/http\";\r\nimport { Observable } from \"rxjs\";\r\nimport { Amistades } from \"../models/amistades\";\r\nimport { Usuario } from \"../models/usuario\";\r\n\r\n\r\n@Injectable({\r\n    providedIn:'root'\r\n})\r\nexport class SesionService {\r\n    private baseUrl = Datos.API_URL+\"Sesion\" ;\r\n    constructor(private http: HttpClient){}\r\n\r\n    public inciarSesion(usuario: Usuario): Observable<Usuario> {\r\n        return this.http.post<any>(this.baseUrl+'/sesionon', usuario);\r\n    }\r\n    public registrarNuevaCuenta(usuario: Usuario): Observable<Usuario> {\r\n        return this.http.post<any>(this.baseUrl+'/registro', usuario);\r\n    }\r\n\r\n    \r\n\r\n\r\n}\r\n"
+        }
+    ]
+}

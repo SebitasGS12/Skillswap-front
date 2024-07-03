@@ -1,0 +1,50 @@
+{
+    "sourceFile": "src/app/constants/datos.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1718397402943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1718397409853,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n export class Datos {\r\n     \r\n+    \r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1718398380162,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n export class Datos {\r\n+    public static \r\n     \r\n-    \r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1718398388103,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n export class Datos {\r\n-    public static \r\n+    public static readonly\r\n     \r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1718398394763,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n export class Datos {\r\n-    public static readonly\r\n+    public static readonly API_URL:String\r\n     \r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1718398406037,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n export class Datos {\r\n-    public static readonly API_URL:String\r\n+    public static readonly API_URL:string =  \"http:\"\r\n     \r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1718398418002,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n export class Datos {\r\n-    public static readonly API_URL:string =  \"http:\"\r\n+    public static readonly API_URL:string =  \"http://\"\r\n     \r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1718398423358,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n export class Datos {\r\n     API_URL:string =  \"http://\"\r\n-\r\n     \r\n+    \r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1718398536788,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n export class Datos {\r\n     BASE:string =  \"http://\"\r\n     LOCAL:string = \"skillswap-core-production.up.railway.app/\"\r\n     WEB:string = \"localhost:8080/\"\r\n-    \r\n+    ESTANDAR :\r\n \r\n     \r\n \r\n }\r\n"
+                }
+            ],
+            "date": 1718397402943,
+            "name": "Commit-0",
+            "content": "export class Datos {\r\n    \r\n\r\n}\r\n"
+        }
+    ]
+}

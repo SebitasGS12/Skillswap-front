@@ -1,0 +1,74 @@
+{
+    "sourceFile": "src/app/models/imagen.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 14,
+            "patches": [
+                {
+                    "date": 1718500545213,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1718500574744,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,4 @@\n-class name {\r\n-    constructor(parameters) {\r\n-        \r\n-    }\r\n+class Imagen {\r\n+    imagenID:number;\r\n+    \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718500582995,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n class Imagen {\r\n     imagenID:number;\r\n+    estado:boolean;\r\n     \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718500588650,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n+import { Blob } from \"buffer\";\r\n+\r\n class Imagen {\r\n     imagenID:number;\r\n     estado:boolean;\r\n-    \r\n+    contenido:Blob\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718500616798,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n \r\n class Imagen {\r\n     imagenID:number;\r\n     estado:boolean;\r\n-    contenido:Blob\r\n+    contenido:Uint8Array;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718500621865,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n \r\n class Imagen {\r\n     imagenID:number;\r\n     estado:boolean;\r\n-    contenido:Uint8Array;\r\n+    contenido!:Uint8Array;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718500631024,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,5 @@\n-import { Blob } from \"buffer\";\r\n-\r\n class Imagen {\r\n-    imagenID:number;\r\n-    estado:boolean;\r\n+    imagenID!:number;\r\n+    estado!:boolean;\r\n     contenido!:Uint8Array;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719010442791,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-class Imagen {\r\n+export class Imagen {\r\n     imagenID!:number;\r\n     estado!:boolean;\r\n-    contenido!:Uint8Array;\r\n+    contenido!:;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719010456603,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n export class Imagen {\r\n     imagenID!:number;\r\n     estado!:boolean;\r\n-    contenido!:;\r\n+    contenido!:strnig;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719010470497,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n export class Imagen {\r\n     imagenID!:number;\r\n     estado!:boolean;\r\n-    contenido!:strnig;\r\n+    contenido!:string;\r\n+    //TODO Cambiar el tipo de dato del campo contenido\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719010489723,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n export class Imagen {\r\n     imagenID!:number;\r\n     estado!:boolean;\r\n-    contenido!:string;\r\n-    //TODO Cambiar el tipo de dato del campo contenido\r\n+    contenido!:Uint8Array;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719010645308,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n export class Imagen {\r\n     imagenID!:number;\r\n     estado!:boolean;\r\n-    contenido!:Uint8Array;\r\n+    contenido:Uint8Array;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719010654616,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n export class Imagen {\r\n     imagenID!:number;\r\n     estado!:boolean;\r\n-    contenido:Uint8Array;\r\n+    contenido!: Uint8Array;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719010664934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n export class Imagen {\r\n     imagenID!:number;\r\n     estado!:boolean;\r\n-    contenido!: Uint8Array;\r\n+    contenido:Uint8Array ;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719010671556,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-export class Imagen {\r\n-    imagenID!:number;\r\n-    estado!:boolean;\r\n+export interface Imagen {\r\n+    imagenID:number;\r\n+    estado:boolean;\r\n     contenido:Uint8Array ;\r\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1718500545213,
+            "name": "Commit-0",
+            "content": "class name {\r\n    constructor(parameters) {\r\n        \r\n    }\r\n}"
+        }
+    ]
+}

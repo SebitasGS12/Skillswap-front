@@ -1,0 +1,47 @@
+<app-header></app-header>
+<div class="division">
+    <app-aside></app-aside>
+    <div class="body">
+        <div class="container">
+            <div class="containerArriba">
+                <h2>Explorar Categorias</h2>
+                <br>            
+                @for (item of categoriaHabilidad; track $index) {
+
+                    <a [routerLink]="['/categoriasExplorar']" ><img src="https://img.freepik.com/vector-gratis/paisaje-lago-degradado_23-2149152834.jpg?t=st=1719186020~exp=1719189620~hmac=254ff5d5026d6d16d66c4bd91594c5ec5061c259b70b91f0b14c706af391bf38&w=1380" alt=""></a>
+
+                }
+            </div>
+            <div class="containerAbajo">
+                <h2>Bienvenido a SkillSwap</h2>
+                <br>
+                <h3>Intenta algo Nuevo</h3>
+                <br>
+                <div class="primerslot">
+                    <div>
+                    <h4>Nuevo en SkillSwap?</h4>
+                    <p>Te ayudaremos a comenzar con tu primer intercambio de habilidades.</p>
+                    </div>
+                    <button>Empezar</button>
+                </div>
+                <br><br>
+                <h3>¿Necesitas ayuda?</h3>
+                <br>
+                <div class="segundoslot">
+                    <p>Encuentra respuestas a sus preguntas en el centro de ayuda.</p>
+                    <a class="diff" href="#">Visitar el centro de ayuda</a>
+                </div>
+                <br>
+                <div class="segundoslot">
+                    <p>Consulta las ultimas actualizaciones en nuestro blog.</p>
+                    <a class="flechita" href="#">Leer el Blog 🡪</a>
+                </div>
+                <br>
+                <div class="segundoslot">
+                    <p>Si necesitas asistencia inmediata, lo atenderemos.</p>
+                    <a class="flechita" href="#">Contactanos 🡪</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

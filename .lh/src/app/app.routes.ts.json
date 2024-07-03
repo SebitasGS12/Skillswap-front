@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/app/app.routes.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1718401099854,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1718401107295,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,4 @@\n import { Routes } from '@angular/router';\r\n \r\n-export const routes: Routes = [{\r\n-\r\n-    \r\n-}];\r\n+export const routes: Routes = [\r\n+    {}];\r\n"
+                },
+                {
+                    "date": 1718401115492,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n import { Routes } from '@angular/router';\r\n \r\n export const routes: Routes = [\r\n-    {}];\r\n+    {path:''}\r\n+];\r\n"
+                },
+                {
+                    "date": 1718401124742,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import { Routes } from '@angular/router';\r\n+import { ListarAmistadesComponent } from './components/listar-amistades/listar-amistades.component';\r\n \r\n export const routes: Routes = [\r\n-    {path:''}\r\n+    {path:'listadoAmistades',component: ListarAmistadesComponent}\r\n ];\r\n"
+                },
+                {
+                    "date": 1718401138104,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { Routes } from '@angular/router';\r\n import { ListarAmistadesComponent } from './components/listar-amistades/listar-amistades.component';\r\n \r\n export const routes: Routes = [\r\n-    {path:'listadoAmistades',component: ListarAmistadesComponent}\r\n+    {path:'listado',component: ListarAmistadesComponent}\r\n ];\r\n"
+                },
+                {
+                    "date": 1718401186166,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,4 +3,5 @@\n \r\n const routes: Routes = [\r\n     {path:'listado',component: ListarAmistadesComponent}\r\n ];\r\n+\r\n"
+                },
+                {
+                    "date": 1718401202940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,5 +8,5 @@\n @NgModule({\r\n     imports: [RouterModule.forRoot(routes)],\r\n     exports: [RouterModule]\r\n })\r\n-  export class AppRoutingModule { }\n\\ No newline at end of file\n+export class AppRoutingModule { }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1718401099854,
+            "name": "Commit-0",
+            "content": "import { Routes } from '@angular/router';\r\n\r\nexport const routes: Routes = [{\r\n\r\n    \r\n}];\r\n"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/app/app.module.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1718401480082,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1718401486123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,15 @@\n+import { AppComponent } from \"./app.component\";\r\n+\r\n @NgModule({\r\n-    declarations: [\r\n-      // tus componentes\r\n-    ],\r\n-    imports: [\r\n-      BrowserModule,\r\n-      HttpClientModule,  // Asegúrate de incluir HttpClientModule aquí\r\n-      // otros módulos\r\n-    ],\r\n-    providers: [],\r\n-    bootstrap: [AppComponent]\r\n-  })\r\n\\ No newline at end of file\n-  export class AppModule { }\r\n-  \n+  declarations: [\r\n+    // tus componentes\r\n+  ],\r\n+  imports: [\r\n+    BrowserModule,\r\n+    HttpClientModule,  // Asegúrate de incluir HttpClientModule aquí\r\n+    // otros módulos\r\n+  ],\r\n+  providers: [],\r\n+  bootstrap: [AppComponent]\r\n+})\r\n+export class AppModule { }\r\n"
+                },
+                {
+                    "date": 1718401492800,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,8 @@\n+import { NgModule } from \"@angular/core\";\r\n import { AppComponent } from \"./app.component\";\r\n+import { BrowserModule } from \"@angular/platform-browser\";\r\n+import { HttpClientModule } from \"@angular/common/http\";\r\n \r\n @NgModule({\r\n   declarations: [\r\n     // tus componentes\r\n"
+                },
+                {
+                    "date": 1718401503872,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,10 @@\n import { HttpClientModule } from \"@angular/common/http\";\r\n \r\n @NgModule({\r\n   declarations: [\r\n-    // tus componentes\r\n-  ],\r\n+    AppComponent\r\n+],\r\n   imports: [\r\n     BrowserModule,\r\n     HttpClientModule,  // Asegúrate de incluir HttpClientModule aquí\r\n     // otros módulos\r\n"
+                },
+                {
+                    "date": 1718401526722,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,17 +2,22 @@\n import { AppComponent } from \"./app.component\";\r\n import { BrowserModule } from \"@angular/platform-browser\";\r\n import { HttpClientModule } from \"@angular/common/http\";\r\n \r\n+\r\n @NgModule({\r\n-  declarations: [\r\n-    AppComponent\r\n+    declarations: [\r\n+      AppComponent,\r\n+      ListarProductosComponent,\r\n+      RegistrarProductosComponent,\r\n     ],\r\n-  imports: [\r\n-    BrowserModule,\r\n-    HttpClientModule,  // Asegúrate de incluir HttpClientModule aquí\r\n-    // otros módulos\r\n-  ],\r\n-  providers: [],\r\n-  bootstrap: [AppComponent]\r\n-})\r\n-export class AppModule { }\r\n+    imports: [\r\n+      BrowserModule,\r\n+      AppRoutingModule\r\n+    ],\r\n+    providers: [\r\n+      provideClientHydration()\r\n+    ],\r\n+    bootstrap: [AppComponent]\r\n+  })\r\n+  export class AppModule { }\r\n+  \r\n"
+                },
+                {
+                    "date": 1718401559790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,7 @@\n import { NgModule } from \"@angular/core\";\r\n import { AppComponent } from \"./app.component\";\r\n import { BrowserModule, provideClientHydration } from \"@angular/platform-browser\";\r\n-\r\n import { AppRoutingModule } from './app-routing.module';\r\n \r\n @NgModule({\r\n     declarations: [\r\n"
+                }
+            ],
+            "date": 1718401480082,
+            "name": "Commit-0",
+            "content": "@NgModule({\r\n    declarations: [\r\n      // tus componentes\r\n    ],\r\n    imports: [\r\n      BrowserModule,\r\n      HttpClientModule,  // Asegúrate de incluir HttpClientModule aquí\r\n      // otros módulos\r\n    ],\r\n    providers: [],\r\n    bootstrap: [AppComponent]\r\n  })\r\n  export class AppModule { }\r\n  "
+        }
+    ]
+}

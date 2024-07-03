@@ -1,0 +1,41 @@
+<app-header></app-header>
+<div class="division">
+    <app-aside></app-aside>
+    <div class="container-skilchat">
+        <div class="mensajes">
+            <h2>SKILLCHAT</h2>
+            <div class="detalle">
+                <div *ngIf="chat_usuario" class="cabecera">
+                    <img src="./assets/images/imgUser.png" alt="User avatar">
+                    <div class="info">
+                        <h4>{{nombreCompleto(amistadPerfilSelected)}}</h4>                        
+                        <h6>En línea</h6>
+                    </div>
+                </div>
+                <div class="message" *ngIf="chat_usuario">
+                    <div class="chats" #messageContainer>
+                        <div *ngFor="let mensaje of mensajesFromChat" [ngClass]="{'receptor': mensaje.obj_Usuario.usuarioId === sesion.obj_Usuario.usuarioId, 'emisor': mensaje.obj_Usuario.usuarioId !== sesion.obj_Usuario.usuarioId}">
+                            <img src="./assets/images/imgUser.png" alt="Avatar">
+                            <div class="texto">{{ mensaje.contenido }}</div>
+                        </div>
+                    </div>
+                    <div >
+                        <form  class="input-section" (ngSubmit)="enviarMensaje(messageContent.value)" >
+                            <input type="text" name="contenido"  placeholder="Type your message" #messageContent>
+                            <button type="submit">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="amigos">
+            <h3>Amigos</h3>
+            <a *ngFor="let item of amistades; trackBy: trackByFn" class="item" (click)="abrirChat(item.amigo.usuarioId)">
+                <img src="./assets/images/user_activo.png" alt="state">
+                <img src="./assets/images/imgUser.png" alt="user picture">
+                <p>{{nombreCompleto(obtenerPerfil(item.amigo.usuarioId)!)}}</p>
+                <img src="./assets/images/abrir_chat.png" alt="">
+            </a>
+        </div>
+    </div>
+</div>

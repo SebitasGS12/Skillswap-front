@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/app/components/crear-discusion/crear-discusion.component.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1720032484710,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1720032492453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n     justify-content: flex-start;\r\n     align-items: center;\r\n     background-color: #0F1A24;\r\n     padding-top: 50px;\r\n+    color: ;\r\n     flex: 1;\r\n }\r\n .contenedor {\r\n     background-color: #282828;\r\n"
+                },
+                {
+                    "date": 1720033877594,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,11 @@\n     justify-content: flex-start;\r\n     align-items: center;\r\n     background-color: #0F1A24;\r\n     padding-top: 50px;\r\n-    color: ;\r\n+    color: white;\r\n     flex: 1;\r\n+    min\r\n }\r\n .contenedor {\r\n     background-color: #282828;\r\n     padding: 30px;\r\n"
+                },
+                {
+                    "date": 1720033882809,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,10 @@\n     background-color: #0F1A24;\r\n     padding-top: 50px;\r\n     color: white;\r\n     flex: 1;\r\n-    min\r\n+    min-height: 100vh;\r\n+    height: 100%;\r\n }\r\n .contenedor {\r\n     background-color: #282828;\r\n     padding: 30px;\r\n"
+                }
+            ],
+            "date": 1720032484710,
+            "name": "Commit-0",
+            "content": ".contenido-principal {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: flex-start;\r\n    align-items: center;\r\n    background-color: #0F1A24;\r\n    padding-top: 50px;\r\n    flex: 1;\r\n}\r\n.contenedor {\r\n    background-color: #282828;\r\n    padding: 30px;\r\n    border-radius: 10px;\r\n    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);\r\n    max-width: 400px;\r\n    width: 100%;\r\n}\r\n.contenedor h2 {\r\n    text-align: center;\r\n}\r\n.grupo-formulario {\r\n    margin-bottom: 15px;\r\n    text-align: left;\r\n}\r\nlabel {\r\n    display: block;\r\n    margin-bottom: 10px;\r\n}\r\ninput[type=\"text\"],\r\ntextarea,\r\ninput[type=\"date\"],\r\nselect {\r\n    width: 100%;\r\n    padding: 10px;\r\n    border: none;\r\n    border-radius: 5px;\r\n    box-sizing: border-box;\r\n    margin-bottom: 15px;\r\n}\r\ntextarea {\r\n    height: 100px;\r\n}\r\n.botones {\r\n    display: flex;\r\n    justify-content: space-between;\r\n}\r\n.botones button {\r\n    padding: 10px 20px;\r\n    border: none;\r\n    border-radius: 5px;\r\n    cursor: pointer;\r\n    font-size: 16px;\r\n    transition: background-color 0.3s ease, transform 0.3s ease;\r\n}\r\n.botones .guardar {\r\n    background-color: #3A76F0;\r\n    color: #fff;\r\n}\r\n.botones .guardar:hover {\r\n    background-color: #3458A1;\r\n    transform: translateY(-3px);\r\n}\r\n.botones .cancelar {\r\n    background-color: #F03A47;\r\n    color: #fff;\r\n}\r\n.botones .cancelar:hover {\r\n    background-color: #B52933;\r\n    transform: translateY(-3px);\r\n}\r\n.botones button:active {\r\n    transform: scale(0.98);\r\n}\r\n"
+        }
+    ]
+}

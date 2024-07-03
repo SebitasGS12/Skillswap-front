@@ -1,0 +1,29 @@
+<app-header></app-header>
+<div class="division">
+  <app-aside></app-aside>
+  <div class="body">
+    <div class="container">
+      <div class="tabs">
+        <div class="tab-button selected">Todos</div>
+        <div class="tab-button">Menciones</div>
+        <div class="tab-button">Interacciones</div>
+      </div>
+      <div class="tab-content">
+        <ng-container *ngFor="let item of notificaciones; let i = index">
+          <div class="notification">
+            <img src="https://img.freepik.com/foto-gratis/cerrar-lindo-gato-interior_23-2148882585.jpg?t=st=1719293832~exp=1719297432~hmac=9ef9fff465d15a1a5a3d7d2bcdc7ca2b2e380ec4f504344d5a58392dc55297ad&w=740" alt="avatar">
+            <div class="text">
+              <h5   >{{item.titulo}}</h5>
+              <p>{{item.contenido}}</p>
+            </div>
+            <div class="actions" *ngIf="item.titulo === 'Solicitud de Amistad'">
+              <span class="check" (click)="gestionarSolicitud(item,true)">✔</span>
+              <span class="cross" (click)="gestionarSolicitud(item,false)">✖</span>
+            </div>
+            <span class="time">{{item.fechaCreacion}}</span>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

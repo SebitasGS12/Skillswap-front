@@ -1,0 +1,46 @@
+.container{
+    padding: 20px;
+    background-color: #0F1A24;
+    min-height: 100vh;
+}
+.form-control {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+}h
+
+.form-control-plaintext {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding-left: 6px;
+    border-radius: 5px;
+    
+}
+.form-control {
+    margin: 5px 5px 5px 0px;  /* top right bottom left*/
+}
+.frmedi{
+    background-color: rgba(15, 26, 36, 1);
+    color: #fff;
+    padding: 60px;
+    margin: 35px 0px 0px 0px;
+    border-radius: 20px;
+    box-shadow: #ccc;
+    border: 3px solid rgba(73, 71, 210, 1);
+    width: 600px;
+}
+#usuarioId{
+    color: #fff;
+}
+
+#imagenPreview {
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+#botones{
+    width: auto;
+    padding: 20px 0px 0px 0px;
+    margin: 20px 0px 0px 70px;
+}

@@ -1,0 +1,174 @@
+{
+    "sourceFile": "src/app/components/categorias-explorar/categorias-explorar.component.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 39,
+            "patches": [
+                {
+                    "date": 1718681960476,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1718681968720,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,9 @@\n .container_principal{\r\n-    \r\n+    font-family: 'Be Vietnam Pro';\r\n+    display: flex;\r\n+    flex-direction: column;\r\n+    padding: 30px 10%;\r\n+    gap: 20px;\r\n+    background-color: #0F1A24;\r\n+    color:#FFFFFF;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718844896275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,5 +5,9 @@\n     padding: 30px 10%;\r\n     gap: 20px;\r\n     background-color: #0F1A24;\r\n     color:#FFFFFF;\r\n+}\r\n+\r\n+.aside{\r\n+    \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718846458639,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,4 @@\n     gap: 20px;\r\n     background-color: #0F1A24;\r\n     color:#FFFFFF;\r\n }\r\n-\r\n-.aside{\r\n-    \r\n-}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718936948386,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,5 +5,6 @@\n     padding: 30px 10%;\r\n     gap: 20px;\r\n     background-color: #0F1A24;\r\n     color:#FFFFFF;\r\n+    min-width: ;\r\n }\r\n"
+                },
+                {
+                    "date": 1718936959314,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,6 +5,6 @@\n     padding: 30px 10%;\r\n     gap: 20px;\r\n     background-color: #0F1A24;\r\n     color:#FFFFFF;\r\n-    min-width: ;\r\n+    min-height: 80vh;\r\n }\r\n"
+                },
+                {
+                    "date": 1718936970600,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,4 +7,6 @@\n     background-color: #0F1A24;\r\n     color:#FFFFFF;\r\n     min-height: 80vh;\r\n }\r\n+\r\n+\r\n"
+                },
+                {
+                    "date": 1718936990764,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,4 +9,5 @@\n     min-height: 80vh;\r\n }\r\n \r\n \r\n+\r\n"
+                },
+                {
+                    "date": 1718937001094,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,5 +9,10 @@\n     min-height: 80vh;\r\n }\r\n \r\n \r\n+.buscador{\r\n \r\n+    border:1px red solid;\r\n+\r\n+\r\n+}\r\n"
+                },
+                {
+                    "date": 1718937007589,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n }\r\n \r\n \r\n .buscador{\r\n-\r\n+    width: ;\r\n     border:1px red solid;\r\n \r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1718937016457,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,13 +6,14 @@\n     gap: 20px;\r\n     background-color: #0F1A24;\r\n     color:#FFFFFF;\r\n     min-height: 80vh;\r\n+    \r\n }\r\n \r\n \r\n .buscador{\r\n-    width: ;\r\n+    width: 70%;\r\n     border:1px red solid;\r\n \r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1718937025319,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     gap: 20px;\r\n     background-color: #0F1A24;\r\n     color:#FFFFFF;\r\n     min-height: 80vh;\r\n-    \r\n+    a: center;\r\n }\r\n \r\n \r\n .buscador{\r\n"
+                },
+                {
+                    "date": 1718937111225,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,14 +6,14 @@\n     gap: 20px;\r\n     background-color: #0F1A24;\r\n     color:#FFFFFF;\r\n     min-height: 80vh;\r\n-    a: center;\r\n+    align-items: center;\r\n }\r\n \r\n \r\n .buscador{\r\n-    width: 70%;\r\n+    width: 50%;\r\n     border:1px red solid;\r\n \r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1718937116664,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n }\r\n \r\n \r\n .buscador{\r\n-    width: 50%;\r\n+    width: 35%;\r\n     border:1px red solid;\r\n \r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1718937125359,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,7 +13,6 @@\n \r\n .buscador{\r\n     width: 35%;\r\n     border:1px red solid;\r\n-\r\n-\r\n+    \r\n }\r\n"
+                },
+                {
+                    "date": 1718937132342,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,6 +13,9 @@\n \r\n .buscador{\r\n     width: 35%;\r\n     border:1px red solid;\r\n-    \r\n+\r\n }\r\n+\r\n+\r\n+.buscador{}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718937140862,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,5 +17,9 @@\n \r\n }\r\n \r\n \r\n-.buscador{}\n\\ No newline at end of file\n+.buscador button,{\r\n+\r\n+\r\n+\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718937150027,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n \r\n }\r\n \r\n \r\n-.buscador button,{\r\n+.buscador button,input{\r\n+    background-color: none;\r\n \r\n \r\n-\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718937159948,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,5 @@\n \r\n }\r\n \r\n \r\n-.buscador button,input{\r\n-    background-color: none;\r\n-\r\n-\r\n-}\n\\ No newline at end of file\n+.buscador button\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718937170585,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,5 +17,10 @@\n \r\n }\r\n \r\n \r\n-.buscador button\n\\ No newline at end of file\n+.buscador button{\r\n+\r\n+}\r\n+.buscador input{\r\n+    \r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718937176603,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,10 @@\n \r\n \r\n .buscador button{\r\n \r\n+    \r\n+\r\n }\r\n .buscador input{\r\n-    \r\n+\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718937191966,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,9 @@\n \r\n \r\n .buscador button{\r\n \r\n+    background-color: none;\r\n     \r\n \r\n }\r\n .buscador input{\r\n"
+                },
+                {
+                    "date": 1718937322001,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,16 +14,5 @@\n .buscador{\r\n     width: 35%;\r\n     border:1px red solid;\r\n \r\n-}\r\n-\r\n-\r\n-.buscador button{\r\n-\r\n-    background-color: none;\r\n-    \r\n-\r\n-}\r\n-.buscador input{\r\n-\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718937675131,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,6 +13,5 @@\n \r\n .buscador{\r\n     width: 35%;\r\n     border:1px red solid;\r\n-\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718937683756,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,5 +13,5 @@\n \r\n .buscador{\r\n     width: 35%;\r\n     border:1px red solid;\r\n-}\n\\ No newline at end of file\n+}\r\n"
+                },
+                {
+                    "date": 1718937689009,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,4 +14,7 @@\n .buscador{\r\n     width: 35%;\r\n     border:1px red solid;\r\n }\r\n+.buscador span{\r\n+    \r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718937696224,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,6 +15,10 @@\n     width: 35%;\r\n     border:1px red solid;\r\n }\r\n .buscador span{\r\n+\r\n+}\r\n+\r\n+.buscador span img{\r\n     \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718937703820,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,5 +20,9 @@\n }\r\n \r\n .buscador span img{\r\n     \r\n+}\r\n+\r\n+.buscador input{\r\n+\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718937777678,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     width: 35%;\r\n     border:1px red solid;\r\n }\r\n .buscador span{\r\n-\r\n+    \r\n }\r\n \r\n .buscador span img{\r\n     \r\n"
+                },
+                {
+                    "date": 1718937792984,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,14 +15,14 @@\n     width: 35%;\r\n     border:1px red solid;\r\n }\r\n .buscador span{\r\n-    \r\n+\r\n }\r\n \r\n .buscador span img{\r\n     \r\n }\r\n \r\n .buscador input{\r\n-\r\n+    background-color: none;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718937807422,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,5 +24,6 @@\n }\r\n \r\n .buscador input{\r\n     background-color: none;\r\n+    ou\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718937812594,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,6 +24,6 @@\n }\r\n \r\n .buscador input{\r\n     background-color: none;\r\n-    ou\r\n+    outline: none;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718937830107,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,6 +24,7 @@\n }\r\n \r\n .buscador input{\r\n     background-color: none;\r\n+    \r\n     outline: none;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718937835415,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,7 +24,7 @@\n }\r\n \r\n .buscador input{\r\n     background-color: none;\r\n-    \r\n+    color: aqua;\r\n     outline: none;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718937843225,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,7 +24,6 @@\n }\r\n \r\n .buscador input{\r\n     background-color: none;\r\n-    color: aqua;\r\n     outline: none;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718937853669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,7 +23,8 @@\n     \r\n }\r\n \r\n .buscador input{\r\n-    background-color: none;\r\n+    border: none;\r\n+    background-color: #0F1A24;\r\n     outline: none;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718937861031,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,5 +26,7 @@\n .buscador input{\r\n     border: none;\r\n     background-color: #0F1A24;\r\n     outline: none;\r\n+\r\n+    \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718937871491,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,10 @@\n \r\n .buscador{\r\n     width: 35%;\r\n     border:1px red solid;\r\n+    display: flex;\r\n+    \r\n }\r\n .buscador span{\r\n \r\n }\r\n@@ -27,6 +29,6 @@\n     border: none;\r\n     background-color: #0F1A24;\r\n     outline: none;\r\n \r\n-    \r\n+\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718937878847,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     width: 35%;\r\n     border:1px red solid;\r\n     display: flex;\r\n     flex-direction: row;\r\n-    gap: ;\r\n+    gap: 5;\r\n }\r\n .buscador span{\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1718939866369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n }\r\n \r\n .buscador:focus-within .buscador_span {\r\n     opacity: 0;\r\n-    d\r\n+    display: block;\r\n     transition: opacity .2s ease;\r\n }\r\n \r\n .selector select {\r\n"
+                }
+            ],
+            "date": 1718681960476,
+            "name": "Commit-0",
+            "content": ".container_principal{\r\n    \r\n}"
+        }
+    ]
+}

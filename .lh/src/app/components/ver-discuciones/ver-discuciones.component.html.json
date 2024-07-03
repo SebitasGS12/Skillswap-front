@@ -1,0 +1,34 @@
+{
+    "sourceFile": "src/app/components/ver-discuciones/ver-discuciones.component.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1719965110672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1719965468744,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <div class=\"container\" *ngIf=\"foro\">\r\n   <div class=\"titu\">\r\n-    <h1>{{ foro.titulo }}</h1>\r\n+    <h1>{{ foro. }}</h1>\r\n     <p>Publicado por {{ foro.obj_Usuario.nombre }} en {{ foro.obj_CategoriaForo.nombre }} - {{ foro.fechaCreacion | date }} {{ foro.obj_CategoriaForo.cantidadVistas }} vistas</p>\r\n   </div>\r\n   <div class=\"persona\">\r\n     <img [src]=\"foro.obj_Usuario.avatarUrl\" alt=\"imagen\" />\r\n"
+                },
+                {
+                    "date": 1719965474890,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <div class=\"container\" *ngIf=\"foro\">\r\n   <div class=\"titu\">\r\n-    <h1>{{ foro. }}</h1>\r\n-    <p>Publicado por {{ foro.obj_Usuario.nombre }} en {{ foro.obj_CategoriaForo.nombre }} - {{ foro.fechaCreacion | date }} {{ foro.obj_CategoriaForo.cantidadVistas }} vistas</p>\r\n+    <h1>{{ foro?.titulo }}</h1>\r\n+    <p>Publicado por {{ foro.ob.nombre }} en {{ foro.obj_CategoriaForo.nombre }} - {{ foro.fechaCreacion | date }} {{ foro.obj_CategoriaForo.cantidadVistas }} vistas</p>\r\n   </div>\r\n   <div class=\"persona\">\r\n     <img [src]=\"foro.obj_Usuario.avatarUrl\" alt=\"imagen\" />\r\n     <div class=\"nombreuser\">\r\n"
+                },
+                {
+                    "date": 1719965487812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <div class=\"container\" *ngIf=\"foro\">\r\n   <div class=\"titu\">\r\n     <h1>{{ foro?.titulo }}</h1>\r\n-    <p>Publicado por {{ foro?.obj_Usuario. }} en {{ foro.obj_CategoriaForo.nombre }} - {{ foro.fechaCreacion | date }} {{ foro.obj_CategoriaForo.cantidadVistas }} vistas</p>\r\n+    <p>Publicado por {{ foro?.obj_Usuario?.correo }} en {{ foro.obj_CategoriaForo.nombre }} - {{ foro.fechaCreacion | date }} {{ foro.obj_CategoriaForo.cantidadVistas }} vistas</p>\r\n   </div>\r\n   <div class=\"persona\">\r\n     <img [src]=\"foro.obj_Usuario.avatarUrl\" alt=\"imagen\" />\r\n     <div class=\"nombreuser\">\r\n"
+                },
+                {
+                    "date": 1719965511484,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <div class=\"container\" *ngIf=\"foro\">\r\n   <div class=\"titu\">\r\n     <h1>{{ foro?.titulo }}</h1>\r\n-    <p>Publicado por {{ foro?.obj_Usuario?.correo }} en {{ foro?.obj_CategoriaForo?.nombre }} - {{ foro?.fechaCreacion | date }} {{ foro.obj_CategoriaForo.cantidadVistas }} vistas</p>\r\n+    <p>Publicado por {{ foro?.obj_Usuario?.correo }} en {{ foro?.obj_CategoriaForo?.nombre }} - {{ foro?.fechaCreacion |  }} {{ foro.obj_CategoriaForo.cantidadVistas }} vistas</p>\r\n   </div>\r\n   <div class=\"persona\">\r\n     <img [src]=\"foro.obj_Usuario.avatarUrl\" alt=\"imagen\" />\r\n     <div class=\"nombreuser\">\r\n"
+                }
+            ],
+            "date": 1719965110672,
+            "name": "Commit-0",
+            "content": "<div class=\"container\" *ngIf=\"foro\">\r\n  <div class=\"titu\">\r\n    <h1>{{ foro.titulo }}</h1>\r\n    <p>Publicado por {{ foro.obj_Usuario.nombre }} en {{ foro.obj_CategoriaForo.nombre }} - {{ foro.fechaCreacion | date }} {{ foro.obj_CategoriaForo.cantidadVistas }} vistas</p>\r\n  </div>\r\n  <div class=\"persona\">\r\n    <img [src]=\"foro.obj_Usuario.avatarUrl\" alt=\"imagen\" />\r\n    <div class=\"nombreuser\">\r\n      <h2>{{ foro.obj_Usuario.nombre }}</h2>\r\n      <p>{{ foro.fechaCreacion | date }} {{ foro.obj_Usuario.nombre }}</p>\r\n    </div>\r\n    <a class=\"btnSeguir\" href=\"#\">Seguir</a>\r\n  </div>\r\n  <div class=\"respuestas\">\r\n    <h1>Respuestas</h1>\r\n    <div class=\"globres\" *ngFor=\"let discusion of discuciones\">\r\n      <div class=\"Rpta\">\r\n        <img [src]=\"discusion.obj_Usuario.avatarUrl\" class=\"imgUs\" alt=\"imgUsuario\" />\r\n        <div class=\"txresp\">\r\n          <div class=\"dia\">\r\n            <h3>{{ discusion.obj_Usuario.nombre }}</h3>\r\n            <p>{{ discusion.fechaCreacion | date }}</p>\r\n          </div>\r\n          <p class=\"resptxt\">\r\n            {{ discusion.descripcion }}\r\n          </p>\r\n        </div>\r\n      </div>\r\n      <div class=\"reaccion\">\r\n        <div class=\"laik\">\r\n          <img src=\"../../../assets/images/como.png\" alt=\"laik\" />\r\n          <p>123</p>\r\n        </div>\r\n        <div class=\"nolaik\">\r\n          <img src=\"../../../assets/images/como.png\" alt=\"dislaik\" />\r\n          <p>5</p>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <!-- Aquí puedes agregar el formulario para agregar respuestas si es necesario -->\r\n  </div>\r\n</div>\r\n"
+        }
+    ]
+}

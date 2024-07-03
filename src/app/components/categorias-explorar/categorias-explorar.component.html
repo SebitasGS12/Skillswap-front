@@ -1,0 +1,37 @@
+<app-header></app-header>
+<div class="division">
+  <app-aside></app-aside>
+  <div class="container_principal">
+    <label class="buscador">
+      <span class="buscador_span">
+        <img src="./assets/images/lupa.png" alt="Buscar">
+      </span>
+      <input type="text" placeholder="Buscar" [(ngModel)]="palabraClave" (input)="busqueda()">
+    </label>
+    <div class="selector">
+      <select (change)="cambioCategoria($event)">
+        <option [value]="99999">Todos</option>
+        <option *ngFor="let item of categoria" [value]="item.categoriaHabilidadId">{{item.nombre}}</option>
+      </select>
+    </div>
+    <div class="informacion">
+      <div *ngIf="!filteredHabilidades || filteredHabilidades.length === 0" class="item">
+        <h3>No Hay elementos</h3>
+      </div>
+      <div *ngFor="let itemFiltered of filteredHabilidades" class="item">
+        <img src="./assets/images/imgUser.png" alt="Buscar">
+        <h3>{{itemFiltered.nombre}}</h3>
+        <h5>{{itemFiltered.obj_Perfil.nombre + " " + itemFiltered.obj_Perfil.apellido}}</h5>
+        <div class="item_btn">
+          <div *ngIf="sesion?.obj_Usuario?.usuarioId !== itemFiltered?.obj_Perfil?.usuario?.usuarioId">
+            <a href="#" *ngIf="amigosMap.get(itemFiltered.obj_Perfil.usuario.usuarioId)">Mensaje</a>
+            <ng-container *ngIf="!amigosMap.get(itemFiltered.obj_Perfil.usuario.usuarioId)">
+              <a href="#">Mensaje</a>
+              <a (click)="agregarAmigo(sesion?.obj_Usuario!, itemFiltered?.obj_Perfil?.usuario!)">Añadir</a>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

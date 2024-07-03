@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/app/components/menu-usuario/menu-usuario.component.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1719616707181,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1719619719691,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-\r\n+<\r\n <div class=\"body\">\r\n     <div class=\"container\">\r\n         <div class=\"containerArriba\">\r\n             <h1>Explorar</h1>\r\n"
+                },
+                {
+                    "date": 1719872234057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n                 <br>            \r\n                 @for (item of categoriaHabilidad; track $index) {\r\n \r\n                     <a href=\"\"><img src=\"https://img.freepik.com/vector-gratis/paisaje-lago-degradado_23-2149152834.jpg?t=st=1719186020~exp=1719189620~hmac=254ff5d5026d6d16d66c4bd91594c5ec5061c259b70b91f0b14c706af391bf38&w=1380\" alt=\"\"></a>\r\n+\r\n                 }\r\n                 </div>\r\n             <div class=\"containerAbajo\">\r\n                 <h2>Bienvenido a SkillSwap</h2>\r\n"
+                }
+            ],
+            "date": 1719616707181,
+            "name": "Commit-0",
+            "content": "<body>\r\n    <div class=\"container\">\r\n        <div class=\"containerArriba\">\r\n            <h1>Explorar</h1>\r\n            <br>\r\n            <a href=\"\"><img src=\"https://img.freepik.com/vector-gratis/paisaje-lago-degradado_23-2149152834.jpg?t=st=1719186020~exp=1719189620~hmac=254ff5d5026d6d16d66c4bd91594c5ec5061c259b70b91f0b14c706af391bf38&w=1380\" alt=\"\"></a>\r\n            <a href=\"\"><img src=\"https://img.freepik.com/vector-gratis/paisaje-montana-degradado_23-2149152830.jpg?t=st=1719186012~exp=1719189612~hmac=6c3925b22124a8e79aef2665abcad147beb4a2061276d32aa402e5d8e7c77992&w=1380\" alt=\"\"></a>\r\n            <a href=\"\"><img src=\"https://img.freepik.com/vector-gratis/paisaje-invierno-degradado_23-2149152827.jpg?t=st=1719186067~exp=1719189667~hmac=b372d4c7462d5e6a1d805bd2edb251f5f8c8bb5665391f102ad6a11dc61fb15e&w=1380\" alt=\"\"></a>\r\n            <a href=\"\"><img src=\"https://img.freepik.com/vector-gratis/paisaje-lago-degradado_23-2149152833.jpg?t=st=1719186084~exp=1719189684~hmac=836b74a32c91307e9fb395c10d35baecc5ad0d67b262d92c2c4e3e6a4ec6824f&w=1380\" alt=\"\"></a>\r\n            <a href=\"\"><img src=\"https://img.freepik.com/vector-gratis/hermoso-paisaje-primavera-degradado_23-2148448598.jpg?t=st=1719186109~exp=1719189709~hmac=09a3ccfe87a01846c816702223b60b9c6a1670dd3e0a813812fbcb8407c6b533&w=1380\" alt=\"\"></a>\r\n        </div>\r\n        <div class=\"containerAbajo\">\r\n            <h1>Bienvenido a SkillSwap</h1>\r\n            <br>\r\n            <h2>Intenta algo Nuevo</h2>\r\n            <br>\r\n            <div class=\"primerslot\">\r\n                <div>\r\n                <h3>Nuevo en SkillSwap?</h3>\r\n                <p>Te ayudaremos a comenzar con tu primer intercambio de habilidades.</p>\r\n                </div>\r\n                <button>Empezar</button>\r\n            </div>\r\n            <br><br>\r\n            <h2>¿Necesitas ayuda?</h2>\r\n            <br>\r\n            <div class=\"segundoslot\">\r\n                <p>Encuentra respuestas a sus preguntas en el centro de ayuda.</p>\r\n                <a class=\"diff\" href=\"#\">Visitar el centro de ayuda</a>\r\n            </div>\r\n            <br>\r\n            <div class=\"segundoslot\">\r\n                <p>Consulta las ultimas actualizaciones en nuestro blog.</p>\r\n                <a class=\"flechita\" href=\"#\">Leer el Blog 🡪</a>\r\n            </div>\r\n            <br>\r\n            <div class=\"segundoslot\">\r\n                <p>Si necesitas asistencia inmediata, lo atenderemos.</p>\r\n                <a class=\"flechita\" href=\"#\">Contactanos 🡪</a>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</body>\r\n"
+        }
+    ]
+}

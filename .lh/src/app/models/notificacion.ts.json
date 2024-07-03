@@ -1,0 +1,34 @@
+{
+    "sourceFile": "src/app/models/notificacion.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1719959673085,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1719959941575,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,8 @@\n     \r\n     notificacionesId!:number|null;\r\n     titulo!:string;\r\n     contenido!:string;\r\n-    nombre!:string;\r\n     fechaCreacion!:Date;\r\n     leido!:string;\r\n     obj_imagenId!:Imagen;\r\n     usuario!:Usuario;\r\n"
+                },
+                {
+                    "date": 1719959960880,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,8 @@\n     titulo!:string;\r\n     contenido!:string;\r\n     fechaCreacion!:Date;\r\n     leido!:string;\r\n-    obj_imagenId!:Imagen;\r\n+    obj_imagenId!:Imagen|;\r\n     usuario!:Usuario;\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719959970670,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     notificacionesId!:number|null;\r\n     titulo!:string;\r\n     contenido!:string;\r\n     fechaCreacion!:Date;\r\n-    leido!:string;\r\n-    obj_imagenId!:Imagen|;\r\n+    leido!:boolean;\r\n+    obj_imagenId!:Imagen|null;\r\n     usuario!:Usuario;\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719961395720,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,6 +9,7 @@\n     fechaCreacion!:Date;\r\n     leido!:boolean;\r\n     obj_imagenId!:Imagen|null;\r\n     usuario!:Usuario;\r\n+    usuario!:Usuario;\r\n \r\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1719959673085,
+            "name": "Commit-0",
+            "content": "import { Imagen } from \"./imagen\";\r\nimport { Usuario } from \"./usuario\";\r\n\r\nexport class  Notificacion {\r\n    \r\n    notificacionesId!:number|null;\r\n    titulo!:string;\r\n    contenido!:string;\r\n    nombre!:string;\r\n    fechaCreacion!:Date;\r\n    leido!:string;\r\n    obj_imagenId!:Imagen;\r\n    usuario!:Usuario;\r\n\r\n}"
+        }
+    ]
+}

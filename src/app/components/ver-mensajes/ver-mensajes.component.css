@@ -1,0 +1,123 @@
+/* Estilo general del contenedor */
+.container {
+    width: 100%;
+    padding: 20px;
+    background-color: #0f1a24;
+    color: white;
+    min-height: 100vh;
+    height: 100%;
+    font-family: 'Be Vietnam Pro';
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.pregunta {
+    text-align: center;
+    margin: 20px;
+}
+
+.pregunta h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.pregunta p {
+    font-size: 14px;
+    color: #666;
+}
+
+.usuario {
+    display: flex;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 15px;
+}
+
+.usuario img {
+width: 40px;
+height: 40px;
+border-radius: 50%;
+margin-right: 10px;
+}
+
+.usuario h3 {
+font-size: 18px;
+font-weight: bold;
+margin-bottom: 5px;
+}
+
+.usuario span {
+font-size: 14px;
+color: #666;
+}
+
+.respuestas {
+    margin-bottom: 20px;
+}
+
+.tem ,.info{
+    display: flex;
+    flex-direction: column;
+}
+
+.respuesta {
+border: 1px solid #ddd;
+padding: 15px;
+margin-bottom: 10px;
+border-radius: 5px;
+}
+
+.respuesta p {
+font-size: 16px;
+line-height: 1.5;
+}
+
+.usuario-respuesta {
+display: flex;
+align-items: center;
+margin-top: 10px;
+}
+
+.usuario-respuesta img {
+width: 30px;
+height: 30px;
+border-radius: 50%;
+margin-right: 5px;
+}
+
+.usuario-respuesta span {
+font-size: 14px;
+font-weight: bold;
+}
+
+
+.input-section {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #4947D2;
+}
+
+.input-section input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #4947D2;
+    border-radius: 5px;
+    margin-right: 10px;
+    background-color: #0F1A24;
+    color: white;
+}
+
+.input-section button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.input-section button:hover {
+    background-color: #0056b3;
+}

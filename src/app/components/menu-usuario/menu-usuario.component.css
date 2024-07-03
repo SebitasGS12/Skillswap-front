@@ -1,0 +1,101 @@
+
+.body{
+    background-color: #0F1A24;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+    margin-left: 15px;
+    color: white;
+
+}
+
+h2{
+    margin-left: 15px;
+    color: white;
+
+}
+
+h3{
+    margin-left: 15px;
+    color: white;
+}
+
+p{
+    margin-left: 15px;
+    color: white;
+    font-size: 1em;
+}
+
+.container{
+    width: 100%;
+    display: block;
+    align-items: center;
+}
+
+.containerAbajo button{
+    background-color: #3533CD;
+    color: #fff;
+    padding: 20px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.containerArriba{
+    width: auto;
+    height: 30%;
+    margin: 40px 150px;
+}
+
+.containerAbajo{
+    width: auto;
+    height: 70%;
+    margin: 30px 150px;
+}
+
+.containerArriba a{
+    margin: 20px;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+}
+
+.containerArriba a img{
+    width: 140px;
+    border-radius: 10px;
+    border: solid white;
+}
+
+.primerslot{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 30px;
+    padding: 10px;
+    border: solid #3533CD;
+}
+
+.primerslot button{
+    margin-right: 30px;
+}
+
+.segundoslot{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 30px;
+    padding: 25px;
+    border: solid #3533CD;
+}
+
+.diff{
+    text-decoration: none;
+    color: #3533CD;
+}
+
+.flechita{
+    text-decoration: none;
+    color: #fff;
+}

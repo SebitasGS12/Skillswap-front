@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/app/service/chatUsuarioService.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1720037206743,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1720037543022,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,8 @@\n     private baseUrl = Datos.API_URL+\"ChatUsuario\" ;\r\n     constructor(private http: HttpClient){}\r\n \r\n     public obtenerChatUsuarioByUsuario(usuarioid:number,usuario2id:number): Observable<ChatUsuario> {\r\n-        return this.http.get<any>(this.baseUrl+'/usuario/'+usuarioid);\r\n+        return this.http.get<ChatUsuario>(`${this.baseUrl}/usuario/${usuarioId}/amigo/${usuario2Id}`);\r\n     }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1720037548591,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,8 @@\n     private baseUrl = Datos.API_URL+\"ChatUsuario\" ;\r\n     constructor(private http: HttpClient){}\r\n \r\n     public obtenerChatUsuarioByUsuario(usuarioid:number,usuario2id:number): Observable<ChatUsuario> {\r\n-        return this.http.get<ChatUsuario>(`${this.baseUrl}/usuario/${usuarioId}/amigo/${usuario2Id}`);\r\n+        return this.http.get<ChatUsuario>(`${this.baseUrl}/usuario/${usuarioid}/amigo/${usuario2id}`);\r\n     }\r\n \r\n }\r\n"
+                }
+            ],
+            "date": 1720037206743,
+            "name": "Commit-0",
+            "content": "import { Injectable } from \"@angular/core\";\r\nimport { Datos } from \"../constants/datos\";\r\nimport { HttpClient } from \"@angular/common/http\";\r\nimport { Observable } from \"rxjs\";\r\nimport { ChatUsuario } from \"../models/chat-usuario\";\r\n\r\n\r\n@Injectable({\r\n    providedIn:'root'\r\n})\r\nexport class ChatUsuarioService {\r\n    private baseUrl = Datos.API_URL+\"ChatUsuario\" ;\r\n    constructor(private http: HttpClient){}\r\n\r\n    public obtenerChatUsuarioByUsuario(usuarioid:number,usuario2id:number): Observable<ChatUsuario> {\r\n        return this.http.get<any>(this.baseUrl+'/usuario/'+usuarioid);\r\n    }\r\n\r\n}\r\n"
+        }
+    ]
+}

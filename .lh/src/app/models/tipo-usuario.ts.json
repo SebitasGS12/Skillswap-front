@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/app/models/tipo-usuario.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1718397149043,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1718397155166,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n export class TipoUsuario {\r\n+    tipoUsuarioID!:\r\n \r\n-    \r\n }\r\n"
+                },
+                {
+                    "date": 1718397161395,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n export class TipoUsuario {\r\n-    tipoUsuarioID!:\r\n+    tipoUsuarioID!:number;\r\n+    descripcion:\r\n \r\n }\r\n"
+                }
+            ],
+            "date": 1718397149043,
+            "name": "Commit-0",
+            "content": "export class TipoUsuario {\r\n\r\n    \r\n}\r\n"
+        }
+    ]
+}

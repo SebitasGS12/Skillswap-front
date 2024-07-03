@@ -1,0 +1,58 @@
+{
+    "sourceFile": "src/app/service/negocioService.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1719616065534,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1719616070606,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n \r\n @Injectable({\r\n     providedIn:'root'\r\n })\r\n-export class AmistadesService {\r\n+export class NegocioService {\r\n     private baseUrl = Datos.API_URL+\"Amistades\" ;\r\n     constructor(private http: HttpClient){}\r\n \r\n     public listar():Observable<Amistades[]>{\r\n"
+                },
+                {
+                    "date": 1719616076240,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n @Injectable({\r\n     providedIn:'root'\r\n })\r\n export class NegocioService {\r\n-    private baseUrl = Datos.API_URL+\"Amistades\" ;\r\n+    private baseUrl = Datos.API_URL+\"Negocio\" ;\r\n     constructor(private http: HttpClient){}\r\n \r\n     public listar():Observable<Amistades[]>{\r\n         return this.http.get<Amistades[]>(this.baseUrl);\r\n"
+                },
+                {
+                    "date": 1719616088721,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n     private baseUrl = Datos.API_URL+\"Negocio\" ;\r\n     constructor(private http: HttpClient){}\r\n \r\n     public listar():Observable<Amistades[]>{\r\n-        return this.http.get<Amistades[]>(this.baseUrl);\r\n+        return this.http.get<Amistades[]>(´/´this.baseUrl);\r\n     }\r\n \r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719616094879,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n     private baseUrl = Datos.API_URL+\"Negocio\" ;\r\n     constructor(private http: HttpClient){}\r\n \r\n     public listar():Observable<Amistades[]>{\r\n-        return this.http.get<Amistades[]>(´/´this.baseUrl);\r\n+        return this.http.get<Amistades[]>(this.baseUrl);\r\n     }\r\n \r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719616103195,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,7 +14,9 @@\n \r\n     public listar():Observable<Amistades[]>{\r\n         return this.http.get<Amistades[]>(this.baseUrl);\r\n     }\r\n+    public registrar(usuario: Usuario): Observable<any> {\r\n+        return this.http.post<any>(this.baseUrl, usuario);\r\n+    }\r\n \r\n-\r\n }\r\n"
+                },
+                {
+                    "date": 1719616110388,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,12 +11,9 @@\n export class NegocioService {\r\n     private baseUrl = Datos.API_URL+\"Negocio\" ;\r\n     constructor(private http: HttpClient){}\r\n \r\n-    public listar():Observable<Amistades[]>{\r\n-        return this.http.get<Amistades[]>(this.baseUrl);\r\n-    }\r\n-    public registrar(usuario: Usuario): Observable<any> {\r\n+    public inciarSesion(usuario: Usuario): Observable<any> {\r\n         return this.http.post<any>(this.baseUrl, usuario);\r\n     }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719616124381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,22 @@\n+import { Injectable } from \"@angular/core\";\r\n+import { Datos } from \"../constants/datos\";\r\n+import { HttpClient } from \"@angular/common/http\";\r\n+import { Observable } from \"rxjs\";\r\n+import { Amistades } from \"../models/amistades\";\r\n+\r\n+\r\n+@Injectable({\r\n+    providedIn:'root'\r\n+})\r\n+export class NegocioService {\r\n+    private baseUrl = Datos.API_URL+\"Negocio\" ;\r\n+    constructor(private http: HttpClient){}\r\n+\r\n+    public inciarSesion(usuario: Usuario): Observable<any> {\r\n+        return this.http.post<any>(this.baseUrl, usuario);\r\n+    }\r\n+    public inciarSesion(usuario: Usuario): Observable<any> {\r\n+        return this.http.post<any>(this.baseUrl, usuario);\r\n+    }\r\n+\r\n+}\r\n"
+                },
+                {
+                    "date": 1719616133692,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n import { Datos } from \"../constants/datos\";\r\n import { HttpClient } from \"@angular/common/http\";\r\n import { Observable } from \"rxjs\";\r\n import { Amistades } from \"../models/amistades\";\r\n+import { Usuario } from \"../models/usuario\";\r\n \r\n \r\n @Injectable({\r\n     providedIn:'root'\r\n@@ -14,28 +15,9 @@\n \r\n     public inciarSesion(usuario: Usuario): Observable<any> {\r\n         return this.http.post<any>(this.baseUrl, usuario);\r\n     }\r\n-    public inciarSesion(usuario: Usuario): Observable<any> {\r\n+    public registrarNuevaCuenta(usuario: Usuario): Observable<any> {\r\n         return this.http.post<any>(this.baseUrl, usuario);\r\n     }\r\n \r\n }\r\n-import { Injectable } from \"@angular/core\";\r\n-import { Datos } from \"../constants/datos\";\r\n-import { HttpClient } from \"@angular/common/http\";\r\n-import { Observable } from \"rxjs\";\r\n-import { Amistades } from \"../models/amistades\";\r\n-\r\n-\r\n-@Injectable({\r\n-    providedIn:'root'\r\n-})\r\n-export class NegocioService {\r\n-    private baseUrl = Datos.API_URL+\"Negocio\" ;\r\n-    constructor(private http: HttpClient){}\r\n-\r\n-    public inciarSesion(usuario: Usuario): Observable<any> {\r\n-        return this.http.post<any>(this.baseUrl, usuario);\r\n-    }\r\n-\r\n-}\r\n"
+                },
+                {
+                    "date": 1719616145813,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     private baseUrl = Datos.API_URL+\"Negocio\" ;\r\n     constructor(private http: HttpClient){}\r\n \r\n     public inciarSesion(usuario: Usuario): Observable<any> {\r\n-        return this.http.post<any>(this.baseUrl+, usuario);\r\n+        return this.http.post<any>(this.baseUrl+\"\", usuario);\r\n     }\r\n     public registrarNuevaCuenta(usuario: Usuario): Observable<any> {\r\n         return this.http.post<any>(this.baseUrl, usuario);\r\n     }\r\n"
+                },
+                {
+                    "date": 1719623824956,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,30 @@\n+import { Injectable } from \"@angular/core\";\r\n+import { Datos } from \"../constants/datos\";\r\n+import { HttpClient } from \"@angular/common/http\";\r\n+import { Observable } from \"rxjs\";\r\n+import { Amistades } from \"../models/amistades\";\r\n+import { Usuario } from \"../models/usuario\";\r\n+\r\n+\r\n+@Injectable({\r\n+    providedIn:'root'\r\n+})\r\n+export class NegocioService {\r\n+    private baseUrl = Datos.API_URL+\"Negocio\" ;\r\n+    constructor(private http: HttpClient){}\r\n+\r\n+    public inciarSesion(usuario: Usuario): Observable<Usuario> {\r\n+        return this.http.post<any>(this.baseUrl+'/sesionon', usuario);\r\n+    }\r\n+    public inciarSesion(usuario: Usuario): Observable<Usuario> {\r\n+        return this.http.post<any>(this.baseUrl+'/sesionon', usuario);\r\n+    }\r\n+\r\n+    public registrarNuevaCuenta(usuario: Usuario): Observable<Usuario> {\r\n+        return this.http.post<any>(this.baseUrl+'/registro', usuario);\r\n+    }\r\n+\r\n+    \r\n+\r\n+\r\n+}\r\n"
+                }
+            ],
+            "date": 1719616065534,
+            "name": "Commit-0",
+            "content": "import { Injectable } from \"@angular/core\";\r\nimport { Datos } from \"../constants/datos\";\r\nimport { HttpClient } from \"@angular/common/http\";\r\nimport { Observable } from \"rxjs\";\r\nimport { Amistades } from \"../models/amistades\";\r\n\r\n\r\n@Injectable({\r\n    providedIn:'root'\r\n})\r\nexport class AmistadesService {\r\n    private baseUrl = Datos.API_URL+\"Amistades\" ;\r\n    constructor(private http: HttpClient){}\r\n\r\n    public listar():Observable<Amistades[]>{\r\n        return this.http.get<Amistades[]>(this.baseUrl);\r\n    }\r\n\r\n\r\n}\r\n"
+        }
+    ]
+}

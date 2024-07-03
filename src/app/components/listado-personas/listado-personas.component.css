@@ -1,0 +1,45 @@
+.container {
+    max-width: 800px;
+    margin: auto;
+    
+  }
+  
+  .card {
+    border-radius: 10px;
+    background-color: #0F1A24;
+    border: 3px solid #3533CD;
+  }
+  
+  .card-header {
+    padding: 2rem;
+    background-color: #0F1A24;
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  .developer-item {
+    padding: 1rem;
+    background-color: #0d2335;
+    border-radius: 8px;
+  }
+  
+  .developer-item img {
+    margin-right: 1rem;
+  }
+  
+  .developer-item h5 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .btn {
+    background-color: #9796FA;
+    border: none;
+    color: white;
+  }
+  
+  .btn:hover {
+    background-color: #5c327d;
+  }
+  

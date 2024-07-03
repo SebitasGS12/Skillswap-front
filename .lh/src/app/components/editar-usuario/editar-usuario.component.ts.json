@@ -1,0 +1,118 @@
+{
+    "sourceFile": "src/app/components/editar-usuario/editar-usuario.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 25,
+            "patches": [
+                {
+                    "date": 1719881026941,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1719881358668,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,17 @@\n import { Component } from '@angular/core';\r\n import { HeaderComponent } from \"../header/header.component\";\r\n+import { AsideComponent } from \"../aside/aside.component\";\r\n \r\n @Component({\r\n     selector: 'app-editar-usuario',\r\n     standalone: true,\r\n     templateUrl: './editar-usuario.component.html',\r\n     styleUrl: './editar-usuario.component.css',\r\n-    imports: [HeaderComponent]\r\n+    imports: [HeaderComponent, AsideComponent]\r\n })\r\n export class EditarUsuarioComponent {\r\n+enviarMensaje(arg0: any) {\r\n+throw new Error('Method not implemented.');\r\n+}\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719881367462,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,11 @@\n     styleUrl: './editar-usuario.component.css',\r\n     imports: [HeaderComponent, AsideComponent]\r\n })\r\n export class EditarUsuarioComponent {\r\n+saveUsuario(arg0: any) {\r\n+throw new Error('Method not implemented.');\r\n+}\r\n enviarMensaje(arg0: any) {\r\n throw new Error('Method not implemented.');\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1719881372797,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,7 @@\n export class EditarUsuarioComponent {\r\n saveUsuario(arg0: any) {\r\n throw new Error('Method not implemented.');\r\n }\r\n-enviarMensaje(arg0: any) {\r\n-throw new Error('Method not implemented.');\r\n-}\r\n \r\n+\r\n }\r\n"
+                },
+                {
+                    "date": 1719881395010,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,27 @@\n     styleUrl: './editar-usuario.component.css',\r\n     imports: [HeaderComponent, AsideComponent]\r\n })\r\n export class EditarUsuarioComponent {\r\n-saveUsuario(arg0: any) {\r\n-throw new Error('Method not implemented.');\r\n-}\r\n \r\n \r\n+    ngOnInit(): void {\r\n+        // Obtener la sesión\r\n+        this.sesionService.obtenerSesion().subscribe((response) => {\r\n+            console.log(response);\r\n+            this.sesion = response;\r\n+            if (this.sesion) {\r\n+                this.amistadesService.obtenerAmistadesByUsuario(this.sesion.obj_Usuario.usuarioId).subscribe((response) => {\r\n+                    console.log(response);\r\n+                    this.amistades = response;\r\n+                    this.cargarPerfiles();\r\n+                });\r\n+            }\r\n+        });\r\n+    }\r\n+\r\n+    saveUsuario(arg0: any) {\r\n+    throw new Error('Method not implemented.');\r\n+    }\r\n+\r\n+\r\n }\r\n"
+                },
+                {
+                    "date": 1719881405583,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { Component } from '@angular/core';\r\n+import { Component, OnInit } from '@angular/core';\r\n import { HeaderComponent } from \"../header/header.component\";\r\n import { AsideComponent } from \"../aside/aside.component\";\r\n \r\n @Component({\r\n@@ -8,11 +8,18 @@\n     templateUrl: './editar-usuario.component.html',\r\n     styleUrl: './editar-usuario.component.css',\r\n     imports: [HeaderComponent, AsideComponent]\r\n })\r\n-export class EditarUsuarioComponent {\r\n+export class EditarUsuarioComponent implements OnInit{\r\n \r\n-\r\n+    constructor(\r\n+        private sesionService: SesionService,\r\n+        private amistadesService: AmistadesService,\r\n+        private perfilService: PerfilService,\r\n+        private chatUsuarioService: ChatUsuarioService,\r\n+        private mensajesService: MensajesService,\r\n+        private router: Router\r\n+    ) { }\r\n     ngOnInit(): void {\r\n         // Obtener la sesión\r\n         this.sesionService.obtenerSesion().subscribe((response) => {\r\n             console.log(response);\r\n"
+                },
+                {
+                    "date": 1719881412597,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,8 @@\n     constructor(\r\n         private sesionService: SesionService,\r\n         private amistadesService: AmistadesService,\r\n         private perfilService: PerfilService,\r\n-        private chatUsuarioService: ChatUsuarioService,\r\n         private mensajesService: MensajesService,\r\n         private router: Router\r\n     ) { }\r\n     ngOnInit(): void {\r\n"
+                },
+                {
+                    "date": 1719881418723,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,11 +12,10 @@\n export class EditarUsuarioComponent implements OnInit{\r\n \r\n     constructor(\r\n         private sesionService: SesionService,\r\n-        private amistadesService: AmistadesService,\r\n+        private usuarioService: AmistadesService,\r\n         private perfilService: PerfilService,\r\n-        private mensajesService: MensajesService,\r\n         private router: Router\r\n     ) { }\r\n     ngOnInit(): void {\r\n         // Obtener la sesión\r\n"
+                },
+                {
+                    "date": 1719881424566,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,10 @@\n import { Component, OnInit } from '@angular/core';\r\n import { HeaderComponent } from \"../header/header.component\";\r\n import { AsideComponent } from \"../aside/aside.component\";\r\n+import { UsuarioService } from '../../service/usuarioService';\r\n+import { PerfilService } from '../../service/perfilService';\r\n+import { SesionService } from '../../service/sesionService';\r\n \r\n @Component({\r\n     selector: 'app-editar-usuario',\r\n     standalone: true,\r\n@@ -12,9 +15,9 @@\n export class EditarUsuarioComponent implements OnInit{\r\n \r\n     constructor(\r\n         private sesionService: SesionService,\r\n-        private usuarioService: AmistadesService,\r\n+        private usuarioService: UsuarioService,\r\n         private perfilService: PerfilService,\r\n         private router: Router\r\n     ) { }\r\n     ngOnInit(): void {\r\n"
+                },
+                {
+                    "date": 1719881439365,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,10 @@\n import { AsideComponent } from \"../aside/aside.component\";\r\n import { UsuarioService } from '../../service/usuarioService';\r\n import { PerfilService } from '../../service/perfilService';\r\n import { SesionService } from '../../service/sesionService';\r\n+import { Router } from '@angular/router';\r\n+import { Sesion } from '../../models/sesion';\r\n \r\n @Component({\r\n     selector: 'app-editar-usuario',\r\n     standalone: true,\r\n@@ -13,8 +15,11 @@\n     imports: [HeaderComponent, AsideComponent]\r\n })\r\n export class EditarUsuarioComponent implements OnInit{\r\n \r\n+    sesion!:Sesion;\r\n+    \r\n+\r\n     constructor(\r\n         private sesionService: SesionService,\r\n         private usuarioService: UsuarioService,\r\n         private perfilService: PerfilService,\r\n"
+                },
+                {
+                    "date": 1719881453386,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,47 @@\n+import { Component, OnInit } from '@angular/core';\r\n+import { HeaderComponent } from \"../header/header.component\";\r\n+import { AsideComponent } from \"../aside/aside.component\";\r\n+import { UsuarioService } from '../../service/usuarioService';\r\n+import { PerfilService } from '../../service/perfilService';\r\n+import { SesionService } from '../../service/sesionService';\r\n+import { Router } from '@angular/router';\r\n+import { Sesion } from '../../models/sesion';\r\n+\r\n+@Component({\r\n+    selector: 'app-editar-usuario',\r\n+    standalone: true,\r\n+    templateUrl: './editar-usuario.component.html',\r\n+    styleUrl: './editar-usuario.component.css',\r\n+    imports: [HeaderComponent, AsideComponent]\r\n+})\r\n+export class EditarUsuarioComponent implements OnInit{\r\n+\r\n+    sesion!:Sesion;\r\n+    perfil!:Perfil;\r\n+\r\n+    constructor(\r\n+        private sesionService: SesionService,\r\n+        private usuarioService: UsuarioService,\r\n+        private perfilService: PerfilService,\r\n+        private router: Router\r\n+    ) { }\r\n+    ngOnInit(): void {\r\n+        // Obtener la sesión\r\n+        this.sesionService.obtenerSesion().subscribe((response) => {\r\n+            console.log(response);\r\n+            this.sesion = response;\r\n+            if (this.sesion) {\r\n+\r\n+\r\n+\r\n+\r\n+            }\r\n+        });\r\n+    }\r\n+\r\n+    saveUsuario(arg0: any) {\r\n+    throw new Error('Method not implemented.');\r\n+    }\r\n+\r\n+\r\n+}\r\n"
+                },
+                {
+                    "date": 1719881460039,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,11 +31,11 @@\n             console.log(response);\r\n             this.sesion = response;\r\n             if (this.sesion) {\r\n \r\n+                this.perfilService.obtenerPerfilByUsuario()\r\n \r\n \r\n-\r\n             }\r\n         });\r\n     }\r\n \r\n@@ -44,52 +44,4 @@\n     }\r\n \r\n \r\n }\r\n-import { Component, OnInit } from '@angular/core';\r\n-import { HeaderComponent } from \"../header/header.component\";\r\n-import { AsideComponent } from \"../aside/aside.component\";\r\n-import { UsuarioService } from '../../service/usuarioService';\r\n-import { PerfilService } from '../../service/perfilService';\r\n-import { SesionService } from '../../service/sesionService';\r\n-import { Router } from '@angular/router';\r\n-import { Sesion } from '../../models/sesion';\r\n-\r\n-@Component({\r\n-    selector: 'app-editar-usuario',\r\n-    standalone: true,\r\n-    templateUrl: './editar-usuario.component.html',\r\n-    styleUrl: './editar-usuario.component.css',\r\n-    imports: [HeaderComponent, AsideComponent]\r\n-})\r\n-export class EditarUsuarioComponent implements OnInit{\r\n-\r\n-    sesion!:Sesion;\r\n-    \r\n-\r\n-    constructor(\r\n-        private sesionService: SesionService,\r\n-        private usuarioService: UsuarioService,\r\n-        private perfilService: PerfilService,\r\n-        private router: Router\r\n-    ) { }\r\n-    ngOnInit(): void {\r\n-        // Obtener la sesión\r\n-        this.sesionService.obtenerSesion().subscribe((response) => {\r\n-            console.log(response);\r\n-            this.sesion = response;\r\n-            if (this.sesion) {\r\n-                this.amistadesService.obtenerAmistadesByUsuario(this.sesion.obj_Usuario.usuarioId).subscribe((response) => {\r\n-                    console.log(response);\r\n-                    this.amistades = response;\r\n-                    this.cargarPerfiles();\r\n-                });\r\n-            }\r\n-        });\r\n-    }\r\n-\r\n-    saveUsuario(arg0: any) {\r\n-    throw new Error('Method not implemented.');\r\n-    }\r\n-\r\n-\r\n-}\r\n"
+                },
+                {
+                    "date": 1719881471482,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,13 @@\n             console.log(response);\r\n             this.sesion = response;\r\n             if (this.sesion) {\r\n \r\n-                this.perfilService.obtenerPerfilByUsuario()\r\n+                this.perfilService.obtenerPerfilByUsuario(this.sesion.obj_Usuario).subscribe(\r\n+                    (response) =>{\r\n+                        \r\n+                    }\r\n+                )\r\n \r\n \r\n             }\r\n         });\r\n"
+                },
+                {
+                    "date": 1719881479084,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,11 +31,11 @@\n             console.log(response);\r\n             this.sesion = response;\r\n             if (this.sesion) {\r\n \r\n-                this.perfilService.obtenerPerfilByUsuario(this.sesion.obj_Usuario).subscribe(\r\n+                this.perfilService.obtenerPerfilByUsuario(this.sesion.obj_Usuario.).subscribe(\r\n                     (response) =>{\r\n-                        \r\n+                        this.perfil = response;\r\n                     }\r\n                 )\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1719881499267,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n import { PerfilService } from '../../service/perfilService';\r\n import { SesionService } from '../../service/sesionService';\r\n import { Router } from '@angular/router';\r\n import { Sesion } from '../../models/sesion';\r\n+import { Perfil } from '../../models/perfil';\r\n \r\n @Component({\r\n     selector: 'app-editar-usuario',\r\n     standalone: true,\r\n@@ -31,9 +32,9 @@\n             console.log(response);\r\n             this.sesion = response;\r\n             if (this.sesion) {\r\n \r\n-                this.perfilService.obtenerPerfilByUsuario(this.sesion.obj_Usuario.).subscribe(\r\n+                this.perfilService.obtenerPerfilByUsuario(this.sesion.obj_Usuario.usuarioId).subscribe(\r\n                     (response) =>{\r\n                         this.perfil = response;\r\n                     }\r\n                 )\r\n"
+                },
+                {
+                    "date": 1719881505501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,15 +6,16 @@\n import { SesionService } from '../../service/sesionService';\r\n import { Router } from '@angular/router';\r\n import { Sesion } from '../../models/sesion';\r\n import { Perfil } from '../../models/perfil';\r\n+import { FormsModule } from '@angular/forms';\r\n \r\n @Component({\r\n     selector: 'app-editar-usuario',\r\n     standalone: true,\r\n     templateUrl: './editar-usuario.component.html',\r\n     styleUrl: './editar-usuario.component.css',\r\n-    imports: [HeaderComponent, AsideComponent]\r\n+    imports: [HeaderComponent, AsideComponent,FormsModule]\r\n })\r\n export class EditarUsuarioComponent implements OnInit{\r\n \r\n     sesion!:Sesion;\r\n"
+                },
+                {
+                    "date": 1719881818096,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,11 @@\n         });\r\n     }\r\n \r\n     saveUsuario(arg0: any) {\r\n-    throw new Error('Method not implemented.');\r\n+\r\n+        \r\n+\r\n     }\r\n \r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719881827470,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,12 +44,12 @@\n             }\r\n         });\r\n     }\r\n \r\n-    saveUsuario(arg0: any) {\r\n+    saveUsuario() {\r\n \r\n-        \r\n \r\n+\r\n     }\r\n \r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719881852510,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n             }\r\n         });\r\n     }\r\n \r\n-    saveUsuario() {\r\n+    saveUsuario(usuario) {\r\n \r\n \r\n \r\n     }\r\n"
+                },
+                {
+                    "date": 1719881880488,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n             }\r\n         });\r\n     }\r\n \r\n-    saveUsuario(usuario) {\r\n+    saveUsuario(perfil:Usuario) {\r\n \r\n \r\n \r\n     }\r\n"
+                },
+                {
+                    "date": 1719881888287,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,12 +44,20 @@\n             }\r\n         });\r\n     }\r\n \r\n-    saveUsuario(perfil:Usuario) {\r\n+    saveUsuario(perfil:Perfil) {\r\n+        this.perfilService.guardarPerfil(this.perfil).subscribe(\r\n+            (response) => {\r\n+              console.log('Perfil actualizado exitosamente', response);\r\n+              // Puedes redirigir a otra página o hacer otras operaciones después de guardar\r\n+            },\r\n+            (error) => {\r\n+              console.error('Error al guardar perfil', error);\r\n+            }\r\n+          );\r\n \r\n \r\n-\r\n     }\r\n \r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719881964112,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,10 @@\n         });\r\n     }\r\n \r\n     saveUsuario(perfil:Perfil) {\r\n-        this.perfilService.guardarPerfil(this.perfil).subscribe(\r\n+\r\n+        this.perfilService.registrar(this.perfil).subscribe(\r\n             (response) => {\r\n               console.log('Perfil actualizado exitosamente', response);\r\n               // Puedes redirigir a otra página o hacer otras operaciones después de guardar\r\n             },\r\n"
+                },
+                {
+                    "date": 1719881969915,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,17 +46,16 @@\n     }\r\n \r\n     saveUsuario(perfil:Perfil) {\r\n \r\n-        this.perfilService.registrar(this.perfil).subscribe(\r\n-            (response) => {\r\n-              console.log('Perfil actualizado exitosamente', response);\r\n-              // Puedes redirigir a otra página o hacer otras operaciones después de guardar\r\n-            },\r\n-            (error) => {\r\n-              console.error('Error al guardar perfil', error);\r\n-            }\r\n-          );\r\n+    this.perfilService.registrar(this.perfil).subscribe(\r\n+        (response) => {\r\n+            console.log('Perfil actualizado exitosamente', response);\r\n+        },\r\n+        (error) => {\r\n+            console.error('Error al guardar perfil', error);\r\n+        }\r\n+        );\r\n \r\n \r\n     }\r\n \r\n"
+                },
+                {
+                    "date": 1719882019467,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,14 +49,12 @@\n \r\n     this.perfilService.registrar(this.perfil).subscribe(\r\n         (response) => {\r\n             console.log('Perfil actualizado exitosamente', response);\r\n-        },\r\n-        (error) => {\r\n-            console.error('Error al guardar perfil', error);\r\n         }\r\n-        );\r\n+    );\r\n \r\n+        \r\n \r\n     }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1719882029337,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,9 +52,9 @@\n             console.log('Perfil actualizado exitosamente', response);\r\n         }\r\n     );\r\n \r\n-        \r\n+    \r\n \r\n     }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1719882036189,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,8 +49,9 @@\n \r\n     this.perfilService.registrar(this.perfil).subscribe(\r\n         (response) => {\r\n             console.log('Perfil actualizado exitosamente', response);\r\n+            this.router.navigate(['/perfil']);\r\n         }\r\n     );\r\n \r\n     \r\n"
+                }
+            ],
+            "date": 1719881026941,
+            "name": "Commit-0",
+            "content": "import { Component } from '@angular/core';\r\nimport { HeaderComponent } from \"../header/header.component\";\r\n\r\n@Component({\r\n    selector: 'app-editar-usuario',\r\n    standalone: true,\r\n    templateUrl: './editar-usuario.component.html',\r\n    styleUrl: './editar-usuario.component.css',\r\n    imports: [HeaderComponent]\r\n})\r\nexport class EditarUsuarioComponent {\r\n\r\n}\r\n"
+        }
+    ]
+}

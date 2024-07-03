@@ -1,0 +1,94 @@
+{
+    "sourceFile": "src/app/components/categorias-explorar/categorias-explorar.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 19,
+            "patches": [
+                {
+                    "date": 1718679764379,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1718679770565,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+import { Component } from '@angular/core';\r\n+\r\n+@Component({\r\n+  selector: 'app-categorias-explorar',\r\n+  standalone: true,\r\n+  imports: [],\r\n+  templateUrl: './categorias-explorar.component.html',\r\n+  styleUrl: './categorias-explorar.component.css'\r\n+})\r\n+export class CategoriasExplorarComponent {\r\n+\r\n+  user\r\n+}\r\n"
+                },
+                {
+                    "date": 1718679777405,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,19 +8,6 @@\n   styleUrl: './categorias-explorar.component.css'\r\n })\r\n export class CategoriasExplorarComponent {\r\n \r\n-  user\r\n+  user = []\r\n }\r\n-import { Component } from '@angular/core';\r\n-\r\n-@Component({\r\n-  selector: 'app-categorias-explorar',\r\n-  standalone: true,\r\n-  imports: [],\r\n-  templateUrl: './categorias-explorar.component.html',\r\n-  styleUrl: './categorias-explorar.component.css'\r\n-})\r\n-export class CategoriasExplorarComponent {\r\n-\r\n-  \r\n-}\r\n"
+                },
+                {
+                    "date": 1718679782785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,6 +8,6 @@\n   styleUrl: './categorias-explorar.component.css'\r\n })\r\n export class CategoriasExplorarComponent {\r\n \r\n-  user = []\r\n+  user = [{}]\r\n }\r\n"
+                },
+                {
+                    "date": 1718679797076,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,6 +8,8 @@\n   styleUrl: './categorias-explorar.component.css'\r\n })\r\n export class CategoriasExplorarComponent {\r\n \r\n-  user = [{}]\r\n+  user = [{\r\n+    name:\r\n+  }]\r\n }\r\n"
+                },
+                {
+                    "date": 1718679804805,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,7 @@\n })\r\n export class CategoriasExplorarComponent {\r\n \r\n   user = [{\r\n-    name:\r\n+    \"name\":\"Desarrollador JAVA\"\r\n   }]\r\n }\r\n"
+                },
+                {
+                    "date": 1718679811221,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,8 @@\n })\r\n export class CategoriasExplorarComponent {\r\n \r\n   user = [{\r\n-    \"name\":\"Desarrollador JAVA\"\r\n+    \"\":\"Desarrollador JAVA\",\r\n+    \"\"\r\n   }]\r\n }\r\n"
+                },
+                {
+                    "date": 1718679819559,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,8 @@\n })\r\n export class CategoriasExplorarComponent {\r\n \r\n   user = [{\r\n-    \"\":\"Desarrollador JAVA\",\r\n+    \"Habilidad\":\"Desarrollador JAVA\",\r\n     \"\"\r\n   }]\r\n }\r\n"
+                },
+                {
+                    "date": 1718679827254,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,7 +10,7 @@\n export class CategoriasExplorarComponent {\r\n \r\n   user = [{\r\n     \"Habilidad\":\"Desarrollador JAVA\",\r\n-    \"\"\r\n+    \"Nombre\":\"\"\r\n   }]\r\n }\r\n"
+                },
+                {
+                    "date": 1718679835410,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,7 +10,7 @@\n export class CategoriasExplorarComponent {\r\n \r\n   user = [{\r\n     \"Habilidad\":\"Desarrollador JAVA\",\r\n-    \"Nombre\":\"\"\r\n+    \"Nombre\":\"Nilton Jimenez\",\r\n   }]\r\n }\r\n"
+                },
+                {
+                    "date": 1718679842943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,12 @@\n   styleUrl: './categorias-explorar.component.css'\r\n })\r\n export class CategoriasExplorarComponent {\r\n \r\n+\r\n+\r\n   user = [{\r\n     \"Habilidad\":\"Desarrollador JAVA\",\r\n     \"Nombre\":\"Nilton Jimenez\",\r\n+    \r\n   }]\r\n }\r\n"
+                },
+                {
+                    "date": 1718679849533,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,7 +13,7 @@\n \r\n   user = [{\r\n     \"Habilidad\":\"Desarrollador JAVA\",\r\n     \"Nombre\":\"Nilton Jimenez\",\r\n-    \r\n+    \"Categoria\"\r\n   }]\r\n }\r\n"
+                },
+                {
+                    "date": 1718679860266,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,11 +9,11 @@\n })\r\n export class CategoriasExplorarComponent {\r\n \r\n \r\n-\r\n+  categoria = \"\"\r\n   user = [{\r\n     \"Habilidad\":\"Desarrollador JAVA\",\r\n     \"Nombre\":\"Nilton Jimenez\",\r\n-    \"Categoria\"\r\n+    \"Categoria\":\"Programacion\"\r\n   }]\r\n }\r\n"
+                },
+                {
+                    "date": 1718679872537,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n })\r\n export class CategoriasExplorarComponent {\r\n \r\n \r\n-  categoria = \"\"\r\n+  categoria = ['Programacion',]\r\n   user = [{\r\n     \"Habilidad\":\"Desarrollador JAVA\",\r\n     \"Nombre\":\"Nilton Jimenez\",\r\n     \"Categoria\":\"Programacion\"\r\n"
+                },
+                {
+                    "date": 1718679881246,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n })\r\n export class CategoriasExplorarComponent {\r\n \r\n \r\n-  categoria = ['Programacion',]\r\n+  categoria = ['Programacion','Base de datos']\r\n   user = [{\r\n     \"Habilidad\":\"Desarrollador JAVA\",\r\n     \"Nombre\":\"Nilton Jimenez\",\r\n     \"Categoria\":\"Programacion\"\r\n"
+                },
+                {
+                    "date": 1718682356153,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n })\r\n export class CategoriasExplorarComponent {\r\n \r\n \r\n-  categoria = ['Programacion','Base de datos']\r\n+  categoria:string[] = ['Programacion','Base de datos'];\r\n   user = [{\r\n     \"Habilidad\":\"Desarrollador JAVA\",\r\n     \"Nombre\":\"Nilton Jimenez\",\r\n     \"Categoria\":\"Programacion\"\r\n"
+                },
+                {
+                    "date": 1718844662742,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,13 @@\n import { Component } from '@angular/core';\r\n+import { AsideComponent } from \"../aside/aside.component\";\r\n \r\n @Component({\r\n-  selector: 'app-categorias-explorar',\r\n-  standalone: true,\r\n-  imports: [],\r\n-  templateUrl: './categorias-explorar.component.html',\r\n-  styleUrl: './categorias-explorar.component.css'\r\n+    selector: 'app-categorias-explorar',\r\n+    standalone: true,\r\n+    templateUrl: './categorias-explorar.component.html',\r\n+    styleUrl: './categorias-explorar.component.css',\r\n+    imports: [AsideComponent]\r\n })\r\n export class CategoriasExplorarComponent {\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1719007710716,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,6 +15,8 @@\n   user = [{\r\n     \"Habilidad\":\"Desarrollador JAVA\",\r\n     \"Nombre\":\"Nilton Jimenez\",\r\n     \"Categoria\":\"Programacion\"\r\n-  }]\r\n+  }\r\n+\r\n+]\r\n }\r\n"
+                },
+                {
+                    "date": 1719007715942,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,6 +21,7 @@\n     \"Habilidad\":\"Desarrollador JAVA\",\r\n     \"Nombre\":\"Nilton Jimenez\",\r\n     \"Categoria\":\"Programacion\"\r\n   },\r\n+  \r\n ]\r\n }\r\n"
+                },
+                {
+                    "date": 1719009199328,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,16 @@\n+import { Component } from '@angular/core';\r\n+import { AsideComponent } from \"../aside/aside.component\";\r\n+\r\n+@Component({\r\n+    selector: 'app-categorias-explorar',\r\n+    standalone: true,\r\n+    templateUrl: './categorias-explorar.component.html',\r\n+    styleUrl: './categorias-explorar.component.css',\r\n+    imports: [AsideComponent]\r\n+})\r\n+export class CategoriasExplorarComponent {\r\n+  user=[{}]\r\n+\r\n+  categoria:string[] = ['Programacion','Base de datos'];\r\n+\r\n+}\r\n"
+                }
+            ],
+            "date": 1718679764379,
+            "name": "Commit-0",
+            "content": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-categorias-explorar',\r\n  standalone: true,\r\n  imports: [],\r\n  templateUrl: './categorias-explorar.component.html',\r\n  styleUrl: './categorias-explorar.component.css'\r\n})\r\nexport class CategoriasExplorarComponent {\r\n\r\n  \r\n}\r\n"
+        }
+    ]
+}
