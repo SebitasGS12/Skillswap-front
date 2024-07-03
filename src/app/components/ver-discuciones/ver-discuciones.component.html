@@ -1,46 +1,27 @@
-<!-- Estructura HTML mejorada -->
-
 <app-header></app-header>
 <div class="division">
   <app-aside></app-aside>
-  <div class="container" *ngIf="foro">
-    <div class="titu">
-      <h1>{{ foro?.titulo }}</h1>
-      <p>Publicado por {{ foro?.obj_Usuario?.correo }} en {{ foro?.obj_CategoriaForo?.nombre }} - {{ foro?.fechaCreacion | date }}</p>
-    </div>
-    <div class="persona">
-      <img src="./assets/images/imgUser.png" alt="imagen" />
-      <div class="nombreuser">
-        <h2>{{ foro?.obj_Usuario?.correo }}</h2>
-        <p>{{ foro?.fechaCreacion | date }} {{ foro?.obj_Usuario?.correo }}</p>
+  <div class="foro-skillswap">
+
+  
+    <div class="contenedor-foros">
+      <div class="informacion">
+        <div class="datos">
+          <h2>{{foro?.titulo}}</h2>
+          <h4>{{foro?.descripcion}}</h4>
+        </div>
+        <div class="nuevo">
+          <a class="btn btn-primary">Nueva Discucion</a>
+        </div>
       </div>
-      <a class="btnSeguir" href="#">Seguir</a>
-    </div>
-    <div class="respuestas">
-      <h1>Respuestas</h1>
-      <div class="globres" *ngFor="let discusion of discuciones">
-        <div class="Rpta">
-          <img src="./assets/images/imgUser.png" class="imgUs" alt="imgUsuario" />
-          <div class="txresp">
-            <div class="dia">
-              <h3>{{ discusion.obj_Usuario.correo }}</h3>
-              <p>{{ discusion.fechaCreacion | date }}</p>
-            </div>
-            <p class="resptxt">
-              {{ discusion.descripcion }}
-            </p>
-          </div>
-        </div>
-        <div class="reaccion">
-          <div class="laik">
-            <img src="../../../assets/images/como.png" alt="laik" />
-            <p>123</p>
-          </div>
-          <div class="nolaik">
-            <img src="../../../assets/images/como.png" alt="dislaik" />
-            <p>5</p>
-          </div>
-        </div>
+      <br>
+      <div class="foro" *ngFor="let discusion of discuciones; let i = index">
+        <a href="" class="foro_item" [routerLink]="['/discucion', discusion.discusionesId]" >
+          <h4>{{ discusion.titulo }}</h4>
+          <h3>{{ discusion.descripcion }} respuestas</h3>
+          <p>{{ buscarPerfil( discusion.obj_Usuario)?.nombre }}</p>
+          <span class="fecha">{{ discusion.fechaCreacion | date }}</span>
+        </a>
       </div>
     </div>
   </div>

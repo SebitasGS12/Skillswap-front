@@ -10,14 +10,12 @@ import { FormsModule } from '@angular/forms';
 import { Sesion } from '../../models/sesion';
 import { SesionService } from '../../service/sesionService';
 import { AmistadesService } from '../../service/amistadesService';
-import { catchError, map, Observable, of } from 'rxjs';
 import { Usuario } from '../../models/usuario';
 import { HeaderComponent } from '../header/header.component';
 import { Amistades } from '../../models/amistades';
 import { NotificacionesService } from '../../service/notificacionesService';
 import { Notificacion } from '../../models/notificacion';
 import { PerfilService } from '../../service/perfilService';
-import { Perfil } from '../../models/perfil';
 
 @Component({
   selector: 'app-categorias-explorar',

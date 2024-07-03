@@ -22,4 +22,9 @@ export class PerfilService {
         return this.http.post<any>(this.baseUrl, perfil);
     }
 
+    public listar():Observable<Perfil[]>{
+        return this.http.get<Perfil[]>(this.baseUrl);
+    }
+
+
 }

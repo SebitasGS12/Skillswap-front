@@ -3,7 +3,7 @@ import { Usuario } from "./usuario";
 
 export class Foro {
     
-    foroId!:number;
+    foroId!:number|null;
     titulo!:string;
     descripcion!:string;
     fechaCreacion!:Date;

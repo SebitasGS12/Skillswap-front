@@ -3,11 +3,167 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 39,
             "patches": [
                 {
                     "date": 1719968488233,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1719970122095,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,140 +1,89 @@\n-/* Estilos CSS mejorados */\r\n-\r\n-.container {\r\n-  font-family: Verdana, Geneva, Tahoma, sans-serif;\r\n-  background-color: rgba(15, 26, 36, 1);\r\n+/* Estilo general del componente */\r\n+.foro-skillswap {\r\n+  display: flex;\r\n+  flex-direction: column;\r\n+  width: 100%;\r\n+  margin: 0 auto;\r\n+  max-width: 800px;\r\n   padding: 20px;\r\n }\r\n \r\n-.titu {\r\n-  background-color: rgba(15, 26, 36, 1);\r\n-  color: white;\r\n-  padding: 10px;\r\n-  margin: 20px 0px 40px 0px;\r\n-}\r\n-\r\n-.persona {\r\n+/* Estilo del encabezado */\r\n+.navbar {\r\n   display: flex;\r\n+  justify-content: space-between;\r\n   align-items: center;\r\n-  justify-content: space-between;\r\n-  background-color: rgba(20, 57, 90, 1);\r\n-  border-radius: 20px;\r\n-  color: aliceblue;\r\n-  padding: 10px;\r\n-  margin-bottom: 20px;\r\n+  padding: 10px 0;\r\n+  border-bottom: 1px solid #ccc;\r\n }\r\n \r\n-.persona img {\r\n-  width: 100px;\r\n-  height: 100px;\r\n-  border-radius: 50%;\r\n-  margin-right: 20px;\r\n+.logo {\r\n+  font-size: 24px;\r\n+  font-weight: bold;\r\n+  text-decoration: none;\r\n+  color: #000;\r\n }\r\n \r\n-.persona .nombreuser {\r\n-  flex: 1;\r\n+.busqueda {\r\n+  display: flex;\r\n+  align-items: center;\r\n }\r\n \r\n-.persona h2 {\r\n-  margin-bottom: 5px;\r\n-  font-size: 1.5rem;\r\n+.busqueda input[type=\"text\"] {\r\n+  padding: 5px;\r\n+  border: 1px solid #ccc;\r\n+  border-radius: 5px;\r\n+  margin-right: 10px;\r\n }\r\n \r\n-.persona p {\r\n-  margin: 0;\r\n-  font-size: 0.9rem;\r\n+.busqueda button {\r\n+  padding: 5px 10px;\r\n+  background-color: #007bff;\r\n+  color: #fff;\r\n+  border: none;\r\n+  border-radius: 5px;\r\n+  cursor: pointer;\r\n }\r\n \r\n-.persona a.btnSeguir {\r\n-  background-color: rgba(73, 71, 210, 1);\r\n-  color: aliceblue;\r\n-  border-radius: 10px;\r\n-  padding: 10px 20px;\r\n-  text-align: center;\r\n-  text-decoration: none;\r\n-}\r\n-\r\n-.persona a.btnSeguir:hover {\r\n-  background-color: rgba(73, 71, 210, 0.8);\r\n-}\r\n-\r\n-.respuestas {\r\n-  background-color: rgba(20, 57, 90, 1);\r\n-  border-radius: 20px;\r\n-  padding: 20px;\r\n+/* Estilo del contenedor de foros */\r\n+.contenedor-foros {\r\n   margin-top: 20px;\r\n }\r\n \r\n-.respuestas h1 {\r\n-  color: aliceblue;\r\n-  font-size: 1.5rem;\r\n-  margin-bottom: 20px;\r\n-}\r\n-\r\n-.globres {\r\n-  margin-bottom: 20px;\r\n-}\r\n-\r\n-.Rpta {\r\n-  display: flex;\r\n-  align-items: flex-start;\r\n-  margin-bottom: 20px;\r\n-}\r\n-\r\n-.Rpta img.imgUs {\r\n-  width: 80px;\r\n-  height: 80px;\r\n-  border-radius: 50%;\r\n-  margin-right: 20px;\r\n-}\r\n-\r\n-.dia {\r\n-  display: flex;\r\n-  align-items: center;\r\n-  gap: 10px;\r\n-  color: aliceblue;\r\n-  font-size: 0.9rem;\r\n+/* Estilo de cada foro */\r\n+.foro {\r\n+  border: 1px solid #ccc;\r\n+  padding: 10px;\r\n   margin-bottom: 10px;\r\n }\r\n \r\n-.dia h3 {\r\n-  font-size: 1.2rem;\r\n+.foro h3 {\r\n+  margin-top: 0;\r\n   margin-bottom: 5px;\r\n }\r\n \r\n-.dia p {\r\n-  margin: 0;\r\n-  font-size: 0.8rem;\r\n+.foro a {\r\n+  text-decoration: none;\r\n+  color: #000;\r\n }\r\n \r\n-.txresp .resptxt {\r\n-  color: aliceblue;\r\n-  text-align: justify;\r\n-  margin: 0;\r\n-  padding-left: 20px;\r\n+.foro .fecha {\r\n+  font-style: italic;\r\n+  color: #666;\r\n }\r\n \r\n-.reaccion {\r\n-  display: flex;\r\n-  align-items: center;\r\n-  gap: 20px;\r\n+/* Estilo de la paginación */\r\n+.paginacion {\r\n+  text-align: center;\r\n+  margin-top: 20px;\r\n }\r\n \r\n-.reaccion .laik,\r\n-.reaccion .nolaik {\r\n-  display: flex;\r\n-  align-items: center;\r\n-  gap: 5px;\r\n-  color: white;\r\n+.paginacion ul {\r\n+  list-style: none;\r\n+  padding: 0;\r\n }\r\n \r\n-.reaccion .laik img,\r\n-.reaccion .nolaik img {\r\n-  width: 20px;\r\n-  height: 20px;\r\n+.paginacion li {\r\n+  display: inline-block;\r\n+  margin-right: 10px;\r\n }\r\n-\r\n-.reaccion p {\r\n-  margin: 0;\r\n-  font-size: 0.9rem;\r\n-}\r\n"
+                },
+                {
+                    "date": 1719970207477,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,24 +5,26 @@\n   width: 100%;\r\n   margin: 0 auto;\r\n   max-width: 800px;\r\n   padding: 20px;\r\n+  background-color: #f8f9fa; /* Color de fondo gris claro */\r\n }\r\n \r\n /* Estilo del encabezado */\r\n .navbar {\r\n   display: flex;\r\n   justify-content: space-between;\r\n   align-items: center;\r\n   padding: 10px 0;\r\n-  border-bottom: 1px solid #ccc;\r\n+  border-bottom: 1px solid #ddd; /* Línea divisoria gris claro */\r\n+  background-color: #fff; /* Fondo blanco */\r\n }\r\n \r\n .logo {\r\n   font-size: 24px;\r\n   font-weight: bold;\r\n   text-decoration: none;\r\n-  color: #000;\r\n+  color: #333; /* Texto gris oscuro */\r\n }\r\n \r\n .busqueda {\r\n   display: flex;\r\n@@ -37,9 +39,9 @@\n }\r\n \r\n .busqueda button {\r\n   padding: 5px 10px;\r\n-  background-color: #007bff;\r\n+  background-color: #007bff; /* Azul claro */\r\n   color: #fff;\r\n   border: none;\r\n   border-radius: 5px;\r\n   cursor: pointer;\r\n@@ -51,39 +53,26 @@\n }\r\n \r\n /* Estilo de cada foro */\r\n .foro {\r\n-  border: 1px solid #ccc;\r\n+  border: 1px solid #ddd; /* Línea divisoria gris claro */\r\n   padding: 10px;\r\n   margin-bottom: 10px;\r\n+  background-color: #fff; /* Fondo blanco */\r\n+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil gris */\r\n+  transition: background-color 0.3s ease; /* Efecto de transición al pasar el cursor */\r\n }\r\n \r\n+.foro:hover {\r\n+  background-color: #f5f5f5; /* Fondo gris claro al pasar el cursor */\r\n+}\r\n+\r\n .foro h3 {\r\n   margin-top: 0;\r\n   margin-bottom: 5px;\r\n+  font-size: 18px;\r\n+  font-weight: bold;\r\n+  color: #333; /* Texto gris oscuro */\r\n }\r\n \r\n .foro a {\r\n-  text-decoration: none;\r\n-  color: #000;\r\n-}\r\n-\r\n-.foro .fecha {\r\n-  font-style: italic;\r\n-  color: #666;\r\n-}\r\n-\r\n-/* Estilo de la paginación */\r\n-.paginacion {\r\n-  text-align: center;\r\n-  margin-top: 20px;\r\n-}\r\n-\r\n-.paginacion ul {\r\n-  list-style: none;\r\n-  padding: 0;\r\n-}\r\n-\r\n-.paginacion li {\r\n-  display: inline-block;\r\n-  margin-right: 10px;\r\n-}\r\n+  text-\r\n"
+                },
+                {
+                    "date": 1719970232755,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -75,4 +75,44 @@\n }\r\n \r\n .foro a {\r\n   text-\r\n+  .foro a {\r\n+    text-decoration: none;\r\n+    color: #007bff; /* Azul claro */\r\n+  }\r\n+  \r\n+  .foro .fecha {\r\n+    font-style: italic;\r\n+    color: #666; /* Gris claro */\r\n+  }\r\n+  \r\n+  /* Estilo de la paginación */\r\n+  .paginacion {\r\n+    text-align: center;\r\n+    margin-top: 20px;\r\n+  }\r\n+  \r\n+  .paginacion ul {\r\n+    list-style: none;\r\n+    padding: 0;\r\n+  }\r\n+  \r\n+  .paginacion li {\r\n+    display: inline-block;\r\n+    margin-right: 10px;\r\n+  }\r\n+  \r\n+  .paginacion a {\r\n+    padding: 5px 10px;\r\n+    border: 1px solid #ddd; /* Borde gris claro */\r\n+    border-radius: 5px;\r\n+    background-color: #fff; /* Fondo blanco */\r\n+    color: #333; /* Texto gris oscuro */\r\n+    text-decoration: none;\r\n+    transition: background-color 0.3s ease; /* Efecto de transición al pasar el cursor */\r\n+  }\r\n+  \r\n+  .paginacion a:hover {\r\n+    background-color: #f5f5f5; /* Fondo gris claro al pasar el cursor */\r\n+  }\r\n+  \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719970255392,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   width: 100%;\r\n   margin: 0 auto;\r\n   max-width: 800px;\r\n   padding: 20px;\r\n-  background-color: #f8f9fa; /* Color de fondo gris claro */\r\n+  background-color: #0F1A24;\r\n }\r\n \r\n /* Estilo del encabezado */\r\n .navbar {\r\n@@ -74,10 +74,8 @@\n   color: #333; /* Texto gris oscuro */\r\n }\r\n \r\n .foro a {\r\n-  text-\r\n-  .foro a {\r\n     text-decoration: none;\r\n     color: #007bff; /* Azul claro */\r\n   }\r\n   \r\n"
+                },
+                {
+                    "date": 1719970277171,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,8 @@\n   display: flex;\r\n   flex-direction: column;\r\n   width: 100%;\r\n   margin: 0 auto;\r\n-  max-width: 800px;\r\n   padding: 20px;\r\n   background-color: #0F1A24;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1719970285357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,114 @@\n+/* Estilo general del componente */\r\n+.foro-skillswap {\r\n+  display: flex;\r\n+  flex-direction: column;\r\n+  width: 100%;\r\n+  margin: 0 auto;\r\n+  padding: 20px;\r\n+  background-color: #0F1A24;\r\n+}\r\n+\r\n+/* Estilo del encabezado */\r\n+.navbar {\r\n+  display: flex;\r\n+  justify-content: space-between;\r\n+  align-items: center;\r\n+  padding: 10px 0;\r\n+  border-bottom: 1px solid #ddd; /* Línea divisoria gris claro */\r\n+}\r\n+\r\n+.logo {\r\n+  font-size: 24px;\r\n+  font-weight: bold;\r\n+  text-decoration: none;\r\n+  color: #333; /* Texto gris oscuro */\r\n+}\r\n+\r\n+.busqueda {\r\n+  display: flex;\r\n+  align-items: center;\r\n+}\r\n+\r\n+.busqueda input[type=\"text\"] {\r\n+  padding: 5px;\r\n+  border: 1px solid #ccc;\r\n+  border-radius: 5px;\r\n+  margin-right: 10px;\r\n+}\r\n+\r\n+.busqueda button {\r\n+  padding: 5px 10px;\r\n+  background-color: #007bff; /* Azul claro */\r\n+  color: #fff;\r\n+  border: none;\r\n+  border-radius: 5px;\r\n+  cursor: pointer;\r\n+}\r\n+\r\n+/* Estilo del contenedor de foros */\r\n+.contenedor-foros {\r\n+  margin-top: 20px;\r\n+}\r\n+\r\n+/* Estilo de cada foro */\r\n+.foro {\r\n+  border: 1px solid #ddd; /* Línea divisoria gris claro */\r\n+  padding: 10px;\r\n+  margin-bottom: 10px;\r\n+  background-color: #fff; /* Fondo blanco */\r\n+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil gris */\r\n+  transition: background-color 0.3s ease; /* Efecto de transición al pasar el cursor */\r\n+}\r\n+\r\n+.foro:hover {\r\n+  background-color: #f5f5f5; /* Fondo gris claro al pasar el cursor */\r\n+}\r\n+\r\n+.foro h3 {\r\n+  margin-top: 0;\r\n+  margin-bottom: 5px;\r\n+  font-size: 18px;\r\n+  font-weight: bold;\r\n+  color: #333; /* Texto gris oscuro */\r\n+}\r\n+\r\n+.foro a {\r\n+    text-decoration: none;\r\n+    color: #007bff; /* Azul claro */\r\n+  }\r\n+  \r\n+  .foro .fecha {\r\n+    font-style: italic;\r\n+    color: #666; /* Gris claro */\r\n+  }\r\n+  \r\n+  /* Estilo de la paginación */\r\n+  .paginacion {\r\n+    text-align: center;\r\n+    margin-top: 20px;\r\n+  }\r\n+  \r\n+  .paginacion ul {\r\n+    list-style: none;\r\n+    padding: 0;\r\n+  }\r\n+  \r\n+  .paginacion li {\r\n+    display: inline-block;\r\n+    margin-right: 10px;\r\n+  }\r\n+  \r\n+  .paginacion a {\r\n+    padding: 5px 10px;\r\n+    border: 1px solid #ddd; /* Borde gris claro */\r\n+    border-radius: 5px;\r\n+    background-color: #fff; /* Fondo blanco */\r\n+    color: #333; /* Texto gris oscuro */\r\n+    text-decoration: none;\r\n+    transition: background-color 0.3s ease; /* Efecto de transición al pasar el cursor */\r\n+  }\r\n+  \r\n+  .paginacion a:hover {\r\n+    background-color: #f5f5f5; /* Fondo gris claro al pasar el cursor */\r\n+  }\r\n+  \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719970291472,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \r\n /* Estilo del encabezado */\r\n .navbar {\r\n   display: flex;\r\n-  justify-content: space-between;\r\n+  justify-content: space-evenly;\r\n   align-items: center;\r\n   padding: 10px 0;\r\n   border-bottom: 1px solid #ddd; /* Línea divisoria gris claro */\r\n }\r\n@@ -110,120 +110,5 @@\n   \r\n   .paginacion a:hover {\r\n     background-color: #f5f5f5; /* Fondo gris claro al pasar el cursor */\r\n   }\r\n-  \n-/* Estilo general del componente */\r\n-.foro-skillswap {\r\n-  display: flex;\r\n-  flex-direction: column;\r\n-  width: 100%;\r\n-  margin: 0 auto;\r\n-  padding: 20px;\r\n-  background-color: #0F1A24;\r\n-}\r\n-\r\n-/* Estilo del encabezado */\r\n-.navbar {\r\n-  display: flex;\r\n-  justify-content: space-between;\r\n-  align-items: center;\r\n-  padding: 10px 0;\r\n-  border-bottom: 1px solid #ddd; /* Línea divisoria gris claro */\r\n-  background-color: #fff; /* Fondo blanco */\r\n-}\r\n-\r\n-.logo {\r\n-  font-size: 24px;\r\n-  font-weight: bold;\r\n-  text-decoration: none;\r\n-  color: #333; /* Texto gris oscuro */\r\n-}\r\n-\r\n-.busqueda {\r\n-  display: flex;\r\n-  align-items: center;\r\n-}\r\n-\r\n-.busqueda input[type=\"text\"] {\r\n-  padding: 5px;\r\n-  border: 1px solid #ccc;\r\n-  border-radius: 5px;\r\n-  margin-right: 10px;\r\n-}\r\n-\r\n-.busqueda button {\r\n-  padding: 5px 10px;\r\n-  background-color: #007bff; /* Azul claro */\r\n-  color: #fff;\r\n-  border: none;\r\n-  border-radius: 5px;\r\n-  cursor: pointer;\r\n-}\r\n-\r\n-/* Estilo del contenedor de foros */\r\n-.contenedor-foros {\r\n-  margin-top: 20px;\r\n-}\r\n-\r\n-/* Estilo de cada foro */\r\n-.foro {\r\n-  border: 1px solid #ddd; /* Línea divisoria gris claro */\r\n-  padding: 10px;\r\n-  margin-bottom: 10px;\r\n-  background-color: #fff; /* Fondo blanco */\r\n-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil gris */\r\n-  transition: background-color 0.3s ease; /* Efecto de transición al pasar el cursor */\r\n-}\r\n-\r\n-.foro:hover {\r\n-  background-color: #f5f5f5; /* Fondo gris claro al pasar el cursor */\r\n-}\r\n-\r\n-.foro h3 {\r\n-  margin-top: 0;\r\n-  margin-bottom: 5px;\r\n-  font-size: 18px;\r\n-  font-weight: bold;\r\n-  color: #333; /* Texto gris oscuro */\r\n-}\r\n-\r\n-.foro a {\r\n-    text-decoration: none;\r\n-    color: #007bff; /* Azul claro */\r\n-  }\r\n-  \r\n-  .foro .fecha {\r\n-    font-style: italic;\r\n-    color: #666; /* Gris claro */\r\n-  }\r\n-  \r\n-  /* Estilo de la paginación */\r\n-  .paginacion {\r\n-    text-align: center;\r\n-    margin-top: 20px;\r\n-  }\r\n-  \r\n-  .paginacion ul {\r\n-    list-style: none;\r\n-    padding: 0;\r\n-  }\r\n-  \r\n-  .paginacion li {\r\n-    display: inline-block;\r\n-    margin-right: 10px;\r\n-  }\r\n-  \r\n-  .paginacion a {\r\n-    padding: 5px 10px;\r\n-    border: 1px solid #ddd; /* Borde gris claro */\r\n-    border-radius: 5px;\r\n-    background-color: #fff; /* Fondo blanco */\r\n-    color: #333; /* Texto gris oscuro */\r\n-    text-decoration: none;\r\n-    transition: background-color 0.3s ease; /* Efecto de transición al pasar el cursor */\r\n-  }\r\n-  \r\n-  .paginacion a:hover {\r\n-    background-color: #f5f5f5; /* Fondo gris claro al pasar el cursor */\r\n-  }\r\n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719970298246,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n   width: 100%;\r\n   margin: 0 auto;\r\n   padding: 20px;\r\n   background-color: #0F1A24;\r\n+  color:white\r\n }\r\n \r\n /* Estilo del encabezado */\r\n .navbar {\r\n"
+                },
+                {
+                    "date": 1719970303936,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,8 @@\n .logo {\r\n   font-size: 24px;\r\n   font-weight: bold;\r\n   text-decoration: none;\r\n-  color: #333; /* Texto gris oscuro */\r\n }\r\n \r\n .busqueda {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1719970392101,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -81,9 +81,8 @@\n     font-style: italic;\r\n     color: #666; /* Gris claro */\r\n   }\r\n   \r\n-  /* Estilo de la paginación */\r\n   .paginacion {\r\n     text-align: center;\r\n     margin-top: 20px;\r\n   }\r\n"
+                },
+                {
+                    "date": 1719970397534,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -98,14 +98,14 @@\n   }\r\n   \r\n   .paginacion a {\r\n     padding: 5px 10px;\r\n-    border: 1px solid #ddd; /* Borde gris claro */\r\n+    border: 1px solid #ddd;\r\n     border-radius: 5px;\r\n-    background-color: #fff; /* Fondo blanco */\r\n-    color: #333; /* Texto gris oscuro */\r\n+    background-color: #fff;\r\n+    color: #333; \r\n     text-decoration: none;\r\n-    transition: background-color 0.3s ease; /* Efecto de transición al pasar el cursor */\r\n+    transition: background-color 0.3s ease; \r\n   }\r\n   \r\n   .paginacion a:hover {\r\n     background-color: #f5f5f5; /* Fondo gris claro al pasar el cursor */\r\n"
+                },
+                {
+                    "date": 1719970502368,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,10 @@\n   flex-direction: column;\r\n   width: 100%;\r\n   margin: 0 auto;\r\n   padding: 20px;\r\n-  background-color: #0F1A24;\r\n-  color:white\r\n+  background-color: #0f1a24;\r\n+  color: white;\r\n }\r\n \r\n /* Estilo del encabezado */\r\n .navbar {\r\n@@ -17,14 +17,8 @@\n   padding: 10px 0;\r\n   border-bottom: 1px solid #ddd; /* Línea divisoria gris claro */\r\n }\r\n \r\n-.logo {\r\n-  font-size: 24px;\r\n-  font-weight: bold;\r\n-  text-decoration: none;\r\n-}\r\n-\r\n .busqueda {\r\n   display: flex;\r\n   align-items: center;\r\n }\r\n@@ -72,42 +66,12 @@\n   color: #333; /* Texto gris oscuro */\r\n }\r\n \r\n .foro a {\r\n-    text-decoration: none;\r\n-    color: #007bff; /* Azul claro */\r\n-  }\r\n-  \r\n-  .foro .fecha {\r\n-    font-style: italic;\r\n-    color: #666; /* Gris claro */\r\n-  }\r\n-  \r\n-  .paginacion {\r\n-    text-align: center;\r\n-    margin-top: 20px;\r\n-  }\r\n-  \r\n-  .paginacion ul {\r\n-    list-style: none;\r\n-    padding: 0;\r\n-  }\r\n-  \r\n-  .paginacion li {\r\n-    display: inline-block;\r\n-    margin-right: 10px;\r\n-  }\r\n-  \r\n-  .paginacion a {\r\n-    padding: 5px 10px;\r\n-    border: 1px solid #ddd;\r\n-    border-radius: 5px;\r\n-    background-color: #fff;\r\n-    color: #333; \r\n-    text-decoration: none;\r\n-    transition: background-color 0.3s ease; \r\n-  }\r\n-  \r\n-  .paginacion a:hover {\r\n-    background-color: #f5f5f5; /* Fondo gris claro al pasar el cursor */\r\n-  }\r\n-  \n\\ No newline at end of file\n+  text-decoration: none;\r\n+  color: #007bff; /* Azul claro */\r\n+}\r\n+\r\n+.foro .fecha {\r\n+  font-style: italic;\r\n+  color: #666; /* Gris claro */\r\n+}\r\n"
+                },
+                {
+                    "date": 1719970571832,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,9 +62,8 @@\n   margin-top: 0;\r\n   margin-bottom: 5px;\r\n   font-size: 18px;\r\n   font-weight: bold;\r\n-  color: #333; /* Texto gris oscuro */\r\n }\r\n \r\n .foro a {\r\n   text-decoration: none;\r\n"
+                },
+                {
+                    "date": 1719970604138,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n .foro {\r\n   border: 1px solid #ddd; /* Línea divisoria gris claro */\r\n   padding: 10px;\r\n   margin-bottom: 10px;\r\n-  background-color: #fff; /* Fondo blanco */\r\n+  background-color: #14395A; /* Fondo blanco */\r\n   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil gris */\r\n   transition: background-color 0.3s ease; /* Efecto de transición al pasar el cursor */\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1719970615579,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,8 +55,9 @@\n }\r\n \r\n .foro:hover {\r\n   background-color: #f5f5f5; /* Fondo gris claro al pasar el cursor */\r\n+  color: ;\r\n }\r\n \r\n .foro h3 {\r\n   margin-top: 0;\r\n"
+                },
+                {
+                    "date": 1719970623657,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,9 @@\n }\r\n \r\n .foro:hover {\r\n   background-color: #f5f5f5; /* Fondo gris claro al pasar el cursor */\r\n-  color: ;\r\n+  color: black;\r\n }\r\n \r\n .foro h3 {\r\n   margin-top: 0;\r\n"
+                },
+                {
+                    "date": 1719970641021,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,8 +56,9 @@\n \r\n .foro:hover {\r\n   background-color: #f5f5f5; /* Fondo gris claro al pasar el cursor */\r\n   color: black;\r\n+  cursor: pointer;\r\n }\r\n \r\n .foro h3 {\r\n   margin-top: 0;\r\n"
+                },
+                {
+                    "date": 1719970651101,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,8 +20,9 @@\n \r\n .busqueda {\r\n   display: flex;\r\n   align-items: center;\r\n+  width: 200px;\r\n }\r\n \r\n .busqueda input[type=\"text\"] {\r\n   padding: 5px;\r\n"
+                },
+                {
+                    "date": 1719970666870,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,8 @@\n .navbar {\r\n   display: flex;\r\n   justify-content: space-evenly;\r\n   align-items: center;\r\n-  padding: 10px 0;\r\n   border-bottom: 1px solid #ddd; /* Línea divisoria gris claro */\r\n }\r\n \r\n .busqueda {\r\n"
+                },
+                {
+                    "date": 1719970673441,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n \r\n .busqueda {\r\n   display: flex;\r\n   align-items: center;\r\n-  width: 200px;\r\n+  width: ;\r\n }\r\n \r\n .busqueda input[type=\"text\"] {\r\n   padding: 5px;\r\n"
+                },
+                {
+                    "date": 1719970682275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,8 @@\n \r\n .busqueda {\r\n   display: flex;\r\n   align-items: center;\r\n-  width: ;\r\n }\r\n \r\n .busqueda input[type=\"text\"] {\r\n   padding: 5px;\r\n"
+                },
+                {
+                    "date": 1719970716906,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,15 +19,18 @@\n \r\n .busqueda {\r\n   display: flex;\r\n   align-items: center;\r\n+  width: 100%;\r\n }\r\n \r\n .busqueda input[type=\"text\"] {\r\n   padding: 5px;\r\n   border: 1px solid #ccc;\r\n   border-radius: 5px;\r\n   margin-right: 10px;\r\n+  width: 79%;\r\n+\r\n }\r\n \r\n .busqueda button {\r\n   padding: 5px 10px;\r\n"
+                },
+                {
+                    "date": 1719970725738,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n   margin: 0 auto;\r\n   padding: 20px;\r\n   background-color: #0f1a24;\r\n   color: white;\r\n+  \r\n }\r\n \r\n /* Estilo del encabezado */\r\n .navbar {\r\n"
+                },
+                {
+                    "date": 1719970941706,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   margin: 0 auto;\r\n   padding: 20px;\r\n   background-color: #0f1a24;\r\n   color: white;\r\n-  \r\n+  height: 100vh;\r\n }\r\n \r\n /* Estilo del encabezado */\r\n .navbar {\r\n@@ -32,8 +32,13 @@\n   width: 79%;\r\n \r\n }\r\n \r\n+.informacion{\r\n+  display: flex;\r\n+  flex-direction: column;\r\n+}\r\n+\r\n .busqueda button {\r\n   padding: 5px 10px;\r\n   background-color: #007bff; /* Azul claro */\r\n   color: #fff;\r\n"
+                },
+                {
+                    "date": 1719970954433,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,10 @@\n }\r\n \r\n .informacion{\r\n   display: flex;\r\n-  flex-direction: column;\r\n+  flex-direction: row;\r\n+  \r\n }\r\n \r\n .busqueda button {\r\n   padding: 5px 10px;\r\n"
+                },
+                {
+                    "date": 1719970960003,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n \r\n .informacion{\r\n   display: flex;\r\n   flex-direction: row;\r\n-  \r\n+  justify-content: ;\r\n }\r\n \r\n .busqueda button {\r\n   padding: 5px 10px;\r\n"
+                },
+                {
+                    "date": 1719970983046,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,10 +35,9 @@\n \r\n .informacion{\r\n   display: flex;\r\n   flex-direction: row;\r\n-  justify-content: ;\r\n-}\r\n+  justify-content: space-between;}\r\n \r\n .busqueda button {\r\n   padding: 5px 10px;\r\n   background-color: #007bff; /* Azul claro */\r\n"
+                },
+                {
+                    "date": 1719971016949,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,10 @@\n \r\n .informacion{\r\n   display: flex;\r\n   flex-direction: row;\r\n-  justify-content: space-between;}\r\n+  justify-content: space-between;\r\n+}\r\n \r\n .busqueda button {\r\n   padding: 5px 10px;\r\n   background-color: #007bff; /* Azul claro */\r\n@@ -67,8 +68,12 @@\n   color: black;\r\n   cursor: pointer;\r\n }\r\n \r\n+.nuevo{\r\n+  align-items: center;\r\n+}\r\n+\r\n .foro h3 {\r\n   margin-top: 0;\r\n   margin-bottom: 5px;\r\n   font-size: 18px;\r\n"
+                },
+                {
+                    "date": 1719971893417,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -72,9 +72,9 @@\n .nuevo{\r\n   align-items: center;\r\n }\r\n \r\n-.foro h3 {\r\n+.foro a h3 {\r\n   margin-top: 0;\r\n   margin-bottom: 5px;\r\n   font-size: 18px;\r\n   font-weight: bold;\r\n"
+                },
+                {
+                    "date": 1719971908982,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -78,14 +78,10 @@\n   margin-bottom: 5px;\r\n   font-size: 18px;\r\n   font-weight: bold;\r\n }\r\n+ \r\n \r\n-.foro a {\r\n-  text-decoration: none;\r\n-  color: #007bff; /* Azul claro */\r\n-}\r\n-\r\n .foro .fecha {\r\n   font-style: italic;\r\n   color: #666; /* Gris claro */\r\n }\r\n"
+                },
+                {
+                    "date": 1719971917635,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -78,10 +78,14 @@\n   margin-bottom: 5px;\r\n   font-size: 18px;\r\n   font-weight: bold;\r\n }\r\n- \r\n \r\n-.foro .fecha {\r\n+.foro a {\r\n+  text-decoration: none;\r\n+  color: #007bff; /* Azul claro */\r\n+}\r\n+\r\n+.foro_item .fecha {\r\n   font-style: italic;\r\n   color: #666; /* Gris claro */\r\n }\r\n"
+                },
+                {
+                    "date": 1719971941163,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -72,9 +72,11 @@\n .nuevo{\r\n   align-items: center;\r\n }\r\n \r\n-.foro a h3 {\r\n+\r\n+\r\n+.foro_item  h3 {\r\n   margin-top: 0;\r\n   margin-bottom: 5px;\r\n   font-size: 18px;\r\n   font-weight: bold;\r\n"
+                },
+                {
+                    "date": 1719971952264,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,9 +83,9 @@\n }\r\n \r\n .foro a {\r\n   text-decoration: none;\r\n-  color: #007bff; /* Azul claro */\r\n+  color: white;\r\n }\r\n \r\n .foro_item .fecha {\r\n   font-style: italic;\r\n"
+                },
+                {
+                    "date": 1719971959128,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n   transition: background-color 0.3s ease; /* Efecto de transición al pasar el cursor */\r\n }\r\n \r\n .foro:hover {\r\n-  background-color: #f5f5f5; /* Fondo gris claro al pasar el cursor */\r\n+  background-color: #14395A; /* Fondo gris claro al pasar el cursor */\r\n   color: black;\r\n   cursor: pointer;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1719971968879,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n   transition: background-color 0.3s ease; /* Efecto de transición al pasar el cursor */\r\n }\r\n \r\n .foro:hover {\r\n-  background-color: #14395A; /* Fondo gris claro al pasar el cursor */\r\n+  background-color: #f5f5f5; /* Fondo gris claro al pasar el cursor */\r\n   color: black;\r\n   cursor: pointer;\r\n }\r\n \r\n@@ -83,9 +83,9 @@\n }\r\n \r\n .foro a {\r\n   text-decoration: none;\r\n-  color: white;\r\n+  color: ;\r\n }\r\n \r\n .foro_item .fecha {\r\n   font-style: italic;\r\n"
+                },
+                {
+                    "date": 1719971993445,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,8 +68,10 @@\n   color: black;\r\n   cursor: pointer;\r\n }\r\n \r\n+.foro:hover \r\n+\r\n .nuevo{\r\n   align-items: center;\r\n }\r\n \r\n@@ -83,9 +85,9 @@\n }\r\n \r\n .foro a {\r\n   text-decoration: none;\r\n-  color: ;\r\n+  color: white;\r\n }\r\n \r\n .foro_item .fecha {\r\n   font-style: italic;\r\n"
+                },
+                {
+                    "date": 1719971999331,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,9 +68,11 @@\n   color: black;\r\n   cursor: pointer;\r\n }\r\n \r\n-.foro:hover \r\n+.foro:hover .foro_item{\r\n+  \r\n+}\r\n \r\n .nuevo{\r\n   align-items: center;\r\n }\r\n"
+                },
+                {
+                    "date": 1719972004463,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,9 +69,9 @@\n   cursor: pointer;\r\n }\r\n \r\n .foro:hover .foro_item{\r\n-  \r\n+  color: black;\r\n }\r\n \r\n .nuevo{\r\n   align-items: center;\r\n"
+                },
+                {
+                    "date": 1719972053907,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -76,10 +76,8 @@\n .nuevo{\r\n   align-items: center;\r\n }\r\n \r\n-\r\n-\r\n .foro_item  h3 {\r\n   margin-top: 0;\r\n   margin-bottom: 5px;\r\n   font-size: 18px;\r\n"
                 }
             ],
             "date": 1719968488233,

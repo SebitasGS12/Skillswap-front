@@ -10,6 +10,9 @@ import { SkillchatComponent } from './components/skillchat/skillchat.component';
 import { CategoriasExplorarComponent } from './components/categorias-explorar/categorias-explorar.component';
 import { EditarUsuarioComponent } from './components/editar-usuario/editar-usuario.component';
 import { VerDiscucionesComponent } from './components/ver-discuciones/ver-discuciones.component';
+import { VerMensajesComponent } from './components/ver-mensajes/ver-mensajes.component';
+import { CrearForoComponent } from './components/crear-foro/crear-foro.component';
+import { CrearDiscusionComponent } from './components/crear-discusion/crear-discusion.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/iniciarSesion', pathMatch: 'full'},
@@ -23,6 +26,9 @@ const routes: Routes = [
   { path: 'categoriasExplorar', component: CategoriasExplorarComponent },
   { path: 'editarUsuario', component: EditarUsuarioComponent },
   { path: 'foro/:id', component: VerDiscucionesComponent },
+  { path: 'discucion/:id', component: VerMensajesComponent },
+  { path: 'crearForo', component: CrearForoComponent },
+  { path: 'crearDiscucion', component: CrearDiscusionComponent },
 ];
 
 @NgModule({

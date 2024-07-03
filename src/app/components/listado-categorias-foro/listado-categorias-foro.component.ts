@@ -56,7 +56,7 @@ export class ListadoCategoriasForoComponent implements OnInit {
     this.foroService.listar().subscribe((response) => {
       this.foros = response;
       this.foros.forEach(foro => {
-        const categoriaId = foro.obj_CategoriaForo.categoriaId;
+        const categoriaId = foro.obj_CategoriaForo!.categoriaId;
         if (!this.forosPorCategoria[categoriaId]) {
           this.forosPorCategoria[categoriaId] = [];
         }

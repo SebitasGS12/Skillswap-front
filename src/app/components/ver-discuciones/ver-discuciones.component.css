@@ -1,140 +1,95 @@
-/* Estilos CSS mejorados */
-
-.container {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: rgba(15, 26, 36, 1);
+/* Estilo general del componente */
+.foro-skillswap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
   padding: 20px;
-}
-
-.titu {
-  background-color: rgba(15, 26, 36, 1);
+  background-color: #0f1a24;
   color: white;
-  padding: 10px;
-  margin: 20px 0px 40px 0px;
+  height: 100vh;
 }
 
-.persona {
+/* Estilo del encabezado */
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 1px solid #ddd; /* Línea divisoria gris claro */
+}
+
+.busqueda {
   display: flex;
   align-items: center;
+  width: 100%;
+}
+
+.busqueda input[type="text"] {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 79%;
+
+}
+
+.informacion{
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  background-color: rgba(20, 57, 90, 1);
-  border-radius: 20px;
-  color: aliceblue;
-  padding: 10px;
-  margin-bottom: 20px;
 }
 
-.persona img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin-right: 20px;
+.busqueda button {
+  padding: 5px 10px;
+  background-color: #007bff; /* Azul claro */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.persona .nombreuser {
-  flex: 1;
-}
-
-.persona h2 {
-  margin-bottom: 5px;
-  font-size: 1.5rem;
-}
-
-.persona p {
-  margin: 0;
-  font-size: 0.9rem;
-}
-
-.persona a.btnSeguir {
-  background-color: rgba(73, 71, 210, 1);
-  color: aliceblue;
-  border-radius: 10px;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-}
-
-.persona a.btnSeguir:hover {
-  background-color: rgba(73, 71, 210, 0.8);
-}
-
-.respuestas {
-  background-color: rgba(20, 57, 90, 1);
-  border-radius: 20px;
-  padding: 20px;
+/* Estilo del contenedor de foros */
+.contenedor-foros {
   margin-top: 20px;
 }
 
-.respuestas h1 {
-  color: aliceblue;
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-}
-
-.globres {
-  margin-bottom: 20px;
-}
-
-.Rpta {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 20px;
-}
-
-.Rpta img.imgUs {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  margin-right: 20px;
-}
-
-.dia {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: aliceblue;
-  font-size: 0.9rem;
+/* Estilo de cada foro */
+.foro {
+  border: 1px solid #ddd; /* Línea divisoria gris claro */
+  padding: 10px;
   margin-bottom: 10px;
+  background-color: #14395A; /* Fondo blanco */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil gris */
+  transition: background-color 0.3s ease; /* Efecto de transición al pasar el cursor */
 }
 
-.dia h3 {
-  font-size: 1.2rem;
+.foro:hover {
+  background-color: #f5f5f5; /* Fondo gris claro al pasar el cursor */
+  color: black;
+  cursor: pointer;
+}
+
+.foro:hover .foro_item{
+  color: black;
+}
+
+.nuevo{
+  align-items: center;
+}
+
+.foro_item  h3 {
+  margin-top: 0;
   margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
-.dia p {
-  margin: 0;
-  font-size: 0.8rem;
-}
-
-.txresp .resptxt {
-  color: aliceblue;
-  text-align: justify;
-  margin: 0;
-  padding-left: 20px;
-}
-
-.reaccion {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.reaccion .laik,
-.reaccion .nolaik {
-  display: flex;
-  align-items: center;
-  gap: 5px;
+.foro a {
+  text-decoration: none;
   color: white;
 }
 
-.reaccion .laik img,
-.reaccion .nolaik img {
-  width: 20px;
-  height: 20px;
-}
-
-.reaccion p {
-  margin: 0;
-  font-size: 0.9rem;
+.foro_item .fecha {
+  font-style: italic;
+  color: #666; /* Gris claro */
 }
