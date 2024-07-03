@@ -1,0 +1,47 @@
+<!-- Estructura HTML mejorada -->
+
+<app-header></app-header>
+<div class="division">
+  <app-aside></app-aside>
+  <div class="container" *ngIf="foro">
+    <div class="titu">
+      <h1>{{ foro?.titulo }}</h1>
+      <p>Publicado por {{ foro?.obj_Usuario?.correo }} en {{ foro?.obj_CategoriaForo?.nombre }} - {{ foro?.fechaCreacion | date }}</p>
+    </div>
+    <div class="persona">
+      <img src="./assets/images/imgUser.png" alt="imagen" />
+      <div class="nombreuser">
+        <h2>{{ foro?.obj_Usuario?.correo }}</h2>
+        <p>{{ foro?.fechaCreacion | date }} {{ foro?.obj_Usuario?.correo }}</p>
+      </div>
+      <a class="btnSeguir" href="#">Seguir</a>
+    </div>
+    <div class="respuestas">
+      <h1>Respuestas</h1>
+      <div class="globres" *ngFor="let discusion of discuciones">
+        <div class="Rpta">
+          <img src="./assets/images/imgUser.png" class="imgUs" alt="imgUsuario" />
+          <div class="txresp">
+            <div class="dia">
+              <h3>{{ discusion.obj_Usuario.correo }}</h3>
+              <p>{{ discusion.fechaCreacion | date }}</p>
+            </div>
+            <p class="resptxt">
+              {{ discusion.descripcion }}
+            </p>
+          </div>
+        </div>
+        <div class="reaccion">
+          <div class="laik">
+            <img src="../../../assets/images/como.png" alt="laik" />
+            <p>123</p>
+          </div>
+          <div class="nolaik">
+            <img src="../../../assets/images/como.png" alt="dislaik" />
+            <p>5</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/app/service/notificacionesService.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1719959587867,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1719959595703,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,11 @@\n     public obtenerNotificacionesByUsuario(usuarioid:number): Observable<Notificacion[]> {\r\n         return this.http.get<any>(this.baseUrl+'/usuario/'+usuarioid);\r\n     }\r\n \r\n+    public registrar(habilidad: Habilidad): Observable<any> {\r\n+        return this.http.post<any>(this.baseUrl, habilidad);\r\n+      }\r\n \r\n-    \r\n \r\n+\r\n }\r\n"
+                },
+                {
+                    "date": 1719959601548,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     public obtenerNotificacionesByUsuario(usuarioid:number): Observable<Notificacion[]> {\r\n         return this.http.get<any>(this.baseUrl+'/usuario/'+usuarioid);\r\n     }\r\n \r\n-    public registrar(habilidad: Habilidad): Observable<any> {\r\n+    public registrar(notificacion: Notificacion): Observable<Notificacion> {\r\n         return this.http.post<any>(this.baseUrl, habilidad);\r\n       }\r\n \r\n \r\n"
+                }
+            ],
+            "date": 1719959587867,
+            "name": "Commit-0",
+            "content": "import { Injectable } from \"@angular/core\";\r\nimport { Datos } from \"../constants/datos\";\r\nimport { HttpClient } from \"@angular/common/http\";\r\nimport { Observable } from \"rxjs\";\r\nimport { Amistades } from \"../models/amistades\";\r\nimport { Usuario } from \"../models/usuario\";\r\nimport { Sesion } from \"../models/sesion\";\r\nimport { Perfil } from \"../models/perfil\";\r\nimport {  Notificacion } from \"../models/notificacion\";\r\n\r\n\r\n@Injectable({\r\n    providedIn:'root'\r\n})\r\nexport class NotificacionesService {\r\n    private baseUrl = Datos.API_URL+\"Notificaciones\" ;\r\n    constructor(private http: HttpClient){}\r\n\r\n    public obtenerNotificacionesByUsuario(usuarioid:number): Observable<Notificacion[]> {\r\n        return this.http.get<any>(this.baseUrl+'/usuario/'+usuarioid);\r\n    }\r\n\r\n\r\n    \r\n\r\n}\r\n"
+        }
+    ]
+}

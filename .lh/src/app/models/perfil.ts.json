@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 13,
+            "activePatchIndex": 16,
             "patches": [
                 {
                     "date": 1718507039926,
@@ -60,6 +60,18 @@
                 {
                     "date": 1718507137903,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,6 +8,6 @@\n     fechaNacimiento!:Date;\r\n     obj_imagenPerfilId!:Imagen;\r\n     obj_imagenCabeceraId!:Imagen;\r\n     biografia!:String;\r\n-    \r\n+    obj_Usuario!:\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719870784557,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import { Imagen } from \"./imagen\";\r\n+import { Usuario } from \"./usuario\";\r\n \r\n export class Perfil {\r\n     perfilID!:number;\r\n     nombre!:string;\r\n@@ -8,6 +9,12 @@\n     fechaNacimiento!:Date;\r\n     obj_imagenPerfilId!:Imagen;\r\n     obj_imagenCabeceraId!:Imagen;\r\n     biografia!:String;\r\n-    obj_Usuario!:\r\n+    obj_Usuario!:Usuario;\r\n+\r\n+    constructor() {}  \r\n+\r\n+    function nombreCompleto():string {\r\n+        return  this.nombre + \" \" +this.apellido;\r\n+    }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719870793299,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,6 @@\n     obj_Usuario!:Usuario;\r\n \r\n     constructor() {}  \r\n \r\n-    function nombreCompleto():string {\r\n-        return  this.nombre + \" \" +this.apellido;\r\n-    }\r\n+    function\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719873877960,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,9 @@\n     fechaNacimiento!:Date;\r\n     obj_imagenPerfilId!:Imagen;\r\n     obj_imagenCabeceraId!:Imagen;\r\n     biografia!:String;\r\n-    obj_Usuario!:Usuario;\r\n+    usuario!:Usuario;\r\n \r\n     constructor() {}  \r\n \r\n-    function\r\n }\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1718507039926,

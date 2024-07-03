@@ -1,33 +1,31 @@
 <app-header></app-header>
 <div class="division">
-
     <app-aside></app-aside>
-
     <div class="body">
         <div class="container">
             <div class="containerArriba">
-                <h1>Explorar</h1>
-                <br>
-                <a href=""><img src="https://img.freepik.com/vector-gratis/paisaje-lago-degradado_23-2149152834.jpg?t=st=1719186020~exp=1719189620~hmac=254ff5d5026d6d16d66c4bd91594c5ec5061c259b70b91f0b14c706af391bf38&w=1380" alt=""></a>
-                <a href=""><img src="https://img.freepik.com/vector-gratis/paisaje-montana-degradado_23-2149152830.jpg?t=st=1719186012~exp=1719189612~hmac=6c3925b22124a8e79aef2665abcad147beb4a2061276d32aa402e5d8e7c77992&w=1380" alt=""></a>
-                <a href=""><img src="https://img.freepik.com/vector-gratis/paisaje-invierno-degradado_23-2149152827.jpg?t=st=1719186067~exp=1719189667~hmac=b372d4c7462d5e6a1d805bd2edb251f5f8c8bb5665391f102ad6a11dc61fb15e&w=1380" alt=""></a>
-                <a href=""><img src="https://img.freepik.com/vector-gratis/paisaje-lago-degradado_23-2149152833.jpg?t=st=1719186084~exp=1719189684~hmac=836b74a32c91307e9fb395c10d35baecc5ad0d67b262d92c2c4e3e6a4ec6824f&w=1380" alt=""></a>
-                <a href=""><img src="https://img.freepik.com/vector-gratis/hermoso-paisaje-primavera-degradado_23-2148448598.jpg?t=st=1719186109~exp=1719189709~hmac=09a3ccfe87a01846c816702223b60b9c6a1670dd3e0a813812fbcb8407c6b533&w=1380" alt=""></a>
+                <h2>Explorar Categorias</h2>
+                <br>            
+                @for (item of categoriaHabilidad; track $index) {
+
+                    <a [routerLink]="['/categoriasExplorar']" ><img src="https://img.freepik.com/vector-gratis/paisaje-lago-degradado_23-2149152834.jpg?t=st=1719186020~exp=1719189620~hmac=254ff5d5026d6d16d66c4bd91594c5ec5061c259b70b91f0b14c706af391bf38&w=1380" alt=""></a>
+
+                }
             </div>
             <div class="containerAbajo">
-                <h1>Bienvenido a SkillSwap</h1>
+                <h2>Bienvenido a SkillSwap</h2>
                 <br>
-                <h2>Intenta algo Nuevo</h2>
+                <h3>Intenta algo Nuevo</h3>
                 <br>
                 <div class="primerslot">
                     <div>
-                    <h3>Nuevo en SkillSwap?</h3>
+                    <h4>Nuevo en SkillSwap?</h4>
                     <p>Te ayudaremos a comenzar con tu primer intercambio de habilidades.</p>
                     </div>
                     <button>Empezar</button>
                 </div>
                 <br><br>
-                <h2>¿Necesitas ayuda?</h2>
+                <h3>¿Necesitas ayuda?</h3>
                 <br>
                 <div class="segundoslot">
                     <p>Encuentra respuestas a sus preguntas en el centro de ayuda.</p>

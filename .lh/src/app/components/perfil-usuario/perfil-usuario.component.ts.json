@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 11,
+            "activePatchIndex": 23,
             "patches": [
                 {
                     "date": 1718509405824,
@@ -52,6 +52,54 @@
                 {
                     "date": 1719635033730,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,13 @@\n import { Component } from '@angular/core';\r\n+import { HeaderComponent } from \"../header/header.component\";\r\n \r\n @Component({\r\n-  selector: 'app-perfil-usuario',\r\n-  standalone: true,\r\n-  imports: [],\r\n-  templateUrl: './perfil-usuario.component.html',\r\n-  styleUrl: './perfil-usuario.component.css'\r\n+    selector: 'app-perfil-usuario',\r\n+    standalone: true,\r\n+    templateUrl: './perfil-usuario.component.html',\r\n+    styleUrl: './perfil-usuario.component.css',\r\n+    imports: [HeaderComponent]\r\n })\r\n export class PerfilUsuarioComponent {\r\n   items:string[] = ['Modas',\r\n     'Liderazgo',\r\n"
+                },
+                {
+                    "date": 1719878428536,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,16 @@\n-import { Component } from '@angular/core';\r\n+import { Component, OnInit } from '@angular/core';\r\n import { HeaderComponent } from \"../header/header.component\";\r\n+import { AsideComponent } from \"../aside/aside.component\";\r\n \r\n @Component({\r\n     selector: 'app-perfil-usuario',\r\n     standalone: true,\r\n     templateUrl: './perfil-usuario.component.html',\r\n     styleUrl: './perfil-usuario.component.css',\r\n-    imports: [HeaderComponent]\r\n+    imports: [HeaderComponent, AsideComponent]\r\n })\r\n-export class PerfilUsuarioComponent {\r\n+export class PerfilUsuarioComponent implements OnInit{\r\n   items:string[] = ['Modas',\r\n     'Liderazgo',\r\n     'Liderazgo'\r\n   \r\n"
+                },
+                {
+                    "date": 1719878434091,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,9 @@\n     styleUrl: './perfil-usuario.component.css',\r\n     imports: [HeaderComponent, AsideComponent]\r\n })\r\n export class PerfilUsuarioComponent implements OnInit{\r\n+\r\n   items:string[] = ['Modas',\r\n     'Liderazgo',\r\n     'Liderazgo'\r\n   \r\n"
+                },
+                {
+                    "date": 1719878446819,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,5 +20,12 @@\n     'Guia para construir un sistema de diseño',\r\n     'Guia para construir un sistema de diseño'\r\n   \r\n   ];\r\n+  constructor(){}\r\n+\r\n+  ngOnInit(): void {\r\n+\r\n+\r\n+\r\n+  }\r\n } \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719878457723,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,11 @@\n     'Guia para construir un sistema de diseño',\r\n     'Guia para construir un sistema de diseño'\r\n   \r\n   ];\r\n-  constructor(){}\r\n+  constructor(\r\n+    private \r\n+  ){}\r\n \r\n   ngOnInit(): void {\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1719878472094,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import { Component, OnInit } from '@angular/core';\r\n import { HeaderComponent } from \"../header/header.component\";\r\n import { AsideComponent } from \"../aside/aside.component\";\r\n+import { UsuarioService } from '../../service/usuarioService';\r\n \r\n @Component({\r\n     selector: 'app-perfil-usuario',\r\n     standalone: true,\r\n@@ -21,8 +22,9 @@\n     'Guia para construir un sistema de diseño'\r\n   \r\n   ];\r\n   constructor(\r\n+    private usuarioService:UsuarioService,\r\n     private \r\n   ){}\r\n \r\n   ngOnInit(): void {\r\n"
+                },
+                {
+                    "date": 1719878478234,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import { Component, OnInit } from '@angular/core';\r\n import { HeaderComponent } from \"../header/header.component\";\r\n import { AsideComponent } from \"../aside/aside.component\";\r\n import { UsuarioService } from '../../service/usuarioService';\r\n+import { PerfilService } from '../../service/perfilService';\r\n \r\n @Component({\r\n     selector: 'app-perfil-usuario',\r\n     standalone: true,\r\n@@ -23,9 +24,9 @@\n   \r\n   ];\r\n   constructor(\r\n     private usuarioService:UsuarioService,\r\n-    private \r\n+    private perfilService:PerfilService\r\n   ){}\r\n \r\n   ngOnInit(): void {\r\n \r\n"
+                },
+                {
+                    "date": 1719878488372,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,10 @@\n     imports: [HeaderComponent, AsideComponent]\r\n })\r\n export class PerfilUsuarioComponent implements OnInit{\r\n \r\n+  sesion!:Sesion;\r\n+  \r\n   items:string[] = ['Modas',\r\n     'Liderazgo',\r\n     'Liderazgo'\r\n   \r\n"
+                },
+                {
+                    "date": 1719878493489,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n import { HeaderComponent } from \"../header/header.component\";\r\n import { AsideComponent } from \"../aside/aside.component\";\r\n import { UsuarioService } from '../../service/usuarioService';\r\n import { PerfilService } from '../../service/perfilService';\r\n+import { Perfil } from '../../models/perfil';\r\n \r\n @Component({\r\n     selector: 'app-perfil-usuario',\r\n     standalone: true,\r\n@@ -13,9 +14,9 @@\n })\r\n export class PerfilUsuarioComponent implements OnInit{\r\n \r\n   sesion!:Sesion;\r\n-  \r\n+  perfil!:Perfil;\r\n   items:string[] = ['Modas',\r\n     'Liderazgo',\r\n     'Liderazgo'\r\n   \r\n"
+                },
+                {
+                    "date": 1719878508796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n import { AsideComponent } from \"../aside/aside.component\";\r\n import { UsuarioService } from '../../service/usuarioService';\r\n import { PerfilService } from '../../service/perfilService';\r\n import { Perfil } from '../../models/perfil';\r\n+import { Sesion } from '../../models/sesion';\r\n \r\n @Component({\r\n     selector: 'app-perfil-usuario',\r\n     standalone: true,\r\n@@ -32,8 +33,21 @@\n   ){}\r\n \r\n   ngOnInit(): void {\r\n \r\n+    this.sesionService.obtenerSesion().subscribe((response) => {\r\n+      console.log(response);\r\n+      this.sesion = response;\r\n+      if (this.sesion) {\r\n+        this.notificacionesService\r\n+          .obtenerNotificacionesByUsuario(this.sesion.obj_Usuario.usuarioId)\r\n+          .subscribe((response) => {\r\n+            console.log(response);\r\n+            this.notificaciones = response;\r\n+          });\r\n \r\n+          this.notificaciones.reverse();\r\n+      }\r\n+    });\r\n \r\n   }\r\n } \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719878518244,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,10 @@\n   \r\n   ];\r\n   constructor(\r\n     private usuarioService:UsuarioService,\r\n-    private perfilService:PerfilService\r\n+    private perfilService:PerfilService,\r\n+    private s\r\n   ){}\r\n \r\n   ngOnInit(): void {\r\n \r\n"
+                },
+                {
+                    "date": 1719878579340,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n import { UsuarioService } from '../../service/usuarioService';\r\n import { PerfilService } from '../../service/perfilService';\r\n import { Perfil } from '../../models/perfil';\r\n import { Sesion } from '../../models/sesion';\r\n+import { SesionService } from '../../service/sesionService';\r\n \r\n @Component({\r\n     selector: 'app-perfil-usuario',\r\n     standalone: true,\r\n@@ -29,9 +30,9 @@\n   ];\r\n   constructor(\r\n     private usuarioService:UsuarioService,\r\n     private perfilService:PerfilService,\r\n-    private s\r\n+    private sesionService:SesionService,\r\n   ){}\r\n \r\n   ngOnInit(): void {\r\n \r\n"
+                },
+                {
+                    "date": 1719878609322,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n     this.sesionService.obtenerSesion().subscribe((response) => {\r\n       console.log(response);\r\n       this.sesion = response;\r\n       if (this.sesion) {\r\n-          this.ses\r\n+          this.\r\n \r\n \r\n       }\r\n     });\r\n"
                 }
             ],
             "date": 1718509405824,

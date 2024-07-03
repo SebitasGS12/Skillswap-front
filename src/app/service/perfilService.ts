@@ -18,5 +18,8 @@ export class PerfilService {
     public obtenerPerfilByUsuario(usuarioid:number): Observable<Perfil> {
         return this.http.get<any>(this.baseUrl+'/usuario/'+usuarioid);
     }
+    public registrar(perfil: Perfil): Observable<Perfil> {
+        return this.http.post<any>(this.baseUrl, perfil);
+    }
 
 }

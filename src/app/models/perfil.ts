@@ -10,5 +10,8 @@ export class Perfil {
     obj_imagenPerfilId!:Imagen;
     obj_imagenCabeceraId!:Imagen;
     biografia!:String;
-    obj_Usuario!:Usuario;
+    usuario!:Usuario;
+
+    constructor() {}  
+
 }

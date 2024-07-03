@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/service/categoriaHabilidadService copy.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1719794699076,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1719794699076,
+            "name": "Commit-0",
+            "content": "import { Injectable } from \"@angular/core\";\r\nimport { Datos } from \"../constants/datos\";\r\nimport { HttpClient } from \"@angular/common/http\";\r\nimport { Observable } from \"rxjs\";\r\nimport { CategoriaHabilidad } from \"../models/categoria-habilidad\";\r\n\r\n\r\n@Injectable({\r\n    providedIn:'root'\r\n})\r\nexport class CategoriaForoService {\r\n    private baseUrl = Datos.API_URL+\"CategoriaHabilidad\" ;\r\n    constructor(private http: HttpClient){}\r\n\r\n    public listar():Observable<CategoriaHabilidad[]>{\r\n        return this.http.get<CategoriaHabilidad[]>(this.baseUrl);\r\n    }\r\n\r\n\r\n    public registrar(categoriaHabilidad: CategoriaHabilidad): Observable<any> {\r\n    return this.http.post<any>(this.baseUrl, categoriaHabilidad);\r\n    }\r\n\r\n    public buscar(id : string): Observable<CategoriaHabilidad> {\r\n    return this.http.get<CategoriaHabilidad>(this.baseUrl + `/${id}`);\r\n    }\r\n}"
+        }
+    ]
+}

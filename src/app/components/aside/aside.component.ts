@@ -16,6 +16,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './aside.component.css'
 })
 export class AsideComponent implements OnInit {
+
   sesion!:Sesion;
   user:string = "assets/images/home.png";
   perfil!:Perfil;
@@ -42,5 +43,15 @@ export class AsideComponent implements OnInit {
         }
       }
     );
+  }
+
+  nombreCompleto(perfil: Perfil) {
+    if (perfil) {
+      
+      if(perfil.nombre != null && perfil.apellido != null ){
+        return perfil.nombre+ " " + perfil.apellido;
+      }
+    }
+      return "No especificado";
   }
 }

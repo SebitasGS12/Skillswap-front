@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 14,
+            "activePatchIndex": 15,
             "patches": [
                 {
                     "date": 1719612199255,
@@ -64,6 +64,10 @@
                 {
                     "date": 1719613704002,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n         <img src=\"./assets/images/logo.png\" alt=\"SkillSwap Logo\">\r\n         <h1>SkillSwap</h1>\r\n     </div>\r\n     <div>\r\n-        <a [routerLink]=\"['iniciarSesion']\" class=\"login\">Iniciar Sesión</a>\r\n+        <a [routerLink]=\"['/iniciarSesion']\" class=\"login\">Iniciar Sesión</a>\r\n     </div>\r\n     \r\n </header>\r\n <section class=\"bienvenido\">\r\n"
+                },
+                {
+                    "date": 1719767356470,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,10 +10,10 @@\n     \r\n </header>\r\n <section class=\"bienvenido\">\r\n     <div class=\"carrusel\">\r\n-        <img src=\"./assets/images/banner.jpg\" alt=\"Imagen 1\" class=\"activa\">\r\n-        <img src=\"./assets/images/banner1.jpg\" alt=\"Imagen 2\">\r\n+        <img src=\"./assets/images/abanner.jpg\" alt=\"Imagen 1\" class=\"activa\">\r\n+        <img src=\"./assets/images/abanner1.jpg\" alt=\"Imagen 2\">\r\n         <img src=\"./assets/images/banner2.jpg\" alt=\"Imagen 3\">\r\n         <img src=\"./assets/images/banner3.jpg\" alt=\"Imagen 4\">\r\n         <div class=\"carrusel-movimiento\">\r\n             <div class=\"activa\" data-slide=\"0\"></div>\r\n"
                 }
             ],
             "date": 1719612199255,

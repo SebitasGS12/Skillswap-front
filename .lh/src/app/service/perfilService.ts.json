@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 10,
+            "activePatchIndex": 12,
             "patches": [
                 {
                     "date": 1719627976107,
@@ -48,6 +48,14 @@
                 {
                     "date": 1719632025742,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n export class PerfilService {\r\n     private baseUrl = Datos.API_URL+\"Perfil\" ;\r\n     constructor(private http: HttpClient){}\r\n \r\n-    public obtenerPerfilByUsuario(usuarioid:Usuario): Observable<Perfil> {\r\n-        return this.http.get<any>(this.baseUrl+'/usuario/'+usuario.usuarioId);\r\n+    public obtenerPerfilByUsuario(usuarioid:number): Observable<Perfil> {\r\n+        return this.http.get<any>(this.baseUrl+'/usuario/'+usuarioId);\r\n     }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719881931369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,11 @@\n     private baseUrl = Datos.API_URL+\"Perfil\" ;\r\n     constructor(private http: HttpClient){}\r\n \r\n     public obtenerPerfilByUsuario(usuarioid:number): Observable<Perfil> {\r\n-        return this.http.get<any>(this.baseUrl+'/usuario/'+usuarioId);\r\n+        return this.http.get<any>(this.baseUrl+'/usuario/'+usuarioid);\r\n     }\r\n+    public registrar(categoriaHabilidad: Foro): Observable<Foro> {\r\n+        return this.http.post<any>(this.baseUrl, categoriaHabilidad);\r\n+        }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719881940118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n \r\n     public obtenerPerfilByUsuario(usuarioid:number): Observable<Perfil> {\r\n         return this.http.get<any>(this.baseUrl+'/usuario/'+usuarioid);\r\n     }\r\n-    public registrar(categoriaHabilidad: Foro): Observable<Foro> {\r\n+    public registrar(perfil: Perfil): Observable<Foro> {\r\n         return this.http.post<any>(this.baseUrl, categoriaHabilidad);\r\n-        }\r\n+    }\r\n \r\n }\r\n"
                 }
             ],
             "date": 1719627976107,

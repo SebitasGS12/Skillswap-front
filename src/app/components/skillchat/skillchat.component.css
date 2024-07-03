@@ -1,211 +1,183 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #0B1126;
-    color: #FFFFFF;
-    margin: 0;
-    padding: 0;
+/* Estructura del contenedor principal */
+.division {
+    display: flex;
+    height: 100vh;
+}
+
+/* Contenedor principal de mensajes y amigos */
+.container-skilchat {
+    display: flex;
+    flex: 1;
+    background-color: #0F1A24;
+    color: white;
+}
+
+/* Estilos para la sección de mensajes */
+.mensajes {
+    flex: 2;
     display: flex;
     flex-direction: column;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+}
+
+.mensajes h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.chats{   
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: calc(100vh - 250px); 
+}
+
+.chats::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chats::-webkit-scrollbar-track {
+    background: #1F1F1F;
+    border-radius: 10px;
+}
+
+.chats::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.chats::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.detalle {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.cabecera {
+    display: flex;
     align-items: center;
-    justify-content: flex-start;
-    padding-top: 20px;
-    height: 100vh; /* Ajusta la altura al 100% del viewport */
-    overflow: hidden; /* Elimina el scroll */
-}
-
-h1 {
-    font-size: 2.5em;
-}
-
-/* Contenedor principal */
-.main-container {
-    width: 90%;
-    max-width: 1400px;
-    display: flex;
-    gap: 20px;
-    margin-top: 20px;
-    overflow: hidden; /* Asegura que no haya scroll en este contenedor */
-}
-
-/* Contenedor de la tabla principal */
-.table-container {
-    flex: 2.5; /* Aumenta el ancho de la tabla */
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #142850; 
-    text-align: center; 
-    border: 2px solid #8A2BE2;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-}
-
-.table-title {
-    margin-top: 0;
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-.chat-container {
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #0F3D78;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    height: 450px; /* Altura fija */
-    width: 100%; /* Ocupa todo el ancho disponible */
-    overflow: hidden; /* Quita el scroll */
-    box-sizing: border-box; /* Asegura que el padding no cause scroll */
-    border: 2px solid #8A2BE2; /* Borde violeta para el contenedor de mensajes */
-}
-
-.chat-messages {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
     padding: 10px;
-    width: 100%;
-    flex-grow: 1;
-    overflow-y: hidden; /* Elimina el scroll vertical */
-    box-sizing: border-box; /* Asegura que el padding no cause scroll */
+    border-bottom: 1px solid #4947D2;
+}
+
+.cabecera img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.info h4, .info h6 {
+    margin: 0;
 }
 
 .message {
-    padding: 10px;
-    border-radius: 8px;
-    background-color: #1E4B8E; 
-    align-self: flex-start; 
-    max-width: 70%; 
-    word-wrap: break-word; 
-}
-
-.other-message {
-    padding: 10px;
-    border-radius: 8px;
-    background-color: #007bff;
-    align-self: flex-end; 
-    max-width: 70%; 
-    word-wrap: break-word; 
-}
-
-.message-content {
-    color: #FFFFFF; 
-}
-
-.message-content img {
-    vertical-align: middle; 
-    width: 24px; 
-    height: 24px;
-    border-radius: 50%; 
-    margin-right: 8px; 
-}
-
-.input-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 20px;
-    background-color: #4E6AFF; 
-    padding: 10px;
-    border-radius: 8px;
-    width: 100%;
-}
-
-.input-bar input[type="text"] {
     flex: 1;
-    padding: 8px;
-    border: none;
-    background-color: transparent;
-    color: #FFFFFF; 
-    outline: none;
-    font-size: 14px;
-}
-
-.input-bar input[type="text"]::placeholder {
-    color: #FFFFFF;
-}
-
-.send-button {
-    padding: 8px 16px; 
-    background-color: #000000;
-    color: #FFFFFF;
-    font-weight: bold;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-.send-button:hover {
-    background-color: #333333;
-}
-
-.paper-plane {
-    font-size: 18px;
-    vertical-align: middle;
-    margin-left: 4px;
-}
-
-/* Contenedor de amigos */
-.friends-container {
-    flex: 1; 
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #142850;
-    text-align: center;
-    border: 2px solid #8A2BE2;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Alineación a la izquierda */
-    height: 100%;
-    overflow: hidden; /* Elimina el scroll */
+    gap: 15px;
+    justify-content: space-between;
+
 }
 
-.friends-container table {
-    width: 100%;
-}
-
-.friends-container td {
-    padding: 10px 0;
-    border: 1px solid #8A2BE2; /* Añadir borde violeta a cada celda */
-}
-
-.friends-container .name {
-    font-size: 18px; /* Tamaño de fuente más grande para los nombres */
+.emisor, .receptor {
     display: flex;
     align-items: center;
+    margin: 10px 0;
 }
 
-/* Estado del usuario */
-.user-status {
-    color: #00FF00; /* Verde para el estado "En línea" */
-    margin-left: 8px; /* Añadir un margen izquierdo */
+.receptor {
+    justify-content: end;
+    flex-direction: row-reverse;
 }
 
-/* Botones verdes y azules */
-.friends-container .btn {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
+.emisor img, .receptor img {
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    margin-right: 8px;
-    background-color: #00FF00; /* Color verde por defecto */
+    margin: 0 10px;
 }
 
-.friends-container .btn-green {
-    background-color: #00FF00; /* Color verde */
+.texto {
+    background-color: #1F364A;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 60%;
 }
 
-.friends-container .btn-blue {
-    background-color: #0000FF; /* Color azul */
+.input-section {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #4947D2;
 }
 
-/* Estilo para las imágenes de perfil */
-.profile-image {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    margin-right: 8px;
+.input-section input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #4947D2;
+    border-radius: 5px;
+    margin-right: 10px;
+    background-color: #0F1A24;
+    color: white;
+}
+
+.input-section button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.input-section button:hover {
+    background-color: #0056b3;
+}
+
+.amigos {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.amigos h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.item img {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+}
+
+.item p {
+    flex: 1;
+    color: white;
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.item:hover {
+    background-color: #1F364A;
+}
+
+.item:active {
+    background-color: #3A4F63;
 }

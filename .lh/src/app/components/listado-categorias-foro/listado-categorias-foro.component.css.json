@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 22,
             "patches": [
                 {
                     "date": 1719634485556,
@@ -12,6 +12,90 @@
                 {
                     "date": 1719634495796,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,4 @@\n-@import '~bootstrap/dist/css/bootstrap.min.css';\r\n-\r\n .container {\r\n     max-width: 100%;\r\n   }\r\n   \r\n"
+                },
+                {
+                    "date": 1719794123730,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n .container {\r\n     max-width: 100%;\r\n+    \r\n   }\r\n   \r\n   .card {\r\n     margin-bottom: 1.5rem;\r\n"
+                },
+                {
+                    "date": 1719794151804,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n .container {\r\n     max-width: 100%;\r\n-    \r\n+    background-color: #0F1A24;\r\n+\r\n   }\r\n   \r\n   .card {\r\n     margin-bottom: 1.5rem;\r\n"
+                },
+                {
+                    "date": 1719794159802,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n .container {\r\n     max-width: 100%;\r\n     background-color: #0F1A24;\r\n-\r\n+  color: ;\r\n   }\r\n   \r\n   .card {\r\n     margin-bottom: 1.5rem;\r\n"
+                },
+                {
+                    "date": 1719794165169,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n .container {\r\n     max-width: 100%;\r\n     background-color: #0F1A24;\r\n-  color: ;\r\n+    color: white;\r\n   }\r\n   \r\n   .card {\r\n     margin-bottom: 1.5rem;\r\n"
+                },
+                {
+                    "date": 1719796448575,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n .container {\r\n     max-width: 100%;\r\n     background-color: #0F1A24;\r\n     color: white;\r\n+    \r\n   }\r\n   \r\n   .card {\r\n     margin-bottom: 1.5rem;\r\n"
+                },
+                {
+                    "date": 1719796471869,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,8 @@\n .container {\r\n     max-width: 100%;\r\n     background-color: #0F1A24;\r\n     color: white;\r\n-    \r\n   }\r\n   \r\n   .card {\r\n     margin-bottom: 1.5rem;\r\n"
+                },
+                {
+                    "date": 1719796508377,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n-.container {\r\n+.  <div class=\"contenedorMain\">\r\n+{\r\n     max-width: 100%;\r\n     background-color: #0F1A24;\r\n     color: white;\r\n   }\r\n"
+                },
+                {
+                    "date": 1719796514191,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n-.  <div class=\"contenedorMain\">\r\n-{\r\n+.contenedorMain {\r\n     max-width: 100%;\r\n     background-color: #0F1A24;\r\n     color: white;\r\n   }\r\n"
+                },
+                {
+                    "date": 1719796524322,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,46 @@\n+.contenedorMain {\r\n+    max-width: 100%;\r\n+    background-color: #0F1A24;\r\n+    color: white;\r\n+  }\r\n+\r\n+  \r\n+  \r\n+  .card {\r\n+    margin-bottom: 1.5rem;\r\n+  }\r\n+  \r\n+  .card-header {\r\n+    padding: 0.75rem 1.25rem;\r\n+  }\r\n+  \r\n+  .card-body {\r\n+    padding: 1.25rem;\r\n+  }\r\n+  \r\n+  .form-control {\r\n+    margin-bottom: 1rem;\r\n+  }\r\n+  \r\n+  .pagination {\r\n+    margin-top: 2rem;\r\n+  }\r\n+  \r\n+  .page-link {\r\n+    color: #007bff;\r\n+  }\r\n+  \r\n+  .page-link:hover {\r\n+    color: #0056b3;\r\n+  }\r\n+  \r\n+  .btn-outline-light {\r\n+    border-color: white;\r\n+    color: white;\r\n+  }\r\n+  \r\n+  .btn-outline-light:hover {\r\n+    background-color: white;\r\n+    color: black;\r\n+  }\r\n+  \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719796530571,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,11 @@\n     background-color: #0F1A24;\r\n     color: white;\r\n   }\r\n \r\n+.container{\r\n   \r\n+}\r\n   \r\n   .card {\r\n     margin-bottom: 1.5rem;\r\n   }\r\n@@ -42,49 +44,5 @@\n   .btn-outline-light:hover {\r\n     background-color: white;\r\n     color: black;\r\n   }\r\n-  \n-.contenedorMain {\r\n-    max-width: 100%;\r\n-    background-color: #0F1A24;\r\n-    color: white;\r\n-  }\r\n-  \r\n-  .card {\r\n-    margin-bottom: 1.5rem;\r\n-  }\r\n-  \r\n-  .card-header {\r\n-    padding: 0.75rem 1.25rem;\r\n-  }\r\n-  \r\n-  .card-body {\r\n-    padding: 1.25rem;\r\n-  }\r\n-  \r\n-  .form-control {\r\n-    margin-bottom: 1rem;\r\n-  }\r\n-  \r\n-  .pagination {\r\n-    margin-top: 2rem;\r\n-  }\r\n-  \r\n-  .page-link {\r\n-    color: #007bff;\r\n-  }\r\n-  \r\n-  .page-link:hover {\r\n-    color: #0056b3;\r\n-  }\r\n-  \r\n-  .btn-outline-light {\r\n-    border-color: white;\r\n-    color: white;\r\n-  }\r\n-  \r\n-  .btn-outline-light:hover {\r\n-    background-color: white;\r\n-    color: black;\r\n-  }\r\n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719796539209,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,13 @@\n .contenedorMain {\r\n     max-width: 100%;\r\n+    width: 100%;\r\n     background-color: #0F1A24;\r\n     color: white;\r\n   }\r\n \r\n .container{\r\n-  \r\n+  width: 100%;\r\n }\r\n   \r\n   .card {\r\n     margin-bottom: 1.5rem;\r\n"
+                },
+                {
+                    "date": 1719796556009,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n     max-width: 100%;\r\n     width: 100%;\r\n     background-color: #0F1A24;\r\n     color: white;\r\n+    min-height: 100vh;\r\n   }\r\n \r\n .container{\r\n   width: 100%;\r\n"
+                },
+                {
+                    "date": 1719963502814,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,50 +1,56 @@\n .contenedorMain {\r\n-    max-width: 100%;\r\n-    width: 100%;\r\n-    background-color: #0F1A24;\r\n-    color: white;\r\n-    min-height: 100vh;\r\n-  }\r\n+  max-width: 100%;\r\n+  width: 100%;\r\n+  background-color: #0F1A24;\r\n+  color: white;\r\n+  min-height: 100vh;\r\n+}\r\n \r\n-.container{\r\n+.container {\r\n   width: 100%;\r\n }\r\n-  \r\n-  .card {\r\n-    margin-bottom: 1.5rem;\r\n-  }\r\n-  \r\n-  .card-header {\r\n-    padding: 0.75rem 1.25rem;\r\n-  }\r\n-  \r\n-  .card-body {\r\n-    padding: 1.25rem;\r\n-  }\r\n-  \r\n-  .form-control {\r\n-    margin-bottom: 1rem;\r\n-  }\r\n-  \r\n-  .pagination {\r\n-    margin-top: 2rem;\r\n-  }\r\n-  \r\n-  .page-link {\r\n-    color: #007bff;\r\n-  }\r\n-  \r\n-  .page-link:hover {\r\n-    color: #0056b3;\r\n-  }\r\n-  \r\n-  .btn-outline-light {\r\n-    border-color: white;\r\n-    color: white;\r\n\\ No newline at end of file\n-  }\r\n-  \r\n-  .btn-outline-light:hover {\r\n-    background-color: white;\r\n-    color: black;\r\n-  }\r\n-  \n+\r\n+.card {\r\n+  margin-bottom: 1.5rem;\r\n+  color: white; /* Color de texto por defecto */\r\n+  text-decoration: none; /* Quitar subrayado */\r\n+  transition: background-color 0.3s ease; /* Transición suave */\r\n+}\r\n+\r\n+.card:hover {\r\n+  background-color: #1a1a1a; /* Color de fondo al pasar el mouse */\r\n+}\r\n+\r\n+.card-header {\r\n+  padding: 0.75rem 1.25rem;\r\n+}\r\n+\r\n+.card-body {\r\n+  padding: 1.25rem;\r\n+}\r\n+\r\n+.form-control {\r\n+  margin-bottom: 1rem;\r\n+}\r\n+\r\n+.pagination {\r\n+  margin-top: 2rem;\r\n+}\r\n+\r\n+.page-link {\r\n+  color: #007bff;\r\n+}\r\n+\r\n+.page-link:hover {\r\n+  color: #0056b3;\r\n+}\r\n+\r\n+.btn-outline-light {\r\n+  border-color: white;\r\n+  color: white;\r\n+}\r\n+\r\n+.btn-outline-light:hover {\r\n+  background-color: white;\r\n+  color: black;\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719963880452,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,56 +1,50 @@\n .contenedorMain {\r\n-  max-width: 100%;\r\n-  width: 100%;\r\n-  background-color: #0F1A24;\r\n-  color: white;\r\n-  min-height: 100vh;\r\n-}\r\n+    max-width: 100%;\r\n+    width: 100%;\r\n+    background-color: #0F1A24;\r\n+    color: white;\r\n+    min-height: 100vh;\r\n+  }\r\n \r\n-.container {\r\n+.container{\r\n   width: 100%;\r\n }\r\n-\r\n-.card {\r\n-  margin-bottom: 1.5rem;\r\n-  color: white; /* Color de texto por defecto */\r\n-  text-decoration: none; /* Quitar subrayado */\r\n-  transition: background-color 0.3s ease; /* Transición suave */\r\n-}\r\n-\r\n-.card:hover {\r\n-  background-color: #1a1a1a; /* Color de fondo al pasar el mouse */\r\n-}\r\n-\r\n-.card-header {\r\n-  padding: 0.75rem 1.25rem;\r\n-}\r\n-\r\n-.card-body {\r\n-  padding: 1.25rem;\r\n-}\r\n-\r\n-.form-control {\r\n-  margin-bottom: 1rem;\r\n-}\r\n-\r\n-.pagination {\r\n-  margin-top: 2rem;\r\n-}\r\n-\r\n-.page-link {\r\n-  color: #007bff;\r\n-}\r\n-\r\n-.page-link:hover {\r\n-  color: #0056b3;\r\n-}\r\n-\r\n-.btn-outline-light {\r\n-  border-color: white;\r\n\\ No newline at end of file\n-  color: white;\r\n-}\r\n-\r\n-.btn-outline-light:hover {\r\n-  background-color: white;\r\n-  color: black;\r\n-}\n+  \r\n+  .card {\r\n+    margin-bottom: 1.5rem;\r\n+  }\r\n+  \r\n+  .card-header {\r\n+    padding: 0.75rem 1.25rem;\r\n+  }\r\n+  \r\n+  .card-body {\r\n+    padding: 1.25rem;\r\n+  }\r\n+  \r\n+  .form-control {\r\n+    margin-bottom: 1rem;\r\n+  }\r\n+  \r\n+  .pagination {\r\n+    margin-top: 2rem;\r\n+  }\r\n+  \r\n+  .page-link {\r\n+    color: #007bff;\r\n+  }\r\n+  \r\n+  .page-link:hover {\r\n+    color: #0056b3;\r\n+  }\r\n+  \r\n+  .btn-outline-light {\r\n+    border-color: white;\r\n+    color: white;\r\n+  }\r\n+  \r\n+  .btn-outline-light:hover {\r\n+    background-color: white;\r\n+    color: black;\r\n+  }\r\n+  \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719963916430,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,12 @@\n   .card {\r\n     margin-bottom: 1.5rem;\r\n   }\r\n   \r\n+  .foro_item{\r\n+    \r\n+  }\r\n+\r\n   .card-header {\r\n     padding: 0.75rem 1.25rem;\r\n   }\r\n   \r\n"
+                },
+                {
+                    "date": 1719963923072,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,10 @@\n   .card {\r\n     margin-bottom: 1.5rem;\r\n   }\r\n   \r\n-  .foro_item{\r\n+  .foro_item:hover{\r\n+    color: #000;\r\n     \r\n   }\r\n \r\n   .card-header {\r\n"
+                },
+                {
+                    "date": 1719963968331,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,12 +13,8 @@\n   .card {\r\n     margin-bottom: 1.5rem;\r\n   }\r\n   \r\n-  .foro_item:hover{\r\n-    color: #000;\r\n-    \r\n-  }\r\n \r\n   .card-header {\r\n     padding: 0.75rem 1.25rem;\r\n   }\r\n"
+                },
+                {
+                    "date": 1719964025777,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n     color: white;\r\n     min-height: 100vh;\r\n   }\r\n \r\n+\r\n .container{\r\n   width: 100%;\r\n }\r\n   \r\n"
+                },
+                {
+                    "date": 1719964040822,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,10 @@\n     background-color: #0F1A24;\r\n     color: white;\r\n     min-height: 100vh;\r\n   }\r\n+.foro_item\r\n \r\n-\r\n .container{\r\n   width: 100%;\r\n }\r\n   \r\n"
+                },
+                {
+                    "date": 1719964046334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,11 @@\n     background-color: #0F1A24;\r\n     color: white;\r\n     min-height: 100vh;\r\n   }\r\n-.foro_item\r\n+.foro_item{\r\n+  text-decoration: none;\r\n+}\r\n \r\n .container{\r\n   width: 100%;\r\n }\r\n"
+                },
+                {
+                    "date": 1719964060495,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,10 @@\n     min-height: 100vh;\r\n   }\r\n .foro_item{\r\n   text-decoration: none;\r\n+  color: white;\r\n+  te\r\n }\r\n \r\n .container{\r\n   width: 100%;\r\n"
                 }
             ],
             "date": 1719634485556,

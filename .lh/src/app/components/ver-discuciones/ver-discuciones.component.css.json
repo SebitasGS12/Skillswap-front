@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/components/ver-discuciones/ver-discuciones.component.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1719968488233,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1719968488233,
+            "name": "Commit-0",
+            "content": "/* Estilos CSS mejorados */\r\n\r\n.container {\r\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\r\n  background-color: rgba(15, 26, 36, 1);\r\n  padding: 20px;\r\n}\r\n\r\n.titu {\r\n  background-color: rgba(15, 26, 36, 1);\r\n  color: white;\r\n  padding: 10px;\r\n  margin: 20px 0px 40px 0px;\r\n}\r\n\r\n.persona {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-between;\r\n  background-color: rgba(20, 57, 90, 1);\r\n  border-radius: 20px;\r\n  color: aliceblue;\r\n  padding: 10px;\r\n  margin-bottom: 20px;\r\n}\r\n\r\n.persona img {\r\n  width: 100px;\r\n  height: 100px;\r\n  border-radius: 50%;\r\n  margin-right: 20px;\r\n}\r\n\r\n.persona .nombreuser {\r\n  flex: 1;\r\n}\r\n\r\n.persona h2 {\r\n  margin-bottom: 5px;\r\n  font-size: 1.5rem;\r\n}\r\n\r\n.persona p {\r\n  margin: 0;\r\n  font-size: 0.9rem;\r\n}\r\n\r\n.persona a.btnSeguir {\r\n  background-color: rgba(73, 71, 210, 1);\r\n  color: aliceblue;\r\n  border-radius: 10px;\r\n  padding: 10px 20px;\r\n  text-align: center;\r\n  text-decoration: none;\r\n}\r\n\r\n.persona a.btnSeguir:hover {\r\n  background-color: rgba(73, 71, 210, 0.8);\r\n}\r\n\r\n.respuestas {\r\n  background-color: rgba(20, 57, 90, 1);\r\n  border-radius: 20px;\r\n  padding: 20px;\r\n  margin-top: 20px;\r\n}\r\n\r\n.respuestas h1 {\r\n  color: aliceblue;\r\n  font-size: 1.5rem;\r\n  margin-bottom: 20px;\r\n}\r\n\r\n.globres {\r\n  margin-bottom: 20px;\r\n}\r\n\r\n.Rpta {\r\n  display: flex;\r\n  align-items: flex-start;\r\n  margin-bottom: 20px;\r\n}\r\n\r\n.Rpta img.imgUs {\r\n  width: 80px;\r\n  height: 80px;\r\n  border-radius: 50%;\r\n  margin-right: 20px;\r\n}\r\n\r\n.dia {\r\n  display: flex;\r\n  align-items: center;\r\n  gap: 10px;\r\n  color: aliceblue;\r\n  font-size: 0.9rem;\r\n  margin-bottom: 10px;\r\n}\r\n\r\n.dia h3 {\r\n  font-size: 1.2rem;\r\n  margin-bottom: 5px;\r\n}\r\n\r\n.dia p {\r\n  margin: 0;\r\n  font-size: 0.8rem;\r\n}\r\n\r\n.txresp .resptxt {\r\n  color: aliceblue;\r\n  text-align: justify;\r\n  margin: 0;\r\n  padding-left: 20px;\r\n}\r\n\r\n.reaccion {\r\n  display: flex;\r\n  align-items: center;\r\n  gap: 20px;\r\n}\r\n\r\n.reaccion .laik,\r\n.reaccion .nolaik {\r\n  display: flex;\r\n  align-items: center;\r\n  gap: 5px;\r\n  color: white;\r\n}\r\n\r\n.reaccion .laik img,\r\n.reaccion .nolaik img {\r\n  width: 20px;\r\n  height: 20px;\r\n}\r\n\r\n.reaccion p {\r\n  margin: 0;\r\n  font-size: 0.9rem;\r\n}\r\n"
+        }
+    ]
+}

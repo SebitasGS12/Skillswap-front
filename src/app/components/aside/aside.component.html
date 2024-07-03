@@ -2,15 +2,9 @@
     <div class="container-aside_tools">
         <ul class="link_ul">
             <li class="link link-user">
-                <a href="">
-                    <img src={{user}} alt="Inicio" class="icono">
-                    <p>{{perfil.nombre + " " +perfil.apellido}}</p>
-                </a>
-            </li>
-            <li class="link link-tool">
                 <a [routerLink]="['/menuUsuario']" >
-                    <img src="assets/images/home.png" alt="Inicio" class="icono">
-                    <p>Inicio</p>
+                    <img src={{user}} alt="Inicio" class="icono">
+                    <p>{{nombreCompleto(perfil)}}</p>
                 </a>
             </li>
             <li class="link link-tool">

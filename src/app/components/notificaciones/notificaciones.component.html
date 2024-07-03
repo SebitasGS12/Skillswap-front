@@ -2,64 +2,27 @@
 <div class="division">
   <app-aside></app-aside>
   <div class="body">
-    <h1>Notificaciones</h1>
     <div class="container">
       <div class="tabs">
-        <div class="tab-button">Todos</div>
+        <div class="tab-button selected">Todos</div>
         <div class="tab-button">Menciones</div>
         <div class="tab-button">Interacciones</div>
       </div>
       <div class="tab-content">
-        <div class="notification">
-          <img
-            src="https://img.freepik.com/foto-gratis/cerrar-lindo-gato-interior_23-2148882585.jpg?t=st=1719293832~exp=1719297432~hmac=9ef9fff465d15a1a5a3d7d2bcdc7ca2b2e380ec4f504344d5a58392dc55297ad&w=740"
-            alt="avatar">
-          <div class="text">
-            <p>Nueva respuesta en el hilo que sigues</p>
-            <span>Hace 2 h</span>
+        <ng-container *ngFor="let item of notificaciones; let i = index">
+          <div class="notification">
+            <img src="https://img.freepik.com/foto-gratis/cerrar-lindo-gato-interior_23-2148882585.jpg?t=st=1719293832~exp=1719297432~hmac=9ef9fff465d15a1a5a3d7d2bcdc7ca2b2e380ec4f504344d5a58392dc55297ad&w=740" alt="avatar">
+            <div class="text">
+              <h5   >{{item.titulo}}</h5>
+              <p>{{item.contenido}}</p>
+            </div>
+            <div class="actions" *ngIf="item.titulo === 'Solicitud de Amistad'">
+              <span class="check" (click)="gestionarSolicitud(item,true)">✔</span>
+              <span class="cross" (click)="gestionarSolicitud(item,false)">✖</span>
+            </div>
+            <span class="time">{{item.fechaCreacion}}</span>
           </div>
-          <span class="time">12:00 PM</span>
-        </div>
-        <div class="notification">
-          <img
-            src="https://img.freepik.com/foto-gratis/perro-feliz-naturaleza_23-2148882552.jpg?t=st=1719293846~exp=1719297446~hmac=e8890d8a3bedeecee0b4de577a864a5fb099753af3ba7d100eb120e6f585a1f8&w=740"
-            alt="avatar">
-          <div class="text">
-            <p>Mencionado en un hilo</p>
-            <span>Hace 1 h</span>
-          </div>
-          <span class="time">12:00 PM</span>
-        </div>
-        <div class="notification">
-          <img
-            src="https://img.freepik.com/foto-gratis/pintura-casa-techo-rojo-luna-al-fondo_1340-33574.jpg?w=900&t=st=1719296788~exp=1719297388~hmac=a9c2e213e60121b1167274e3251eaa25cfc76d9ab7544d812abb98bb16834432"
-            alt="avatar">
-          <div class="text">
-            <p>Nuevo seguidor</p>
-            <span>Hace 3 d</span>
-          </div>
-          <span class="time">12:00 PM</span>
-        </div>
-        <div class="notification">
-          <img
-            src="https://img.freepik.com/foto-gratis/pintura-bosque-rio-primer-plano_1340-27682.jpg?w=740&t=st=1719296802~exp=1719297402~hmac=77412e2f4346370c8c09ea6b918655523791b2b3fc5fee062f62b15a03c2d936"
-            alt="avatar">
-          <div class="text">
-            <p>Nuevo seguidor</p>
-            <span>Hace 3 d</span>
-          </div>
-          <span class="time">12:00 PM</span>
-        </div>
-        <div class="notification">
-          <img
-            src="https://img.freepik.com/foto-gratis/pintura-cascada-bosque-fondo-verde_1340-27149.jpg?w=1380&t=st=1719296837~exp=1719297437~hmac=947af02d4e9d148e44975142345ca903ac1078b1c7bdc1af7ea2f660e0742068"
-            alt="avatar">
-          <div class="text">
-            <p>Nuevo seguidor</p>
-            <span>Hace 3 d</span>
-          </div>
-          <span class="time">12:00 PM</span>
-        </div>
+        </ng-container>
       </div>
     </div>
   </div>

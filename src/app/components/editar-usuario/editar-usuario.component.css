@@ -1,3 +1,8 @@
+.container{
+    padding: 20px;
+    background-color: #0F1A24;
+    min-height: 100vh;
+}
 .form-control {
     background-color: #ffffff;
     border: 1px solid #ccc;

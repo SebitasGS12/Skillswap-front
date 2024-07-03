@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 2,
             "patches": [
                 {
                     "date": 1719616707181,
@@ -12,6 +12,10 @@
                 {
                     "date": 1719619719691,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-\r\n+<\r\n <div class=\"body\">\r\n     <div class=\"container\">\r\n         <div class=\"containerArriba\">\r\n             <h1>Explorar</h1>\r\n"
+                },
+                {
+                    "date": 1719872234057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n                 <br>            \r\n                 @for (item of categoriaHabilidad; track $index) {\r\n \r\n                     <a href=\"\"><img src=\"https://img.freepik.com/vector-gratis/paisaje-lago-degradado_23-2149152834.jpg?t=st=1719186020~exp=1719189620~hmac=254ff5d5026d6d16d66c4bd91594c5ec5061c259b70b91f0b14c706af391bf38&w=1380\" alt=\"\"></a>\r\n+\r\n                 }\r\n                 </div>\r\n             <div class=\"containerAbajo\">\r\n                 <h2>Bienvenido a SkillSwap</h2>\r\n"
                 }
             ],
             "date": 1719616707181,

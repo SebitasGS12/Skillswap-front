@@ -1,0 +1,140 @@
+/* Estilos CSS mejorados */
+
+.container {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgba(15, 26, 36, 1);
+  padding: 20px;
+}
+
+.titu {
+  background-color: rgba(15, 26, 36, 1);
+  color: white;
+  padding: 10px;
+  margin: 20px 0px 40px 0px;
+}
+
+.persona {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(20, 57, 90, 1);
+  border-radius: 20px;
+  color: aliceblue;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.persona img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.persona .nombreuser {
+  flex: 1;
+}
+
+.persona h2 {
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+}
+
+.persona p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.persona a.btnSeguir {
+  background-color: rgba(73, 71, 210, 1);
+  color: aliceblue;
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.persona a.btnSeguir:hover {
+  background-color: rgba(73, 71, 210, 0.8);
+}
+
+.respuestas {
+  background-color: rgba(20, 57, 90, 1);
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.respuestas h1 {
+  color: aliceblue;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.globres {
+  margin-bottom: 20px;
+}
+
+.Rpta {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.Rpta img.imgUs {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.dia {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: aliceblue;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.dia h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.dia p {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.txresp .resptxt {
+  color: aliceblue;
+  text-align: justify;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.reaccion {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.reaccion .laik,
+.reaccion .nolaik {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: white;
+}
+
+.reaccion .laik img,
+.reaccion .nolaik img {
+  width: 20px;
+  height: 20px;
+}
+
+.reaccion p {
+  margin: 0;
+  font-size: 0.9rem;
+}

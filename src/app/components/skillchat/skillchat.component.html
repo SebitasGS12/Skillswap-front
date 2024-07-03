@@ -1,80 +1,41 @@
 <app-header></app-header>
 <div class="division">
-  <app-aside></app-aside>
-
-    <div class="main-container">
-        <div class="table-container">
-            <h2 class="table-title">Skill Chat</h2> 
-            <table>
-                <tbody>
-                    
-                    <tr>
-                        <td>
-                            <div class="chat-container">
-                                <div class="chat-header">
-                                    <div>
-                                        <img src="https://w7.pngwing.com/pngs/705/75/png-transparent-karlovy-vary-computer-icons-avatar-health-care-man-icon-child-face-heroes.png
-                                        " class="profile-image">
-                                        <strong>Marco Johnson</strong>
-                                    </div>
-                                </div>
-                                <span class="user-status">En línea</span>
-                                <div class="chat-messages">
-                                    <div class="message">
-                                        <div class="message-content"><img src="https://e7.pngegg.com/pngimages/17/886/png-clipart-computer-icons-user-woman-people-head.png"> Hola Marco</div>
-                                    </div>                                    
-                                    <div class="other-message">
-                                        <img src="https://w7.pngwing.com/pngs/705/75/png-transparent-karlovy-vary-computer-icons-avatar-health-care-man-icon-child-face-heroes.png
-                                        " class="profile-image"> Hola Alexandra
-                                    </div>
-                                    <div class="message">
-                                        <div class="message-content"><img src="https://e7.pngegg.com/pngimages/17/886/png-clipart-computer-icons-user-woman-people-head.png"> Podría solicitar el intercambio de conocimientos.</div>
-                                    </div>
-                                    <div class="other-message">
-                                        <img src="https://w7.pngwing.com/pngs/705/75/png-transparent-karlovy-vary-computer-icons-avatar-health-care-man-icon-child-face-heroes.png
-                                        " class="profile-image"> Claro está bien, Alexandra, coordina los horarios.
-                                    </div>
-                                    <div class="message">
-                                        <div class="message-content"><img src="https://e7.pngegg.com/pngimages/17/886/png-clipart-computer-icons-user-woman-people-head.png"> Excelente, ¡Gracias!</div>
-                                    </div>
-                                    <div class="other-message">
-                                        <img src="https://w7.pngwing.com/pngs/705/75/png-transparent-karlovy-vary-computer-icons-avatar-health-care-man-icon-child-face-heroes.png
-                                        " class="profile-image"> Me escribes y ahí estaré.
-                                    </div>
-                                </div>
-                                <div class="input-bar">
-                                    <input type="text" placeholder="Escribe tu mensaje...">
-                                    <button class="send-button"><span class="paper-plane">✈️</span></button>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+    <app-aside></app-aside>
+    <div class="container-skilchat">
+        <div class="mensajes">
+            <h2>SKILLCHAT</h2>
+            <div class="detalle">
+                <div *ngIf="chat_usuario" class="cabecera">
+                    <img src="./assets/images/imgUser.png" alt="User avatar">
+                    <div class="info">
+                        <h4>{{nombreCompleto(amistadPerfilSelected)}}</h4>                        
+                        <h6>En línea</h6>
+                    </div>
+                </div>
+                <div class="message" *ngIf="chat_usuario">
+                    <div class="chats" #messageContainer>
+                        <div *ngFor="let mensaje of mensajesFromChat" [ngClass]="{'receptor': mensaje.obj_Usuario.usuarioId === sesion.obj_Usuario.usuarioId, 'emisor': mensaje.obj_Usuario.usuarioId !== sesion.obj_Usuario.usuarioId}">
+                            <img src="./assets/images/imgUser.png" alt="Avatar">
+                            <div class="texto">{{ mensaje.contenido }}</div>
+                        </div>
+                    </div>
+                    <div >
+                        <form  class="input-section" (ngSubmit)="enviarMensaje(messageContent.value)" >
+                            <input type="text" name="contenido"  placeholder="Type your message" #messageContent>
+                            <button type="submit">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="friends-container">
-            <h2>Amigos</h2>
-            <table>
-                <tbody>
-                    <tr>
-                        <td><a href="#" class="btn btn-green"></a></td>
-                        <td class="name">🚹 Marco Johnson<span class="message-symbol">💬</span></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#" class="btn btn-green"></a></td>
-                        <td class="name">🚺 Lauren Miller<span class="message-symbol">💬</span></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#" class="btn btn-green"></a></td>
-                        <td class="name">🚹 Chris Thompson<span class="message-symbol">💬</span></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#" class="btn btn-blue"></a></td>
-                        <td class="name">🚹 Sam Brown<span class="message-symbol">💬</span></td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="amigos">
+            <h3>Amigos</h3>
+            <a *ngFor="let item of amistades; trackBy: trackByFn" class="item" (click)="abrirChat(item.amigo.usuarioId)">
+                <img src="./assets/images/user_activo.png" alt="state">
+                <img src="./assets/images/imgUser.png" alt="user picture">
+                <p>{{nombreCompleto(obtenerPerfil(item.amigo.usuarioId)!)}}</p>
+                <img src="./assets/images/abrir_chat.png" alt="">
+            </a>
         </div>
     </div>
 </div>

@@ -7,6 +7,9 @@ import { NotificacionesComponent } from './components/notificaciones/notificacio
 import { ListadoCategoriasForoComponent } from './components/listado-categorias-foro/listado-categorias-foro.component';
 import { PerfilUsuarioComponent } from './components/perfil-usuario/perfil-usuario.component';
 import { SkillchatComponent } from './components/skillchat/skillchat.component';
+import { CategoriasExplorarComponent } from './components/categorias-explorar/categorias-explorar.component';
+import { EditarUsuarioComponent } from './components/editar-usuario/editar-usuario.component';
+import { VerDiscucionesComponent } from './components/ver-discuciones/ver-discuciones.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/iniciarSesion', pathMatch: 'full'},
@@ -17,6 +20,9 @@ const routes: Routes = [
   { path: 'foros', component: ListadoCategoriasForoComponent },
   { path: 'perfil', component: PerfilUsuarioComponent },
   { path: 'mensajes', component: SkillchatComponent },
+  { path: 'categoriasExplorar', component: CategoriasExplorarComponent },
+  { path: 'editarUsuario', component: EditarUsuarioComponent },
+  { path: 'foro/:id', component: VerDiscucionesComponent },
 ];
 
 @NgModule({

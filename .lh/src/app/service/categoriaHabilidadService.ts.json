@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 13,
+            "activePatchIndex": 14,
             "patches": [
                 {
                     "date": 1719013716901,
@@ -60,6 +60,10 @@
                 {
                     "date": 1719014003805,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,8 @@\n import { Injectable } from \"@angular/core\";\r\n import { Datos } from \"../constants/datos\";\r\n import { HttpClient } from \"@angular/common/http\";\r\n import { Observable } from \"rxjs\";\r\n-import { Amistades } from \"../models/amistades\";\r\n-import { Habilidad } from \"../models/habilidad\";\r\n import { CategoriaHabilidad } from \"../models/categoria-habilidad\";\r\n \r\n \r\n @Injectable({\r\n"
+                },
+                {
+                    "date": 1719887389264,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,11 @@\n     public listar():Observable<CategoriaHabilidad[]>{\r\n         return this.http.get<CategoriaHabilidad[]>(this.baseUrl);\r\n     }\r\n \r\n-\r\n+    public registrar(categoriaHabilidad: CategoriaForos): Observable<CategoriaForos> {\r\n+        return this.http.post<any>(this.baseUrl, categoriaHabilidad);\r\n+        }\r\n     public registrar(categoriaHabilidad: CategoriaHabilidad): Observable<any> {\r\n     return this.http.post<any>(this.baseUrl, categoriaHabilidad);\r\n     }\r\n \r\n"
                 }
             ],
             "date": 1719013716901,

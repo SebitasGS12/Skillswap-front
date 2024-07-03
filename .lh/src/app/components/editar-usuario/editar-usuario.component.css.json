@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/app/components/editar-usuario/editar-usuario.component.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1719881042389,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1719881053024,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n+\r\n .form-control {\r\n-    background-color: #a52727;\r\n+    background-color: #ffffff;\r\n     border: 1px solid #ccc;\r\n }h\r\n \r\n .form-control-plaintext {\r\n"
+                },
+                {
+                    "date": 1719881072326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n-\r\n+.container{\r\n+    \r\n+}\r\n .form-control {\r\n     background-color: #ffffff;\r\n     border: 1px solid #ccc;\r\n }h\r\n"
+                },
+                {
+                    "date": 1719881081855,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n .container{\r\n-    \r\n+    padding: 20px;\r\n+    background-color: #0F1A24;\r\n+    min-height: 100vh;\r\n }\r\n .form-control {\r\n     background-color: #ffffff;\r\n     border: 1px solid #ccc;\r\n"
+                }
+            ],
+            "date": 1719881042389,
+            "name": "Commit-0",
+            "content": ".form-control {\r\n    background-color: #a52727;\r\n    border: 1px solid #ccc;\r\n}h\r\n\r\n.form-control-plaintext {\r\n    background-color: #fff;\r\n    border: 1px solid #ccc;\r\n    padding-left: 6px;\r\n    border-radius: 5px;\r\n    \r\n}\r\n.form-control {\r\n    margin: 5px 5px 5px 0px;  /* top right bottom left*/\r\n}\r\n.frmedi{\r\n    background-color: rgba(15, 26, 36, 1);\r\n    color: #fff;\r\n    padding: 60px;\r\n    margin: 35px 0px 0px 0px;\r\n    border-radius: 20px;\r\n    box-shadow: #ccc;\r\n    border: 3px solid rgba(73, 71, 210, 1);\r\n    width: 600px;\r\n}\r\n#usuarioId{\r\n    color: #fff;\r\n}\r\n\r\n#imagenPreview {\r\n    margin-top: 10px;\r\n    border: 1px solid #ccc;\r\n    padding: 5px;\r\n    border-radius: 5px;\r\n    background-color: #fff;\r\n}\r\n#botones{\r\n    width: auto;\r\n    padding: 20px 0px 0px 0px;\r\n    margin: 20px 0px 0px 70px;\r\n}"
+        }
+    ]
+}

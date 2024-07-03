@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 3,
+            "activePatchIndex": 22,
             "patches": [
                 {
                     "date": 1719619921608,
@@ -20,6 +20,82 @@
                 {
                     "date": 1719620338764,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,15 @@\n import { CommonModule } from '@angular/common';\r\n import { Component } from '@angular/core';\r\n import { HeaderComponent } from \"../header/header.component\";\r\n+import { AsideComponent } from \"../aside/aside.component\";\r\n \r\n @Component({\r\n     selector: 'app-menu-usuario',\r\n     standalone: true,\r\n     templateUrl: './menu-usuario.component.html',\r\n     styleUrl: './menu-usuario.component.css',\r\n-    imports: [CommonModule, HeaderComponent]\r\n+    imports: [CommonModule, HeaderComponent, AsideComponent]\r\n })\r\n export class MenuUsuarioComponent {\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719872069363,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { CommonModule } from '@angular/common';\r\n-import { Component } from '@angular/core';\r\n+import { Component, OnInit } from '@angular/core';\r\n import { HeaderComponent } from \"../header/header.component\";\r\n import { AsideComponent } from \"../aside/aside.component\";\r\n \r\n @Component({\r\n@@ -9,7 +9,7 @@\n     templateUrl: './menu-usuario.component.html',\r\n     styleUrl: './menu-usuario.component.css',\r\n     imports: [CommonModule, HeaderComponent, AsideComponent]\r\n })\r\n-export class MenuUsuarioComponent {\r\n+export class MenuUsuarioComponent implements OnInit{\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719872094977,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,6 +10,11 @@\n     styleUrl: './menu-usuario.component.css',\r\n     imports: [CommonModule, HeaderComponent, AsideComponent]\r\n })\r\n export class MenuUsuarioComponent implements OnInit{\r\n+    ngOnInit(): void {\r\n+        throw new Error('Method not implemented.');\r\n+    }\r\n \r\n+    \r\n+\r\n }\r\n"
+                },
+                {
+                    "date": 1719872115299,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,10 +10,16 @@\n     styleUrl: './menu-usuario.component.css',\r\n     imports: [CommonModule, HeaderComponent, AsideComponent]\r\n })\r\n export class MenuUsuarioComponent implements OnInit{\r\n+    constructor(){\r\n+        \r\n+    }\r\n+\r\n     ngOnInit(): void {\r\n-        throw new Error('Method not implemented.');\r\n+\r\n+\r\n+\r\n     }\r\n \r\n     \r\n \r\n"
+                },
+                {
+                    "date": 1719872121577,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,12 +10,13 @@\n     styleUrl: './menu-usuario.component.css',\r\n     imports: [CommonModule, HeaderComponent, AsideComponent]\r\n })\r\n export class MenuUsuarioComponent implements OnInit{\r\n-    constructor(){\r\n-        \r\n-    }\r\n+    constructor(\r\n \r\n+        private \r\n+    ){}\r\n+\r\n     ngOnInit(): void {\r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1719872131933,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import { CommonModule } from '@angular/common';\r\n import { Component, OnInit } from '@angular/core';\r\n import { HeaderComponent } from \"../header/header.component\";\r\n import { AsideComponent } from \"../aside/aside.component\";\r\n+import { CategoriaHabilidadService } from '../../service/categoriaHabilidadService';\r\n \r\n @Component({\r\n     selector: 'app-menu-usuario',\r\n     standalone: true,\r\n@@ -12,9 +13,9 @@\n })\r\n export class MenuUsuarioComponent implements OnInit{\r\n     constructor(\r\n \r\n-        private \r\n+        private categoriaHabilidadService:CategoriaHabilidadService;\r\n     ){}\r\n \r\n     ngOnInit(): void {\r\n \r\n"
+                },
+                {
+                    "date": 1719872137474,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,10 @@\n     styleUrl: './menu-usuario.component.css',\r\n     imports: [CommonModule, HeaderComponent, AsideComponent]\r\n })\r\n export class MenuUsuarioComponent implements OnInit{\r\n+        \r\n     constructor(\r\n-\r\n         private categoriaHabilidadService:CategoriaHabilidadService;\r\n     ){}\r\n \r\n     ngOnInit(): void {\r\n"
+                },
+                {
+                    "date": 1719872145542,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,11 @@\n     styleUrl: './menu-usuario.component.css',\r\n     imports: [CommonModule, HeaderComponent, AsideComponent]\r\n })\r\n export class MenuUsuarioComponent implements OnInit{\r\n-        \r\n+    \r\n+    categoriaHabilidadService:CategoriaHabilidadService[]\r\n+\r\n     constructor(\r\n         private categoriaHabilidadService:CategoriaHabilidadService;\r\n     ){}\r\n \r\n"
+                },
+                {
+                    "date": 1719872150626,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,12 +12,12 @@\n     imports: [CommonModule, HeaderComponent, AsideComponent]\r\n })\r\n export class MenuUsuarioComponent implements OnInit{\r\n     \r\n-    categoriaHabilidadService:CategoriaHabilidadService[]\r\n+    categoriaHabilidadService!:CategoriaHabilidadService[];\r\n \r\n     constructor(\r\n-        private categoriaHabilidadService:CategoriaHabilidadService;\r\n+        private categoriaHabilidadService:CategoriaHabilidadService\r\n     ){}\r\n \r\n     ngOnInit(): void {\r\n \r\n"
+                },
+                {
+                    "date": 1719872156348,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n     imports: [CommonModule, HeaderComponent, AsideComponent]\r\n })\r\n export class MenuUsuarioComponent implements OnInit{\r\n     \r\n-    categoriaHabilidadService!:CategoriaHabilidadService[];\r\n+    categoriaHabilidad!:CategoriaHabilidadService[];\r\n \r\n     constructor(\r\n         private categoriaHabilidadService:CategoriaHabilidadService\r\n     ){}\r\n"
+                },
+                {
+                    "date": 1719872161744,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,10 +20,10 @@\n     ){}\r\n \r\n     ngOnInit(): void {\r\n \r\n+        this\r\n \r\n-\r\n     }\r\n \r\n     \r\n \r\n"
+                },
+                {
+                    "date": 1719872177566,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,22 @@\n     ){}\r\n \r\n     ngOnInit(): void {\r\n \r\n-        this\r\n+        this.sesionService.obtenerSesion().subscribe((response) => {\r\n+            console.log(response);\r\n+            this.sesion = response;\r\n+            if (this.sesion) {\r\n+              this.categoriaForoService.listar().subscribe(\r\n+                (response) => {\r\n+                  console.log(response);\r\n+                  this.categoriasForos = response;\r\n+                  this.filteredCategorias = this.categoriasForos;\r\n+                  this.cargarForos();\r\n+                }\r\n+              );\r\n+            }\r\n+          });\r\n \r\n     }\r\n \r\n     \r\n"
+                },
+                {
+                    "date": 1719872187614,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n import { Component, OnInit } from '@angular/core';\r\n import { HeaderComponent } from \"../header/header.component\";\r\n import { AsideComponent } from \"../aside/aside.component\";\r\n import { CategoriaHabilidadService } from '../../service/categoriaHabilidadService';\r\n+import { SesionService } from '../../service/sesionService';\r\n \r\n @Component({\r\n     selector: 'app-menu-usuario',\r\n     standalone: true,\r\n@@ -15,9 +16,10 @@\n     \r\n     categoriaHabilidad!:CategoriaHabilidadService[];\r\n \r\n     constructor(\r\n-        private categoriaHabilidadService:CategoriaHabilidadService\r\n+        private categoriaHabilidadService:CategoriaHabilidadService,\r\n+        private sesionService:SesionService;\r\n     ){}\r\n \r\n     ngOnInit(): void {\r\n \r\n"
+                },
+                {
+                    "date": 1719872194101,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,12 +14,12 @@\n })\r\n export class MenuUsuarioComponent implements OnInit{\r\n     \r\n     categoriaHabilidad!:CategoriaHabilidadService[];\r\n-\r\n+    sesion!:Sesion;\r\n     constructor(\r\n         private categoriaHabilidadService:CategoriaHabilidadService,\r\n-        private sesionService:SesionService;\r\n+        private sesionService:SesionService\r\n     ){}\r\n \r\n     ngOnInit(): void {\r\n \r\n"
+                },
+                {
+                    "date": 1719872201731,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n import { HeaderComponent } from \"../header/header.component\";\r\n import { AsideComponent } from \"../aside/aside.component\";\r\n import { CategoriaHabilidadService } from '../../service/categoriaHabilidadService';\r\n import { SesionService } from '../../service/sesionService';\r\n+import { Sesion } from '../../models/sesion';\r\n \r\n @Component({\r\n     selector: 'app-menu-usuario',\r\n     standalone: true,\r\n@@ -26,9 +27,9 @@\n         this.sesionService.obtenerSesion().subscribe((response) => {\r\n             console.log(response);\r\n             this.sesion = response;\r\n             if (this.sesion) {\r\n-              this.categoriaForoService.listar().subscribe(\r\n+              this.categoriaHabilidadService.listar().subscribe(\r\n                 (response) => {\r\n                   console.log(response);\r\n                   this.categoriasForos = response;\r\n                   this.filteredCategorias = this.categoriasForos;\r\n"
+                },
+                {
+                    "date": 1719872207007,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,10 +31,9 @@\n               this.categoriaHabilidadService.listar().subscribe(\r\n                 (response) => {\r\n                   console.log(response);\r\n                   this.categoriasForos = response;\r\n-                  this.filteredCategorias = this.categoriasForos;\r\n-                  this.cargarForos();\r\n+\r\n                 }\r\n               );\r\n             }\r\n           });\r\n"
+                },
+                {
+                    "date": 1719872218804,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n import { AsideComponent } from \"../aside/aside.component\";\r\n import { CategoriaHabilidadService } from '../../service/categoriaHabilidadService';\r\n import { SesionService } from '../../service/sesionService';\r\n import { Sesion } from '../../models/sesion';\r\n+import { CategoriaHabilidad } from '../../models/categoria-habilidad';\r\n \r\n @Component({\r\n     selector: 'app-menu-usuario',\r\n     standalone: true,\r\n@@ -14,9 +15,9 @@\n     imports: [CommonModule, HeaderComponent, AsideComponent]\r\n })\r\n export class MenuUsuarioComponent implements OnInit{\r\n     \r\n-    categoriaHabilidad!:CategoriaHabilidadService[];\r\n+    categoriaHabilidad!:CategoriaHabilidad[];\r\n     sesion!:Sesion;\r\n     constructor(\r\n         private categoriaHabilidadService:CategoriaHabilidadService,\r\n         private sesionService:SesionService\r\n@@ -30,9 +31,9 @@\n             if (this.sesion) {\r\n               this.categoriaHabilidadService.listar().subscribe(\r\n                 (response) => {\r\n                   console.log(response);\r\n-                  this.categoriasForos = response;\r\n+                  this.categoriaHabilidad = response;\r\n \r\n                 }\r\n               );\r\n             }\r\n"
+                },
+                {
+                    "date": 1719872317779,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,9 @@\n     \r\n     categoriaHabilidad!:CategoriaHabilidad[];\r\n     sesion!:Sesion;\r\n     constructor(\r\n+        private Router\r\n         private categoriaHabilidadService:CategoriaHabilidadService,\r\n         private sesionService:SesionService\r\n     ){}\r\n \r\n@@ -32,14 +33,12 @@\n               this.categoriaHabilidadService.listar().subscribe(\r\n                 (response) => {\r\n                   console.log(response);\r\n                   this.categoriaHabilidad = response;\r\n-\r\n                 }\r\n               );\r\n             }\r\n           });\r\n-\r\n     }\r\n \r\n     \r\n \r\n"
+                },
+                {
+                    "date": 1719872323747,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n import { CategoriaHabilidadService } from '../../service/categoriaHabilidadService';\r\n import { SesionService } from '../../service/sesionService';\r\n import { Sesion } from '../../models/sesion';\r\n import { CategoriaHabilidad } from '../../models/categoria-habilidad';\r\n+import { Router } from '@angular/router';\r\n \r\n @Component({\r\n     selector: 'app-menu-usuario',\r\n     standalone: true,\r\n@@ -18,9 +19,9 @@\n     \r\n     categoriaHabilidad!:CategoriaHabilidad[];\r\n     sesion!:Sesion;\r\n     constructor(\r\n-        private Router\r\n+        private router:Router,\r\n         private categoriaHabilidadService:CategoriaHabilidadService,\r\n         private sesionService:SesionService\r\n     ){}\r\n \r\n"
+                },
+                {
+                    "date": 1719872346471,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n     selector: 'app-menu-usuario',\r\n     standalone: true,\r\n     templateUrl: './menu-usuario.component.html',\r\n     styleUrl: './menu-usuario.component.css',\r\n-    imports: [CommonModule, HeaderComponent, AsideComponent]\r\n+    imports: [CommonModule, HeaderComponent, AsideComponent,RouterModule]\r\n })\r\n export class MenuUsuarioComponent implements OnInit{\r\n     \r\n     categoriaHabilidad!:CategoriaHabilidad[];\r\n"
                 }
             ],
             "date": 1719619921608,

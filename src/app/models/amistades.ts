@@ -1,10 +1,10 @@
 import { Usuario } from "./usuario";
 
 export class Amistades {
-    amistadID!:number;
+    amistadID!:number|null;
     fechaAmistad!:Date;
     amistadAceptada!:boolean;
-    obj_Usuario!:Usuario;
-    obj_Amigo!:Usuario;
+    usuario!:Usuario;
+    amigo!:Usuario;
 
 }
