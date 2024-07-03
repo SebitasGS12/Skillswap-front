@@ -1,0 +1,34 @@
+{
+    "sourceFile": "src/app/components/header/header.component.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1719626025654,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1719626299994,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-body {\r\n+.body {\r\n     margin: 0;\r\n     font-family: Arial, sans-serif;\r\n     background-color: #0F1A24;\r\n     color: white;\r\n"
+                },
+                {
+                    "date": 1719626333153,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     color: white;\r\n     display: flex;\r\n     flex-direction: column;\r\n }\r\n-header {\r\n+.header {\r\n     padding: 20px;\r\n     display: flex;\r\n     justify-content: space-between;\r\n     align-items: center;\r\n@@ -16,9 +16,9 @@\n .logo {\r\n     display: flex;\r\n     align-items: center;\r\n }\r\n-header img {\r\n+.header img {\r\n     height: 50px;\r\n }\r\n .logo h1 {\r\n     text-align: center;\r\n"
+                },
+                {
+                    "date": 1719626338335,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n     text-align: center;\r\n     margin-left: 10px;\r\n     font-size: 30px;\r\n }\r\n-header nav {\r\n+.header nav {\r\n     margin-left: 20px;\r\n     display: flex;\r\n }\r\n header nav a {\r\n"
+                },
+                {
+                    "date": 1719626345350,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,17 +28,17 @@\n .header nav {\r\n     margin-left: 20px;\r\n     display: flex;\r\n }\r\n-header nav a {\r\n+.header nav a {\r\n     margin-left: 20%; \r\n     padding: 10px 2px;\r\n     text-decoration: none;\r\n     color: white;\r\n     border-radius: 5px;\r\n     transition: background-color 0.3s ease, transform 0.3s ease;\r\n }\r\n-header nav a::after {\r\n+.header nav a::after {\r\n     content: '';\r\n     position: absolute;\r\n     width: 100%;\r\n     height: 2px;\r\n"
+                }
+            ],
+            "date": 1719626025654,
+            "name": "Commit-0",
+            "content": "body {\r\n    margin: 0;\r\n    font-family: Arial, sans-serif;\r\n    background-color: #0F1A24;\r\n    color: white;\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\nheader {\r\n    padding: 20px;\r\n    display: flex;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n    border-bottom: 1px solid white;\r\n}\r\n.logo {\r\n    display: flex;\r\n    align-items: center;\r\n}\r\nheader img {\r\n    height: 50px;\r\n}\r\n.logo h1 {\r\n    text-align: center;\r\n    margin-left: 10px;\r\n    font-size: 30px;\r\n}\r\nheader nav {\r\n    margin-left: 20px;\r\n    display: flex;\r\n}\r\nheader nav a {\r\n    margin-left: 20%; \r\n    padding: 10px 2px;\r\n    text-decoration: none;\r\n    color: white;\r\n    border-radius: 5px;\r\n    transition: background-color 0.3s ease, transform 0.3s ease;\r\n}\r\nheader nav a::after {\r\n    content: '';\r\n    position: absolute;\r\n    width: 100%;\r\n    height: 2px;\r\n    background-color:  #7b46d1;\r\n    bottom: 0;\r\n    left: 0;\r\n    transform: scaleX(0);\r\n    transition: transform 0.3s ease;\r\n}\r\nheader nav a:hover {\r\n    color:#cdaeeb;\r\n    transform: scale(1.1);\r\n}\r\nheader nav a:hover::after {\r\n    transform: scaleX(1);\r\n}"
+        }
+    ]
+}

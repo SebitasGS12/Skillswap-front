@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/service/negocioService copy.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1719623277919,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1719623277919,
+            "name": "Commit-0",
+            "content": "import { Injectable } from \"@angular/core\";\r\nimport { Datos } from \"../constants/datos\";\r\nimport { HttpClient } from \"@angular/common/http\";\r\nimport { Observable } from \"rxjs\";\r\nimport { Amistades } from \"../models/amistades\";\r\nimport { Usuario } from \"../models/usuario\";\r\n\r\n\r\n@Injectable({\r\n    providedIn:'root'\r\n})\r\nexport class SesionService {\r\n    private baseUrl = Datos.API_URL+\"Negocio\" ;\r\n    constructor(private http: HttpClient){}\r\n\r\n    public inciarSesion(usuario: Usuario): Observable<Usuario> {\r\n        return this.http.post<any>(this.baseUrl+'/sesionon', usuario);\r\n    }\r\n    public registrarNuevaCuenta(usuario: Usuario): Observable<Usuario> {\r\n        return this.http.post<any>(this.baseUrl+'/registro', usuario);\r\n    }\r\n\r\n    \r\n\r\n\r\n}\r\n"
+        }
+    ]
+}

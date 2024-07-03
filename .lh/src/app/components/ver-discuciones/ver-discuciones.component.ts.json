@@ -1,0 +1,46 @@
+{
+    "sourceFile": "src/app/components/ver-discuciones/ver-discuciones.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1719964541824,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1719964585178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,26 @@\n-import { Component } from '@angular/core';\r\n+import { Component, OnInit } from '@angular/core';\r\n+import { ActivatedRoute } from '@angular/router';\r\n+import { Foro } from './ruta-donde-se-encuentra-el-modelo-de-foro'; // Asegúrate de importar el modelo de Foro\r\n \r\n @Component({\r\n   selector: 'app-ver-discuciones',\r\n-  standalone: true,\r\n-  imports: [],\r\n   templateUrl: './ver-discuciones.component.html',\r\n-  styleUrl: './ver-discuciones.component.css'\r\n+  styleUrls: ['./ver-discuciones.component.css']\r\n })\r\n-export class VerDiscucionesComponent {\r\n+export class VerDiscucionesComponent implements OnInit {\r\n \r\n+  foro: Foro | undefined;\r\n+\r\n+  constructor(private route: ActivatedRoute) {}\r\n+\r\n+  ngOnInit() {\r\n+    // Recibir el parámetro de la ruta (ID del foro)\r\n+    this.route.params.subscribe(params => {\r\n+      const id = +params['id']; // Convertir el parámetro a número si es necesario\r\n+      // Aquí deberías cargar los detalles del foro usando el ID\r\n+      // Por ejemplo, puedes obtener el foro de una lista o hacer una solicitud HTTP\r\n+      this.foro = { id: id, titulo: `Foro ${id}`, descripcion: `Descripción del Foro ${id}` }; // Ejemplo estático\r\n+    });\r\n+  }\r\n+\r\n }\r\n"
+                },
+                {
+                    "date": 1719964592916,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,6 @@\n import { Component, OnInit } from '@angular/core';\r\n import { ActivatedRoute } from '@angular/router';\r\n-import { Foro } from './ruta-donde-se-encuentra-el-modelo-de-foro'; // Asegúrate de importar el modelo de Foro\r\n \r\n @Component({\r\n   selector: 'app-ver-discuciones',\r\n   templateUrl: './ver-discuciones.component.html',\r\n"
+                },
+                {
+                    "date": 1719964605052,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,16 @@\n import { Component, OnInit } from '@angular/core';\r\n import { ActivatedRoute } from '@angular/router';\r\n+import { Foro } from '../../models/Foro';\r\n \r\n @Component({\r\n   selector: 'app-ver-discuciones',\r\n   templateUrl: './ver-discuciones.component.html',\r\n   styleUrls: ['./ver-discuciones.component.css']\r\n })\r\n export class VerDiscucionesComponent implements OnInit {\r\n \r\n-  foro: Foro | undefined;\r\n+  foro!: Foro | undefined;\r\n \r\n   constructor(private route: ActivatedRoute) {}\r\n \r\n   ngOnInit() {\r\n@@ -17,9 +18,9 @@\n     this.route.params.subscribe(params => {\r\n       const id = +params['id']; // Convertir el parámetro a número si es necesario\r\n       // Aquí deberías cargar los detalles del foro usando el ID\r\n       // Por ejemplo, puedes obtener el foro de una lista o hacer una solicitud HTTP\r\n-      this.foro = { id: id, titulo: `Foro ${id}`, descripcion: `Descripción del Foro ${id}` }; // Ejemplo estático\r\n+      this.foro = { : id, titulo: `Foro ${id}`, descripcion: `Descripción del Foro ${id}` }; // Ejemplo estático\r\n     });\r\n   }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719964732693,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,14 +13,11 @@\n \r\n   constructor(private route: ActivatedRoute) {}\r\n \r\n   ngOnInit() {\r\n-    // Recibir el parámetro de la ruta (ID del foro)\r\n-    this.route.params.subscribe(params => {\r\n-      const id = +params['id']; // Convertir el parámetro a número si es necesario\r\n-      // Aquí deberías cargar los detalles del foro usando el ID\r\n-      // Por ejemplo, puedes obtener el foro de una lista o hacer una solicitud HTTP\r\n-      this.foro = { : id, titulo: `Foro ${id}`, descripcion: `Descripción del Foro ${id}` }; // Ejemplo estático\r\n-    });\r\n+\r\n+    \r\n+\r\n+\r\n   }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719964739094,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   constructor(private route: ActivatedRoute) {}\r\n \r\n   ngOnInit() {\r\n \r\n-    \r\n+    this.route.\r\n \r\n \r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1719964748388,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,13 @@\n   constructor(private route: ActivatedRoute) {}\r\n \r\n   ngOnInit() {\r\n \r\n-    this.route.params.\r\n+    this.route.params.subscribe(\r\n+      params =>{\r\n+        \r\n+      }\r\n+    )\r\n \r\n \r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1719964789115,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n \r\n     this.route.params.subscribe(\r\n       params =>{\r\n         const id = +params['id'];\r\n-        this.foroService.buscar\r\n+        this.foroService.buscar()\r\n       }\r\n     )\r\n \r\n \r\n"
+                }
+            ],
+            "date": 1719964541824,
+            "name": "Commit-0",
+            "content": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-ver-discuciones',\r\n  standalone: true,\r\n  imports: [],\r\n  templateUrl: './ver-discuciones.component.html',\r\n  styleUrl: './ver-discuciones.component.css'\r\n})\r\nexport class VerDiscucionesComponent {\r\n\r\n}\r\n"
+        }
+    ]
+}

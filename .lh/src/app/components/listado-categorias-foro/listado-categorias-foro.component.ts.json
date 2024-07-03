@@ -1,0 +1,50 @@
+{
+    "sourceFile": "src/app/components/listado-categorias-foro/listado-categorias-foro.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1719634407968,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1719634829775,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,14 @@\n import { Component } from '@angular/core';\r\n import { CommonModule } from '@angular/common';\r\n+import { AsideComponent } from \"../aside/aside.component\";\r\n \r\n @Component({\r\n-  selector: 'app-listado-categorias-foro',\r\n-  standalone: true,\r\n-  imports: [CommonModule],\r\n-  templateUrl: './listado-categorias-foro.component.html',\r\n-  styleUrl: './listado-categorias-foro.component.css',\r\n+    selector: 'app-listado-categorias-foro',\r\n+    standalone: true,\r\n+    templateUrl: './listado-categorias-foro.component.html',\r\n+    styleUrl: './listado-categorias-foro.component.css',\r\n+    imports: [CommonModule, AsideComponent]\r\n })\r\n export class ListadoCategoriasForoComponent {\r\n \r\n   categorias = [\r\n"
+                },
+                {
+                    "date": 1719634898388,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,15 @@\n import { Component } from '@angular/core';\r\n import { CommonModule } from '@angular/common';\r\n import { AsideComponent } from \"../aside/aside.component\";\r\n+import { HeaderComponent } from \"../header/header.component\";\r\n \r\n @Component({\r\n     selector: 'app-listado-categorias-foro',\r\n     standalone: true,\r\n     templateUrl: './listado-categorias-foro.component.html',\r\n     styleUrl: './listado-categorias-foro.component.css',\r\n-    imports: [CommonModule, AsideComponent]\r\n+    imports: [CommonModule, AsideComponent, HeaderComponent]\r\n })\r\n export class ListadoCategoriasForoComponent {\r\n \r\n   categorias = [\r\n"
+                },
+                {
+                    "date": 1719794309086,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,5 +43,9 @@\n         }\r\n       ]\r\n     }\r\n   ];\r\n+\r\n+\r\n+\r\n+  \r\n }\r\n"
+                },
+                {
+                    "date": 1719794314317,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { Component } from '@angular/core';\r\n+import { Component, OnInit } from '@angular/core';\r\n import { CommonModule } from '@angular/common';\r\n import { AsideComponent } from \"../aside/aside.component\";\r\n import { HeaderComponent } from \"../header/header.component\";\r\n \r\n@@ -9,9 +9,9 @@\n     templateUrl: './listado-categorias-foro.component.html',\r\n     styleUrl: './listado-categorias-foro.component.css',\r\n     imports: [CommonModule, AsideComponent, HeaderComponent]\r\n })\r\n-export class ListadoCategoriasForoComponent {\r\n+export class ListadoCategoriasForoComponent implements OnInit {\r\n \r\n   categorias = [\r\n     {\r\n       nombre: 'PROGRAMACIÓN',\r\n@@ -46,6 +46,6 @@\n   ];\r\n \r\n \r\n \r\n-  \r\n+\r\n }\r\n"
+                },
+                {
+                    "date": 1719794319838,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,14 @@\n     styleUrl: './listado-categorias-foro.component.css',\r\n     imports: [CommonModule, AsideComponent, HeaderComponent]\r\n })\r\n export class ListadoCategoriasForoComponent implements OnInit {\r\n+  \r\n+  \r\n+  \r\n+  ngOnInit(): void {\r\n+    throw new Error('Method not implemented.');\r\n+  }\r\n \r\n   categorias = [\r\n     {\r\n       nombre: 'PROGRAMACIÓN',\r\n"
+                },
+                {
+                    "date": 1719794342095,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,20 @@\n   \r\n   \r\n   \r\n   ngOnInit(): void {\r\n-    throw new Error('Method not implemented.');\r\n+    this.sesionService.obtenerSesion().subscribe((response) => {\r\n+      console.log(response);\r\n+      this.sesion = response;\r\n+      if (this.sesion) {\r\n+        this.notificacionesService\r\n+          .obtenerNotificacionesByUsuario(this.sesion.obj_Usuario.usuarioId)\r\n+          .subscribe((response) => {\r\n+            console.log(response);\r\n+            this.notificaciones = response;\r\n+          });\r\n+      }\r\n+    });\r\n   }\r\n \r\n   categorias = [\r\n     {\r\n"
+                },
+                {
+                    "date": 1719794348259,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,11 @@\n     styleUrl: './listado-categorias-foro.component.css',\r\n     imports: [CommonModule, AsideComponent, HeaderComponent]\r\n })\r\n export class ListadoCategoriasForoComponent implements OnInit {\r\n-  constructor(){}\r\n+  constructor(\r\n+    \r\n+  ){}\r\n   \r\n   \r\n   ngOnInit(): void {\r\n     this.sesionService.obtenerSesion().subscribe((response) => {\r\n"
+                },
+                {
+                    "date": 1719795219131,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,10 +34,9 @@\n         this.categoriaForoService.listar().subscribe(\r\n           (response) => {\r\n             console.log(response);\r\n             this.categoriasForos = response;\r\n-          }\r\n-        )\r\n+          }        )\r\n       }\r\n     });\r\n   }\r\n \r\n"
+                }
+            ],
+            "date": 1719634407968,
+            "name": "Commit-0",
+            "content": "import { Component } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\n\r\n@Component({\r\n  selector: 'app-listado-categorias-foro',\r\n  standalone: true,\r\n  imports: [CommonModule],\r\n  templateUrl: './listado-categorias-foro.component.html',\r\n  styleUrl: './listado-categorias-foro.component.css',\r\n})\r\nexport class ListadoCategoriasForoComponent {\r\n\r\n  categorias = [\r\n    {\r\n      nombre: 'PROGRAMACIÓN',\r\n      foros: [\r\n        {\r\n          titulo: 'Base de Datos SQL',\r\n          descripcion: 'Foro destinado a temas de SQL y más. Resolverá tus dudas más frecuentes.',\r\n          fecha: '12/05/2024'\r\n        },\r\n        {\r\n          titulo: 'Algoritmo y Estructuras de Datos',\r\n          descripcion: 'Foro destinado a temas de algoritmos iniciales y más. Resolverá tus dudas más frecuentes.',\r\n          fecha: '14/05/2024'\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      nombre: 'MÚSICA',\r\n      foros: [\r\n        {\r\n          titulo: 'Instrumentos de cuerdas',\r\n          descripcion: 'Foro para los interesados en los instrumentos de cuerdas y que deseen aprender de ello.',\r\n          fecha: '16/05/2024'\r\n        },\r\n        {\r\n          titulo: 'Instrumentos de viento',\r\n          descripcion: 'Foro para los interesados en los instrumentos de viento y que deseen aprender de ello.',\r\n          fecha: '18/05/2024'\r\n        }\r\n      ]\r\n    }\r\n  ];\r\n}\r\n"
+        }
+    ]
+}

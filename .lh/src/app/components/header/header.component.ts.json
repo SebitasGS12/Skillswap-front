@@ -1,0 +1,166 @@
+{
+    "sourceFile": "src/app/components/header/header.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 37,
+            "patches": [
+                {
+                    "date": 1719619960257,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1719621431013,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,13 @@\n-import { Component } from '@angular/core';\r\n+import { CommonModule } from '@angular/common';\r\n+import { Component, OnInit } from '@angular/core';\r\n \r\n @Component({\r\n   selector: 'app-header',\r\n   standalone: true,\r\n   imports: [CommonModule],\r\n   templateUrl: './header.component.html',\r\n   styleUrl: './header.component.css'\r\n })\r\n-export class HeaderComponent {\r\n+export class HeaderComponent implements OnInit{\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719621437838,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,5 +9,12 @@\n   styleUrl: './header.component.css'\r\n })\r\n export class HeaderComponent implements OnInit{\r\n \r\n+\r\n+  ngOnInit(): void {\r\n+    throw new Error('Method not implemented.');\r\n+  }\r\n+\r\n+\r\n+  \r\n }\r\n"
+                },
+                {
+                    "date": 1719623411917,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,12 +9,12 @@\n   styleUrl: './header.component.css'\r\n })\r\n export class HeaderComponent implements OnInit{\r\n \r\n-\r\n+  sesion:Sesion;\r\n   ngOnInit(): void {\r\n     throw new Error('Method not implemented.');\r\n   }\r\n \r\n \r\n-  \r\n+\r\n }\r\n"
+                },
+                {
+                    "date": 1719623432057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,11 @@\n   styleUrl: './header.component.css'\r\n })\r\n export class HeaderComponent implements OnInit{\r\n \r\n-  sesion:Sesion;\r\n+  sesion!:Sesion;\r\n+  \r\n+\r\n   ngOnInit(): void {\r\n     throw new Error('Method not implemented.');\r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1719623442815,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,10 +10,12 @@\n })\r\n export class HeaderComponent implements OnInit{\r\n \r\n   sesion!:Sesion;\r\n-  \r\n+  constructor(private router: Router,\r\n+    private negocioService: NegocioService) { }\r\n \r\n+\r\n   ngOnInit(): void {\r\n     throw new Error('Method not implemented.');\r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1719623453249,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,10 @@\n export class HeaderComponent implements OnInit{\r\n \r\n   sesion!:Sesion;\r\n   constructor(private router: Router,\r\n-    private negocioService: NegocioService) { }\r\n+    private negocioService: NegocioService,\r\n+    private sesionService:Sesion) { }\r\n \r\n \r\n   ngOnInit(): void {\r\n     throw new Error('Method not implemented.');\r\n"
+                },
+                {
+                    "date": 1719623458914,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,9 @@\n import { CommonModule } from '@angular/common';\r\n import { Component, OnInit } from '@angular/core';\r\n+import { SesionService } from '../../service/sesionService';\r\n+import { NegocioService } from '../../service/negocioService';\r\n+import { Router } from 'express';\r\n \r\n @Component({\r\n   selector: 'app-header',\r\n   standalone: true,\r\n@@ -10,11 +13,12 @@\n })\r\n export class HeaderComponent implements OnInit{\r\n \r\n   sesion!:Sesion;\r\n+  \r\n   constructor(private router: Router,\r\n     private negocioService: NegocioService,\r\n-    private sesionService:Sesion) { }\r\n+    private sesionService:SesionService) { }\r\n \r\n \r\n   ngOnInit(): void {\r\n     throw new Error('Method not implemented.');\r\n"
+                },
+                {
+                    "date": 1719623465246,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n import { Component, OnInit } from '@angular/core';\r\n import { SesionService } from '../../service/sesionService';\r\n import { NegocioService } from '../../service/negocioService';\r\n import { Router } from 'express';\r\n+import { Sesion } from '../../models/sesion';\r\n \r\n @Component({\r\n   selector: 'app-header',\r\n   standalone: true,\r\n@@ -13,9 +14,9 @@\n })\r\n export class HeaderComponent implements OnInit{\r\n \r\n   sesion!:Sesion;\r\n-  \r\n+\r\n   constructor(private router: Router,\r\n     private negocioService: NegocioService,\r\n     private sesionService:SesionService) { }\r\n \r\n"
+                },
+                {
+                    "date": 1719623522306,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,11 @@\n   templateUrl: './header.component.html',\r\n   styleUrl: './header.component.css'\r\n })\r\n export class HeaderComponent implements OnInit{\r\n+salir() {\r\n+throw new Error('Method not implemented.');\r\n+}\r\n \r\n   sesion!:Sesion;\r\n \r\n   constructor(private router: Router,\r\n"
+                },
+                {
+                    "date": 1719623745298,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,11 @@\n     private sesionService:SesionService) { }\r\n \r\n \r\n   ngOnInit(): void {\r\n-    throw new Error('Method not implemented.');\r\n+\r\n+\r\n+\r\n   }\r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1719623751851,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,12 +12,10 @@\n   templateUrl: './header.component.html',\r\n   styleUrl: './header.component.css'\r\n })\r\n export class HeaderComponent implements OnInit{\r\n-salir() {\r\n-throw new Error('Method not implemented.');\r\n-}\r\n \r\n+\r\n   sesion!:Sesion;\r\n \r\n   constructor(private router: Router,\r\n     private negocioService: NegocioService,\r\n@@ -29,7 +27,10 @@\n \r\n \r\n   }\r\n \r\n+  salir() {\r\n \r\n \r\n+  }\r\n+\r\n }\r\n"
+                },
+                {
+                    "date": 1719623765616,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,8 +29,9 @@\n   }\r\n \r\n   salir() {\r\n \r\n+    \r\n \r\n   }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719623773198,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n   }\r\n \r\n   salir() {\r\n \r\n-    \r\n+    this.sesionService.obtenerSesion\r\n \r\n   }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719623789181,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n   }\r\n \r\n   salir() {\r\n \r\n-    this.sesionService.obtenerSesion\r\n+    this.negocioService.()\r\n \r\n   }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719623981844,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n   }\r\n \r\n   salir() {\r\n \r\n-    this.negocioService.()\r\n+    this.negocioService.\r\n \r\n   }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719623991245,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,10 +28,10 @@\n \r\n   }\r\n \r\n   salir() {\r\n+    \r\n+    this.negocioService.cerrarSesion();\r\n \r\n-    this.negocioService.\r\n-\r\n   }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719623998959,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,11 @@\n   }\r\n \r\n   salir() {\r\n     \r\n-    this.negocioService.cerrarSesion();\r\n+    this.negocioService.cerrarSesion(\r\n+      this.sesionService.obtenerSesion()\r\n+    );\r\n \r\n   }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719624006675,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,8 @@\n \r\n   salir() {\r\n     \r\n     this.negocioService.cerrarSesion(\r\n-      this.sesionService.obtenerSesion()\r\n     );\r\n \r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1719624016638,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,8 +30,9 @@\n \r\n   salir() {\r\n     \r\n     this.negocioService.cerrarSesion(\r\n+      this.sesion.obj_Usuario;\r\n     );\r\n \r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1719624022826,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,10 +30,10 @@\n \r\n   salir() {\r\n     \r\n     this.negocioService.cerrarSesion(\r\n-      this.sesion.obj_Usuario;\r\n-    );\r\n+      this.sesion.obj_Usuario\r\n+    ).;\r\n \r\n   }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719624033875,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,18 +22,18 @@\n     private sesionService:SesionService) { }\r\n \r\n \r\n   ngOnInit(): void {\r\n+    this.sesion = s\r\n \r\n \r\n-\r\n   }\r\n \r\n   salir() {\r\n     \r\n     this.negocioService.cerrarSesion(\r\n       this.sesion.obj_Usuario\r\n-    ).;\r\n+    );\r\n \r\n   }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719624039843,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n     private sesionService:SesionService) { }\r\n \r\n \r\n   ngOnInit(): void {\r\n-    this.sesion = s\r\n+    this.sesionService.obtenerSesion\r\n \r\n \r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1719624046478,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,11 @@\n     private sesionService:SesionService) { }\r\n \r\n \r\n   ngOnInit(): void {\r\n-    this.sesionService.obtenerSesion\r\n+    this.sesionService.obtenerSesion().subscribe(\r\n+      data = \r\n+    )\r\n \r\n \r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1719624052937,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,11 @@\n \r\n \r\n   ngOnInit(): void {\r\n     this.sesionService.obtenerSesion().subscribe(\r\n-      data = \r\n+      data = {\r\n+        \r\n+      }\r\n     )\r\n \r\n \r\n   }\r\n"
+                },
+                {
+                    "date": 1719624060913,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,10 +23,10 @@\n \r\n \r\n   ngOnInit(): void {\r\n     this.sesionService.obtenerSesion().subscribe(\r\n-      data = {\r\n-        \r\n+      data) => {\r\n+\r\n       }\r\n     )\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1719624067156,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,10 +23,10 @@\n \r\n \r\n   ngOnInit(): void {\r\n     this.sesionService.obtenerSesion().subscribe(\r\n-      data) => {\r\n-\r\n+      (response) => {\r\n+        c\r\n       }\r\n     )\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1719624073694,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n \r\n   ngOnInit(): void {\r\n     this.sesionService.obtenerSesion().subscribe(\r\n       (response) => {\r\n-        c\r\n+        console.log(response)\r\n       }\r\n     )\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1719624303919,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,9 @@\n   ngOnInit(): void {\r\n     this.sesionService.obtenerSesion().subscribe(\r\n       (response) => {\r\n         console.log(response)\r\n+        this.sesion = response;\r\n       }\r\n     )\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1719624321000,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,12 +24,12 @@\n \r\n   ngOnInit(): void {\r\n     this.sesionService.obtenerSesion().subscribe(\r\n       (response) => {\r\n-        console.log(response)\r\n+        console.log(response);\r\n         this.sesion = response;\r\n       }\r\n-    )\r\n+    );\r\n \r\n \r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1719624532290,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,16 +22,16 @@\n     private sesionService:SesionService) { }\r\n \r\n \r\n   ngOnInit(): void {\r\n+\r\n     this.sesionService.obtenerSesion().subscribe(\r\n       (response) => {\r\n         console.log(response);\r\n         this.sesion = response;\r\n       }\r\n     );\r\n \r\n-\r\n   }\r\n \r\n   salir() {\r\n     \r\n"
+                },
+                {
+                    "date": 1719625088258,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n   salir() {\r\n     \r\n     this.negocioService.cerrarSesion(\r\n       this.sesion.obj_Usuario\r\n-    );\r\n+    ).;\r\n \r\n   }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719625101714,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,14 @@\n   salir() {\r\n     \r\n     this.negocioService.cerrarSesion(\r\n       this.sesion.obj_Usuario\r\n-    ).;\r\n+    ).subscribe(\r\n+      (response) => {\r\n+        \r\n+      }\r\n \r\n+    );\r\n+\r\n   }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719625110555,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n     this.negocioService.cerrarSesion(\r\n       this.sesion.obj_Usuario\r\n     ).subscribe(\r\n       (response) => {\r\n-        \r\n+        console.log\r\n       }\r\n \r\n     );\r\n \r\n"
+                },
+                {
+                    "date": 1719625116831,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,11 +38,10 @@\n     this.negocioService.cerrarSesion(\r\n       this.sesion.obj_Usuario\r\n     ).subscribe(\r\n       (response) => {\r\n-        console.log\r\n+        console.log(response);\r\n       }\r\n-\r\n     );\r\n \r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1719625127322,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,8 +41,7 @@\n       (response) => {\r\n         console.log(response);\r\n       }\r\n     );\r\n-\r\n   }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719625137376,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,8 +42,8 @@\n         console.log(response);\r\n       }\r\n     );\r\n \r\n-    this.router\r\n+    this.router.\r\n   }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719625171524,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,48 @@\n+import { CommonModule } from '@angular/common';\r\n+import { Component, OnInit } from '@angular/core';\r\n+import { SesionService } from '../../service/sesionService';\r\n+import { NegocioService } from '../../service/negocioService';\r\n+import { Sesion } from '../../models/sesion';\r\n+\r\n+@Component({\r\n+  selector: 'app-header',\r\n+  standalone: true,\r\n+  imports: [CommonModule],\r\n+  templateUrl: './header.component.html',\r\n+  styleUrl: './header.component.css'\r\n+})\r\n+export class HeaderComponent implements OnInit{\r\n+\r\n+\r\n+  sesion!:Sesion;\r\n+\r\n+  constructor(private router: Router,\r\n+    private negocioService: NegocioService,\r\n+    private sesionService:SesionService) { }\r\n+\r\n+\r\n+  ngOnInit(): void {\r\n+\r\n+    this.sesionService.obtenerSesion().subscribe(\r\n+      (response) => {\r\n+        console.log(response);\r\n+        this.sesion = response;\r\n+      }\r\n+    );\r\n+\r\n+  }\r\n+\r\n+  salir() {\r\n+\r\n+    this.negocioService.cerrarSesion(\r\n+      this.sesion.obj_Usuario\r\n+    ).subscribe(\r\n+      (response) => {\r\n+        console.log(response);\r\n+        this.router.navigate(['/menuPrincipal'])\r\n+      }\r\n+    );\r\n+\r\n+  }\r\n+\r\n+}\r\n"
+                }
+            ],
+            "date": 1719619960257,
+            "name": "Commit-0",
+            "content": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-header',\r\n  standalone: true,\r\n  imports: [CommonModule],\r\n  templateUrl: './header.component.html',\r\n  styleUrl: './header.component.css'\r\n})\r\nexport class HeaderComponent {\r\n\r\n}\r\n"
+        }
+    ]
+}

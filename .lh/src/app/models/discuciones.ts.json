@@ -1,0 +1,58 @@
+{
+    "sourceFile": "src/app/models/discuciones.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1718505393382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1718505399245,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,5 @@\n-class\n\\ No newline at end of file\n+class Discuciones {\r\n+    constructor(parameters) {\r\n+        \r\n+    }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718505406323,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n-class Discuciones {\r\n-    constructor(parameters) {\r\n-        \r\n-    }\r\n+export class Discuciones {\r\n+    \r\n+\r\n+    \r\n+\r\n+\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718505413214,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n export class Discuciones {\r\n     \r\n-\r\n+    discusionesId:number;\r\n     \r\n \r\n \r\n+\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718505419812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,10 @@\n export class Discuciones {\r\n     \r\n-    discusionesId:number;\r\n-    \r\n+    discusionesId!:number;\r\n \r\n+    private String titulo;\r\n+    private String descripcion;\r\n+    private Date fechaCreacion;\r\n \r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718505425546,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,9 @@\n export class Discuciones {\r\n     \r\n     discusionesId!:number;\r\n+    titulo;\r\n+    descripcion;\r\n+    fechaCreacion;\r\n \r\n-    private String titulo;\r\n-    private String descripcion;\r\n-    private Date fechaCreacion;\r\n \r\n-\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718505437586,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n export class Discuciones {\r\n     \r\n     discusionesId!:number;\r\n-    titulo;\r\n-    descripcion;\r\n-    fechaCreacion;\r\n+    titulo!:string;\r\n+    descripcion!:string;\r\n+    fechaCreacion!:Date;\r\n \r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718505445347,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,7 @@\n     discusionesId!:number;\r\n     titulo!:string;\r\n     descripcion!:string;\r\n     fechaCreacion!:Date;\r\n-\r\n-\r\n+    obj_Usuario\r\n+    obj_Foro\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718505451912,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n+import { Usuario } from \"./usuario\";\r\n+\r\n export class Discuciones {\r\n     \r\n     discusionesId!:number;\r\n     titulo!:string;\r\n     descripcion!:string;\r\n     fechaCreacion!:Date;\r\n-    obj_Usuario\r\n-    obj_Foro\r\n+    obj_Usuario:Usuario\r\n+    obj_Foro:Foro\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1718506708926,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,12 @@\n+import { Foro } from \"./Foro\";\r\n import { Usuario } from \"./usuario\";\r\n \r\n export class Discuciones {\r\n     \r\n     discusionesId!:number;\r\n     titulo!:string;\r\n     descripcion!:string;\r\n     fechaCreacion!:Date;\r\n-    obj_Usuario:Usuario\r\n+    obj_Usuario!:Usuario\r\n     obj_Foro:Foro\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1720034174950,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,11 +2,11 @@\n import { Usuario } from \"./usuario\";\r\n \r\n export class Discuciones {\r\n     \r\n-    discusionesId!:number;\r\n+    discusionesId!:number|null;\r\n     titulo!:string;\r\n     descripcion!:string;\r\n     fechaCreacion!:Date;\r\n     obj_Usuario!:Usuario\r\n-    obj_Foro:Foro\r\n+    obj_Foro!:Foro\r\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1718505393382,
+            "name": "Commit-0",
+            "content": "class"
+        }
+    ]
+}

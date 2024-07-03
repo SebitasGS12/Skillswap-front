@@ -1,0 +1,170 @@
+{
+    "sourceFile": "src/app/components/crear-foro/crear-foro.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 38,
+            "patches": [
+                {
+                    "date": 1719979728152,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1719980216744,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,14 @@\n import { CommonModule } from '@angular/common';\r\n import { Component } from '@angular/core';\r\n+import { HeaderComponent } from \"../header/header.component\";\r\n \r\n @Component({\r\n-  selector: 'app-crear-foro',\r\n-  standalone: true,\r\n-  imports: [CommonModule],\r\n-  templateUrl: './crear-foro.component.html',\r\n-  styleUrl: './crear-foro.component.css'\r\n+    selector: 'app-crear-foro',\r\n+    standalone: true,\r\n+    templateUrl: './crear-foro.component.html',\r\n+    styleUrl: './crear-foro.component.css',\r\n+    imports: [CommonModule, HeaderComponent]\r\n })\r\n export class CrearForoComponent {\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719980671880,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,15 @@\n import { CommonModule } from '@angular/common';\r\n-import { Component } from '@angular/core';\r\n+import { Component, OnInit } from '@angular/core';\r\n import { HeaderComponent } from \"../header/header.component\";\r\n+import { AsideComponent } from \"../aside/aside.component\";\r\n \r\n @Component({\r\n     selector: 'app-crear-foro',\r\n     standalone: true,\r\n     templateUrl: './crear-foro.component.html',\r\n     styleUrl: './crear-foro.component.css',\r\n-    imports: [CommonModule, HeaderComponent]\r\n+    imports: [CommonModule, HeaderComponent, AsideComponent]\r\n })\r\n-export class CrearForoComponent {\r\n+export class CrearForoComponent implements OnInit{\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719980732875,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,6 +10,9 @@\n     styleUrl: './crear-foro.component.css',\r\n     imports: [CommonModule, HeaderComponent, AsideComponent]\r\n })\r\n export class CrearForoComponent implements OnInit{\r\n+    ngOnInit(): void {\r\n+        throw new Error('Method not implemented.');\r\n+    }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719981834826,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,13 @@\n     styleUrl: './crear-foro.component.css',\r\n     imports: [CommonModule, HeaderComponent, AsideComponent]\r\n })\r\n export class CrearForoComponent implements OnInit{\r\n+\r\n+    sesion!:Sesion;\r\n     ngOnInit(): void {\r\n-        throw new Error('Method not implemented.');\r\n+    \r\n+    \r\n+        \r\n     }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719981845380,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import { CommonModule } from '@angular/common';\r\n import { Component, OnInit } from '@angular/core';\r\n import { HeaderComponent } from \"../header/header.component\";\r\n import { AsideComponent } from \"../aside/aside.component\";\r\n+import { Sesion } from '../../models/sesion';\r\n \r\n @Component({\r\n     selector: 'app-crear-foro',\r\n     standalone: true,\r\n@@ -12,8 +13,11 @@\n })\r\n export class CrearForoComponent implements OnInit{\r\n \r\n     sesion!:Sesion;\r\n+\r\n+\r\n+    constructor\r\n     ngOnInit(): void {\r\n     \r\n     \r\n         \r\n"
+                },
+                {
+                    "date": 1719981851841,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,12 @@\n \r\n     sesion!:Sesion;\r\n \r\n \r\n-    constructor\r\n+    constructor(\r\n+        private sesionService:SesionService,\r\n+\r\n+    ){}\r\n     ngOnInit(): void {\r\n     \r\n     \r\n         \r\n"
+                },
+                {
+                    "date": 1719981905626,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n import { Component, OnInit } from '@angular/core';\r\n import { HeaderComponent } from \"../header/header.component\";\r\n import { AsideComponent } from \"../aside/aside.component\";\r\n import { Sesion } from '../../models/sesion';\r\n+import { SesionService } from '../../service/sesionService';\r\n \r\n @Component({\r\n     selector: 'app-crear-foro',\r\n     standalone: true,\r\n@@ -17,13 +18,14 @@\n \r\n \r\n     constructor(\r\n         private sesionService:SesionService,\r\n-\r\n     ){}\r\n     ngOnInit(): void {\r\n     \r\n-    \r\n+        this.sesionService.obtenerSesion().subscribe(\r\n+            (response) => {\r\n+              console.log(response);\r\n         \r\n     }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719981911660,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,10 @@\n     ngOnInit(): void {\r\n     \r\n         this.sesionService.obtenerSesion().subscribe(\r\n             (response) => {\r\n-              console.log(response);\r\n+              console.log(response);}\r\n+            ):\r\n         \r\n     }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719981924445,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,10 +23,11 @@\n     ngOnInit(): void {\r\n     \r\n         this.sesionService.obtenerSesion().subscribe(\r\n             (response) => {\r\n-              console.log(response);}\r\n-            ):\r\n+              console.log(response);\r\n+            }\r\n+        ):\r\n         \r\n     }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719981930308,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,11 +23,11 @@\n     ngOnInit(): void {\r\n     \r\n         this.sesionService.obtenerSesion().subscribe(\r\n             (response) => {\r\n-              console.log(response);\r\n+                console.log(response);\r\n             }\r\n-        ):\r\n+        );\r\n         \r\n     }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719981944346,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,9 @@\n     \r\n         this.sesionService.obtenerSesion().subscribe(\r\n             (response) => {\r\n                 console.log(response);\r\n+                this.sesion = \r\n             }\r\n         );\r\n         \r\n     }\r\n"
+                },
+                {
+                    "date": 1719982003369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,15 +3,16 @@\n import { HeaderComponent } from \"../header/header.component\";\r\n import { AsideComponent } from \"../aside/aside.component\";\r\n import { Sesion } from '../../models/sesion';\r\n import { SesionService } from '../../service/sesionService';\r\n+import { FormsModule } from '@angular/forms';\r\n \r\n @Component({\r\n     selector: 'app-crear-foro',\r\n     standalone: true,\r\n     templateUrl: './crear-foro.component.html',\r\n     styleUrl: './crear-foro.component.css',\r\n-    imports: [CommonModule, HeaderComponent, AsideComponent]\r\n+    imports: [CommonModule, HeaderComponent, AsideComponent,FormsModule]\r\n })\r\n export class CrearForoComponent implements OnInit{\r\n \r\n     sesion!:Sesion;\r\n@@ -24,9 +25,9 @@\n     \r\n         this.sesionService.obtenerSesion().subscribe(\r\n             (response) => {\r\n                 console.log(response);\r\n-                this.sesion = \r\n+                this.sesion = response;\r\n             }\r\n         );\r\n         \r\n     }\r\n"
+                },
+                {
+                    "date": 1719982032513,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,11 @@\n     styleUrl: './crear-foro.component.css',\r\n     imports: [CommonModule, HeaderComponent, AsideComponent,FormsModule]\r\n })\r\n export class CrearForoComponent implements OnInit{\r\n+nuevoForo(arg0: any) {\r\n+throw new Error('Method not implemented.');\r\n+}\r\n \r\n     sesion!:Sesion;\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1719982039878,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,12 +13,10 @@\n     styleUrl: './crear-foro.component.css',\r\n     imports: [CommonModule, HeaderComponent, AsideComponent,FormsModule]\r\n })\r\n export class CrearForoComponent implements OnInit{\r\n-nuevoForo(arg0: any) {\r\n-throw new Error('Method not implemented.');\r\n-}\r\n \r\n+\r\n     sesion!:Sesion;\r\n \r\n \r\n     constructor(\r\n@@ -34,5 +32,12 @@\n         );\r\n         \r\n     }\r\n \r\n+    nuevoForo(arg0: any) {\r\n+\r\n+\r\n+\r\n+\r\n+    }\r\n+\r\n }\r\n"
+                },
+                {
+                    "date": 1719982045961,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n import { AsideComponent } from \"../aside/aside.component\";\r\n import { Sesion } from '../../models/sesion';\r\n import { SesionService } from '../../service/sesionService';\r\n import { FormsModule } from '@angular/forms';\r\n+import { Foro } from '../../models/Foro';\r\n \r\n @Component({\r\n     selector: 'app-crear-foro',\r\n     standalone: true,\r\n@@ -32,9 +33,9 @@\n         );\r\n         \r\n     }\r\n \r\n-    nuevoForo(arg0: any) {\r\n+    nuevoForo(arg0: Foro) {\r\n \r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1719982056394,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,8 +21,9 @@\n \r\n \r\n     constructor(\r\n         private sesionService:SesionService,\r\n+        private foroService:\r\n     ){}\r\n     ngOnInit(): void {\r\n     \r\n         this.sesionService.obtenerSesion().subscribe(\r\n@@ -33,9 +34,9 @@\n         );\r\n         \r\n     }\r\n \r\n-    nuevoForo(arg0: Foro) {\r\n+    nuevoForo( foro : Foro) {\r\n \r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1719982063949,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n import { Sesion } from '../../models/sesion';\r\n import { SesionService } from '../../service/sesionService';\r\n import { FormsModule } from '@angular/forms';\r\n import { Foro } from '../../models/Foro';\r\n+import { ForosService } from '../../service/ForosService';\r\n \r\n @Component({\r\n     selector: 'app-crear-foro',\r\n     standalone: true,\r\n@@ -21,9 +22,9 @@\n \r\n \r\n     constructor(\r\n         private sesionService:SesionService,\r\n-        private foroService:\r\n+        private foroService:ForosService,\r\n     ){}\r\n     ngOnInit(): void {\r\n     \r\n         this.sesionService.obtenerSesion().subscribe(\r\n"
+                },
+                {
+                    "date": 1719982083455,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n \r\n \r\n     constructor(\r\n         private sesionService:SesionService,\r\n-        private foroService:ForosService,\r\n+        private foroService:ForosService\r\n     ){}\r\n     ngOnInit(): void {\r\n     \r\n         this.sesionService.obtenerSesion().subscribe(\r\n@@ -36,11 +36,11 @@\n         \r\n     }\r\n \r\n     nuevoForo( foro : Foro) {\r\n+        \r\n \r\n \r\n \r\n-\r\n     }\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719982089873,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n         \r\n     }\r\n \r\n     nuevoForo( foro : Foro) {\r\n-        \r\n+        let obje\r\n \r\n \r\n \r\n     }\r\n"
+                },
+                {
+                    "date": 1719982097811,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,11 @@\n         \r\n     }\r\n \r\n     nuevoForo( foro : Foro) {\r\n-        let obje\r\n+        let objectForo:Foro={\r\n+            \r\n+        }\r\n \r\n \r\n \r\n     }\r\n"
+                },
+                {
+                    "date": 1719982113726,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,10 @@\n \r\n \r\n     constructor(\r\n         private sesionService:SesionService,\r\n-        private foroService:ForosService\r\n+        private foroService:ForosService,\r\n+        private categorias\r\n     ){}\r\n     ngOnInit(): void {\r\n     \r\n         this.sesionService.obtenerSesion().subscribe(\r\n@@ -37,9 +38,14 @@\n     }\r\n \r\n     nuevoForo( foro : Foro) {\r\n         let objectForo:Foro={\r\n-            \r\n+            foroId: 0,\r\n+            titulo: '',\r\n+            descripcion: '',\r\n+            fechaCreacion: undefined,\r\n+            obj_Usuario: new Usuario,\r\n+            obj_CategoriaForo: new CategoriaForos\r\n         }\r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1719982120636,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n import { SesionService } from '../../service/sesionService';\r\n import { FormsModule } from '@angular/forms';\r\n import { Foro } from '../../models/Foro';\r\n import { ForosService } from '../../service/ForosService';\r\n+import { CategoriaForosService } from '../../service/categoriaForosService';\r\n \r\n @Component({\r\n     selector: 'app-crear-foro',\r\n     standalone: true,\r\n@@ -23,9 +24,9 @@\n \r\n     constructor(\r\n         private sesionService:SesionService,\r\n         private foroService:ForosService,\r\n-        private categorias\r\n+        private categoriasForoService:CategoriaForosService,\r\n     ){}\r\n     ngOnInit(): void {\r\n     \r\n         this.sesionService.obtenerSesion().subscribe(\r\n"
+                },
+                {
+                    "date": 1719982132168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n import { FormsModule } from '@angular/forms';\r\n import { Foro } from '../../models/Foro';\r\n import { ForosService } from '../../service/ForosService';\r\n import { CategoriaForosService } from '../../service/categoriaForosService';\r\n+import { CategoriaForos } from '../../models/categoria-foros';\r\n \r\n @Component({\r\n     selector: 'app-crear-foro',\r\n     standalone: true,\r\n@@ -19,8 +20,9 @@\n export class CrearForoComponent implements OnInit{\r\n \r\n \r\n     sesion!:Sesion;\r\n+    categoriaForos!:CategoriaForos;\r\n \r\n \r\n     constructor(\r\n         private sesionService:SesionService,\r\n"
+                },
+                {
+                    "date": 1719982200320,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,15 +20,15 @@\n export class CrearForoComponent implements OnInit{\r\n \r\n \r\n     sesion!:Sesion;\r\n-    categoriaForos!:CategoriaForos;\r\n+    categoriaForos!:CategoriaForos[];\r\n \r\n \r\n     constructor(\r\n         private sesionService:SesionService,\r\n         private foroService:ForosService,\r\n-        private categoriasForoService:CategoriaForosService,\r\n+        private categoriasForoService:CategoriaForosService\r\n     ){}\r\n     ngOnInit(): void {\r\n     \r\n         this.sesionService.obtenerSesion().subscribe(\r\n"
+                },
+                {
+                    "date": 1719982270835,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,8 +34,18 @@\n         this.sesionService.obtenerSesion().subscribe(\r\n             (response) => {\r\n                 console.log(response);\r\n                 this.sesion = response;\r\n+                if (this.sesion) {\r\n+                    this.categoriaForoService.listar().subscribe(\r\n+                      (response) => {\r\n+                        console.log(response);\r\n+                        this.categoriasForos = response;\r\n+                        this.filteredCategorias = this.categoriasForos;\r\n+                        this.cargarForos();\r\n+                      }\r\n+                    );\r\n+                  }\r\n             }\r\n         );\r\n         \r\n     }\r\n"
+                },
+                {
+                    "date": 1719982280590,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,66 @@\n+import { CommonModule } from '@angular/common';\r\n+import { Component, OnInit } from '@angular/core';\r\n+import { HeaderComponent } from \"../header/header.component\";\r\n+import { AsideComponent } from \"../aside/aside.component\";\r\n+import { Sesion } from '../../models/sesion';\r\n+import { SesionService } from '../../service/sesionService';\r\n+import { FormsModule } from '@angular/forms';\r\n+import { Foro } from '../../models/Foro';\r\n+import { ForosService } from '../../service/ForosService';\r\n+import { CategoriaForosService } from '../../service/categoriaForosService';\r\n+import { CategoriaForos } from '../../models/categoria-foros';\r\n+\r\n+@Component({\r\n+    selector: 'app-crear-foro',\r\n+    standalone: true,\r\n+    templateUrl: './crear-foro.component.html',\r\n+    styleUrl: './crear-foro.component.css',\r\n+    imports: [CommonModule, HeaderComponent, AsideComponent,FormsModule]\r\n+})\r\n+export class CrearForoComponent implements OnInit{\r\n+\r\n+\r\n+    sesion!:Sesion;\r\n+    categoriaForos!:CategoriaForos[];\r\n+\r\n+\r\n+    constructor(\r\n+        private sesionService:SesionService,\r\n+        private foroService:ForosService,\r\n+        private categoriasForoService:CategoriaForosService\r\n+    ){}\r\n+    ngOnInit(): void {\r\n+    \r\n+        this.sesionService.obtenerSesion().subscribe(\r\n+            (response) => {\r\n+                console.log(response);\r\n+                this.sesion = response;\r\n+                if (this.sesion) {\r\n+                    this.categoriasForoService.listar().subscribe(\r\n+                      (response) => {\r\n+                        console.log(response);\r\n+                        this.categoriasForos = response;\r\n+\r\n+                      }\r\n+                    );\r\n+                  }\r\n+            }\r\n+        );\r\n+        \r\n+    }\r\n+\r\n+    nuevoForo( foro : Foro) {\r\n+        let objectForo:Foro={\r\n+            foroId: 0,\r\n+            titulo: '',\r\n+            descripcion: '',\r\n+            fechaCreacion: undefined,\r\n+            obj_Usuario: new Usuario,\r\n+            obj_CategoriaForo: new CategoriaForos\r\n+        }\r\n+\r\n+\r\n+\r\n+    }\r\n+\r\n+}\r\n"
+                },
+                {
+                    "date": 1719982287403,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,13 +38,13 @@\n                 if (this.sesion) {\r\n                     this.categoriasForoService.listar().subscribe(\r\n                       (response) => {\r\n                         console.log(response);\r\n-                        this.categoriasForos = response;\r\n+                        this.categoriaForos = response;\r\n \r\n                       }\r\n                     );\r\n-                  }\r\n+                }\r\n             }\r\n         );\r\n         \r\n     }\r\n@@ -63,71 +63,4 @@\n \r\n     }\r\n \r\n }\r\n-import { CommonModule } from '@angular/common';\r\n-import { Component, OnInit } from '@angular/core';\r\n-import { HeaderComponent } from \"../header/header.component\";\r\n-import { AsideComponent } from \"../aside/aside.component\";\r\n-import { Sesion } from '../../models/sesion';\r\n-import { SesionService } from '../../service/sesionService';\r\n-import { FormsModule } from '@angular/forms';\r\n-import { Foro } from '../../models/Foro';\r\n-import { ForosService } from '../../service/ForosService';\r\n-import { CategoriaForosService } from '../../service/categoriaForosService';\r\n-import { CategoriaForos } from '../../models/categoria-foros';\r\n-\r\n-@Component({\r\n-    selector: 'app-crear-foro',\r\n-    standalone: true,\r\n-    templateUrl: './crear-foro.component.html',\r\n-    styleUrl: './crear-foro.component.css',\r\n-    imports: [CommonModule, HeaderComponent, AsideComponent,FormsModule]\r\n-})\r\n-export class CrearForoComponent implements OnInit{\r\n-\r\n-\r\n-    sesion!:Sesion;\r\n-    categoriaForos!:CategoriaForos[];\r\n-\r\n-\r\n-    constructor(\r\n-        private sesionService:SesionService,\r\n-        private foroService:ForosService,\r\n-        private categoriasForoService:CategoriaForosService\r\n-    ){}\r\n-    ngOnInit(): void {\r\n-    \r\n-        this.sesionService.obtenerSesion().subscribe(\r\n-            (response) => {\r\n-                console.log(response);\r\n-                this.sesion = response;\r\n-                if (this.sesion) {\r\n-                    this.categoriaForoService.listar().subscribe(\r\n-                      (response) => {\r\n-                        console.log(response);\r\n-                        this.categoriasForos = response;\r\n-                        this.filteredCategorias = this.categoriasForos;\r\n-                        this.cargarForos();\r\n-                      }\r\n-                    );\r\n-                  }\r\n-            }\r\n-        );\r\n-        \r\n-    }\r\n-\r\n-    nuevoForo( foro : Foro) {\r\n-        let objectForo:Foro={\r\n-            foroId: 0,\r\n-            titulo: '',\r\n-            descripcion: '',\r\n-            fechaCreacion: undefined,\r\n-            obj_Usuario: new Usuario,\r\n-            obj_CategoriaForo: new CategoriaForos\r\n-        }\r\n-\r\n-\r\n-\r\n-    }\r\n-\r\n-}\r\n"
+                },
+                {
+                    "date": 1719982470736,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,9 @@\n     }\r\n \r\n     nuevoForo( foro : Foro) {\r\n         let objectForo:Foro={\r\n-            foroId: 0,\r\n+            foroId: null,\r\n             titulo: '',\r\n             descripcion: '',\r\n             fechaCreacion: undefined,\r\n             obj_Usuario: new Usuario,\r\n"
+                },
+                {
+                    "date": 1719982479521,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,9 +51,9 @@\n \r\n     nuevoForo( foro : Foro) {\r\n         let objectForo:Foro={\r\n             foroId: null,\r\n-            titulo: '',\r\n+            titulo: foro.,\r\n             descripcion: '',\r\n             fechaCreacion: undefined,\r\n             obj_Usuario: new Usuario,\r\n             obj_CategoriaForo: new CategoriaForos\r\n"
+                },
+                {
+                    "date": 1719982488814,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,10 +51,10 @@\n \r\n     nuevoForo( foro : Foro) {\r\n         let objectForo:Foro={\r\n             foroId: null,\r\n-            titulo: foro.,\r\n-            descripcion: '',\r\n+            titulo: foro.titulo,\r\n+            descripcion: foro.descripcion,\r\n             fechaCreacion: undefined,\r\n             obj_Usuario: new Usuario,\r\n             obj_CategoriaForo: new CategoriaForos\r\n         }\r\n"
+                },
+                {
+                    "date": 1719982532426,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,11 @@\n     styleUrl: './crear-foro.component.css',\r\n     imports: [CommonModule, HeaderComponent, AsideComponent,FormsModule]\r\n })\r\n export class CrearForoComponent implements OnInit{\r\n+retornar() {\r\n+throw new Error('Method not implemented.');\r\n+}\r\n \r\n \r\n     sesion!:Sesion;\r\n     categoriaForos!:CategoriaForos[];\r\n@@ -53,9 +56,9 @@\n         let objectForo:Foro={\r\n             foroId: null,\r\n             titulo: foro.titulo,\r\n             descripcion: foro.descripcion,\r\n-            fechaCreacion: undefined,\r\n+            fechaCreacion: foro.fechaCreacion,\r\n             obj_Usuario: new Usuario,\r\n             obj_CategoriaForo: new CategoriaForos\r\n         }\r\n \r\n"
+                },
+                {
+                    "date": 1719982540335,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,13 +17,11 @@\n     styleUrl: './crear-foro.component.css',\r\n     imports: [CommonModule, HeaderComponent, AsideComponent,FormsModule]\r\n })\r\n export class CrearForoComponent implements OnInit{\r\n-retornar() {\r\n-throw new Error('Method not implemented.');\r\n-}\r\n \r\n \r\n+\r\n     sesion!:Sesion;\r\n     categoriaForos!:CategoriaForos[];\r\n \r\n \r\n@@ -65,5 +63,9 @@\n \r\n \r\n     }\r\n \r\n+    retornar() {\r\n+        throw new Error('Method not implemented.');\r\n+        }\r\n+\r\n }\r\n"
+                },
+                {
+                    "date": 1719982557051,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,9 @@\n             foroId: null,\r\n             titulo: foro.titulo,\r\n             descripcion: foro.descripcion,\r\n             fechaCreacion: foro.fechaCreacion,\r\n-            obj_Usuario: new Usuario,\r\n+            obj_Usuario: th,\r\n             obj_CategoriaForo: new CategoriaForos\r\n         }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1719982564203,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,9 @@\n             foroId: null,\r\n             titulo: foro.titulo,\r\n             descripcion: foro.descripcion,\r\n             fechaCreacion: foro.fechaCreacion,\r\n-            obj_Usuario: th,\r\n+            obj_Usuario: this.sesion.obj_Usuario,\r\n             obj_CategoriaForo: new CategoriaForos\r\n         }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1719982570175,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n             titulo: foro.titulo,\r\n             descripcion: foro.descripcion,\r\n             fechaCreacion: foro.fechaCreacion,\r\n             obj_Usuario: this.sesion.obj_Usuario,\r\n-            obj_CategoriaForo: new CategoriaForos\r\n+            obj_CategoriaForo: foro.obj_CategoriaForo\r\n         }\r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1719982932390,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,11 +58,11 @@\n             fechaCreacion: foro.fechaCreacion,\r\n             obj_Usuario: this.sesion.obj_Usuario,\r\n             obj_CategoriaForo: foro.obj_CategoriaForo\r\n         }\r\n+        \r\n \r\n \r\n-\r\n     }\r\n \r\n     retornar() {\r\n         throw new Error('Method not implemented.');\r\n"
+                },
+                {
+                    "date": 1719982939936,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n             fechaCreacion: foro.fechaCreacion,\r\n             obj_Usuario: this.sesion.obj_Usuario,\r\n             obj_CategoriaForo: foro.obj_CategoriaForo\r\n         }\r\n-        this.foroService.registrar\r\n+        this.foroService.registrar()\r\n \r\n \r\n     }\r\n \r\n"
+                },
+                {
+                    "date": 1719982946793,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n             fechaCreacion: foro.fechaCreacion,\r\n             obj_Usuario: this.sesion.obj_Usuario,\r\n             obj_CategoriaForo: foro.obj_CategoriaForo\r\n         }\r\n-        this.foroService.registrar(objectForo).subscribe\r\n+        this.foroService.registrar(objectForo).subscribe()\r\n \r\n \r\n     }\r\n \r\n"
+                }
+            ],
+            "date": 1719979728152,
+            "name": "Commit-0",
+            "content": "import { CommonModule } from '@angular/common';\r\nimport { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-crear-foro',\r\n  standalone: true,\r\n  imports: [CommonModule],\r\n  templateUrl: './crear-foro.component.html',\r\n  styleUrl: './crear-foro.component.css'\r\n})\r\nexport class CrearForoComponent {\r\n\r\n}\r\n"
+        }
+    ]
+}

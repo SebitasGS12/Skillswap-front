@@ -1,0 +1,70 @@
+{
+    "sourceFile": "src/app/models/mensajes.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 13,
+            "patches": [
+                {
+                    "date": 1719765835923,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1719765842165,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n export class Mnensajes{\r\n-\"mensajeId\": 1,\r\n+        \"mensajeId\": 1,\r\n         \"contenido\": \"Hola, ¿cómo estás?\",\r\n         \"fechaEnvio\": \"2023-01-01\",\r\n         \"obj_Usuario\": {\r\n             \"usuarioId\": 1,\r\n@@ -12,11 +12,6 @@\n                 \"tipoUsuarioID\": 1,\r\n                 \"descripcion\": \"Admin\"\r\n             }\r\n         },\r\n-        \"chat\": {\r\n-            \"chatId\": 1,\r\n-            \"nombre\": \"Sala de Chat 1\",\r\n-            \"fechaCreacion\": \"2023-01-01\",\r\n-            \"fechaModificacion\": \"2023-01-01\"\r\n-        }\r\n+        \"chat\":\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719765851273,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,17 +1,7 @@\n export class Mnensajes{\r\n-        \"mensajeId\": 1,\r\n+        \"mensajeId\": number,\r\n         \"contenido\": \"Hola, ¿cómo estás?\",\r\n         \"fechaEnvio\": \"2023-01-01\",\r\n-        \"obj_Usuario\": {\r\n-            \"usuarioId\": 1,\r\n-            \"correo\": \"admin@example.com\",\r\n-            \"contrasenia\": \"contrasenia1\",\r\n-            \"fechaRegistro\": \"2023-01-01\",\r\n-            \"estado\": true,\r\n-            \"obj_tipoUsuario\": {\r\n-                \"tipoUsuarioID\": 1,\r\n-                \"descripcion\": \"Admin\"\r\n-            }\r\n-        },\r\n+        \"obj_Usuario\":\r\n         \"chat\":\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719765858859,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export class Mnensajes{\r\n         \"mensajeId\": number,\r\n-        \"contenido\": \"Hola, ¿cómo estás?\",\r\n-        \"fechaEnvio\": \"2023-01-01\",\r\n+        \"contenido\": string,\r\n+        \"fechaEnvio\": date,\r\n         \"obj_Usuario\":\r\n         \"chat\":\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719765866277,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,10 @@\n+import { Chat } from \"./chat\"\r\n+import { Usuario } from \"./usuario\"\r\n+\r\n export class Mnensajes{\r\n         \"mensajeId\": number,\r\n         \"contenido\": string,\r\n         \"fechaEnvio\": date,\r\n-        \"obj_Usuario\":\r\n-        \"chat\":\r\n+        \"obj_Usuario\": Usuario,\r\n+        \"chat\": Chat,\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719765872600,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import { Chat } from \"./chat\"\r\n import { Usuario } from \"./usuario\"\r\n \r\n export class Mnensajes{\r\n-        \"mensajeId\": number,\r\n-        \"contenido\": string,\r\n-        \"fechaEnvio\": date,\r\n-        \"obj_Usuario\": Usuario,\r\n-        \"chat\": Chat,\r\n+        mensajeId\": number,\r\n+        contenido\": string,\r\n+        fechaEnvio\": date,\r\n+        obj_Usuario: Usuario,\r\n+        chat\": Chat,\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719765880704,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import { Chat } from \"./chat\"\r\n import { Usuario } from \"./usuario\"\r\n \r\n export class Mnensajes{\r\n-        mensajeId\": number,\r\n-        contenido\": string,\r\n-        fechaEnvio\": date,\r\n+        mensajeId: number;\r\n+        contenido: string;\r\n+        fechaEnvio: date;\r\n         obj_Usuario: Usuario,\r\n-        chat\": Chat,\r\n+        chat: Chat,\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719765887546,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import { Chat } from \"./chat\"\r\n import { Usuario } from \"./usuario\"\r\n \r\n export class Mnensajes{\r\n-        mensajeId: number;\r\n+        mensajeId!: number;\r\n         contenido: string;\r\n-        fechaEnvio: date;\r\n-        obj_Usuario: Usuario,\r\n-        chat: Chat,\r\n+        fechaEnvio: Date;\r\n+        obj_Usuario: Usuario;\r\n+        chat: Chat;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719765897355,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import { Chat } from \"./chat\"\r\n import { Usuario } from \"./usuario\"\r\n \r\n-export class Mnensajes{\r\n+export class Mensajes{\r\n         mensajeId!: number;\r\n-        contenido: string;\r\n-        fechaEnvio: Date;\r\n-        obj_Usuario: Usuario;\r\n-        chat: Chat;\r\n+        contenido!: string;\r\n+        fechaEnvio!: Date;\r\n+        obj_Usuario!: Usuario;\r\n+        chat!: Chat;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719783439657,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,5 +6,7 @@\n         contenido!: string;\r\n         fechaEnvio!: Date;\r\n         obj_Usuario!: Usuario;\r\n         chat!: Chat;\r\n+\r\n+        \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719783808923,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,12 @@\n import { Chat } from \"./chat\"\r\n import { Usuario } from \"./usuario\"\r\n \r\n-export class Mensajes{\r\n+export interface Mensajes{\r\n         mensajeId!: number;\r\n         contenido!: string;\r\n         fechaEnvio!: Date;\r\n         obj_Usuario!: Usuario;\r\n         chat!: Chat;\r\n \r\n-        \r\n+\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719783814118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,12 @@\n import { Chat } from \"./chat\"\r\n import { Usuario } from \"./usuario\"\r\n \r\n export interface Mensajes{\r\n-        mensajeId!: number;\r\n-        contenido!: string;\r\n-        fechaEnvio!: Date;\r\n-        obj_Usuario!: Usuario;\r\n-        chat!: Chat;\r\n+        mensajeId: number;\r\n+        contenido: string;\r\n+        fechaEnvio: Date;\r\n+        obj_Usuario: Usuario;\r\n+        chat: Chat;\r\n \r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719783849670,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,12 @@\n import { Chat } from \"./chat\"\r\n import { Usuario } from \"./usuario\"\r\n \r\n-export interface Mensajes{\r\n-        mensajeId: number;\r\n-        contenido: string;\r\n-        fechaEnvio: Date;\r\n-        obj_Usuario: Usuario;\r\n-        chat: Chat;\r\n+export class Mensajes{\r\n+        mensajeId!: number;\r\n+        contenido!: string;\r\n+        fechaEnvio!: Date;\r\n+        obj_Usuario!: Usuario;\r\n+        chat!: Chat;\r\n \r\n-\r\n+        \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719783970423,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { Chat } from \"./chat\"\r\n import { Usuario } from \"./usuario\"\r\n \r\n export class Mensajes{\r\n-        mensajeId!: number;\r\n+        mensajeId!: number | null;\r\n         contenido!: string;\r\n         fechaEnvio!: Date;\r\n         obj_Usuario!: Usuario;\r\n         chat!: Chat;\r\n"
+                }
+            ],
+            "date": 1719765835923,
+            "name": "Commit-0",
+            "content": "export class Mnensajes{\r\n\"mensajeId\": 1,\r\n        \"contenido\": \"Hola, ¿cómo estás?\",\r\n        \"fechaEnvio\": \"2023-01-01\",\r\n        \"obj_Usuario\": {\r\n            \"usuarioId\": 1,\r\n            \"correo\": \"admin@example.com\",\r\n            \"contrasenia\": \"contrasenia1\",\r\n            \"fechaRegistro\": \"2023-01-01\",\r\n            \"estado\": true,\r\n            \"obj_tipoUsuario\": {\r\n                \"tipoUsuarioID\": 1,\r\n                \"descripcion\": \"Admin\"\r\n            }\r\n        },\r\n        \"chat\": {\r\n            \"chatId\": 1,\r\n            \"nombre\": \"Sala de Chat 1\",\r\n            \"fechaCreacion\": \"2023-01-01\",\r\n            \"fechaModificacion\": \"2023-01-01\"\r\n        }\r\n}"
+        }
+    ]
+}

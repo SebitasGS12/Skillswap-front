@@ -1,0 +1,34 @@
+{
+    "sourceFile": "src/app/service/respuestasService.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1719972842555,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1719972847651,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n @Injectable({\r\n     providedIn:'root'\r\n })\r\n export class RespuestasService {\r\n-    private baseUrl = Datos.API_URL+\"Discusiones\" ;\r\n+    private baseUrl = Datos.API_URL+\"Respuestas\" ;\r\n     constructor(private http: HttpClient){}\r\n \r\n     public listar():Observable<Discuciones[]>{\r\n         return this.http.get<Discuciones[]>(this.baseUrl);\r\n"
+                },
+                {
+                    "date": 1719972854449,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n export class RespuestasService {\r\n     private baseUrl = Datos.API_URL+\"Respuestas\" ;\r\n     constructor(private http: HttpClient){}\r\n \r\n-    public listar():Observable<Discuciones[]>{\r\n+    public listar():Observable<Respuestas[]>{\r\n         return this.http.get<Discuciones[]>(this.baseUrl);\r\n     }\r\n \r\n     public registrar(discuciones: Discuciones): Observable<Discuciones> {\r\n"
+                },
+                {
+                    "date": 1719972861473,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n import { CategoriaHabilidad } from \"../models/categoria-habilidad\";\r\n import { CategoriaForos } from \"../models/categoria-foros\";\r\n import { Foro } from \"../models/Foro\";\r\n import { Discuciones } from \"../models/discuciones\";\r\n+import { Respuestas } from \"../models/respuestas\";\r\n \r\n \r\n @Injectable({\r\n     providedIn:'root'\r\n@@ -15,15 +16,15 @@\n     private baseUrl = Datos.API_URL+\"Respuestas\" ;\r\n     constructor(private http: HttpClient){}\r\n \r\n     public listar():Observable<Respuestas[]>{\r\n-        return this.http.get<Discuciones[]>(this.baseUrl);\r\n+        return this.http.get<Respuestas[]>(this.baseUrl);\r\n     }\r\n \r\n-    public registrar(discuciones: Discuciones): Observable<Discuciones> {\r\n+    public registrar(discuciones: Respuestas): Observable<Respuestas> {\r\n     return this.http.post<any>(this.baseUrl, discuciones);\r\n     }\r\n \r\n-    public buscar(id : number): Observable<Discuciones> {\r\n-    return this.http.get<Discuciones>(this.baseUrl + `/${id}`);\r\n+    public buscar(id : number): Observable<Respuestas> {\r\n+    return this.http.get<Respuestas>(this.baseUrl + `/${id}`);\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1719977447456,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     public listar():Observable<Respuestas[]>{\r\n         return this.http.get<Respuestas[]>(this.baseUrl);\r\n     }\r\n \r\n-    public registrar(discuciones: Respuestas): Observable<Respuestas> {\r\n+    public registrar(respuesta: Respuestas): Observable<Respuestas> {\r\n     return this.http.post<any>(this.baseUrl, discuciones);\r\n     }\r\n \r\n     public buscar(id : number): Observable<Respuestas> {\r\n"
+                }
+            ],
+            "date": 1719972842555,
+            "name": "Commit-0",
+            "content": "import { Injectable } from \"@angular/core\";\r\nimport { Datos } from \"../constants/datos\";\r\nimport { HttpClient } from \"@angular/common/http\";\r\nimport { Observable } from \"rxjs\";\r\nimport { CategoriaHabilidad } from \"../models/categoria-habilidad\";\r\nimport { CategoriaForos } from \"../models/categoria-foros\";\r\nimport { Foro } from \"../models/Foro\";\r\nimport { Discuciones } from \"../models/discuciones\";\r\n\r\n\r\n@Injectable({\r\n    providedIn:'root'\r\n})\r\nexport class RespuestasService {\r\n    private baseUrl = Datos.API_URL+\"Discusiones\" ;\r\n    constructor(private http: HttpClient){}\r\n\r\n    public listar():Observable<Discuciones[]>{\r\n        return this.http.get<Discuciones[]>(this.baseUrl);\r\n    }\r\n\r\n    public registrar(discuciones: Discuciones): Observable<Discuciones> {\r\n    return this.http.post<any>(this.baseUrl, discuciones);\r\n    }\r\n\r\n    public buscar(id : number): Observable<Discuciones> {\r\n    return this.http.get<Discuciones>(this.baseUrl + `/${id}`);\r\n    }\r\n}"
+        }
+    ]
+}

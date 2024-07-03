@@ -1,0 +1,26 @@
+<app-header></app-header>
+<div class="division">
+  <app-aside></app-aside>
+  <div class="foro-skillswap">
+    <div class="contenedor-foros">
+      <div class="informacion">
+        <div class="datos">
+          <h2>{{foro?.titulo}}</h2>
+          <h4>{{foro?.descripcion}}</h4>
+        </div>
+        <div class="nuevo">
+          <a class="btn btn-primary" [routerLink]="['/crearDiscucion',foro?.foroId]">Nueva Discucion</a>
+        </div>
+      </div>
+      <br>
+      <div class="foro" *ngFor="let discusion of discuciones; let i = index">
+        <a href="" class="foro_item" [routerLink]="['/discucion', discusion.discusionesId]" >
+          <h4>{{ discusion.titulo }}</h4>
+          <h3>{{ discusion.descripcion }} respuestas</h3>
+          <p>{{ buscarPerfil( discusion.obj_Usuario)?.nombre }}</p>
+          <span class="fecha">{{ discusion.fechaCreacion | date }}</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

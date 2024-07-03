@@ -1,0 +1,34 @@
+<div class="body">
+  <div class="container" id="container">
+    <div class="form-container sign-up">
+      <form (ngSubmit)="register(userForm.value)" #userForm="ngForm">
+        <h1>Crear cuenta de SkillSwap</h1>
+          <input type="email" placeholder="Correo Electronico" name="correo" ngModel required />
+          <input type="password" placeholder="Contraseña" name="contrasenia" ngModel required />
+        <button type="submit">Registrarse</button>
+      </form>
+    </div>
+    <div class="form-container sign-in">
+      <form (ngSubmit)="login(credentialsForm.value)" #credentialsForm="ngForm" >
+        <h1>Iniciar sesión en SkillSwap</h1>
+        <input type="email" placeholder="Correo electronico" name="correo" ngModel required />
+        <input type="password" placeholder="Contraseña" name="contrasenia" ngModel required />
+        <button type="submit">Ingresar</button>
+      </form>
+    </div>
+    <div class="toggle-container">
+      <div class="toggle">
+        <div class="toggle-panel toggle-left">
+          <h1>¿Ya tienes una cuenta?</h1>
+          <p>Inicia sesión para entrar en la página</p>
+          <button class="hidden" id="login">Iniciar sesión</button>
+        </div>
+        <div class="toggle-panel toggle-right">
+          <h1>¿Aún no tienes una cuenta?</h1>
+          <p>Regístrate para que puedas iniciar sesión</p>
+          <button class="hidden" id="register">Registrarse</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

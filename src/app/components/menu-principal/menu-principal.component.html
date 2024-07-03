@@ -1,0 +1,60 @@
+<!-- src/app/menu-principal/menu-principal.component.html -->
+<header>
+    <div class="logo">
+        <img src="./assets/images/logo.png" alt="SkillSwap Logo">
+        <h1>SkillSwap</h1>
+    </div>
+    <div>
+        <a [routerLink]="['/iniciarSesion']" class="login">Iniciar Sesión</a>
+    </div>
+    
+</header>
+<section class="bienvenido">
+    <div class="carrusel">
+        <img src="./assets/images/abanner.jpg" alt="Imagen 1" class="activa">
+        <img src="./assets/images/abanner1.jpg" alt="Imagen 2">
+        <img src="./assets/images/abanner2.jpg" alt="Imagen 3">
+        <img src="./assets/images/abanner3.jpg" alt="Imagen 4">
+        <div class="carrusel-movimiento">
+            <div class="activa" data-slide="0"></div>
+            <div data-slide="1"></div>
+            <div data-slide="2"></div>
+            <div data-slide="3"></div>
+        </div>
+    </div>
+    <div class="contenido">
+        <h1>Bienvenido a SkillSwap</h1>
+        <p>Conéctese con personas que pueden ayudarlo a aprender nuevas<br>
+            habilidades o compartir su experiencia con otros.</p>
+        <div class="buscar">
+            <div class="buscar-input">
+                <input type="text" placeholder="Buscar una habilidad, materia o tema.">
+                <img src="./assets/images/buscar.png" alt="Icono Lupa">
+                <button>Buscar</button>
+            </div>
+        </div>
+    </div>
+</section>
+<h2>Explora por las Categorias:</h2>
+<section class="categorias">
+    <div>
+        <img src="./assets/images/programacion.jpg" alt="Programación">
+        <p>Programación</p>
+    </div>
+    <div>
+        <img src="./assets/images/escritura.jpg" alt="Escritura">
+        <p>Escritura</p>
+    </div>
+    <div>
+        <img src="./assets/images/cocina.jpg" alt="Cocina">
+        <p>Cocina</p>
+    </div>
+    <div>
+        <img src="./assets/images/fotografia.jpg" alt="Fotografía">
+        <p>Fotografía</p>
+    </div>
+    <div>
+        <img src="./assets/images/musica.jpg" alt="Música">
+        <p>Música</p>
+    </div>
+</section>

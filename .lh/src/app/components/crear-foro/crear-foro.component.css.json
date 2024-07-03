@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/app/components/crear-foro/crear-foro.component.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1719980237490,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1719980248828,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n .container {\r\n     max-width: 100%;\r\n-    height: ;\r\n+    min-height: 100vh;\r\n+\r\n   }\r\n   \r\n   .card {\r\n     max-width: 500px;\r\n"
+                },
+                {
+                    "date": 1719980254534,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n .container {\r\n     max-width: 100%;\r\n-    min-height: 100vh;\r\n+    min-height: 00%;\r\n \r\n   }\r\n   \r\n   .card {\r\n"
+                },
+                {
+                    "date": 1719980264501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n .container {\r\n     max-width: 100%;\r\n-    min-height: 00%;\r\n-\r\n+    min-height: 100%;\r\n+    height: 100vh;\r\n   }\r\n   \r\n   .card {\r\n     max-width: 500px;\r\n"
+                },
+                {
+                    "date": 1719980390286,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n .container {\r\n     max-width: 100%;\r\n     min-height: 100%;\r\n     height: 100vh;\r\n+    background-color: #;\r\n   }\r\n   \r\n   .card {\r\n     max-width: 500px;\r\n"
+                },
+                {
+                    "date": 1719980399093,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n .container {\r\n     max-width: 100%;\r\n     min-height: 100%;\r\n     height: 100vh;\r\n-    background-color: #;\r\n+    background-color: #0F1A24;\r\n   }\r\n   \r\n   .card {\r\n     max-width: 500px;\r\n"
+                }
+            ],
+            "date": 1719980237490,
+            "name": "Commit-0",
+            "content": ".container {\r\n    max-width: 100%;\r\n    height: ;\r\n  }\r\n  \r\n  .card {\r\n    max-width: 500px;\r\n    margin: auto;\r\n  }\r\n  \r\n  .card-header {\r\n    padding: 1rem;\r\n  }\r\n  \r\n  .card-body {\r\n    padding: 1.5rem;\r\n  }\r\n  \r\n  .form-group {\r\n    margin-bottom: 1.5rem;\r\n  }\r\n  \r\n  .btn {\r\n    min-width: 100px;\r\n  }\r\n  "
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/app/components/notificaciones/notificaciones.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1719630116796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1719635079964,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,14 @@\n+import { CommonModule } from '@angular/common';\r\n import { Component } from '@angular/core';\r\n+import { AsideComponent } from \"../aside/aside.component\";\r\n \r\n @Component({\r\n-  selector: 'app-notificaciones',\r\n-  standalone: true,\r\n-  imports: [Common],\r\n-  templateUrl: './notificaciones.component.html',\r\n-  styleUrl: './notificaciones.component.css'\r\n+    selector: 'app-notificaciones',\r\n+    standalone: true,\r\n+    templateUrl: './notificaciones.component.html',\r\n+    styleUrl: './notificaciones.component.css',\r\n+    imports: [CommonModule, AsideComponent]\r\n })\r\n export class NotificacionesComponent {\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1719871738719,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n           .obtenerNotificacionesByUsuario(this.sesion.obj_Usuario.usuarioId)\r\n           .subscribe((response) => {\r\n             console.log(response);\r\n             this.notificaciones = response;\r\n-            this.notificaciones.reverse\r\n+            this.notificaciones.reverse()\r\n           });\r\n       }\r\n     });\r\n   }\r\n"
+                },
+                {
+                    "date": 1719961658655,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n \r\n \r\n   gestionarSolicitud(notificacion: Notificacion,estado: boolean) {\r\n   \r\n-    let amistad:\r\n+    let amistad:A\r\n \r\n \r\n   \r\n   \r\n"
+                }
+            ],
+            "date": 1719630116796,
+            "name": "Commit-0",
+            "content": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-notificaciones',\r\n  standalone: true,\r\n  imports: [Common],\r\n  templateUrl: './notificaciones.component.html',\r\n  styleUrl: './notificaciones.component.css'\r\n})\r\nexport class NotificacionesComponent {\r\n\r\n}\r\n"
+        }
+    ]
+}

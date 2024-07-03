@@ -1,0 +1,62 @@
+{
+    "sourceFile": "src/app/service/usuarioService.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1719615265300,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1719615271609,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,15 @@\n import { Injectable } from \"@angular/core\";\r\n import { Datos } from \"../constants/datos\";\r\n import { HttpClient } from \"@angular/common/http\";\r\n import { Observable } from \"rxjs\";\r\n-import { Amistades } from \"../models/amistades\";\r\n \r\n \r\n @Injectable({\r\n     providedIn:'root'\r\n })\r\n export class UsuarioService {\r\n-    private baseUrl = Datos.API_URL+\"Amistades\" ;\r\n+    private baseUrl = Datos.API_URL+\"Usuario\" ;\r\n     constructor(private http: HttpClient){}\r\n \r\n     public listar():Observable<Amistades[]>{\r\n         return this.http.get<Amistades[]>(this.baseUrl);\r\n"
+                },
+                {
+                    "date": 1719615277373,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import { Injectable } from \"@angular/core\";\r\n import { Datos } from \"../constants/datos\";\r\n import { HttpClient } from \"@angular/common/http\";\r\n import { Observable } from \"rxjs\";\r\n+import { Usuario } from \"../models/usuario\";\r\n \r\n \r\n @Injectable({\r\n     providedIn:'root'\r\n@@ -10,9 +11,9 @@\n export class UsuarioService {\r\n     private baseUrl = Datos.API_URL+\"Usuario\" ;\r\n     constructor(private http: HttpClient){}\r\n \r\n-    public listar():Observable<Amistades[]>{\r\n+    public listar():Observable<Usuario[]>{\r\n         return this.http.get<Amistades[]>(this.baseUrl);\r\n     }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1719615288151,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,15 @@\n     private baseUrl = Datos.API_URL+\"Usuario\" ;\r\n     constructor(private http: HttpClient){}\r\n \r\n     public listar():Observable<Usuario[]>{\r\n-        return this.http.get<Amistades[]>(this.baseUrl);\r\n+        return this.http.get<Usuario[]>(this.baseUrl);\r\n     }\r\n \r\n-\r\n+    public registrar(habilidad: Habilidad): Observable<any> {\r\n+        return this.http.post<any>(this.baseUrl, habilidad);\r\n+      }\r\n+      \r\n+      public buscar(id : string): Observable<Habilidad> {\r\n+        return this.http.get<Habilidad>(this.baseUrl + `/${id}`);\r\n+      }\r\n }\r\n"
+                },
+                {
+                    "date": 1719615295566,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,10 +17,10 @@\n     }\r\n \r\n     public registrar(habilidad: Habilidad): Observable<any> {\r\n         return this.http.post<any>(this.baseUrl, habilidad);\r\n-      }\r\n+    }\r\n       \r\n-      public buscar(id : string): Observable<Habilidad> {\r\n-        return this.http.get<Habilidad>(this.baseUrl + `/${id}`);\r\n-      }\r\n+    public buscar(id : string): Observable<Habilidad> {\r\n+      return this.http.get<Habilidad>(this.baseUrl + `/${id}`);\r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1719615305026,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,12 +15,11 @@\n     public listar():Observable<Usuario[]>{\r\n         return this.http.get<Usuario[]>(this.baseUrl);\r\n     }\r\n \r\n-    public registrar(habilidad: Habilidad): Observable<any> {\r\n+    public registrar(habilidad: Usuario): Observable<any> {\r\n         return this.http.post<any>(this.baseUrl, habilidad);\r\n     }\r\n-      \r\n-    public buscar(id : string): Observable<Habilidad> {\r\n-      return this.http.get<Habilidad>(this.baseUrl + `/${id}`);\r\n+    public buscar(id : string): Observable<Usuario> {\r\n+      return this.http.get<Usuario>(this.baseUrl + `/${id}`);\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1719615609804,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,11 +15,13 @@\n     public listar():Observable<Usuario[]>{\r\n         return this.http.get<Usuario[]>(this.baseUrl);\r\n     }\r\n \r\n+    \r\n+\r\n     public registrar(habilidad: Usuario): Observable<any> {\r\n         return this.http.post<any>(this.baseUrl, habilidad);\r\n     }\r\n     public buscar(id : string): Observable<Usuario> {\r\n-      return this.http.get<Usuario>(this.baseUrl + `/${id}`);\r\n+        return this.http.get<Usuario>(this.baseUrl + `/${id}`);\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1719615614867,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,11 @@\n     public listar():Observable<Usuario[]>{\r\n         return this.http.get<Usuario[]>(this.baseUrl);\r\n     }\r\n \r\n-    \r\n+        public registrar(habilidad: Usuario): Observable<any> {\r\n+        return this.http.post<any>(this.baseUrl, habilidad);\r\n+    }\r\n \r\n     public registrar(habilidad: Usuario): Observable<any> {\r\n         return this.http.post<any>(this.baseUrl, habilidad);\r\n     }\r\n"
+                },
+                {
+                    "date": 1719615942242,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     public listar():Observable<Usuario[]>{\r\n         return this.http.get<Usuario[]>(this.baseUrl);\r\n     }\r\n \r\n-        public registrar(habilidad: Usuario): Observable<any> {\r\n+    public registrar(habilidad: Usuario): Observable<any> {\r\n         return this.http.post<any>(this.baseUrl, habilidad);\r\n     }\r\n \r\n     public registrar(habilidad: Usuario): Observable<any> {\r\n"
+                },
+                {
+                    "date": 1719616047574,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,12 +15,10 @@\n     public listar():Observable<Usuario[]>{\r\n         return this.http.get<Usuario[]>(this.baseUrl);\r\n     }\r\n \r\n-    public registrar(habilidad: Usuario): Observable<any> {\r\n-        return this.http.post<any>(this.baseUrl, habilidad);\r\n-    }\r\n \r\n+\r\n     public registrar(habilidad: Usuario): Observable<any> {\r\n         return this.http.post<any>(this.baseUrl, habilidad);\r\n     }\r\n     public buscar(id : string): Observable<Usuario> {\r\n"
+                },
+                {
+                    "date": 1719616053377,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,11 +16,10 @@\n         return this.http.get<Usuario[]>(this.baseUrl);\r\n     }\r\n \r\n \r\n-\r\n-    public registrar(habilidad: Usuario): Observable<any> {\r\n-        return this.http.post<any>(this.baseUrl, habilidad);\r\n+    public registrar(usuario: Usuario): Observable<any> {\r\n+        return this.http.post<any>(this.baseUrl, usuario);\r\n     }\r\n     public buscar(id : string): Observable<Usuario> {\r\n         return this.http.get<Usuario>(this.baseUrl + `/${id}`);\r\n     }\r\n"
+                },
+                {
+                    "date": 1719616314061,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n         return this.http.get<Usuario[]>(this.baseUrl);\r\n     }\r\n \r\n \r\n-    public registrar(usuario: Usuario): Observable<any> {\r\n+    public registrar(usuario: Usuario): Observable<Usuario> {\r\n         return this.http.post<any>(this.baseUrl, usuario);\r\n     }\r\n     public buscar(id : string): Observable<Usuario> {\r\n         return this.http.get<Usuario>(this.baseUrl + `/${id}`);\r\n"
+                }
+            ],
+            "date": 1719615265300,
+            "name": "Commit-0",
+            "content": "import { Injectable } from \"@angular/core\";\r\nimport { Datos } from \"../constants/datos\";\r\nimport { HttpClient } from \"@angular/common/http\";\r\nimport { Observable } from \"rxjs\";\r\nimport { Amistades } from \"../models/amistades\";\r\n\r\n\r\n@Injectable({\r\n    providedIn:'root'\r\n})\r\nexport class UsuarioService {\r\n    private baseUrl = Datos.API_URL+\"Amistades\" ;\r\n    constructor(private http: HttpClient){}\r\n\r\n    public listar():Observable<Amistades[]>{\r\n        return this.http.get<Amistades[]>(this.baseUrl);\r\n    }\r\n\r\n\r\n}\r\n"
+        }
+    ]
+}

@@ -1,0 +1,63 @@
+<app-header></app-header>
+<div class="division">
+  <app-aside></app-aside>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form class="frmedi" (ngSubmit)="saveUsuario(userForm.value)" #userForm="ngForm">
+          <h2 class="text-center mb-4">DATOS DE USUARIO</h2>
+          <div class="form-group row">
+            <label for="usuarioId" class="col-sm-3 col-form-label">Usuario ID:</label>
+            <div class="col-sm-9">
+              <input type="text" readonly class="form-control-plaintext" id="usuarioId" name="usuarioId"
+                [(ngModel)]="perfil.usuario.usuarioId" />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="nombre" class="col-sm-3 col-form-label">Nombre:</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese su nombre"
+                [(ngModel)]="perfil.nombre" />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="apellido" class="col-sm-3 col-form-label">Apellido:</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Ingrese su apellido"
+                [(ngModel)]="perfil.apellido" />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="telefono" class="col-sm-3 col-form-label">Teléfono:</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Ingrese su teléfono"
+                [(ngModel)]="perfil.telefono" />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="fechaNacimiento" class="col-sm-3 col-form-label">Fecha de Nacimiento:</label>
+            <div class="col-sm-9">
+              <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento"
+                [(ngModel)]="perfil.fechaNacimiento" />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="biografia" class="col-sm-3 col-form-label">Biografía:</label>
+            <div class="col-sm-9">
+              <textarea class="form-control" id="biografia" name="biografia" rows="5"
+                placeholder="Ingrese su biografía" [(ngModel)]="perfil.biografia"></textarea>
+            </div>
+          </div>
+          <div class="row justify-content-center" id="botones">
+            <div class="col-sm-6">
+              <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+            <div class="col-sm-6">
+              <button type="button" class="btn btn-danger">Eliminar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

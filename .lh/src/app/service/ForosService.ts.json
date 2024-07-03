@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/app/service/ForosService.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1719797438589,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1719797446992,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,22 +3,23 @@\n import { HttpClient } from \"@angular/common/http\";\r\n import { Observable } from \"rxjs\";\r\n import { CategoriaHabilidad } from \"../models/categoria-habilidad\";\r\n import { CategoriaForos } from \"../models/categoria-foros\";\r\n+import { Foro } from \"../models/Foro\";\r\n \r\n \r\n @Injectable({\r\n     providedIn:'root'\r\n })\r\n export class ForosService {\r\n-    private baseUrl = Datos.API_URL+\"CategoriaForos\" ;\r\n+    private baseUrl = Datos.API_URL+\"Foros\" ;\r\n     constructor(private http: HttpClient){}\r\n \r\n-    public listar():Observable<CategoriaForos[]>{\r\n-        return this.http.get<CategoriaForos[]>(this.baseUrl);\r\n+    public listar():Observable<Foro[]>{\r\n+        return this.http.get<Foro[]>(this.baseUrl);\r\n     }\r\n \r\n-    public registrar(categoriaHabilidad: CategoriaForos): Observable<CategoriaForos> {\r\n+    public registrar(categoriaHabilidad: Foro): Observable<CategoriaForos> {\r\n     return this.http.post<any>(this.baseUrl, categoriaHabilidad);\r\n     }\r\n \r\n     public buscar(id : string): Observable<CategoriaForos> {\r\n"
+                },
+                {
+                    "date": 1719964806666,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,12 +17,12 @@\n     public listar():Observable<Foro[]>{\r\n         return this.http.get<Foro[]>(this.baseUrl);\r\n     }\r\n \r\n-    public registrar(categoriaHabilidad: Foro): Observable<CategoriaForos> {\r\n+    public registrar(categoriaHabilidad: Foro): Observable<Foro> {\r\n     return this.http.post<any>(this.baseUrl, categoriaHabilidad);\r\n     }\r\n \r\n-    public buscar(id : string): Observable<CategoriaForos> {\r\n-    return this.http.get<CategoriaForos>(this.baseUrl + `/${id}`);\r\n+    public buscar(id : number): Observable<Foro> {\r\n+    return this.http.get<Foro>(this.baseUrl + `/${id}`);\r\n     }\r\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1719797438589,
+            "name": "Commit-0",
+            "content": "import { Injectable } from \"@angular/core\";\r\nimport { Datos } from \"../constants/datos\";\r\nimport { HttpClient } from \"@angular/common/http\";\r\nimport { Observable } from \"rxjs\";\r\nimport { CategoriaHabilidad } from \"../models/categoria-habilidad\";\r\nimport { CategoriaForos } from \"../models/categoria-foros\";\r\n\r\n\r\n@Injectable({\r\n    providedIn:'root'\r\n})\r\nexport class ForosService {\r\n    private baseUrl = Datos.API_URL+\"CategoriaForos\" ;\r\n    constructor(private http: HttpClient){}\r\n\r\n    public listar():Observable<CategoriaForos[]>{\r\n        return this.http.get<CategoriaForos[]>(this.baseUrl);\r\n    }\r\n\r\n    public registrar(categoriaHabilidad: CategoriaForos): Observable<CategoriaForos> {\r\n    return this.http.post<any>(this.baseUrl, categoriaHabilidad);\r\n    }\r\n\r\n    public buscar(id : string): Observable<CategoriaForos> {\r\n    return this.http.get<CategoriaForos>(this.baseUrl + `/${id}`);\r\n    }\r\n}"
+        }
+    ]
+}
