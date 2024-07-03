@@ -6,6 +6,5 @@ export class Datos {
 
     //public static readonly API_URL = this.base+this.web+this.estandar;
     public static readonly API_URL = this.base+this.local+this.estandar;
-    
 
 }

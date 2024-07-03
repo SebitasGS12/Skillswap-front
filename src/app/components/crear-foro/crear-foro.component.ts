@@ -63,7 +63,6 @@ export class CrearForoComponent implements OnInit {
             (response) => {
                 console.log(response);
                 this.router.navigate(['/foros']);
-
             }
         );
     }

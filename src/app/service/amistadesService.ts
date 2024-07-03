@@ -19,6 +19,10 @@ export class AmistadesService {
         return this.http.post<any>(this.baseUrl, amistad);
     }
 
+
+    public registrarAmistades(amistades: Amistades[]): Observable<Amistades[]> {
+        return this.http.post<Amistades[]>(`${this.baseUrl}/registrar`, amistades);
+    }
     public existeAmistad(usuarioId:number,amigoId:number):Observable<boolean>{
         return this.http.get<any>(`${this.baseUrl}/existeAmistad?usuarioId=${usuarioId}&amigoId=${amigoId}`);
     }

@@ -3,7 +3,7 @@ import { Usuario } from "./usuario";
 
 export class Discuciones {
     
-    discusionesId!:number;
+    discusionesId!:number|null;
     titulo!:string;
     descripcion!:string;
     fechaCreacion!:Date;

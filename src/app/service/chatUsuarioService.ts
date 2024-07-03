@@ -12,8 +12,8 @@ export class ChatUsuarioService {
     private baseUrl = Datos.API_URL+"ChatUsuario" ;
     constructor(private http: HttpClient){}
 
-    public obtenerChatUsuarioByUsuario(usuarioid:number): Observable<ChatUsuario> {
-        return this.http.get<any>(this.baseUrl+'/usuario/'+usuarioid);
+    public obtenerChatUsuarioByUsuario(usuarioid:number,usuario2id:number): Observable<ChatUsuario> {
+        return this.http.get<ChatUsuario>(`${this.baseUrl}/usuario/${usuarioid}/amigo/${usuario2id}`);
     }
 
 }

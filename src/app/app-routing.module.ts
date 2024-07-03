@@ -28,7 +28,7 @@ const routes: Routes = [
   { path: 'foro/:id', component: VerDiscucionesComponent },
   { path: 'discucion/:id', component: VerMensajesComponent },
   { path: 'crearForo', component: CrearForoComponent },
-  { path: 'crearDiscucion', component: CrearDiscusionComponent },
+  { path: 'crearDiscucion/:id', component: CrearDiscusionComponent },
 ];
 
 @NgModule({

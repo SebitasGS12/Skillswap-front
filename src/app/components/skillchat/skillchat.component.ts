@@ -70,7 +70,7 @@ export class SkillchatComponent implements OnInit {
     }
 
     abrirChat(usuarioid: number) {
-        this.chatUsuarioService.obtenerChatUsuarioByUsuario(usuarioid).subscribe(
+        this.chatUsuarioService.obtenerChatUsuarioByUsuario(usuarioid,this.sesion.obj_Usuario.usuarioId).subscribe(
             (response) => {
                 this.chat_usuario = response;
                 this.amistadPerfilSelected = this.obtenerPerfil(usuarioid)!;

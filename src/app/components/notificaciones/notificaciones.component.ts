@@ -67,20 +67,21 @@ export class NotificacionesComponent implements OnInit {
           amistadEmisora.amistadAceptada = true;
           amistadReceptora.amistadAceptada = true;
         }
+
+        let lstAmistades:Amistades[]=[
+          amistadEmisora,
+          amistadReceptora
+        ]
   
         // Actualizar el estado de las amistades en el servicio
-        this.amistadService.registrar(amistadEmisora).subscribe(
+        this.amistadService.registrarAmistades(lstAmistades).subscribe(
           () => {
-            this.amistadService.registrar(amistadReceptora).subscribe(
-              () => {
                 // Si el estado es true, cambiar el título de la notificación
                 if (estado) {
                   notificacion.titulo = "SOLICITUD ACEPTADA";
                   notificacion.contenido = "YA SON AMIGUES"
                   this.notificacionesService.registrar(notificacion).subscribe();
-                }
-              }
-            );
+            }
           }
         );
       }

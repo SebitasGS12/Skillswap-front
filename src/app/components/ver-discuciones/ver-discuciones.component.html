@@ -2,8 +2,6 @@
 <div class="division">
   <app-aside></app-aside>
   <div class="foro-skillswap">
-
-  
     <div class="contenedor-foros">
       <div class="informacion">
         <div class="datos">
@@ -11,7 +9,7 @@
           <h4>{{foro?.descripcion}}</h4>
         </div>
         <div class="nuevo">
-          <a class="btn btn-primary">Nueva Discucion</a>
+          <a class="btn btn-primary" [routerLink]="['/crearDiscucion',foro?.foroId]">Nueva Discucion</a>
         </div>
       </div>
       <br>

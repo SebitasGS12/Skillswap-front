@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 49,
+            "activePatchIndex": 50,
             "patches": [
                 {
                     "date": 1718401630369,
@@ -204,6 +204,10 @@
                 {
                     "date": 1719979622860,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,9 @@\n import { EditarUsuarioComponent } from './components/editar-usuario/editar-usuario.component';\r\n import { VerDiscucionesComponent } from './components/ver-discuciones/ver-discuciones.component';\r\n import { VerMensajesComponent } from './components/ver-mensajes/ver-mensajes.component';\r\n import { CrearForoComponent } from './components/crear-foro/crear-foro.component';\r\n+import { CrearDiscusionComponent } from './components/crear-discusion/crear-discusion.component';\r\n \r\n const routes: Routes = [\r\n   {path: '', redirectTo: '/iniciarSesion', pathMatch: 'full'},\r\n   { path: 'menuPrincipal', component: MenuPrincipalComponent },\r\n@@ -26,9 +27,9 @@\n   { path: 'editarUsuario', component: EditarUsuarioComponent },\r\n   { path: 'foro/:id', component: VerDiscucionesComponent },\r\n   { path: 'discucion/:id', component: VerMensajesComponent },\r\n   { path: 'crearForo', component: CrearForoComponent },\r\n-  { path: 'crearForo', component: CrearForoComponent },\r\n+  { path: 'crearDiscucion', component: CrearDiscusionComponent },\r\n ];\r\n \r\n @NgModule({\r\n   imports: [RouterModule.forRoot(routes)],\r\n"
+                },
+                {
+                    "date": 1720032881509,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n   { path: 'editarUsuario', component: EditarUsuarioComponent },\r\n   { path: 'foro/:id', component: VerDiscucionesComponent },\r\n   { path: 'discucion/:id', component: VerMensajesComponent },\r\n   { path: 'crearForo', component: CrearForoComponent },\r\n-  { path: 'crearDiscucion', component: CrearDiscusionComponent },\r\n+  { path: 'crearDiscucion/:id', component: CrearDiscusionComponent },\r\n ];\r\n \r\n @NgModule({\r\n   imports: [RouterModule.forRoot(routes)],\r\n"
                 }
             ],
             "date": 1718401630369,

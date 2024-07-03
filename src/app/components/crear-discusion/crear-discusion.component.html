@@ -1,23 +1,21 @@
-<div class="contenido-principal">
+<app-header></app-header>
+<div class="division">
+  <app-aside></app-aside>
+  <div class="contenido-principal">
     <div class="contenedor">
-        <h2>Crear Discusiones</h2>
-        <div class="grupo-formulario">
-            <label for="discusiones">Discusiones:</label>
-            <input type="text" id="discusiones" name="discusiones">
-            <label for="titulo">Título:</label>
-            <input type="text" id="titulo" name="titulo">
-            <label for="descripcion">Descripción:</label>
-            <textarea id="descripcion" name="descripcion"></textarea>
-            <label for="fecha">Fecha Creación:</label>
-            <input type="date" id="fecha" name="fecha">
-            <label for="categoria">Categoría:</label>
-            <select id="categoria" name="categoria">
-                <option value="">Seleccione una categoría</option>
-            </select>
-        </div>
+      <h2>Crear Discusiones</h2>
+      <form class="grupo-formulario" (ngSubmit)="nuevaDiscucion(formObject.value)" #formObject="ngForm">
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo" ngModel>
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" name="descripcion" ngModel></textarea>
+        <label for="fecha">Fecha Creación:</label>
+        <input type="date" id="fecha" name="fechaCreacion" ngModel>
         <div class="botones">
-            <button class="guardar">Guardar</button>
-            <button class="cancelar">Cancelar</button>
+          <button class="guardar" type="submit">Guardar</button>
+          <button class="cancelar" (click)="retornar()">Cancelar</button>
         </div>
+      </form>
     </div>
+  </div>
 </div>

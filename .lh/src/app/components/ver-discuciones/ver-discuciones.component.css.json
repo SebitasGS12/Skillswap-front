@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 39,
+            "activePatchIndex": 40,
             "patches": [
                 {
                     "date": 1719968488233,
@@ -164,6 +164,10 @@
                 {
                     "date": 1719972053907,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -76,10 +76,8 @@\n .nuevo{\r\n   align-items: center;\r\n }\r\n \r\n-\r\n-\r\n .foro_item  h3 {\r\n   margin-top: 0;\r\n   margin-bottom: 5px;\r\n   font-size: 18px;\r\n"
+                },
+                {
+                    "date": 1720032427639,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   width: 100%;\r\n   margin: 0 auto;\r\n   padding: 20px;\r\n   background-color: #0f1a24;\r\n-  color: white;\r\n+  color: hsl(0, 0%, 100%);\r\n   height: 100vh;\r\n }\r\n \r\n /* Estilo del encabezado */\r\n"
                 }
             ],
             "date": 1719968488233,
